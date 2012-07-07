@@ -1,0 +1,16 @@
+# >= 2.33.1
+depends glib-2
+# >= 2.2.0
+depends atk
+# >= 1.30.0
+depends pango
+# >= 1.10.0
+depends cairo
+# >= 1.10.0
+# depends cairo-gobject
+# >= 2.26.0
+depends gdk-pixbuf
+# atk-bridge-2.0
+depends at-spi2-atk
+
+optional_depends gobject-introspection "--enable-introspection=yes" "--enable-introspection=no" "Enable introspection for this build?" y
