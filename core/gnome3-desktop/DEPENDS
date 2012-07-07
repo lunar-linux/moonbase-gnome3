@@ -1,0 +1,18 @@
+# >= 2.21.3
+depends gdk-pixbuf
+# >= 3.3.6
+depends gtk+-3
+# >= 2.19.1
+depends glib-2
+# >= 2.19.1
+#epends gio
+# >= 0.1.4
+depends gsettings-desktop-schemas
+# >= 1.3
+depends xrandr
+# >= 1.1
+depends libXext
+depends xkeyboard-config
+depends libxkbfile
+
+optional_depends gobject-introspection "--enable-introspection=yes" "--enable-introspection=no" "Enable introspection for this build?"
