@@ -1,0 +1,12 @@
+# >= 2.28.0
+depends glib-2
+# >= 2.90.7
+depends gtk+-3
+# >= 0.76
+depends dbus-glib
+# >= 0.10
+depends json-glib
+# GConf 2
+depends GConf
+
+optional_depends systemd "--enable-systemd" "" "Use systemd?"

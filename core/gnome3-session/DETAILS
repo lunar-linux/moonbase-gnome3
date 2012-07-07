@@ -1,0 +1,16 @@
+          MODULE=gnome3-session
+	 PKGNAME=gnome-session
+# note why I didn't replaced 3.5.3 with VERSION (.2)
+	 VERSION=3.5.2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$PKGNAME-$VERSION
+          SOURCE=$PKGNAME-$VERSION.tar.xz
+   SOURCE_URL[0]=http://ftp.gnome.org/pub/GNOME/core/3.5/3.5.3/sources/
+      SOURCE_VFY=sha1:337051ba10dc8f21ca31aa97e4590dbdcd4895d2
+        WEB_SITE=http://www.gnome.org/gnome-3/
+         ENTERED=20120706
+         UPDATED=20120706
+           SHORT="gnome-session contains the GNOME session manager, as well as a configuration program to choose applications starting on login"
+
+cat << EOF
+
+EOF
