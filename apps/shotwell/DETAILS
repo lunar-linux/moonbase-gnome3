@@ -1,0 +1,14 @@
+          MODULE=shotwell
+         VERSION=0.12.3
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=http://yorba.org/download/$MODULE/stable
+      SOURCE_VFY=sha1:7232ebb3e7592993b4b1cf835974e3725a1eda70
+        WEB_SITE=http://yorba.org/shotwell
+         ENTERED=20100909
+         UPDATED=20120510
+           PSAFE=no
+           SHORT="A photo organizer"
+
+cat << EOF
+A popular and easy to use photo organizer for the GNOME desktop.
+EOF
