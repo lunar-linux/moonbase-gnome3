@@ -1,0 +1,21 @@
+depends icu4c
+depends gperf
+depends libxslt
+depends sqlite
+depends %JPEG
+depends libpng
+depends freetype2
+depends libsoup
+depends enchant
+depends gst-plugins-base
+
+# workaround for make_names.pl
+depends Switch
+
+# see webkit module for gtk+-2
+depends "gtk+-3"
+
+optional_depends "gst-plugins-good"      "--enable-video"         "--disable-video"         "for HTML5 video support"
+optional_depends "geoclue"               "--enable-geolocation"   "--disable-geolocation"   "for geolocation support"
+optional_depends "gobject-introspection" "--enable-introspection" "--disable-introspection" "say Y for Epiphany, and possibly others"
+optional_depends "librsvg"               "--enable-svg"           "--disable-svg"           "for svg graphics support"
