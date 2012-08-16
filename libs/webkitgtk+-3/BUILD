@@ -29,6 +29,11 @@
   done &&
   unset error_count &&
   make install &&
-  install 'Programs/GtkLauncher' '/usr/bin/Gtk3Launcher'
+  install 'Programs/GtkLauncher' '/usr/bin/Gtk3Launcher' &&
+
+  # symlink plugin folder to a location webkit looks for it
+  if [ ! -e "/usr/lib/browser-plugins" ]; then
+     ln -sf /usr/lib/lunar/plugins /usr/lib/browser-plugins
+  fi
 
 ) > $C_FIFO 2>&1
