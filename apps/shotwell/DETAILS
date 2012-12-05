@@ -1,8 +1,8 @@
           MODULE=shotwell
-         VERSION=0.12.3
-          SOURCE=$MODULE-$VERSION.tar.bz2
+         VERSION=0.13.1
+          SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://yorba.org/download/$MODULE/stable
-      SOURCE_VFY=sha1:7232ebb3e7592993b4b1cf835974e3725a1eda70
+      SOURCE_VFY=sha1:2748966e851baa465906c3c9bbfedcd48008432d
         WEB_SITE=http://yorba.org/shotwell
          ENTERED=20100909
          UPDATED=20120510
