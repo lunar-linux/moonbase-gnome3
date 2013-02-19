@@ -8,14 +8,14 @@ depends libgnomekbd
 depends lxml
 depends libsoup
 depends gnome-common
-depends gnome3-session
-depends gnome3-menus
-depends gnome3-desktop
-depends gnome3-settings-daemon
+depends gnome-session
+depends gnome-menus
+depends gnome-desktop
+depends gnome-settings-daemon
 depends libgnome-keyring
 
 # fails to start without working themes
-depends gnome3-themes-standard
+depends gnome-themes-standard
 
 depends NetworkManager
 # this seems to be a hard depends (for the moment?)
