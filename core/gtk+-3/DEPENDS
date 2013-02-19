@@ -1,16 +1,8 @@
-# >= 2.32.0
 depends glib-2
-# >= 2.2.0
 depends atk
-# >= 1.30.0
 depends pango
-# >= 1.10.0
 depends cairo
-# >= 2.26.0
 depends gdk-pixbuf
+depends gobject-introspection
 
-optional_depends gobject-introspection "--enable-introspection=yes" "--enable-introspection=no" "Enable introspection for this build?" y
-
-# this will become a dependency with the next major release
-# atk-bridge-2.0
-#depends at-spi2-atk
+depends at-spi2-atk
