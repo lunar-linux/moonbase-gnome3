@@ -1,1 +1,2 @@
-depends at-spi2-core
+depends  atk
+depends  at-spi2-core
