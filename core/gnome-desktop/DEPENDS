@@ -1,0 +1,3 @@
+depends  gtk+-3
+depends  gsettings-desktop-schemas
+depends  xkeyboard-config

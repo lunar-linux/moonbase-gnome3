@@ -1,0 +1,15 @@
+          MODULE=gnome-desktop
+         VERSION=3.6.2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=http://ftp.gnome.org/pub/gnome/sources/$MODULE/${VERSION%.*3}
+      SOURCE_VFY=sha1:b5a8f4a008bc36f9310ee9d943a0070a2373cb38
+        WEB_SITE=http://www.gnome.org/gnome-3
+         ENTERED=20120706
+         UPDATED=20130216
+           SHORT="Library with common API for various GNOME modules"
+
+cat << EOF
+The libgnome-desktop library provides API shared by several applications
+on the desktop, but that cannot live in the platform for various reasons.
+EOF
