@@ -1,0 +1,13 @@
+          MODULE=gnome-common
+         VERSION=3.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=http://download.gnome.org/sources/$MODULE/${VERSION::3}
+      SOURCE_VFY=sha1:63a99fb27f8288595d516ee927929036312a86e1
+        WEB_SITE=http://www.gnome.org/gnome-3
+         ENTERED=20130216
+         UPDATED=20130216
+           SHORT="Common development macros for GNOME"
+
+cat << EOF
+Common development macros for GNOME.
+EOF
