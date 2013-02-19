@@ -1,0 +1,14 @@
+          MODULE=gnome-session
+         VERSION=3.6.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=http://download.gnome.org/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha1:f3e846ea7b1d86055d85ff17b0c79cee2aa83acd
+        WEB_SITE=http://www.gnome.org/gnome-3
+         ENTERED=20120706
+         UPDATED=20130216
+           SHORT="The GNOME Session Handler"
+
+cat << EOF
+Gnome-session contains the GNOME session manager, as well as a configuration
+program to choose applications starting on login.
+EOF
