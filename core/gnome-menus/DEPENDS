@@ -1,0 +1,4 @@
+depends  intltool
+depends  glib-2
+depends  pygobject
+depends  gobject-introspection
