@@ -1,0 +1,14 @@
+          MODULE=muffin
+         VERSION=1.1.2
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-$MODULE-ab1d98e
+      SOURCE_URL=http://github.com/linuxmint/$MODULE/tarball/$VERSION
+      SOURCE_VFY=sha1:94f35d537d7c3065f671632916268bfae71c8af7
+        WEB_SITE=http://github.com/linuxmint/muffin
+         ENTERED=20130210
+         UPDATED=20130210
+           SHORT="A window manager based on Mutter"
+
+cat <<EOF
+The Cinnamon Window Manager based on Mutter.
+EOF
