@@ -1,0 +1,5 @@
+depends  gtk+-3
+depends  libgcrypt
+depends  libtasn1
+depends  libcap-ng
+depends  gcr
