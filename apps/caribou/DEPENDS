@@ -1,0 +1,8 @@
+depends  dconf
+depends  at-spi2-atk
+depends  pyatspi
+depends  pygobject
+depends  libxklavier
+depends  libgee
+depends  clutter
+depends  gtk+-3
