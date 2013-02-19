@@ -1,0 +1,4 @@
+depends  cairo
+depends  dbus-glib
+depends  gobject-introspection
+depends  spidermonkey
