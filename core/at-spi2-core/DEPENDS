@@ -1,1 +1,3 @@
-optional_depends gobject-introspection "--enable-introspection=yes" "--enable-introspection=no" "Enable introspection for this build?" y
+depends  dbus
+depends  libXtst
+depends  gobject-introspection
