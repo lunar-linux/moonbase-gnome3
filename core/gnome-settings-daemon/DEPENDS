@@ -1,0 +1,13 @@
+depends  colord
+depends  dconf
+depends  gnome-desktop
+depends  hicolor-icon-theme
+depends  libnotify
+depends  nss
+depends  libcanberra
+depends  pulseaudio
+depends  upower
+depends  libxslt
+depends  ibus
+depends  xf86-input-wacom
+depends  libwacom
