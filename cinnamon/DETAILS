@@ -1,0 +1,18 @@
+          MODULE=cinnamon
+         VERSION=1.6.7
+          SOURCE=$MODULE-$VERSION.tar.gz
+         SOURCE2=$MODULE-gnome-autogen.sh.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-Cinnamon-5ab432d
+      SOURCE_URL=http://github.com/linuxmint/Cinnamon/tarball/$VERSION
+     SOURCE2_URL=$PATCH_URL
+      SOURCE_VFY=sha1:bbda16864bd04b0c0aff184a261915ad514ef1a1
+     SOURCE2_VFY=sha1:2e9831bd6a0d19d6f33b267479fc591bc6b7f3c4
+        WEB_SITE=http://cinnamon.linuxmint.com
+         ENTERED=20130210
+         UPDATED=20130210
+           SHORT="A Linux desktop based on GTK+-3"
+
+cat <<EOF
+Linux desktop which provides advanced innovative features and a traditional
+user experience and is based on GTK+-3.
+EOF
