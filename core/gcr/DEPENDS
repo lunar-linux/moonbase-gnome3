@@ -1,0 +1,4 @@
+depends gtk+-3
+depends dconf
+depends libgcrypt
+depends p11-kit

@@ -1,0 +1,18 @@
+          MODULE=gcr
+         VERSION=3.6.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha1:95ee30fb6424e13baa6ae53584ccd8b0cf4c9798
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20130218
+         UPDATED=20130218
+           SHORT="A library for bits of crypto UI and parsing"
+
+cat << EOF
+GCR is a library for displaying certificates, and crypto UI, accessing
+key stores. It also provides the viewer for crypto files on the GNOME
+desktop.
+
+GCK is a library for accessing PKCS#11 modules like smart cards, in a
+(G)object oriented way.
+EOF
