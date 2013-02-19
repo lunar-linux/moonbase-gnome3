@@ -1,0 +1,13 @@
+          MODULE=libgnomekbd
+         VERSION=3.6.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha1:4375d2cb8cbdbad7a4f59a8b99edd58cfa328597
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20070315
+         UPDATED=20130216
+           SHORT="The GNOME keyboard configuration library"
+
+cat << EOF
+libgnomekbd is a library to manage the keyboard in GNOME applications.
+EOF

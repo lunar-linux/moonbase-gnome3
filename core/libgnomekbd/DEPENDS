@@ -1,0 +1,2 @@
+depends  dconf
+depends  libxklavier
