@@ -1,0 +1,13 @@
+depends dbus-glib
+depends iproute2
+depends libnl3
+depends nss
+depends polkit
+depends wpa_supplicant
+depends ppp
+depends libsoup
+
+optional_depends "dhcpcd"    "" "" "alternative DHCP client"
+optional_depends "iptables"  "" "" "Connection sharing"
+optional_depends "dnsmasq"   "" "" "Connection sharing"
+optional_depends "bluez"     "" "" "Bluetooth support"
