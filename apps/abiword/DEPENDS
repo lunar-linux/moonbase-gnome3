@@ -1,0 +1,11 @@
+depends  fribidi
+depends  wv
+depends  boost
+depends  cairo
+depends  gtk+-3
+depends  librsvg
+
+optional_depends  "goffice"      "--with-goffice" "--without-goffice" "use system goffice library"
+optional_depends  "enchant"      "" "--disable-spell" "enable spell-checking"
+
+optional_depends  "gtkmathview"  "" "" "for built-in formula editor(say yes to plugins)"
