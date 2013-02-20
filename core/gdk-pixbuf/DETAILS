@@ -1,0 +1,16 @@
+          MODULE=gdk-pixbuf
+         VERSION=2.26.5
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION::4}
+      SOURCE_VFY=sha1:94f30c417441404dcbe23206dda91730074f9b7d
+        WEB_SITE=http://live.gnome.org/GObjectIntrospection
+         ENTERED=20091105
+         UPDATED=20121231
+           SHORT="An image loading library used with GNOME"
+
+cat << EOF
+The gdk-pixbuf package contains an image loading library used with the
+GNOME GUI desktop environment. The GdkPixBuf library provides
+image-loading facilities, the rendering of a GdkPixBuf into various
+formats (drawables or GdkRGB buffers), and a cache interface.
+EOF
