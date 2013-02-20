@@ -1,0 +1,11 @@
+depends glib-2
+depends libgsf
+depends libxml2
+depends cairo
+depends pango
+depends librsvg
+depends gdk-pixbuf
+depends gtk+-3
+
+optional_depends lasem "--with-lasem" "--without-lasem" "for SVG/MathML rendering"
+optional_depends libspectre "" "" "support embedded EPS"
