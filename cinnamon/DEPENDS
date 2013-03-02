@@ -19,4 +19,4 @@ depends gnome-themes-standard
 
 depends NetworkManager
 # this seems to be a hard depends (for the moment?)
-#optional_depends  "NetworkManager"  "--enable-networkmanager"  "--disable-networkmanager"  "for NetworkManager support"
+optional_depends  "NetworkManager"  "--enable-networkmanager"  "--disable-networkmanager"  "for NetworkManager support"
