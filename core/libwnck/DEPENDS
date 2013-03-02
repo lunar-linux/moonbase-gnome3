@@ -1,3 +1,0 @@
-depends  libXres
-depends  gtk+-3
-depends  startup-notification
