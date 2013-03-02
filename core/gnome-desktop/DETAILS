@@ -2,7 +2,7 @@
          VERSION=3.6.2
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://ftp.gnome.org/pub/gnome/sources/$MODULE/${VERSION%.*3}
+      SOURCE_URL=http://ftp.gnome.org/pub/gnome/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha1:b5a8f4a008bc36f9310ee9d943a0070a2373cb38
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20120706
