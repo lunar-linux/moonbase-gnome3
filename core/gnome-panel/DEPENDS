@@ -5,7 +5,7 @@ depends  libSM
 depends  libcanberra
 depends  gnome-desktop
 depends  gnome-menus
-depends  libwnck
+depends  libwnck3
 depends  libgweather
 
 optional_depends  "NetworkManager"  ""  ""  "for NetworkManager support"
