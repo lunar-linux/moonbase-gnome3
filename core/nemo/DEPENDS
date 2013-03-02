@@ -1,0 +1,11 @@
+depends  libexif
+depends  gvfs
+depends  dconf
+depends  desktop-file-utils
+depends  gtk-doc
+depends  gnome-common
+depends  gnome-desktop
+depends  gnome-icon-theme
+depends  libnotify
+
+#optional_depends  "gksu"  ""  ""  "open it as root"

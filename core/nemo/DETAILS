@@ -1,0 +1,17 @@
+          MODULE=nemo
+         VERSION=1.7.1
+          SOURCE=$MODULE-$VERSION.tar.gz
+         SOURCE2=$MODULE-gnome-autogen.sh.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-nemo-63f7b44
+      SOURCE_URL=http://github.com/linuxmint/$MODULE/tarball/$VERSION
+     SOURCE2_URL=$PATCH_URL
+      SOURCE_VFY=sha1:f3a737026b9449fa16f780b51391df1b56ef538d
+     SOURCE2_VFY=sha1:d10b1502f1b58cda2feb27c3c25b8a2d6eaa6b69
+        WEB_SITE=http://github.com/linuxmint/nemo
+         ENTERED=20130302
+         UPDATED=20130302
+           SHORT="Cinnamon file manager (Nautilus fork)"
+
+cat <<EOF
+Nemo is the file manager for the Cinnamon desktop environment.
+EOF
