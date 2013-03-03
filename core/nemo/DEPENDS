@@ -6,6 +6,6 @@ depends  gtk-doc
 depends  gnome-common
 depends  gnome-desktop
 depends  gnome-icon-theme
-depends  libnotify
+depends  libnotify4
 
 #optional_depends  "gksu"  ""  ""  "open it as root"

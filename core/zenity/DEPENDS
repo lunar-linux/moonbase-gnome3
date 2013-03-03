@@ -3,6 +3,6 @@ depends  docbook-xsl
 depends  gtk+-3
 depends  itstool
 
-optional_depends  "libnotify"  "--enable-notify"     "--disable-notify"     "for libnotify support"
+optional_depends  "libnotify4"  "--enable-notify"     "--disable-notify"     "for libnotify support"
 #optional_depends  "webkitgtk3" "--enable-webkitgtk"  "--disable-webkitgtk"  "for webkit support"
 

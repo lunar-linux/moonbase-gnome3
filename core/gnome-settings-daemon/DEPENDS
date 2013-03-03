@@ -2,7 +2,7 @@ depends  colord
 depends  dconf
 depends  gnome-desktop
 depends  hicolor-icon-theme
-depends  libnotify
+depends  libnotify4
 depends  nss
 depends  libcanberra
 depends  pulseaudio

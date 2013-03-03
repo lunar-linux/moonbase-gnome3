@@ -1,7 +1,9 @@
-          MODULE=libnotify
+          MODULE=libnotify4
+         PAKNAME=libnotify
          VERSION=0.7.5
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+          SOURCE=$PAKNAME-$VERSION.tar.xz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$PKGNAME-$VERSION
+      SOURCE_URL=http://ftp.gnome.org/pub/GNOME/sources/$PAKNAME/${VERSION%.*}
       SOURCE_VFY=sha1:729d1382617fee7e82eac17d808c11469ab2b7e1
         WEB_SITE=http://www.galago-project.org
          ENTERED=20060526
