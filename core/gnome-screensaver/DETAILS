@@ -1,0 +1,17 @@
+          MODULE=gnome-screensaver
+         VERSION=3.6.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha1:22af6dfa9c55903a7624bc093718ef472b86cb51
+        WEB_SITE=http://live.gnome.org/GnomeScreensaver
+         ENTERED=20061130
+         UPDATED=20130303
+           SHORT="A screensaver control for Gnome"
+
+cat << EOF
+gnome-screensaver is a screensaver designed to replace xscreensaver.
+It is designed to integrate well with the desktop and provide a
+control interface that is desktop neutral. It simplifies and
+streamlines the experience for the user and provides more capability
+for the system administrator and vendor.
+EOF

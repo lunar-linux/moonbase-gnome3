@@ -1,0 +1,5 @@
+depends  dbus-glib
+depends  gnome-desktop
+depends  gsettings-desktop-schemas
+depends  libgnomekbd
+depends  systemd
