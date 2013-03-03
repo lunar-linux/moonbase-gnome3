@@ -1,7 +1,7 @@
           MODULE=libgweather
          VERSION=3.6.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://ftp.gnome.org/pub/gnome/sources/$MODULE/${VERSION%.*}
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha1:3f082f0fd506e49f5c498606170dead8c09f7ee7
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20120706

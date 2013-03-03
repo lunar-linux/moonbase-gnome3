@@ -1,7 +1,7 @@
           MODULE=gdk-pixbuf
          VERSION=2.26.5
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION::4}
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha1:94f30c417441404dcbe23206dda91730074f9b7d
         WEB_SITE=http://live.gnome.org/GObjectIntrospection
          ENTERED=20091105

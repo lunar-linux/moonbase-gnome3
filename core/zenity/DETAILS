@@ -1,7 +1,7 @@
           MODULE=zenity
          VERSION=3.6.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION::3}
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha1:ce31d3aa4aeb24c45a91a4238c3e9218de5c2b93
         WEB_SITE=http://www.gnome.org
          ENTERED=20030205

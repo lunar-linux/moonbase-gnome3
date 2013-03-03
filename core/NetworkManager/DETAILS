@@ -1,7 +1,7 @@
           MODULE=NetworkManager
          VERSION=0.9.8.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION::3}
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha1:ba453a19fbbf0e3f773bead2111fb93761c4ba83
         WEB_SITE=http://www.gnome.org/projects/$MODULE
          ENTERED=20130216

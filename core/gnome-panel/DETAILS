@@ -1,7 +1,7 @@
           MODULE=gnome-panel
          VERSION=3.6.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://ftp.gnome.org/pub/gnome/sources/$MODULE/${VERSION%.*}
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha1:9e7a94dedba0e6514c8dd634f08bc7c1c3d3b338
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20120706

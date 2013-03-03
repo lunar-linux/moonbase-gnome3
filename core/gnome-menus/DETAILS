@@ -1,7 +1,7 @@
           MODULE=gnome-menus
          VERSION=3.6.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://ftp.gnome.org/pub/gnome/sources/$MODULE/${VERSION%.*}
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha1:44f95bd7ed7b98be91b12e6dfa2ded679c3d9c34
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20120706

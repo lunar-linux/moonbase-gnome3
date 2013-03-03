@@ -1,7 +1,7 @@
           MODULE=gjs
          VERSION=1.34.0
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://download.gnome.org/sources/$MODULE/${VERSION%.*}
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha1:bd83389a4ee8b31a1d7e639645db364474edde24
         WEB_SITE=http://live.gnome.org/Gjs
          ENTERED=20130210

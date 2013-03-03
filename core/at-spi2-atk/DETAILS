@@ -1,7 +1,7 @@
           MODULE=at-spi2-atk
          VERSION=2.6.2
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://download.gnome.org/sources/$MODULE/${VERSION%.*}
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha1:4de46325b4a682478cf4295237e3359372b81911
         WEB_SITE=http://www.gnome.org
          ENTERED=20120706

@@ -1,7 +1,7 @@
           MODULE=polkit-gnome
          VERSION=0.105
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://download.gnome.org/sources/$MODULE/$VERSION
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/$VERSION
       SOURCE_VFY=sha1:948bad76395834a1b45b65bd191d46145f5c0b9f
         WEB_SITE=http://hal.freedesktop.org/releases
          ENTERED=20100227

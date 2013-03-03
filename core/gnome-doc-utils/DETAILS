@@ -1,7 +1,7 @@
           MODULE=gnome-doc-utils
          VERSION=0.20.6
           SOURCE=$MODULE-$VERSION.tar.bz2
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION^.*}
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha1:c11dda3cff4248a6918cfaf0d7b892fc20bf329e
         WEB_SITE=http://www.gnome.org
          ENTERED=20050315

@@ -3,7 +3,7 @@
          VERSION=3.4.4
           SOURCE=$PKGNAME-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$PKGNAME-$VERSION
-      SOURCE_URL=http://ftp.gnome.org/pub/gnome/sources/$PKGNAME/${VERSION%.*}
+      SOURCE_URL=$GNOME_URL/sources/$PKGNAME/${VERSION%.*}
       SOURCE_VFY=sha1:a4a7224d9ac5ee3c00c811ad208ac5fbf233f2b9
         WEB_SITE=http://www.gnome.org
          ENTERED=20130217

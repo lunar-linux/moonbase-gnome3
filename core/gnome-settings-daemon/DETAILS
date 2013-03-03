@@ -1,7 +1,7 @@
           MODULE=gnome-settings-daemon
          VERSION=3.6.4
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://download.gnome.org/sources/$MODULE/${VERSION%.*}
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha1:6ab132afbefc7b3335ef5dc34e07da0766c88339
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20120706

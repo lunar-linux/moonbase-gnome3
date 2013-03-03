@@ -1,7 +1,7 @@
           MODULE=gnome-themes-standard
          VERSION=3.6.5
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://download.gnome.org/sources/$MODULE/${VERSION%.*}
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha1:a1d19fb26d1799f477b03e11caa8f187aa04ae50
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20130217
