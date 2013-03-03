@@ -1,3 +1,5 @@
+depends libXt
+depends gobject-introspection
 depends gtk+-3
 depends icu4c
 depends gperf
@@ -8,24 +10,17 @@ depends libpng
 depends freetype2
 depends libsoup
 depends enchant
+depends gtk-doc
 depends gst-plugins-base
+depends gst-plugins-good
 
 # workaround for make_names.pl
 depends Switch
-
-# compile fails without this for 1.8.2 so --enable is in BUILD for now
-#optional_depends "gst-plugins-good"      "--enable-video"         "--disable-video"         "for HTML5 video support"
-depends "gst-plugins-good"
 
 optional_depends "geoclue" \
                  "--enable-geolocation" \
                  "--disable-geolocation" \
                  "for geolocation support"
-
-optional_depends "gobject-introspection" \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
-                 "say Y for Epiphany, and possibly others"
 
 optional_depends "librsvg" \
                  "--enable-svg --enable-svg-fonts" \
