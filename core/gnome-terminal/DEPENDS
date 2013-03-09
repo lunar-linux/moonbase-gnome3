@@ -1,0 +1,4 @@
+depends  libSM
+depends  GConf
+depends  gsettings-desktop-schemas
+depends  vte3
