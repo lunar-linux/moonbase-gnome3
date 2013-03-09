@@ -13,6 +13,9 @@ chmod +x gnome-autogen.sh &&
              --with-systemd   \
              $OPTS           &&
 
-#sedit "s:-Werror:-W :" src/Makefile  &&
-
 default_make
+
+# Now the .desktop files
+install -Dm 644 {"$SCRIPT_DIRECTORY",/usr/share/applications}/cinnamon-screensaver.desktop
+install -Dm 644 {"$SCRIPT_DIRECTORY",/usr/share/applications}/cinnamon2d-screensaver.desktop
+
