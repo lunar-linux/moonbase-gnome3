@@ -1,0 +1,15 @@
+          MODULE=libgnome-keyring
+         VERSION=3.6.0
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha1:0c7a991037efe5a2b827666671c5a9b3e30b6a7a
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20100403
+         UPDATED=20130316
+           SHORT="A interface library to gnome-keyring"
+
+cat << EOF
+gnome-keyring is a program that keep password and other secrets for
+users. The library libgnome-keyring is used by applications to integrate
+with the gnome keyring system.
+EOF
