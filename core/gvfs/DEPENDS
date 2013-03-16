@@ -5,12 +5,12 @@ depends  intltool
 depends  gtk+-3
 depends  openssh
 
-optional_depends  "libarchive"    "--enable-archive"  "--disable-archive"  "For archive support"
-optional_depends  "obexftp"       "--enable-obexftp"  "--disable-obexftp"  "For ObexFTP support"
-optional_depends  "libsoup"       "--enable-http"     "--disable-http"     "FTP/HTTP/WebDAV support(compile with gnome support)"
-optional_depends  "libcdio"       "--enable-cdda"     "--disable-cdda"     "For CDDA support"
-optional_depends  "fuse"          "--enable-fuse"     "--disable-fuse"     "For FUSE support"
-optional_depends  "libgphoto2"    "--enable-gphoto2"  "--disable-gphoto2"  "For Gphoto2 support"
-optional_depends  "gnome-keyring" "--enable-keyring"  "--disable-keyring"  "GNOME Keyring support"
-optional_depends  "samba"         "--enable-samba"    "--disable-samba"    "For Samba support"
-optional_depends  "avahi"         "--enable-avahi"    "--disable-avahi"    "For avahi support"
+optional_depends  "libsecret"    "--enable-keyring"  "--disable-keyring"  "For Keyring support"
+optional_depends  "libarchive"   "--enable-archive"  "--disable-archive"  "For archive support"
+optional_depends  "openobex"     "--enable-obexftp"  "--disable-obexftp"  "For ObexFTP support"
+optional_depends  "libsoup"      "--enable-http"     "--disable-http"     "FTP/HTTP/WebDAV support"
+optional_depends  "libcdio"      "--enable-cdda"     "--disable-cdda"     "For CDDA support"
+optional_depends  "fuse"         "--enable-fuse"     "--disable-fuse"     "For FUSE support"
+optional_depends  "libgphoto2"   "--enable-gphoto2"  "--disable-gphoto2"  "For Gphoto2 support"
+optional_depends  "samba"        "--enable-samba"    "--disable-samba"    "For Samba support"
+optional_depends  "avahi"        "--enable-avahi"    "--disable-avahi"    "For avahi support"
