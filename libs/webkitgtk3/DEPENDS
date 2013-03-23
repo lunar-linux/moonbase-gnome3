@@ -12,6 +12,7 @@ depends  libsoup
 depends  enchant
 depends  gst-plugins-base
 depends  gst-plugins-good
+depends  ruby
 
 # workaround for make_names.pl
 depends Switch
