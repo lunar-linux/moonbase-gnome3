@@ -1,18 +1,18 @@
           MODULE=cinnamon
-         VERSION=1.7.2
+         VERSION=1.7.3
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=$MODULE-gnome-autogen.sh.tar.gz
          SOURCE3=$MODULE-1.7.2-optional_networkmanager.patch
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-Cinnamon-b552942
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-Cinnamon-2538b4c
       SOURCE_URL=http://github.com/linuxmint/Cinnamon/tarball/$VERSION
      SOURCE2_URL=$PATCH_URL
      SOURCE3_URL=$PATCH_URL
-      SOURCE_VFY=sha1:d0652b59491c9f97e1dfb40de1a2a07a23cd1be5
+      SOURCE_VFY=sha1:b9a98dde7094a1d5ab49a5365dc0c8ee43efaf1a
      SOURCE2_VFY=sha1:2e9831bd6a0d19d6f33b267479fc591bc6b7f3c4
      SOURCE3_VFY=sha1:b2153d527fcdc9a702fabd17d844eea73f4188cc
         WEB_SITE=http://cinnamon.linuxmint.com
          ENTERED=20130210
-         UPDATED=20130309
+         UPDATED=20130323
            SHORT="A Linux desktop based on GTK+-3"
 
 cat <<EOF
