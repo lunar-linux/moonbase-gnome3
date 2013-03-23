@@ -1,6 +1,6 @@
           MODULE=libgnome-keyring
          VERSION=3.6.0
-          SOURCE=$MODULE-$VERSION.tar.bz2
+          SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha1:0c7a991037efe5a2b827666671c5a9b3e30b6a7a
         WEB_SITE=http://www.gnome.org
