@@ -10,3 +10,5 @@ depends gtk+-3
 depends webkitgtk3
 depends LibRaw
 depends rest
+depends gstreamer
+depends gst-plugins-base-1.0
