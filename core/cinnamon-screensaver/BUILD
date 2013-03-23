@@ -2,6 +2,8 @@ sedit "s:--warn-all --warn-error::" src/Makefile.am  &&
 
 sedit "s:gnome-autogen.sh:.\/gnome-autogen.sh:" autogen.sh  &&
 
+cp -f $SCRIPT_DIRECTORY/pam.d/cinnamon-screensaver data/  &&
+
 chmod +x gnome-autogen.sh &&
 
 ./autogen.sh --prefix=/usr     \
