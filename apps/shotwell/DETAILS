@@ -1,11 +1,11 @@
           MODULE=shotwell
-         VERSION=0.14.0
+         VERSION=0.14.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://yorba.org/download/$MODULE/${VERSION%.*}
-      SOURCE_VFY=
+      SOURCE_VFY=7fa0fc21938b7627411d6d6c6c78c262bd6b756c
         WEB_SITE=http://yorba.org/shotwell
          ENTERED=20100909
-         UPDATED=20130323
+         UPDATED=20130405
            #PSAFE=no
            SHORT="A photo organizer"
 
