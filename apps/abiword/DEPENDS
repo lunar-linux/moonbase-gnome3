@@ -4,6 +4,7 @@ depends  boost
 depends  cairo
 depends  gtk+-3
 depends  librsvg
+depends  libpng
 
 optional_depends  "goffice"      "--with-goffice" "--without-goffice" "use system goffice library"
 optional_depends  "enchant"      "" "--disable-spell" "enable spell-checking"
