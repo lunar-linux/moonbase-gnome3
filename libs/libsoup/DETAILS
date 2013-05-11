@@ -1,14 +1,14 @@
           MODULE=libsoup
-         VERSION=2.40.3
+         VERSION=2.42.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:63ce1d2b022b58831430099b28dee3b47fb63ed1
+      SOURCE_VFY=sha1:8d2a660879c4cf00379ceab04c3e479dedd1405c
         WEB_SITE=http://www.gnome.org
          ENTERED=20030413
-         UPDATED=20130216
-           PSAFE=no
+         UPDATED=20130511
            SHORT="a SOAP implementation in C"
 
+#PSAFE=no
 cat << EOF
 Soup is a SOAP (Simple Object Access Protocol) implementation in C.
 It provides an queued asynchronous callback-based mechanism for sending and
