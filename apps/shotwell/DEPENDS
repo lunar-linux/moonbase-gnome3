@@ -1,5 +1,5 @@
 depends vala
-depends libgee
+depends libgee06
 depends libgexiv2
 depends libgphoto2
 depends libsoup
