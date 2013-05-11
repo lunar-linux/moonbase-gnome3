@@ -9,6 +9,8 @@ depends  %JPEG
 depends  libpng
 depends  freetype2
 depends  libsoup
+depends  libsecret
+depends  harfbuzz
 depends  enchant
 depends  gst-plugins-base
 depends  gst-plugins-good

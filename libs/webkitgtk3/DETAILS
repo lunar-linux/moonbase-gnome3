@@ -1,14 +1,14 @@
 # WHEN BUMPING THIS MODULE PLEASE CHECK IF ANY OF THE COMMENTED
 # BUILD OPTIONS IN CONFIGURE/DEPENDS WORK AGAIN!
           MODULE=webkitgtk3
-         VERSION=1.10.2
+         VERSION=2.0.1
           SOURCE=webkitgtk-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/webkitgtk-$VERSION
       SOURCE_URL=http://www.webkitgtk.org/releases
-      SOURCE_VFY=sha1:733ca23157eb8dd072d57becf325799c00bde630
+      SOURCE_VFY=sha1:43323e8e79ba29f41bd2a93bb35c53cfd89b7741
         WEB_SITE=http://www.webkit.org
          ENTERED=20070919
-         UPDATED=20130303
+         UPDATED=20130511
            SHORT="gtk+ web rendering engine"
 
 cat << EOF

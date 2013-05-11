@@ -1,11 +1,11 @@
+# breaks without webgl for now
 OPTS+=" --with-target=x11             \
-        --with-unicode-backend=icu    \
-        --with-font-backend=freetype  \
         --enable-xslt                 \
         --enable-optimizations        \
         --disable-glibtest            \
         --with-gtk=3.0                \
         --enable-video                \
+        --enable-webgl                \
         --disable-web-audio           \
         --disable-gtk-doc-html"      &&
 
@@ -25,7 +25,7 @@ do
   fi
 done &&
 unset error_count &&
-make install &&
+
 install 'Programs/GtkLauncher' '/usr/bin/Gtk3Launcher' &&
 
 # symlink plugin folder to a location webkit looks for it
