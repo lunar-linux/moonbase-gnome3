@@ -1,0 +1,17 @@
+          MODULE=clutter-gtk
+         VERSION=1.4.4
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha1:15fa002070671eca0f14e2b7c9c0580b6393f14d
+        WEB_SITE=http://clutter-project.org
+         ENTERED=20030415
+         UPDATED=201304512
+           SHORT="GTK clutter widget"
+
+cat << EOF
+Clutter-GTK is a library providing facilities to integrate Clutter into GTK+
+applications and vice versa.
+Clutter-GTK provides a GTK+ widget, GtkClutterEmbed, for embedding the a Clutter
+stage into any GtkContainer; and GtkClutterActor, a Clutter actor for embedding 
+any GtkWidget inside a Clutter stage.
+EOF

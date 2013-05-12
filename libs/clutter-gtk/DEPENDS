@@ -1,0 +1,3 @@
+depends clutter
+depends gtk+-3
+
