@@ -1,11 +1,11 @@
           MODULE=gnome-themes-standard
-         VERSION=3.6.5
+         VERSION=3.8.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:a1d19fb26d1799f477b03e11caa8f187aa04ae50
+      SOURCE_VFY=sha1:802391e75ca03e3888c9e1bf007f008c2bc0789f
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20130217
-         UPDATED=20130219
+         UPDATED=20130420
            SHORT="Default themes for the GNOME desktop"
 
 cat << EOF
