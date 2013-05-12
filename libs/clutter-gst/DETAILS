@@ -1,0 +1,27 @@
+          MODULE=clutter-gst
+         VERSION=2.0.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha1:00ffd71bb4e8709275a0ea2fddeac7518f469212
+        WEB_SITE=http://clutter-project.org
+         ENTERED=20030415
+         UPDATED=20130512
+           SHORT="GStreamer bindings for clutter"
+
+cat << EOF
+Clutter-Gst is an integration library for using GStreamer with Clutter.
+It provides a GStreamer sink to upload frames to GL and an actor that
+implements the ClutterMedia interface using playbin2.
+
+Clutter is an open source software library for creating fast, visually
+rich and animated graphical user interfaces. It uses OpenGL for drawing
+primitives and has multiple backends, allowing its usage on different
+platforms.
+
+GStreamer is a streaming media framework, based on graphs of filters
+which operate on media data.  Applications using this library can do
+anything from real-time sound processing to playing videos, and just
+about anything else media-related.  Its plugin-based architecture means
+that new data types or processing capabilities can be added simply by
+installing new plug-ins.
+EOF
