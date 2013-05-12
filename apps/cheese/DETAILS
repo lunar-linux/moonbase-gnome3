@@ -1,0 +1,14 @@
+          MODULE=cheese
+         VERSION=3.8.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha1:cb130806ae435bc4874cd47eb91b43b4e7a6f701
+        WEB_SITE=http://www.gnome.org/projects/cheese
+         ENTERED=20080817
+         UPDATED=20130420
+           SHORT="webcam picture taker"
+
+cat << EOF
+Cheese uses your webcam to take photos and videos, applies fancy
+special effects and lets you share the fun with others.
+EOF

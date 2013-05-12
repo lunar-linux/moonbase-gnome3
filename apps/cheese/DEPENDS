@@ -1,0 +1,8 @@
+depends clutter-gst
+depends clutter-gtk
+depends gst-plugins-good
+depends gnome-desktop
+depends libcanberra
+depends libgee
+depends librsvg
+
