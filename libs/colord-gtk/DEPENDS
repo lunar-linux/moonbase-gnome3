@@ -1,0 +1,6 @@
+depends colord
+depends gtk+-3
+depends lcms2
+depends vala
+
+
