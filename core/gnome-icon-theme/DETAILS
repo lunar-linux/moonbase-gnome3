@@ -1,12 +1,12 @@
           MODULE=gnome-icon-theme
-         VERSION=2.31.0
-          SOURCE=$MODULE-$VERSION.tar.bz2
+         VERSION=3.8.0
+          SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:ed6f5ccfc871281e632f80c3d9a756f201758862
+      SOURCE_VFY=sha1:426bcd2b74a9c0f44b3190ae36430a80bcd2c879
         WEB_SITE=http://www.gnome.org
          ENTERED=20021202
-         UPDATED=20101111
-           SHORT="Default icon themes for GNOME 2"
+         UPDATED=20130411
+           SHORT="Default icon themes for GNOME"
 
 cat << EOF
 gnome-icon-theme contains the default icon theme used by the GNOME
