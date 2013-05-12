@@ -1,0 +1,11 @@
+depends  intltool
+depends  clutter-gtk
+depends  colord-gtk
+depends  desktop-file-utils
+depends  exiv2
+depends  gnome-desktop
+depends  hicolor-icon-theme
+depends  libcanberra
+depends  libexif
+depends  vte3
+

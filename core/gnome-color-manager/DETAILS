@@ -1,0 +1,15 @@
+          MODULE=gnome-color-manager
+         VERSION=3.8.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha1:09289e184fa7607493fab46ad9e2a916aa9da14c
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20130415
+         UPDATED=20130415
+           SHORT="Color profile manager for the GNOME desktop"
+
+cat << EOF
+GNOME Color Manager is a session framework for the GNOME desktop environment
+that makes it easy to manage easy to manage, install and generate color
+profiles.
+EOF
