@@ -1,11 +1,11 @@
           MODULE=gtkhtml
-         VERSION=4.6.4
+         VERSION=4.6.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:560bee55a0384b9b3879af56fd882a032054a0c1
+      SOURCE_VFY=sha1:5a985e00d50eb1e0523c829726906be24eab8e64
         WEB_SITE=http://www.gnome.org
          ENTERED=20021118
-         UPDATED=20130302
+         UPDATED=20130513
            SHORT="HTML rendering/editing library"
            PSAFE=no
 
