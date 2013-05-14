@@ -2,14 +2,14 @@
          VERSION=1.8.0
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=$MODULE-gnome-autogen.sh.tar.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-screensaver-d39a898
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-screensaver-3f325c3
       SOURCE_URL=http://github.com/linuxmint/$MODULE/tarball/$VERSION
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:
+      SOURCE_VFY=sha1:baca6cf9ff2fd430f7aea376b2e5276804efe12a
      SOURCE2_VFY=sha1:960552a3d589544b29b4e203b9d1d70ee5bb8529
         WEB_SITE=http://github.com/linuxmint/nemo
          ENTERED=20130303
-         UPDATED=20130509
+         UPDATED=20130513
            SHORT="Cinnamon screenaver"
 
 cat <<EOF
