@@ -1,11 +1,11 @@
           MODULE=gsettings-desktop-schemas
-         VERSION=3.8.0
+         VERSION=3.8.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:5eb43f06efcad3b1312e0a5901196428de2e616b
+      SOURCE_VFY=sha1:6fb3e8e0bcd28a30fb8192502149b4c1a03b4c8e
         WEB_SITE=http://live.gnome.org
          ENTERED=20130210
-         UPDATED=20130411
+         UPDATED=20130514
            SHORT="Shared GSettings schemas for the desktop"
 
 cat <<EOF
