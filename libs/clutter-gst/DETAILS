@@ -1,11 +1,11 @@
           MODULE=clutter-gst
-         VERSION=2.0.2
+         VERSION=2.0.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:00ffd71bb4e8709275a0ea2fddeac7518f469212
+      SOURCE_VFY=sha1:623923ac8bfee20f0ce60b2d3671673ad342afaa
         WEB_SITE=http://clutter-project.org
          ENTERED=20030415
-         UPDATED=20130512
+         UPDATED=20130524
            SHORT="GStreamer bindings for clutter"
 
 cat << EOF
