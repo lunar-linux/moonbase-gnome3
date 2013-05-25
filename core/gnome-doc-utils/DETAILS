@@ -1,11 +1,11 @@
           MODULE=gnome-doc-utils
-         VERSION=0.20.6
-          SOURCE=$MODULE-$VERSION.tar.bz2
+         VERSION=0.20.10
+          SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:c11dda3cff4248a6918cfaf0d7b892fc20bf329e
+      SOURCE_VFY=sha1:8320a30e1b7239aa33ba276da046090407a93bbf
         WEB_SITE=http://www.gnome.org
          ENTERED=20050315
-         UPDATED=20111118
+         UPDATED=20130525
            SHORT="Documentation utilities for the GNOME project"
 
 cat << EOF

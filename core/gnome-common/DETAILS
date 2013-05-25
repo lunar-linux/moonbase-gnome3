@@ -1,11 +1,11 @@
           MODULE=gnome-common
-         VERSION=3.6.0
+         VERSION=3.7.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:63a99fb27f8288595d516ee927929036312a86e1
+      SOURCE_VFY=sha1:b02cd66b73d3ded795f187f725be150ee08f13ac
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20130216
-         UPDATED=20130216
+         UPDATED=20130525
            SHORT="Common development macros for GNOME"
 
 cat << EOF
