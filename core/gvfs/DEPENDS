@@ -1,10 +1,10 @@
 depends  dconf
 depends  dbus
-depends  udisks2
 depends  intltool
 depends  gtk+-3
 depends  openssh
 
+optional_depends  "udisks2"      "--enable-udisks2"  "--disable-udisks2"  "For udisk support"
 optional_depends  "libsecret"    "--enable-keyring"  "--disable-keyring"  "For Keyring support"
 optional_depends  "libarchive"   "--enable-archive"  "--disable-archive"  "For archive support"
 optional_depends  "openobex"     "--enable-obexftp"  "--disable-obexftp"  "For ObexFTP support"
