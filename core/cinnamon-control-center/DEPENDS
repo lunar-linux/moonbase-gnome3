@@ -1,0 +1,6 @@
+depends  cinnamon
+depends  libgtop
+depends  gnome-color-manager
+depends  krb5
+
+optional_depends  "mesa-demos"  ""  ""  "for glxinfo graphics information"
