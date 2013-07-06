@@ -1,0 +1,46 @@
+depends  gtk+-3
+depends  poppler
+depends  gnome-icon-theme
+depends  gnome-doc-utils
+depends  desktop-file-utils
+depends  gobject-introspection
+depends  libsecret
+
+optional_depends  "dconf" "" "" "to save user settings"
+
+optional_depends  "gobject-introspection"   \
+                  "--enable-introspection"  \
+                  ""                        \
+                  "for introspection support"
+
+optional_depends  "tiff"  \
+                  "--enable-tiff"   \
+                  "--disable-tiff"  \
+                  "support multi-page TIFF files"
+
+optional_depends  "dbus-glib"  \
+                  ""           \
+                  "--disable-dbus"  \
+                  "for DBus support"
+
+optional_depends  "libspectre"    \
+                  "--enable-ps"   \
+                  "--disable-ps"  \
+                  "compile with PostScript support"
+
+optional_depends  "texlive"         \
+                  "--enable-dvi"    \
+                  "--disable-dvi"   \
+                  "for DVI back-end support"
+
+optional_depends  "t1lib"           \
+                  "--enable-t1lib"  \
+                  ""                \
+                  "for Type 1 fonts in DVI"
+
+optional_depends  "nautilus"  \
+                  "--enable-nautilus"   \
+                  "--disable-nautilus"  \
+                  "compile the nautilus plugin"
+
+
