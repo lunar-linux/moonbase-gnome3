@@ -1,0 +1,14 @@
+          MODULE=gnome-icon-theme-extras
+         VERSION=3.6.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha1:c3b74fa14a882c68f88729ac4bd6b201ca6a4679
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20130706
+         UPDATED=20130706
+           SHORT="extra icons for gnome icon theme"
+
+cat << EOF
+gnome-icon-theme-extras provides additional icons
+for the gnome icon theme.
+EOF
