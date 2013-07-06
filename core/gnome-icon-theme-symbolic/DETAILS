@@ -1,0 +1,16 @@
+          MODULE=gnome-icon-theme-symbolic
+         VERSION=3.8.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha1:39c5149f18c1fc24f96e1338bfad01519a5110a5
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20130706
+         UPDATED=20130706
+           SHORT="Symbolic icon theme for GNOME"
+
+cat << EOF
+Purpose of this icon theme is to extend the base
+gnome icon theme that follows the Tango style guidelines
+for speciic purposes. This would include OSD messages,
+panel system/notification area, and possibly menu icons.
+EOF
