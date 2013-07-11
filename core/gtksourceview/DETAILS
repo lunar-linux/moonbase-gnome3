@@ -6,10 +6,10 @@
         WEB_SITE=http://www.gnome.org
          ENTERED=20030510
          UPDATED=20130708
-           SHORT="Text widget that extends the gtk+-2 text widget GtkTextView"
+           SHORT="Text widget that extends the gtk+-3 text widget GtkTextView"
 
 cat << EOF
-GtkSourceView is a text widget that extends the standard gtk+-2 text
+GtkSourceView is a text widget that extends the standard gtk+-3 text
 widget GtkTextView. It improves GtkTextView by implementing syntax
 highlighting and other features typical of a source editor.
 EOF
