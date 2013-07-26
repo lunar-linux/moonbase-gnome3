@@ -5,4 +5,6 @@ fi  &&
 # ignore unrecognized format function type warning
 sedit 's:CFLAGS="$CFLAGS -Werror=format"::' configure &&
 
+OPTS+=" --with-python=python2" &&
+
 default_build
