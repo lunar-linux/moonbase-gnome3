@@ -1,11 +1,11 @@
           MODULE=transmission
-         VERSION=2.81
+         VERSION=2.82
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://download.transmissionbt.com/files
-      SOURCE_VFY=sha1:2ca458982054b4ad21bdbdb8cf085c96e5118e34
+      SOURCE_VFY=sha1:1081542e2692147e45dde7c310b793abc4f33f2d
         WEB_SITE=http://transmissionbt.com
          ENTERED=20060626
-         UPDATED=20130719
+         UPDATED=20130810
            SHORT="A fast and powerful BitTorrent client"
 
 cat << EOF
