@@ -4,4 +4,4 @@ depends libevent
 depends openssl
 
 optional_depends "gtk+-3"     "--with-gtk"      "--without-gtk"       "for the GUI interface"
-optional_depends "libnotify"  "--with-inotify"  "--without-inotify"   "for inotify support"
+optional_depends "libnotify4" "--with-inotify"  "--without-inotify"   "for inotify support"
