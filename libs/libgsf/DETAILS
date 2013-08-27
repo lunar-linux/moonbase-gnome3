@@ -1,11 +1,11 @@
           MODULE=libgsf
-         VERSION=1.14.27
+         VERSION=1.14.28
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:b6082b71bf9d6e1cdafde9628cae58fcedc4a8fd
+      SOURCE_VFY=sha1:6e361410a8922bd5970add23398868abab47608f
         WEB_SITE=http://www.gnome.org
          ENTERED=20021118
-         UPDATED=20130624
+         UPDATED=20130827
            SHORT="Provides an API to access OLE2 streams"
 
 cat << EOF
