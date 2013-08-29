@@ -1,4 +1,3 @@
-depends  libexif
 depends  gvfs
 depends  dconf
 depends  desktop-file-utils
@@ -9,3 +8,5 @@ depends  gnome-icon-theme
 depends  libnotify4
 
 #optional_depends  "gksu"  ""  ""  "open it as root"
+optional_depends  "exempi"   ""                  ""                   "for XMP metadata support"
+optional_depends  "libexif"  "--enable-libexif"  "--disable-libexif"  "for exif support"
