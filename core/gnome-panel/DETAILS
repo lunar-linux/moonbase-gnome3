@@ -1,14 +1,11 @@
           MODULE=gnome-panel
-         VERSION=3.6.2
+         VERSION=3.8.0
           SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=$MODULE-3.8.x.patch
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:9e7a94dedba0e6514c8dd634f08bc7c1c3d3b338
-     SOURCE2_VFY=sha1:ee6ababf4d1dbe44749749becbdcc3a8d5a57191
+      SOURCE_VFY=sha1:1d701832358b0c29964669cdd3bbe90035a794f5
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20120706
-         UPDATED=20130525
+         UPDATED=20130929
            SHORT="The GNOME Panel"
 
 cat << EOF
