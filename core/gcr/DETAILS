@@ -1,11 +1,11 @@
           MODULE=gcr
-         VERSION=3.6.2
+         VERSION=3.8.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:95ee30fb6424e13baa6ae53584ccd8b0cf4c9798
+      SOURCE_VFY=sha1:241acff88075bb6a8f7ee199c0e31ce6c768806e
         WEB_SITE=http://www.gnome.org
          ENTERED=20130218
-         UPDATED=20130218
+         UPDATED=20131005
            SHORT="A library for bits of crypto UI and parsing"
 
 cat << EOF
