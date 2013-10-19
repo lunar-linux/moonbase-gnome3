@@ -1,4 +1,4 @@
-sedit "s:--warn-all --warn-error::" src/Makefile.am  &&
+patch_it $SOURCE3 1 &&
 
 sedit "s:gnome-autogen.sh:.\/gnome-autogen.sh:" autogen.sh  &&
 

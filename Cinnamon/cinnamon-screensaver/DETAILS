@@ -1,17 +1,21 @@
           MODULE=cinnamon-screensaver
-         VERSION=1.8.0
+         VERSION=2.0.0
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=$MODULE-gnome-autogen.sh.tar.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-screensaver-3f325c3
+         SOURCE3=nemo-2.0.0-automake-1.14.patch.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-screensaver-40f21bc
       SOURCE_URL=http://github.com/linuxmint/$MODULE/tarball/$VERSION
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:baca6cf9ff2fd430f7aea376b2e5276804efe12a
+     SOURCE3_URL=$PATCH_URL
+      SOURCE_VFY=sha1:2fd3e53d479be795219ebafce6946cff9af59bb0
      SOURCE2_VFY=sha1:960552a3d589544b29b4e203b9d1d70ee5bb8529
+     SOURCE3_VFY=sha1:c8686cc8744e565ef33b913f7045ce5a45e00f88
         WEB_SITE=http://github.com/linuxmint/nemo
          ENTERED=20130303
-         UPDATED=20130513
+         UPDATED=20131019
            SHORT="Cinnamon screenaver"
 
 cat <<EOF
 This is the screensaver for the Cinnamon desktop environment.
 EOF
+
