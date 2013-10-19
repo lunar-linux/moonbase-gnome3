@@ -2,5 +2,6 @@ depends  cinnamon
 depends  libgtop
 depends  gnome-color-manager
 depends  krb5
+depends  cinnamon-settings-daemon
 
 optional_depends  "mesa-demos"  ""  ""  "for glxinfo graphics information"
