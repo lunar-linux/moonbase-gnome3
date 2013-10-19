@@ -12,6 +12,7 @@ depends gnome-menus
 depends gnome-desktop
 depends gnome-settings-daemon
 depends libgnome-keyring
+depends cinnamon-desktop
 
 # fails to start without working themes
 depends gnome-themes-standard

@@ -6,6 +6,7 @@ depends  gnome-common
 depends  gnome-desktop
 depends  gnome-icon-theme
 depends  libnotify4
+depends  cinnamon-desktop
 
 #optional_depends  "gksu"  ""  ""  "open it as root"
 optional_depends  "exempi"   ""                  ""                   "for XMP metadata support"
