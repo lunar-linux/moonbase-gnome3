@@ -1,11 +1,11 @@
           MODULE=libgnome-keyring
-         VERSION=3.8.0
+         VERSION=3.10.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:5540ac37ef38768d6df9f15ab340132e6653df93
+      SOURCE_VFY=sha1:ecce42ab9d12155c4a11fc2fcd801813b9e786be
         WEB_SITE=http://www.gnome.org
          ENTERED=20100403
-         UPDATED=20130411
+         UPDATED=20131019
            SHORT="A interface library to gnome-keyring"
 
 cat << EOF
