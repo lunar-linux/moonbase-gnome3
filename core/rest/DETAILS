@@ -6,7 +6,7 @@
         WEB_SITE=http://git.gnome.org/browse/librest
          ENTERED=20120728
          UPDATED=20131019
-           SHORT="library to easily access many web services"
+           SHORT="A library to easily access many web services"
 
 cat <<EOF
 This library has been designed to make it easier to access web services that
