@@ -1,0 +1,17 @@
+          MODULE=cinnamon-desktop
+         VERSION=2.0.1
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-desktop-099d6d3
+      SOURCE_URL=http://github.com/linuxmint/$MODULE/tarball/$VERSION
+      SOURCE_VFY=sha1:03451aa8f92c268ee4c59e6621314bd33b0381a8
+        WEB_SITE=http://github.com/linuxmint/nemo
+         ENTERED=20131019
+         UPDATED=20131019
+           SHORT="A library with common API for various Cinnamon modules"
+
+cat <<EOF
+cinnamon-desktop contains the libcinnamon-desktop library, the cinnamon-about
+program as well as some desktop-wide documents.
+The libcinnamon-desktop library provides API shared by several applications
+on the desktop.
+EOF

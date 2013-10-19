@@ -1,0 +1,4 @@
+depends  libxkbfile
+depends  gnome-common
+depends  gobject-introspection
+depends  intltool
