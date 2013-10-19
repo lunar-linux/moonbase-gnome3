@@ -1,12 +1,12 @@
           MODULE=cinnamon-control-center
-         VERSION=1.8.2
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-$MODULE-2249c94
+         VERSION=2.0.2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-$MODULE-387509f
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://github.com/linuxmint/$MODULE/tarball/$VERSION
-      SOURCE_VFY=sha1:6ef591d14e046344b400eb0e1a017279b0a03081
+      SOURCE_VFY=sha1:9f5b446f27191128bfdc25dc302a55fd1554a8d1
         WEB_SITE=http://github.com/linuxmint/$MODULE
          ENTERED=20130415
-         UPDATED=20130523
+         UPDATED=20131019
            SHORT="The Control Center for Cinnamon"
 
 cat << EOF
