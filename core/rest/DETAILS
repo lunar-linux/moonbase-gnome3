@@ -1,11 +1,11 @@
           MODULE=rest
-         VERSION=0.7.12
-          SOURCE=${MODULE}-${VERSION}.tar.xz
+         VERSION=0.7.90
+          SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:a773ec89227dd441b4fb2bb6d0fcd1cdefc529d4
+      SOURCE_VFY=sha1:c1b7be3afed247252e2a15b1f6510707cf9ceca4
         WEB_SITE=http://git.gnome.org/browse/librest
          ENTERED=20120728
-         UPDATED=20120728
+         UPDATED=20131019
            SHORT="library to easily access many web services"
 
 cat <<EOF
