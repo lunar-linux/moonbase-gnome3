@@ -1,11 +1,11 @@
           MODULE=gnome-icon-theme
-         VERSION=3.8.3
+         VERSION=3.10.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:7bc5c5cc623cc41156d7ab43caedf4c292de132c
+      SOURCE_VFY=sha1:45fac73ad9852ce25b45cf82e75a1ed4860f090b
         WEB_SITE=http://www.gnome.org
          ENTERED=20021202
-         UPDATED=20130731
+         UPDATED=20131019
            SHORT="Default icon themes for GNOME"
 
 cat << EOF
