@@ -1,0 +1,14 @@
+          MODULE=cjs
+         VERSION=2.0.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cjs-259581f
+      SOURCE_URL=http://github.com/linuxmint/$MODULE/tarball/$VERSION
+      SOURCE_VFY=sha1:9b177ee502c6bd1c77198e86c0a24651ae1055c6
+        WEB_SITE=http://github.com/linuxmint/$MODULE
+         ENTERED=20131019
+         UPDATED=20131019
+           SHORT="Javascript Bindings for Cinnamon"
+
+cat <<EOF
+This module contains JavaScript bindings based on gobject-introspection.
+EOF
