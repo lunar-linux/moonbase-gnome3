@@ -1,11 +1,7 @@
 depends  cinnamon-desktop
-depends  ibus
-depends  pulseaudio
-depends  libcanberra
-depends  librsvg
-depends  nss
 depends  upower
 depends  gnome-common
-depends  docbook-xsl
-depends  intltool
+depends  json-glib
+depends  xtrans
+
 

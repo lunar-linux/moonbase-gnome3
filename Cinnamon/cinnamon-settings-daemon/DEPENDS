@@ -7,5 +7,4 @@ depends  nss
 depends  upower
 depends  gnome-common
 depends  docbook-xsl
-depends  intltool
 
