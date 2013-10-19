@@ -12,7 +12,8 @@ depends gnome-menus
 depends gnome-desktop
 depends gnome-settings-daemon
 depends libgnome-keyring
-depends cinnamon-desktop
+depends cinnamon-settings-daemon
+depends NetworkManager
 
 # fails to start without working themes
 depends gnome-themes-standard
@@ -32,7 +33,3 @@ optional_depends  "nemo" \
                   ""     \
                   "the official Cinnamon file manager"
 
-optional_depends  "NetworkManager"            \
-                  "--enable-networkmanager"   \
-                  "--disable-networkmanager"  \
-                  "for NetworkManager support"
