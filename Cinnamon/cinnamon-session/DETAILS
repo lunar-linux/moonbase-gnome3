@@ -1,0 +1,14 @@
+          MODULE=cinnamon-session
+         VERSION=2.0.1
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-session-557e7d7
+      SOURCE_URL=http://github.com/linuxmint/$MODULE/tarball/$VERSION
+      SOURCE_VFY=sha1:3ff419236193b9241416545d4cdefdfa7e9c3e00
+        WEB_SITE=http://github.com/linuxmint/$MODULE
+         ENTERED=20131019
+         UPDATED=20131019
+           SHORT="The Cinnamon Session Handler"
+
+cat <<EOF
+The Cinnamon Session Handler.
+EOF
