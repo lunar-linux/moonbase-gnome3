@@ -1,0 +1,4 @@
+depends  gettext
+depends  gobject-introspection
+depends  intltool
+
