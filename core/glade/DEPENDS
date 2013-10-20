@@ -1,0 +1,10 @@
+depends  gtk+-3
+depends  desktop-file-utils
+depends  hicolor-icon-theme
+depends  libxml2
+depends  docbook-xsl
+depends  gobject-introspection
+depends  pygobject
+depends  intltool
+depends  gtk-doc
+
