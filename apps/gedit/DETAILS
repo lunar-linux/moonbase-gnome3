@@ -1,0 +1,14 @@
+          MODULE=gedit
+         VERSION=3.10.1
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha1:f07658d8df45873707bd599277e73da2f1c5847d
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20131020
+         UPDATED=20131020
+           SHORT="A text editor for GNOME"
+
+cat << EOF
+A text editor for GNOME.
+EOF
