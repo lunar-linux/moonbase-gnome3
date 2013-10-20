@@ -7,7 +7,8 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
         WEB_SITE=http://www.gnome.org
          ENTERED=20131020
          UPDATED=20131020
-           SHORT="GNOME Scientific calculato"
+           SHORT="GNOME Scientific calculator"
 
 cat << EOF
+GNOME Scientific calculator.
 EOF
