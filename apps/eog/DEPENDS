@@ -5,6 +5,7 @@ depends  gnome-icon-theme
 depends  libexif
 depends  lcms2
 depends  desktop-file-utils
+depends  gsettings-desktop-schemas
 depends  exempi
 depends  librsvg
 depends  intltool
