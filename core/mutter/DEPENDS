@@ -1,0 +1,12 @@
+depends  clutter
+depends  libSM
+depends  dconf
+depends  intltool
+depends  gsettings-desktop-schemas
+depends  libcanberra
+depends  gobject-introspection
+depends  startup-notification
+depends  zenity
+depends  gnome-desktop
+depends  upower
+depends  gnome-doc-utils
