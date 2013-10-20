@@ -1,0 +1,12 @@
+depends  dconf
+depends  gtk+-3
+depends  gtk-doc
+depends  gnome-icon-theme
+depends  libexif
+depends  lcms2
+depends  desktop-file-utils
+depends  exempi
+depends  librsvg
+depends  intltool
+depends  libpeas
+

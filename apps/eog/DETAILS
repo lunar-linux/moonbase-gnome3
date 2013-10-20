@@ -1,0 +1,14 @@
+          MODULE=eog
+         VERSION=3.10.1
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha1:381a564d71cc8a6ee3b63e59b6893bbbff107877
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20131020
+         UPDATED=20131020
+           SHORT="An image viewing and cataloging program"
+
+cat << EOF
+Eye of Gnome: An image viewing and cataloging program.
+EOF
