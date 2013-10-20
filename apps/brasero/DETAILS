@@ -1,0 +1,16 @@
+          MODULE=brasero
+         VERSION=3.8.0
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha1:5794044645470ddd68a6fdd738a1be750d52fcde
+        WEB_SITE=https://projects.gnome.org/brasero
+         ENTERED=20131020
+         UPDATED=20131020
+           SHORT="A disc burning application for Gnome"
+
+cat << EOF
+Brasero is a application to burn CD/DVD for the Gnome Desktop. It is designed to
+be as simple as possible and has some unique features to enable users to create
+their discs easily and quickly.
+EOF

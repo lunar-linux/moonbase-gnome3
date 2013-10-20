@@ -1,0 +1,20 @@
+#depends  cdrkit
+depends  cdrdao
+depends  dconf
+depends  gtk+-3
+depends  gst-plugins-good
+depends  desktop-file-utils
+depends  hicolor-icon-theme
+depends  libSM
+depends  shared-mime-info
+depends  libcanberra
+depends  dvdrtools
+depends  libnotify4
+depends  gnome-common
+depends  libburn
+depends  libisofs
+depends  gobject-introspection
+depends  GConf
+depends  docbook-xsl
+depends  intltool
+
