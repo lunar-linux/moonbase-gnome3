@@ -1,0 +1,9 @@
+depends  gnome-desktop
+depends  libexif
+depends  exempi
+depends  gvfs
+depends  desktop-file-utils
+depends  gnome-icon-theme
+depends  dconf
+depends  libnotify4
+depends  nautilus-sendto
