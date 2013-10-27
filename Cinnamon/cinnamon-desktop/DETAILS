@@ -1,12 +1,12 @@
           MODULE=cinnamon-desktop
-         VERSION=2.0.1
+         VERSION=2.0.2
           SOURCE=$MODULE-$VERSION.tar.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-desktop-099d6d3
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-desktop-d75129a
       SOURCE_URL=http://github.com/linuxmint/$MODULE/tarball/$VERSION
-      SOURCE_VFY=sha1:03451aa8f92c268ee4c59e6621314bd33b0381a8
+      SOURCE_VFY=sha1:9cf3e8f0234c0b6427347813572f3d72b8d70275
         WEB_SITE=http://github.com/linuxmint/$MODULE
          ENTERED=20131019
-         UPDATED=20131019
+         UPDATED=20131027
            SHORT="A library with common API for various Cinnamon modules"
 
 cat <<EOF
