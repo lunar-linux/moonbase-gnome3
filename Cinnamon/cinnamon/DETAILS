@@ -1,15 +1,15 @@
           MODULE=cinnamon
-         VERSION=2.0.2
+         VERSION=2.0.6
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=$MODULE-gnome-autogen.sh.tar.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-Cinnamon-94544d4
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-Cinnamon-8655baf
       SOURCE_URL=http://github.com/linuxmint/Cinnamon/tarball/$VERSION
      SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha1:2e51669350c85f4a3fe8c02017d2d0e2efd832b2
+      SOURCE_VFY=sha1:a4764ca47e9fae260643f586aa3d89cef679c805
      SOURCE2_VFY=sha1:2e9831bd6a0d19d6f33b267479fc591bc6b7f3c4
         WEB_SITE=http://cinnamon.linuxmint.com
          ENTERED=20130210
-         UPDATED=20131019
+         UPDATED=20131027
            SHORT="A Linux desktop based on GTK+-3"
 
 cat <<EOF
