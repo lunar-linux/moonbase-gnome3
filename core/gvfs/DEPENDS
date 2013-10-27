@@ -14,3 +14,4 @@ optional_depends  "fuse"         "--enable-fuse"     "--disable-fuse"     "For F
 optional_depends  "libgphoto2"   "--enable-gphoto2"  "--disable-gphoto2"  "For Gphoto2 support"
 optional_depends  "samba"        "--enable-samba"    "--disable-samba"    "For Samba support"
 optional_depends  "avahi"        "--enable-avahi"    "--disable-avahi"    "For avahi support"
+optional_depends  "libmtp"       "--enable-libmtp"   "--disable-libmtp"   "For mtp support"

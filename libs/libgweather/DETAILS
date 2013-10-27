@@ -1,11 +1,11 @@
           MODULE=libgweather
-         VERSION=3.8.2
+         VERSION=3.10.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:f8fc3772e7c48b084e39e05f997d30016ca4a76c
+      SOURCE_VFY=sha1:3de7fb3357d074d914d001be4bd379cf013a3aba
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20120706
-         UPDATED=20130513
+         UPDATED=20131027
            SHORT="Provides access to weather information from the net"
 
 cat << EOF
