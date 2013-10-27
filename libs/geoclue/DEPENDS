@@ -1,0 +1,4 @@
+depends  intltool
+depends  libsoup
+depends  json-glib
+
