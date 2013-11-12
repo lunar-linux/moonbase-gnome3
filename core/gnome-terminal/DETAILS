@@ -1,12 +1,12 @@
           MODULE=gnome-terminal
-         VERSION=3.10.1
+         VERSION=3.10.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:8b6538918bb908b6b0878f77700fd41673353ceb
+      SOURCE_VFY=sha1:4256e63bc5c6f009a59a7434c39ae75a3e322f45
         WEB_SITE=http://www.gnome.org
          ENTERED=20020714
-         UPDATED=20131019
-           SHORT="The GNOME terminal emulator"
+         UPDATED=20131112
+          SHORT="The GNOME terminal emulator"
 
 cat << EOF
 GNOME Terminal is a terminal emulation application. It features the
