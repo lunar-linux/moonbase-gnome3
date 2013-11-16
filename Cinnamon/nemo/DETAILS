@@ -12,7 +12,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-nemo-13796e7
      SOURCE3_VFY=sha1:c8686cc8744e565ef33b913f7045ce5a45e00f88
         WEB_SITE=http://github.com/linuxmint/nemo
          ENTERED=20130302
-         UPDATED=201311116
+         UPDATED=20131116
            SHORT="Cinnamon file manager (Nautilus fork)"
 
 cat <<EOF
