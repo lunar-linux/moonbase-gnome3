@@ -1,12 +1,12 @@
           MODULE=cinnamon-settings-daemon
-         VERSION=2.0.7
+         VERSION=2.0.8
           SOURCE=$MODULE-$VERSION.tar.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-settings-daemon-86d0ffb
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-settings-daemon-e6e2dd4
       SOURCE_URL=http://github.com/linuxmint/$MODULE/tarball/$VERSION
-      SOURCE_VFY=sha1:a517a347b12217ad96d4b321f26ee7d11ff1b45e
+      SOURCE_VFY=sha1:61909ffd6448e3dab64741468e02bac4c66ca5ce
         WEB_SITE=http://github.com/linuxmint/$MODULE
          ENTERED=20131019
-         UPDATED=20131116
+         UPDATED=20131130
            SHORT="The Cinnamon Settings daemon"
 
 cat <<EOF
