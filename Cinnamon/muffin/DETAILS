@@ -1,12 +1,12 @@
           MODULE=muffin
-         VERSION=2.0.3
+         VERSION=2.0.5
           SOURCE=$MODULE-$VERSION.tar.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-$MODULE-be47b0c
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-$MODULE-5e58a74
       SOURCE_URL=http://github.com/linuxmint/$MODULE/tarball/$VERSION
-      SOURCE_VFY=sha1:017ad71ef8457122781afbad91988d41521a1ba2
+      SOURCE_VFY=sha1:fab99cbbb33de900c3a93c686ca016ff6d4dc5f7
         WEB_SITE=http://github.com/linuxmint/muffin
          ENTERED=20130210
-         UPDATED=20131027
+         UPDATED=20131130
            SHORT="A window manager based on Mutter"
 
 cat <<EOF
