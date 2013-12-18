@@ -4,5 +4,6 @@ depends pango
 depends cairo
 depends gdk-pixbuf
 depends gobject-introspection
+depends gdbus-codegen
 
 depends at-spi2-atk
