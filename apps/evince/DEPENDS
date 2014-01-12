@@ -1,7 +1,6 @@
 depends  gtk+-3
 depends  poppler
 depends  gnome-icon-theme-symbolic
-depends  gnome-doc-utils
 depends  desktop-file-utils
 depends  gobject-introspection
 depends  libsecret
@@ -44,4 +43,7 @@ optional_depends  "nautilus"  \
                   "--disable-nautilus"  \
                   "compile the nautilus plugin"
 
-
+optional_depends  gnome-doc-utils \
+                  "--enable-gtk-doc" \
+                  "--disable-gtk-doc" \
+                  "build documentation"
