@@ -1,0 +1,7 @@
+default_pre_build &&
+
+# make sure the build doesn't break without scrollkeeper
+# yes, it's ugly; yes it works
+if ! in_depends $MODULE scrollkeeper; then
+  sedit 's@absfile=$(srcdir)/$$file.out@absfile=$(srcdir)/$$file@' doc/C/Makefile.in
+fi

@@ -19,6 +19,7 @@ optional_depends  "libgda" \
                   "--with-gda" \
                   "--without-gda" \
                   "compile the Gnome Database Access plugin"
+
 optional_depends  libgnomedb \
                   "" \
 		  " " \
@@ -28,3 +29,9 @@ optional_depends  "psiconv" \
                   "--with-psiconv" \
                   "--without-psiconv" \
                   "compile with Psiconv support"
+
+# intentionally a single blank - disabled in PRE_BUILD
+optional_depends  "scrollkeeper" \
+                  "" \
+                  " " \
+                  "use documentation"
