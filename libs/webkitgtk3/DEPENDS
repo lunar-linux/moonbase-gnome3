@@ -7,6 +7,7 @@ depends  libxslt
 depends  sqlite
 depends  %JPEG
 depends  libpng
+depends  libwebp
 depends  freetype2
 depends  libsoup
 depends  libsecret
