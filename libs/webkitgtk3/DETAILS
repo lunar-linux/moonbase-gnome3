@@ -1,13 +1,13 @@
 # BUILD OPTIONS IN CONFIGURE/DEPENDS WORK AGAIN!
           MODULE=webkitgtk3
-         VERSION=2.2.5
+         VERSION=2.4.0
           SOURCE=webkitgtk-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/webkitgtk-$VERSION
       SOURCE_URL=http://www.webkitgtk.org/releases
-      SOURCE_VFY=sha1:561dd0cf3d6cb42a7b90dc311fbacb2aac11a317
+      SOURCE_VFY=sha1:d7dade39ebeded72ddf7ac37a9d9ed17ac68dcba
         WEB_SITE=http://www.webkit.org
          ENTERED=20070919
-         UPDATED=20140226
+         UPDATED=20140412
            SHORT="gtk+ web rendering engine"
 
 cat << EOF
