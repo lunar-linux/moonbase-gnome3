@@ -1,12 +1,12 @@
           MODULE=brasero
-         VERSION=3.10.0
+         VERSION=3.11.3
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:5fd0f43c5e8a7d59dabfec88988d7711c9246e1e
+      SOURCE_VFY=sha1:8b7a10daed32cc0aec473eb6ba1d20ad2f10dfb8
         WEB_SITE=https://projects.gnome.org/brasero
          ENTERED=20131020
-         UPDATED=20131126
+         UPDATED=20140412
            SHORT="A disc burning application for Gnome"
 
 cat << EOF
