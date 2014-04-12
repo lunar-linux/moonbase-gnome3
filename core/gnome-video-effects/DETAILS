@@ -1,11 +1,11 @@
           MODULE=gnome-video-effects
-         VERSION=0.4.0
+         VERSION=0.4.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:8cf5f8dd0376b13703efd35627e34d4857801c5a
+      SOURCE_VFY=sha1:4ccf161fc45c54d3dead7bfdebcd59b3a2f8c02b
         WEB_SITE=http://www.gnome.org
          ENTERED=20130415
-         UPDATED=20130415
+         UPDATED=20140412
            SHORT="A collection of GStreamer effects"
 
 cat << EOF
