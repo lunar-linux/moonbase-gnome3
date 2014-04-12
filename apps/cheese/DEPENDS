@@ -1,6 +1,7 @@
 depends clutter-gst
 depends clutter-gtk
 depends gst-plugins-good
+depends gnome-video-effects
 depends gnome-desktop
 depends libcanberra
 depends libgee
