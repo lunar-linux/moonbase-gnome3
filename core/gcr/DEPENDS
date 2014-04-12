@@ -2,3 +2,5 @@ depends gtk+-3
 depends dconf
 depends libgcrypt
 depends p11-kit
+depends hicolor-icon-theme
+depends desktop-file-utils
