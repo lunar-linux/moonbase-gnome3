@@ -1,0 +1,18 @@
+          MODULE=geoclue2
+         VERSION=2.1.4
+          SOURCE=geoclue-$VERSION.tar.xz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/geoclue-$VERSION
+      SOURCE_URL=http://freedesktop.org/software/$MODULE/releases/${VERSION%.*}
+      SOURCE_VFY=sha1:96c18d91f4b9b879fc67f29508b0f335060f100d
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20140413
+         UPDATED=20140413
+           SHORT="A modular geoinformation service"
+
+cat << EOF
+Geoclue is a modular geoinformation service built on top of the D-Bus messaging
+system. The goal of the Geoclue project is to make creating location-aware
+applications as simple as possible. Geoclue is Free Software, licensed under GNU
+LGPL. It is developed for Linux, but should be portable to any platform that
+uses D-Bus.
+EOF
