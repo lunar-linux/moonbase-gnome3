@@ -1,11 +1,11 @@
           MODULE=clutter-gtk
-         VERSION=1.4.4
+         VERSION=1.5.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:15fa002070671eca0f14e2b7c9c0580b6393f14d
+      SOURCE_VFY=sha1:eaca5b5571f031c0804876ae727795b9ba4261ba
         WEB_SITE=http://clutter-project.org
          ENTERED=20030415
-         UPDATED=20130512
+         UPDATED=20140413
            SHORT="GTK clutter widget"
 
 cat << EOF
