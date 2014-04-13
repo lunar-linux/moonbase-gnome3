@@ -1,11 +1,11 @@
           MODULE=gnome-icon-theme-extras
-         VERSION=3.6.2
+         VERSION=3.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:c3b74fa14a882c68f88729ac4bd6b201ca6a4679
+      SOURCE_VFY=sha1:1ec91dc4f20c6877589124bc76c1ac2db1accb01
         WEB_SITE=http://www.gnome.org
          ENTERED=20130706
-         UPDATED=20130706
+         UPDATED=20140413
            SHORT="extra icons for gnome icon theme"
 
 cat << EOF
