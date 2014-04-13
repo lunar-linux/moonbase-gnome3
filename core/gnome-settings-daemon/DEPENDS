@@ -12,4 +12,4 @@ depends  ibus
 depends  xf86-input-wacom
 depends  libwacom
 depends  geocode-glib
-depends  geoclue
+depends  geoclue2
