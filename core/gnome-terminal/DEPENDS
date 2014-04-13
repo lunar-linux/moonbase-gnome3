@@ -1,4 +1,6 @@
 depends  libSM
 depends  GConf
 depends  gsettings-desktop-schemas
+depends  appdata-tools
+depends  itstool
 depends  vte3
