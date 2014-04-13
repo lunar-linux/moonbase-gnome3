@@ -1,11 +1,11 @@
           MODULE=gnome-icon-theme-symbolic
-         VERSION=3.10.1
+         VERSION=3.12.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:5b61ee13f0a93615a7aba525438b1b6d452ba94b
+      SOURCE_VFY=sha1:e0d84c1d8983f37c7697afd55df69de8aae02b03
         WEB_SITE=http://www.gnome.org
          ENTERED=20130706
-         UPDATED=20131019
+         UPDATED=20140413
            SHORT="Symbolic icon theme for GNOME"
 
 cat << EOF
