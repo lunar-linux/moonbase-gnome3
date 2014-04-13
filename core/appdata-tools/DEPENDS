@@ -1,0 +1,3 @@
+depends  libsoup
+depends  gdk-pixbuf
+

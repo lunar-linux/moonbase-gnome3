@@ -1,0 +1,14 @@
+          MODULE=appdata-tools
+         VERSION=0.1.7
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=http://people.freedesktop.org/~hughsient/releases/
+      SOURCE_VFY=sha1:3a4fb2326c79c2a58e27b4943fe76adb65bd3c49
+        WEB_SITE=http://github.com/hughsie/appdata-ools/
+         ENTERED=20140413
+         UPDATED=20140413
+          SHORT="Validate AppData descriptions for standards compliance"
+
+cat << EOF
+The appdata-tools is used to validate AppData files to conform to standard
+specification  and to the style guide.
+EOF
