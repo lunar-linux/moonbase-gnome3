@@ -1,0 +1,17 @@
+          MODULE=ModemManager
+         VERSION=1.2.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=http://www.freedesktop.org/software/$MODULE/
+      SOURCE_VFY=sha1:1e17965716a1b27a8b250e813dbeb135d88b0bb9
+        WEB_SITE=http://www.freedesktop.org/wiki/Software/ModemManager/
+         ENTERED=20140413
+         UPDATED=20140403
+           SHORT="Mobile broadband modem management service"
+
+cat << EOF
+ModemManager is a DBus-activated daemon which controls mobile broadband (2G/3G/4G)
+devices and connections. Whether built-in devices, USB dongles, bluetooth-paired
+telephones, or professional RS232/USB devices with external power supplies,
+ModemManager is able to prepare and configure the modems and setup connections with
+them.
+EOF

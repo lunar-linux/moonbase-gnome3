@@ -1,0 +1,9 @@
+depends polkit
+depends ppp
+depends libqmi
+depends libmbim
+depends gobject-introspection
+depends vala
+
+optional_depends "usbmodesswitch" "" "" "if your modes shows up as a storage drive"
+
