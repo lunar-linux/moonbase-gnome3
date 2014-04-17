@@ -1,12 +1,12 @@
           MODULE=gedit
-         VERSION=3.12.0
+         VERSION=3.12.1
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:772641654cad00b3a7eb1c3f389abc49a2d7a092
+      SOURCE_VFY=sha1:f7bc20e516cdde557e1a8a65de0f74922e934764
         WEB_SITE=http://www.gnome.org
          ENTERED=20131020
-         UPDATED=20140413
+         UPDATED=20140417
            SHORT="A text editor for GNOME"
 
 cat << EOF
