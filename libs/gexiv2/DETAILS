@@ -1,0 +1,14 @@
+          MODULE=gexiv2
+         VERSION=0.10.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=http://ftp.gnome.org/pub/gnome/sources/$MODULE/${VERSION%.0}/
+      SOURCE_VFY=sha1:f139e1b9e149ed60addcb834be7847043ac9984d
+        WEB_SITE=http://wiki.gnome.org/Projects/gexiv2
+         ENTERED=20100909
+         UPDATED=20140417
+           SHORT="GObject-based wrapper around exiv2"
+
+cat << EOF
+GObject-based wrapper around exiv2
+EOF
+

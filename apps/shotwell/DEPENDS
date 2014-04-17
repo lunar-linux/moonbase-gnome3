@@ -1,6 +1,6 @@
 depends vala
 depends libgee
-depends libgexiv2
+depends gexiv2
 depends libgphoto2
 depends libsoup
 depends libunique
