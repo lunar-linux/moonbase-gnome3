@@ -1,0 +1,5 @@
+depends readline
+depends libffi
+depends nspr
+depends Python
+depends zip

@@ -1,0 +1,19 @@
+          MODULE=mozjs
+         VERSION=24.2.0
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=http://ftp.mozilla.org/pub/mozilla.org/js/
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/mozjs-$VERSION
+      SOURCE_VFY=sha256:e62f3f331ddd90df1e238c09d61a505c516fe9fd8c5c95336611d191d18437d8
+        WEB_SITE=http://developer.mozilla.org/En/SpiderMonkey/17
+         ENTERED=20140418
+         UPDATED=20140418
+           SHORT="JavaScript interpreter and libraries"
+           PSAFE=no
+
+cat << EOF
+This is SpiderMonkey, Mozilla's C implementation of JavaScript.
+SpiderMonkey is written in C and contains a compiler, interpreter,
+decompiler, garbage collector, and standard classes. It is intended to
+be embedded in other applications that provide host environments for
+JavaScript.
+EOF
