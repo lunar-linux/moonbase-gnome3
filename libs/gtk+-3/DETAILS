@@ -1,12 +1,12 @@
           MODULE=gtk\+-3
-         VERSION=12.1
+         VERSION=12.2
           SOURCE=$MODULE.$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE.$VERSION
       SOURCE_URL=$GNOME_URL/sources/gtk+/3.${VERSION%%.*}
-      SOURCE_VFY=sha1:38399dabbbca0eab1d74a45a3e16473494b071a3
+      SOURCE_VFY=sha1:9727843d1389306fcad80f92bb50201f1f43f894
         WEB_SITE=http://www.gtk.org
          ENTERED=20120706
-         UPDATED=20140415
+         UPDATED=20140514
            SHORT="GTK+ is a multi-platform toolkit for creating GUIs"
 
 cat << EOF
