@@ -1,11 +1,11 @@
           MODULE=cheese
-         VERSION=3.12.1
+         VERSION=3.12.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:a071b38e72d3810ca70e766b301c80e852603150
+      SOURCE_VFY=sha1:8447bd1b5657e54ab6cbe0e10df496d2f1835253
         WEB_SITE=http://www.gnome.org/projects/cheese
          ENTERED=20080817
-         UPDATED=20140417
+         UPDATED=20140525
            SHORT="webcam picture taker"
 
 cat << EOF
