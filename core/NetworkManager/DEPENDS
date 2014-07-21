@@ -6,6 +6,7 @@ depends polkit
 depends wpa_supplicant
 depends ppp
 depends libsoup
+depends libndp
 
 optional_depends "dhcpcd"    "" "" "alternative DHCP client"
 optional_depends "iptables"  "" "" "Connection sharing"
