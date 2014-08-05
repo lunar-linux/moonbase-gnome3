@@ -11,4 +11,4 @@ depends libndp
 optional_depends "dhcpcd"    "" "" "alternative DHCP client"
 optional_depends "iptables"  "" "" "Connection sharing"
 optional_depends "dnsmasq"   "" "" "Connection sharing"
-optional_depends "bluez"     "" "" "Bluetooth support"
+optional_depends "%BLUEZ"    "" "" "Bluetooth support"
