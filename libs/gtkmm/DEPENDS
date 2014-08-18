@@ -1,0 +1,4 @@
+depends gtk+-3
+depends cairomm
+depends pangomm
+depends atkmm
