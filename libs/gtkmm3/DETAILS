@@ -1,14 +1,14 @@
-          MODULE=gtkmm
+          MODULE=gtkmm3
          VERSION=3.12.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+          SOURCE=gtkmm-$VERSION.tar.xz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/gtkmm-$VERSION
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha1:1765232c113d71a16a0600b1158574c9e3d965c6
         WEB_SITE=http://gtkmm.org
          ENTERED=20021225
          UPDATED=20140417
-           SHORT="C++ bindings for gtk2 and glib2"
+           SHORT="C++ bindings for GTK+3"
 
 cat << EOF
-gtkmm2 is the official C++ binding for GTK+2 and Glib2.
+C++ binding for GTK+3.
 EOF
