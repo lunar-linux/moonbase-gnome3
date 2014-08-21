@@ -1,5 +1,6 @@
 depends  intltool
 depends  libsoup
 depends  json-glib
+depends  guile
 depends  NetworkManager
 depends  ModemManager
