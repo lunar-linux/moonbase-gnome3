@@ -1,6 +1,7 @@
+depends  dbus-glib
 depends  cairo
 depends  gobject-introspection
-depends  spidermonkey
-depends  dbus-glib
+depends  MOZJS
+
 
 
