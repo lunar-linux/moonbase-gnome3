@@ -1,0 +1,13 @@
+          MODULE=metacity
+         VERSION=3.14.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:1a4ebf77478fd948f62aa3df26cf7fa9bd9a2c2a98c30d3bcdf7dd8e1cf3d6f4
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20141018
+         UPDATED=20141018
+           SHORT="A legacy window manager for GNOME"
+
+cat << EOF
+A legacy window manager for GNOME.
+EOF
