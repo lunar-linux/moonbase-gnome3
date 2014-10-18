@@ -7,8 +7,8 @@ depends wpa_supplicant
 depends ppp
 depends libsoup
 depends libndp
+depends iptables
 
 optional_depends "dhcpcd"    "" "" "alternative DHCP client"
-optional_depends "iptables"  "" "" "Connection sharing"
 optional_depends "dnsmasq"   "" "" "Connection sharing"
 optional_depends "%BLUEZ"    "" "" "Bluetooth support"
