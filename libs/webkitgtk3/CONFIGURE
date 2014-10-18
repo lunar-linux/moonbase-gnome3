@@ -1,4 +1,3 @@
 mquery ENABLE_SPELL "Enable support for spellcheck?" n "--enable-spellcheck" "--disable-spellcheck"
-
-# y to this breaks build with 1.8.2 so --disable is in BUILD for now
-#mquery ENABLE_WEB_AUDIO "Enable support for Web Audio ?" n " --enable-web-audio" "--disable-web-audio"
+mquery ENABLE_WEB_AUDIO "Enable support for Web Audio ?" n " --enable-web-audio" "--disable-web-audio"
+mquery ENABLE_DEBUG_SYMBOLS "Enable debug symbols?" n "--enable-debug-symbols=yes" "--enable-debug-symbols=no"
