@@ -20,7 +20,7 @@ depends  ruby
 # workaround for make_names.pl
 depends Switch
 
-optional_depends "geoclue" \
+optional_depends "geoclue2" \
                  "--enable-geolocation" \
                  "--disable-geolocation" \
                  "for geolocation support"
