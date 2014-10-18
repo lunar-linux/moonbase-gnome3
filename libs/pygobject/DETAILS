@@ -1,11 +1,11 @@
           MODULE=pygobject
-         VERSION=3.10.2
+         VERSION=3.14.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:693cc1cb692a8f21ff27d28eaa780f5e67cafb1a
+      SOURCE_VFY=sha256:779effa93f4b59cdb72f4ab0128fb3fd82900bf686193b570fd3a8ce63392d54
         WEB_SITE=http://www.pygtk.org
          ENTERED=20050319
-         UPDATED=20140413
+         UPDATED=20141017
            SHORT="Python bindings for GObject"
 
 cat << EOF
