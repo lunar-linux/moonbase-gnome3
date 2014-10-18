@@ -13,3 +13,4 @@ depends  xf86-input-wacom
 depends  libwacom
 depends  geocode-glib
 depends  geoclue2
+depends  libgweather
