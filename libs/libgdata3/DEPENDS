@@ -1,0 +1,9 @@
+depends  gcr
+depends  libsoup
+depends  liboauth
+depends  uhttpmock
+
+optional_depends "vala"                   "--enable-vala"           "--disable-vala"           " for vala support"
+optional_depends "gnome-online-accounts"  "--enable-goa"            "--disable-goa"            " for GNOME Online Accounts support"
+optional_depends "gobject-introspection"  "--enable-introspection"  "--disable-introspection"  " for object introspection"
+

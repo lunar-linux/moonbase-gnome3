@@ -1,0 +1,11 @@
+depends  intltool
+depends  gcr
+depends  json-glib
+depends  libnotify4
+depends  libsecret
+depends  rest
+depends  webkitgtk3
+depends  docbook-xsl
+depends  krb5
+depends  telepathy-glib
+depends  gobject-introspection
