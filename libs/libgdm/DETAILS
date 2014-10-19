@@ -1,0 +1,15 @@
+          MODULE=libgdm
+         PKGNAME=gdm
+         VERSION=3.14.1
+          SOURCE=gdm-$VERSION.tar.xz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$PKGNAME-$VERSION
+      SOURCE_URL=$GNOME_URL/sources/gdm/${VERSION%.*}
+     SOURCE_VFY=sha256:ed83498131bcea69ce60f882783c669c24b007d2b7e1219b4bdde18f6c94deb1
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20141019
+         UPDATED=20141019
+           SHORT="GDM support library"
+
+cat << EOF
+GDM support library.
+EOF
