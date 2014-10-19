@@ -1,6 +1,0 @@
-depends  enchant
-depends  gtk+-3
-
-optional_depends "vala"                  "--enable-vala"           "--disable-vala"           " for vala support"
-optional_depends "gobject-introspection" "--enable-introspection"  "--disable-introspection"  " for object introspection"
-
