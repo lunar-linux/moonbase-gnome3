@@ -1,12 +1,12 @@
 # breaks without webgl for now
-OPTS+=" --with-target=x11             \
+OPTS+=" --enable-x11-target           \
         --enable-xslt                 \
         --enable-optimizations        \
+        --enable-introspection        \
         --disable-glibtest            \
         --with-gtk=3.0                \
         --enable-video                \
         --enable-webgl                \
-        --disable-web-audio           \
         --disable-gtk-doc-html"      &&
 
 #make build work even if gtk-doc is not installed
