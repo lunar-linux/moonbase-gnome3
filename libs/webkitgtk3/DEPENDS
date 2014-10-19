@@ -13,8 +13,8 @@ depends  libsoup
 depends  libsecret
 depends  harfbuzz
 depends  enchant
-depends  gst-plugins-base
-depends  gst-plugins-good
+depends  gst-plugins-base-1.0
+depends  gst-plugins-good-1.0
 depends  ruby
 
 # workaround for make_names.pl
