@@ -5,6 +5,9 @@ depends  desktop-file-utils
 depends  gobject-introspection
 depends  libsecret
 depends  itstool
+depends  gtk-doc
+depends  adwaita-icon-theme
+
 
 optional_depends  "dconf" "" "" "to save user settings"
 
@@ -42,8 +45,3 @@ optional_depends  "nautilus"  \
                   "--enable-nautilus"   \
                   "--disable-nautilus"  \
                   "compile the nautilus plugin"
-
-optional_depends  gnome-doc-utils \
-                  "--enable-gtk-doc" \
-                  "--disable-gtk-doc" \
-                  "build documentation"
