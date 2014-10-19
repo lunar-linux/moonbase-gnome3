@@ -1,5 +1,0 @@
-depends  intltool
-depends  glib-2
-depends  polkit
-depends  systemd
-depends  gobject-introspection
