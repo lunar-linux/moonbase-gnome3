@@ -1,6 +1,5 @@
 depends  dconf
 depends  gtk+-3
-depends  gtk-doc
 depends  gnome-icon-theme
 depends  libexif
 depends  lcms2
@@ -10,4 +9,7 @@ depends  exempi
 depends  librsvg
 depends  intltool
 depends  libpeas
+
+optional_depends  "gtk-doc" "--enable-gtk-doc" "--disable-gtk-doc" "for GTK documentation"
+
 
