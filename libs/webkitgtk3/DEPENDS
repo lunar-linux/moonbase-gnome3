@@ -13,17 +13,13 @@ depends  libsoup
 depends  libsecret
 depends  harfbuzz
 depends  enchant
-depends  gst-plugins-base
-depends  gst-plugins-good
+depends  gst-plugins-base-1.0
+depends  gst-plugins-good-1.0
 depends  ruby
+depends  geoclue2
 
 # workaround for make_names.pl
 depends Switch
-
-optional_depends "geoclue2" \
-                 "--enable-geolocation" \
-                 "--disable-geolocation" \
-                 "for geolocation support"
 
 optional_depends "librsvg" \
                  "--enable-svg --enable-svg-fonts" \
