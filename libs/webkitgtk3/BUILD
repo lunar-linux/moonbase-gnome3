@@ -1,6 +1,5 @@
 # breaks without webgl for now
 OPTS+=" --enable-x11-target           \
-        --enable-xslt                 \
         --enable-optimizations        \
         --enable-introspection        \
         --disable-glibtest            \
