@@ -2,12 +2,13 @@ depends  gvfs
 depends  dconf
 depends  desktop-file-utils
 depends  gtk-doc
-depends  gnome-common
 depends  gnome-desktop
 depends  gnome-icon-theme
 depends  libnotify4
 depends  cinnamon-desktop
+depends  cinnamon-translations
 
 #optional_depends  "gksu"  ""  ""  "open it as root"
+
 optional_depends  "exempi"   ""                  ""                   "for XMP metadata support"
 optional_depends  "libexif"  "--enable-libexif"  "--disable-libexif"  "for exif support"

@@ -1,18 +1,18 @@
           MODULE=nemo
-         VERSION=2.0.8
+         VERSION=2.2.4
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=$MODULE-gnome-autogen.sh.tar.gz
          SOURCE3=$MODULE-2.0.0-automake-1.14.patch.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-nemo-562e147
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-nemo-0f4f990
       SOURCE_URL=http://github.com/linuxmint/$MODULE/tarball/$VERSION
      SOURCE2_URL=$PATCH_URL
      SOURCE3_URL=$PATCH_URL
-      SOURCE_VFY=sha1:cd2e68c5aed1d3be31bed15f2ee9ceafd07363ed
-     SOURCE2_VFY=sha1:d10b1502f1b58cda2feb27c3c25b8a2d6eaa6b69
-     SOURCE3_VFY=sha1:c8686cc8744e565ef33b913f7045ce5a45e00f88
+      SOURCE_VFY=sha256:7dea1a9e1360b00840fe6cf3248c888eba09c3c1003c36aece3d40699787934a
+     SOURCE2_VFY=sha256:b868a9f61e0b218cdd515502671d41a48d0e1a719c4990ec87c22997521a501f
+     SOURCE3_VFY=sha256:e5957cb7d9b094a5c815bbbe06ba886d1ca5e0b8261a0c766bd5aff73a93ad4c
         WEB_SITE=http://github.com/linuxmint/nemo
          ENTERED=20130302
-         UPDATED=20131130
+         UPDATED=20141022
            SHORT="Cinnamon file manager (Nautilus fork)"
 
 cat <<EOF
