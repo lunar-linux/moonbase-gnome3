@@ -1,14 +1,21 @@
 depends dbus-glib
 depends iproute2
+depends iptables
 depends libnl3
 depends nss
 depends polkit
 depends wpa_supplicant
-depends ppp
 depends libsoup
 depends libndp
-depends iptables
+depends libsecret
+depends util-linux
+depends systemd
+depends vala
 
-optional_depends "dhcpcd"    "" "" "alternative DHCP client"
-optional_depends "dnsmasq"   "" "" "Connection sharing"
-optional_depends "%BLUEZ"    "" "" "Bluetooth support"
+optional_depends "dhcp"            "" "" "for standard DHCP client"
+optional_depends "dhcpcd"          "" "" "for alternative DHCP client"
+optional_depends "dnsmasq"         "" "" "for DNS forwarder and DHCP server with connection sharing support"
+optional_depends "gnome-bluetooth" "" "" "for Bluetooth support"
+optional_depends "ppp"             "" "" "for Point-to-Point Protocol with dial-up networking support"
+optional_depends "rp-pppoe"        "" "" "for Roaring Penguin's Point-to-Point Protocol over Ethernet support"
+optional_depends "ModemManager"    "" "" "for mobile broadband modem support"
