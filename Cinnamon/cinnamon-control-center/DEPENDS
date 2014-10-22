@@ -1,7 +1,13 @@
-depends  cinnamon
-depends  libgtop
-depends  gnome-color-manager
-depends  krb5
+depends  cinnamon-menus
 depends  cinnamon-settings-daemon
+depends  cinnamon-translations
+depends  network-manager-applet
+depends  libgnomekbd
 
-optional_depends  "mesa-demos"  ""  ""  "for glxinfo graphics information"
+optional_depends  "gnome-color-manager"  "" ""  "for color management tasks"
+optional_depends  "cups"                 "" ""  "for CUPS support"
+
+optional_depends  "systemd"           \
+                  "--enable-systemd"  \
+                  "--disable-systemd" \
+                   "for systemd support"
