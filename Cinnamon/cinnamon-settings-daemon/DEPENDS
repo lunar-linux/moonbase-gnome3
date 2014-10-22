@@ -3,8 +3,9 @@ depends  ibus
 depends  pulseaudio
 depends  libcanberra
 depends  librsvg
+depends  libgnomekbd
 depends  nss
 depends  upower
 depends  gnome-common
 depends  docbook-xsl
-
+depends  libnotify4
