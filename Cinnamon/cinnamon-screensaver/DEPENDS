@@ -1,2 +1,9 @@
-depends  cinnamon
-depends  gnome-screensaver
+depends  dbus-glib
+depends  libgnomekbd
+depends  cinnamon-desktop
+depends  cinnamon-translations
+
+optional_depends  "systemd"           \
+                  "--enable-systemd"  \
+                  "--disable-systemd" \
+                   "for systemd support"
