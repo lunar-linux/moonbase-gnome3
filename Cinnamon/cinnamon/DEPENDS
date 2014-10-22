@@ -1,27 +1,27 @@
+depends gstreamer-10
+depends clutter-gtk
+depends librsvg
+depends lxml
 depends accountsservice
 depends caribou
-depends gjs
-depends muffin
-depends gstreamer-10
-depends pulseaudio
-depends lxml
-depends libsoup
-depends gnome-common
-depends gnome-session
-depends gnome-menus
-depends gnome-desktop
+depends cjs
+depends cinnamon-control-center
+depends cinnamon-session
 depends gnome-settings-daemon
 depends libgnome-keyring
-depends cinnamon-settings-daemon
-depends NetworkManager
+depends muffin
+depends polkit-gnome
+depends webkitgtk3
 
 # fails to start without working themes
 depends gnome-themes-standard
 
-optional_depends  "libgnomekbd" \
-                  ""            \
-                  ""            \
-                  "to show keyboard layout from Keyboard applet"
+#depends gnome-backgrounds
+
+optional_depends  "gnome-bluetooth" \
+                  ""                \
+                  ""                \
+                  "for Bluetooth support"
 
 optional_depends  "cinnamon-screensaver" \
                   ""                     \
