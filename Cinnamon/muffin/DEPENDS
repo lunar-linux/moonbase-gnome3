@@ -1,10 +1,9 @@
-depends  libSM
 depends  clutter
+depends  dconf
 depends  gobject-introspection
 depends  startup-notification
 depends  zenity
 depends  gnome-doc-utils
-depends  gsettings-desktop-schemas
 depends  cinnamon-desktop
 
 optional_depends  "libcanberra"  "--with-libcanberra"  "--without-libcanberra"  "for sounds support using libcanberra"
