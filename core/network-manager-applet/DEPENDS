@@ -1,0 +1,9 @@
+depends gtk+-3
+depends libnotify4
+depends libsecret
+depends iso-codes
+depends NetworkManager
+depends gnome-icon-theme
+
+optional_depends "gnome-bluetooth" "" "" "Bluetooth support"
+optional_depends "ModemManager"    "" "" "Mobile braodband modem support"

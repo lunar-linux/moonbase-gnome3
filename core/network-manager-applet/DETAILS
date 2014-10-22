@@ -1,0 +1,13 @@
+          MODULE=network-manager-applet
+         VERSION=0.9.10.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION::3}
+      SOURCE_VFY=sha256:f5c26c692f538dc0145dc7d46d3d390754fad73d0ff06861c074c61f3dc54eca
+        WEB_SITE=http://gnome.org/projects/$MODULE
+         ENTERED=20141022
+         UPDATED=20141022
+           SHORT="Applet for managing network connections"
+
+cat << EOF
+Applet for managing network connections.
+EOF
