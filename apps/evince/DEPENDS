@@ -5,7 +5,6 @@ depends  desktop-file-utils
 depends  gobject-introspection
 depends  libsecret
 depends  itstool
-depends  gtk-doc
 depends  adwaita-icon-theme
 
 
@@ -45,3 +44,8 @@ optional_depends  "nautilus"  \
                   "--enable-nautilus"   \
                   "--disable-nautilus"  \
                   "compile the nautilus plugin"
+
+optional_depends  gtk-doc \
+                  "--enable-gtk-doc" \
+                  "--disable-gtk-doc" \
+                  "build documentation"
