@@ -1,4 +1,3 @@
-#depends  cdrkit
 depends  cdrdao
 depends  dconf
 depends  gtk+-3
