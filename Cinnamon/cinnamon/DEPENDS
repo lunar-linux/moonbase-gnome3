@@ -16,7 +16,7 @@ depends webkitgtk3
 # fails to start without working themes
 depends gnome-themes-standard
 
-#depends gnome-backgrounds
+optional_depends gnome-backgrounds  ""  ""  "for GNOME backgrounds image files"
 
 optional_depends  "gnome-bluetooth" \
                   ""                \
