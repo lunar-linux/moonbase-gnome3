@@ -3,3 +3,5 @@ depends  gnome-desktop
 depends  gsettings-desktop-schemas
 depends  libgnomekbd
 depends  systemd
+
+optional_depends gnome-backgrounds  ""  ""  "for GNOME backgrounds image files"
