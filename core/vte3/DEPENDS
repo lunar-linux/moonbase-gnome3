@@ -1,4 +1,5 @@
 depends  gobject-introspection
 depends  gtk+-3
+depends  vala
 
 optional_depends "pygtk" "--enable-python" "--disable-python" "for the python bindings"
