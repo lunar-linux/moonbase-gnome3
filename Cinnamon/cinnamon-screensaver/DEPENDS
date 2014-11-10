@@ -3,7 +3,7 @@ depends  libgnomekbd
 depends  cinnamon-desktop
 depends  cinnamon-translations
 
-optional_depends  "systemd"           \
-                  "--enable-systemd"  \
-                  "--disable-systemd" \
+optional_depends  "systemd"  \
+                  "--with-systemd"  \
+                  "--without-systemd" \
                    "for systemd support"

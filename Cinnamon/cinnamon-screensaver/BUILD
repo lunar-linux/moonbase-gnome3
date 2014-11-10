@@ -8,11 +8,10 @@ chmod +x gnome-autogen.sh &&
 
 ./autogen.sh --prefix=/usr     \
              --sysconfdir=/etc \
-             --libexecdir=/usr/lib/cinnamon-screensaver \
              --localstatedir=/var \
+             --libexecdir=/usr/lib/cinnamon-screensaver \
              --disable-static \
              --with-mit-ext   \
-             --with-systemd   \
              $OPTS           &&
 
 default_make
