@@ -6,4 +6,4 @@ depends NetworkManager
 depends gnome-icon-theme
 
 optional_depends "gnome-bluetooth" "" "" "Bluetooth support"
-optional_depends "ModemManager"    "" "" "Mobile braodband modem support"
+optional_depends "ModemManager"    "" "" "Mobile broadband modem support"
