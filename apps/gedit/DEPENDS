@@ -5,9 +5,10 @@ depends  iso-codes
 depends  gtksourceview
 depends  desktop-file-utils
 depends  gsettings-desktop-schemas
-depends  pygobject
 depends  intltool
 depends  libpeas
 
-optional_depends  "vala"  "--enable-vala=yes"  "--enable-vala=no"  "for vala bindings"
+# Needs pygobject compiled with Python3
+#optional_depends  "pygobject"  "--enable-python"  "--disable-python"  "for Python 3.x bindings"
 
+optional_depends  "vala"  "--enable-vala"  "--enable-vala"  "for vala bindings"
