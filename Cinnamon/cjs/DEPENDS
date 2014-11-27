@@ -1,6 +1,6 @@
 depends  cairo
 depends  gobject-introspection
-depends  spidermonkey
+depends  mozjs
 depends  dbus-glib
 
 
