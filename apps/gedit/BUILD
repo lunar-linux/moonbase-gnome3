@@ -1,6 +1,6 @@
 (
 
-  OPTS+=" --disable-python"
+  OPTS+=" --enable-python"
 
   default_build
 
