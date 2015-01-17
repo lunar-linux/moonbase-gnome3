@@ -1,11 +1,11 @@
           MODULE=colord-gtk
-         VERSION=0.1.25
+         VERSION=0.1.26
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://www.freedesktop.org/software/colord/releases
-      SOURCE_VFY=sha1:ffb27568ff25860fbcc09cc32ba05469655b099d
+      SOURCE_VFY=sha256:28d00b7f157ea3e2ea5315387b2660fde82faba16674861c50465e55d61a3e45
         WEB_SITE=http://www.freedesktop.org/software/colord
          ENTERED=20030415
-         UPDATED=20130512
+         UPDATED=20150117
            SHORT="GTK integration for libcolord"
 
 cat << EOF
