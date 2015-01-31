@@ -1,0 +1,25 @@
+depends intltool
+depends gtk-doc
+depends accountsservice
+depends gcr
+depends gjs
+depends libcroco
+depends libsecret
+depends libgdm
+depends caribou
+depends mutter
+depends gnome-bluetooth
+depends gnome-menus
+depends gnome-session
+depends gnome-settings-daemon
+depends gnome-themes-standard
+depends unzip
+depends gstreamer
+
+optional_depends "evolution-data-server"  ""  ""  "for evolution calendar intergation"
+#optional_depends "gnome-control-center"   ""  ""  "for system settings integration"
+
+
+optional_depends "gtk-doc"               "--enable-gtk-doc"        "--disable-gtk-doc"        "for documentation generation"
+optional_depends "NetworkManager"        "--enable-networkmanager" "--disable-networkmanager" "for Network Manager support"
+optional_depends "gobject-introspection" "--enable-introspection"  "--disable-introspection"  " for object introspection"
