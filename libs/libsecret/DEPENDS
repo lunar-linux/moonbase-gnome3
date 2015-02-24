@@ -1,2 +1,7 @@
-depends  glib-2
-depends  libgcrypt
+depends glib-2
+depends libgcrypt
+depends docbook-xsl
+depends intltool
+depends vala
+
+optional_depends gnome-keyring "" "" "for key storage service"
