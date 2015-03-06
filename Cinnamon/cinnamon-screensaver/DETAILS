@@ -1,18 +1,18 @@
           MODULE=cinnamon-screensaver
-         VERSION=2.4.0
+         VERSION=2.4.1
           SOURCE=$MODULE-$VERSION.tar.gz
          SOURCE2=$MODULE-gnome-autogen.sh.tar.gz
          SOURCE3=nemo-2.0.0-automake-1.14.patch.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-screensaver-b1fe3d5
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-screensaver-b0794ee
       SOURCE_URL=http://github.com/linuxmint/$MODULE/tarball/$VERSION
      SOURCE2_URL=$PATCH_URL
      SOURCE3_URL=$PATCH_URL
-      SOURCE_VFY=sha256:b899bbd18969b80cf631d28a831245020ce483595c48621dae6d8d846e426d02
+      SOURCE_VFY=sha256:bc298f80d56ad1e22ec7fe16075c40ed6259d2320f8e34b4e67043b5569668ef
      SOURCE2_VFY=sha256:e34a422d24772e2a64e45331a3f7f6aef34f02c5c38a7138204d1e9116f535b0
      SOURCE3_VFY=sha256:e5957cb7d9b094a5c815bbbe06ba886d1ca5e0b8261a0c766bd5aff73a93ad4c
         WEB_SITE=http://github.com/linuxmint/$MODULE
          ENTERED=20130303
-         UPDATED=20141110
+         UPDATED=20150306
            SHORT="Cinnamon screenaver"
 
 cat <<EOF
