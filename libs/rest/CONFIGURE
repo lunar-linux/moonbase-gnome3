@@ -1,1 +1,0 @@
-mquery ENABLE_GNOME "Build with gnome support(requires libsoup to be build with gnome support)?" n "" "--without-gnome"
