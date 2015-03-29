@@ -1,11 +1,11 @@
           MODULE=rest
-         VERSION=0.7.92
+         VERSION=0.7.93
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:07548c8785a3e743daf54a82b952ff5f32af94fee68997df4c83b00d52f9c0ec
+      SOURCE_VFY=sha256:c710644455340a44ddc005c645c466f05c0d779993138ea21a62c6082108b216
         WEB_SITE=http://git.gnome.org/browse/librest
          ENTERED=20120728
-         UPDATED=20141018
+         UPDATED=20150329
            SHORT="A library to easily access many web services"
 
 cat <<EOF
