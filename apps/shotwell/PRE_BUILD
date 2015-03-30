@@ -1,0 +1,7 @@
+default_pre_build &&
+
+# it doesn't overlay /usr/lib/pkgconfig/shotwell-plugin-dev-1.0.pc
+# which is automatically detected by valac
+if module_installed $MODULE; then
+  lrm --upgrade $MODULE
+fi
