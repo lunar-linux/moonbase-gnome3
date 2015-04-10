@@ -2,12 +2,15 @@
           MODULE=webkitgtk3
          VERSION=2.4.8
           SOURCE=webkitgtk-$VERSION.tar.xz
+         SOURCE2=webkitgtk-2.4.8-gmutexlocker.patch
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/webkitgtk-$VERSION
       SOURCE_URL=http://www.webkitgtk.org/releases
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:68f11559cb178679ca92acc9e3a3d7febede7acb7b98afd7fb761875bbc6bd23
+     SOURCE2_VFY=sha256:fabd056013b6d3408b359419a1440ec9c31ce970878f4502a2781bd56b3feff1
         WEB_SITE=http://www.webkit.org
          ENTERED=20070919
-         UPDATED=20150117
+         UPDATED=20150409
            SHORT="gtk+ web rendering engine"
 
 cat << EOF
