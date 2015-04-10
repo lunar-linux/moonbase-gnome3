@@ -12,7 +12,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-screensaver-8467494
      SOURCE3_VFY=sha256:e5957cb7d9b094a5c815bbbe06ba886d1ca5e0b8261a0c766bd5aff73a93ad4c
         WEB_SITE=http://github.com/linuxmint/$MODULE
          ENTERED=20130303
-         UPDATED=20150306
+         UPDATED=20150410
            SHORT="Cinnamon screenaver"
 
 cat <<EOF
