@@ -1,7 +1,7 @@
 depends  cdrdao
 depends  dconf
 depends  gtk+-3
-depends  gst-plugins-good
+depends  gst-plugins-good-1.0
 depends  desktop-file-utils
 depends  hicolor-icon-theme
 depends  libSM
