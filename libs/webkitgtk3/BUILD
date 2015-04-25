@@ -1,3 +1,6 @@
+
+patch_it $SOURCE2 1 &&
+
 # breaks without webgl for now
 OPTS+=" --enable-x11-target           \
         --enable-optimizations        \
