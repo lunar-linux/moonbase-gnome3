@@ -3,5 +3,3 @@ depends libxml2
 
 optional_depends "polkit" ""              "--disable-defaults-service" "for polkit support"
 optional_depends "gtk+-3" "--enable-gtk"  "--disable-gtk"              "for GTK+-3 Support"
-
-optional_depends "ORBit2" "--enable-orbit" "--disable-orbit" "use ORBit for IPC"
