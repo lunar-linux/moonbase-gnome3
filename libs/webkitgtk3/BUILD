@@ -30,7 +30,8 @@
     mkdir build-2 &&
     cp -a Documentation build-2 &&
     cd build-2
-    ../configure --prefix=/usr $OPTS &&
+    OPTS+=" --with-gtk=2.0 --disable-webkit2" &&
+    ../configure --prefix=/usr$OPTS &&
     default_make &&
     install 'Programs/GtkLauncher' '/usr/bin/Gtk2Launcher'
   fi &&
