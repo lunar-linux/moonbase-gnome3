@@ -15,11 +15,11 @@
     sed -i '/gtkdoc --rebase/s:^:# :' GNUmakefile.in
   fi &&
 
-# First we build the gtk3 version
+# First we build the gtk3 version sans webkit2
   mkdir build-3 &&
   cp -a Documentation build-3 &&
   cd build-3
-  OPTS+=" --with-gtk=3.0" &&
+  OPTS+=" --with-gtk=3.0 --disable-webkit2" &&
   ../configure --prefix=/usr $OPTS &&
   default_make &&
   install 'Programs/GtkLauncher' '/usr/bin/Gtk3Launcher' &&
@@ -30,7 +30,7 @@
     mkdir build-2 &&
     cp -a Documentation build-2 &&
     cd build-2
-    OPTS+=" --with-gtk=2.0 --disable-webkit2" &&
+    OPTS+=" --with-gtk=3.0 --enable-webkit2" &&
     ../configure --prefix=/usr$OPTS &&
     default_make &&
     install 'Programs/GtkLauncher' '/usr/bin/Gtk2Launcher'

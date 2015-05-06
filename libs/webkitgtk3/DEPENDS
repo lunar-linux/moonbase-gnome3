@@ -21,7 +21,7 @@ depends  geoclue2
 # workaround for make_names.pl
 depends Switch
 
-optional_depends "gtk+-2" "" "" "To build supported WebKit2 graphics widgets" y
+optional_depends "gtk+-2" "" "" "For webkit2 support" y
 
 optional_depends "librsvg" \
                  "--enable-svg --enable-svg-fonts" \
