@@ -1,16 +1,14 @@
           MODULE=abiword
-         VERSION=2.9.4
+         VERSION=3.0.1
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://www.abisource.com/downloads/$MODULE/$VERSION/source
-      SOURCE_VFY=sha1:67cfbc633129128a1aa48ffba8959229cef2ebdd
+      SOURCE_VFY=sha256:e094f6fbf0afc5c5538b4894888e7c346f8ee8f49c9d24821dd696d0734865c6
         WEB_SITE=http://www.abisource.com
          ENTERED=20011224
-         UPDATED=20130219
+         UPDATED=20150518
            SHORT="A full-featured, yet light and fast word processor"
 
 cat << EOF
-THIS IS AN UNSTABLE RELEASE! NOT RECOMMENTED FOR PRODUCTIVE USE!
-
 Abiword is a free word processing program similar to Microsoft Word.
 It is suitable for typing papers, letter, reports, memos and so forth.
 EOF
