@@ -1,5 +1,3 @@
-patch_it $SOURCE3 1 &&
-
 sedit "s:gnome-autogen.sh:.\/gnome-autogen.sh:" autogen.sh  &&
 
 cp -f $SCRIPT_DIRECTORY/pam.d/cinnamon-screensaver data/  &&
