@@ -1,5 +1,3 @@
-patch_it $SOURCE3 1 &&
-
 sed -i '/AC_SUBST(DISABLE_DEPRECATED_CFLAGS)/d' configure.in  &&
 
 #sedit "s:--warn-all --warn-error::" src/Makefile.am  &&
