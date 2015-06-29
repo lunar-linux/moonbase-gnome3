@@ -1,3 +1,4 @@
+depends  gtk+-3
 depends  libxkbfile
 depends  gnome-common
 depends  gobject-introspection
