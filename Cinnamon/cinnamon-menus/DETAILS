@@ -1,12 +1,12 @@
           MODULE=cinnamon-menus
-         VERSION=2.4.1
+         VERSION=2.6.0
           SOURCE=$MODULE-$VERSION.tar.gz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-menus-0334183
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linuxmint-cinnamon-menus-f0e1374
       SOURCE_URL=http://github.com/linuxmint/$MODULE/tarball/$VERSION
-      SOURCE_VFY=sha256:c5ab512ac4f2767eb3e0e165f2bf133e3866a1ae6cecfe9725393ecd3f1c6289
+      SOURCE_VFY=sha256:b7a04a54024e2df2d65ef46df35f7312b83c28379c7fa61a1909f2965094e14a
         WEB_SITE=http://github.com/linuxmint/$MODULE
          ENTERED=20140512
-         UPDATED=20150124
+         UPDATED=20150629
            SHORT="Cinnamon menu specifications"
 
 cat <<EOF
