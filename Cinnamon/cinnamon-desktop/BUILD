@@ -1,3 +1,5 @@
+sedit "s:subdir-objects::g" configure.ac &&
+
 ./autogen.sh --prefix=/usr                  \
              --sysconfdir=/etc              \
              --libexecdir=/usr/lib/cinnamon \
@@ -6,6 +8,7 @@
              --enable-compile-warnings=no   \
              $OPTS                         &&
 
-sedit "s:-Werror:-W :" Makefile  &&
+
+sedit "s:-Werror:-W :" Makefile &&
 
 default_make
