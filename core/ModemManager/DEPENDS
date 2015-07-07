@@ -4,6 +4,7 @@ depends libqmi
 depends libmbim
 depends gobject-introspection
 depends vala
+depends libgudev
 
 optional_depends "usb-modeswitch" "" "" "if your modes shows up as a storage drive"
 
