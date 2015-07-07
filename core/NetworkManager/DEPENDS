@@ -10,6 +10,7 @@ depends libndp
 depends libsecret
 depends util-linux
 depends systemd
+depends libgudev
 depends vala
 
 optional_depends "dhcp"            "" "" "for standard DHCP client"
