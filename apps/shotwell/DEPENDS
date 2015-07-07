@@ -13,3 +13,4 @@ depends rest
 depends gstreamer
 depends gst-plugins-base-1.0
 depends gnome-doc-utils
+depends libgudev
