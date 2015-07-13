@@ -1,1 +1,5 @@
 depends  gtk+-3
+depends  gdk-pixbuf
+
+optional_depends "gobject-introspection"  "--enable-introspection"  "--disable-introspection"  " for object introspection"
+
