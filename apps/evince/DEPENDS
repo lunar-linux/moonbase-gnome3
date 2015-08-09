@@ -6,9 +6,9 @@ depends  gobject-introspection
 depends  libsecret
 depends  itstool
 depends  adwaita-icon-theme
-depends  gsfonts
 
-optional_depends  "dconf" "" "" "to save user settings"
+optional_depends  "dconf"   "" "" "to save user settings"
+optional_depends  "gsfonts" "" "" "for URW+Postcript core 35 fonts"
 
 optional_depends  "gobject-introspection"   \
                   "--enable-introspection"  \
