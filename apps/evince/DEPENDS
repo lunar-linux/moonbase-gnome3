@@ -6,7 +6,7 @@ depends  gobject-introspection
 depends  libsecret
 depends  itstool
 depends  adwaita-icon-theme
-
+depends  gsfonts
 
 optional_depends  "dconf" "" "" "to save user settings"
 
