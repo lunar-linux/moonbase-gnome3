@@ -1,11 +1,11 @@
           MODULE=appstream-glib
-         VERSION=0.3.0
+         VERSION=0.4.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://people.freedesktop.org/~hughsient/$MODULE/releases/
-      SOURCE_VFY=sha256:3551753f06d9f96390786d5d300aef868c2620d1dc7557c42d0269d3b7c17bdf
+      SOURCE_VFY=sha256:e999383cd7ab1875b345f738789cb0fe55faa5caebdf4de6507aead649592ada
         WEB_SITE=http://github.com/hughsie/appdata-ools/
          ENTERED=20140413
-         UPDATED=20141018
+         UPDATED=20150820
           SHORT="A library to read/write AppStream metadata"
 
 cat << EOF
