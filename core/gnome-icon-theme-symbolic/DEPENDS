@@ -1,6 +1,5 @@
-depends  gettext
-depends  intltool
-depends  shared-mime-info
-depends  hicolor-icon-theme
-depends  icon-naming-utils
-depends  gnome-icon-theme
+depends intltool
+depends hicolor-icon-theme
+depends icon-naming-utils
+depends librsvg
+
