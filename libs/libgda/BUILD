@@ -1,4 +1,3 @@
+OPTS+=" --sysconfdir=/etc --disable-gtk-doc-html --localstatedir=/var" &&
 
- OPTS+=" --sysconfdir=/etc --disable-gtk-doc-html --localstatedir=/var"
-
- default_build
+default_build
