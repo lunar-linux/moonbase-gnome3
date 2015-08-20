@@ -1,11 +1,11 @@
           MODULE=gnome-menus
-         VERSION=3.10.1
+         VERSION=3.13.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:29226e7a8ab59984cabb13545cc0ec28cba55398
+      SOURCE_VFY=sha256:7c446eb8ff381df52b8ba04e5886497595e84d1bc46caf7af764d894736c654e
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20120706
-         UPDATED=20131019
+         UPDATED=20150820
            SHORT="GNOME menu specifications"
 
 cat << EOF
