@@ -1,11 +1,11 @@
           MODULE=zenity
-         VERSION=3.14.0
+         VERSION=3.16.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:6b57ec6c456af17714dc366e63dabb8bbe0577878b61907805f0186d4d2b892f
+      SOURCE_VFY=sha256:7fe28016fbc5b1fc6d8f730d8eabd5ae2d8b7d67c8bfa0270811ff0c2bfb1eba
         WEB_SITE=http://www.gnome.org
          ENTERED=20030205
-         UPDATED=20141018
+         UPDATED=20150820
            SHORT="Displays graphical dialog boxes from the command line"
 
 cat << EOF

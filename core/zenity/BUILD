@@ -1,3 +1,3 @@
-OPTS+=" --sysconfdir=/etc --localstatedir=/var " &&
+OPTS+=" --sysconfdir=/etc --localstatedir=/var" &&
 
 default_build
