@@ -4,7 +4,7 @@
           SOURCE=$PAKNAME-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$PAKNAME-$VERSION
       SOURCE_URL=http://ftp.gnome.org/pub/GNOME/sources/$PAKNAME/${VERSION%.*}
-      SOURCE_VFY=sha1:956ce02a9f2c9fb74a81a765358131efdb7bf536
+      SOURCE_VFY=sha256:0ef61ca400d30e28217979bfa0e73a7406b19c32dd76150654ec5b2bdf47d837
         WEB_SITE=http://www.galago-project.org
          ENTERED=20060526
          UPDATED=20131004
