@@ -1,5 +1,5 @@
-depends  dconf
-depends  gtk+-3
-depends  vala
-depends  intltool
+depends dconf
+depends gtksourceview
+depends vala
+depends intltool
 
