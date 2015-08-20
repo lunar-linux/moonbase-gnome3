@@ -2,10 +2,10 @@
          VERSION=3.6.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:22af6dfa9c55903a7624bc093718ef472b86cb51
+      SOURCE_VFY=sha256:f39b78d4f7fed748c7f0a31d694112fb907c6d3c4e63db22eb858df07e962cd0
         WEB_SITE=http://live.gnome.org/GnomeScreensaver
          ENTERED=20061130
-         UPDATED=20130303
+         UPDATED=20150820
            SHORT="A screensaver control for Gnome"
 
 cat << EOF

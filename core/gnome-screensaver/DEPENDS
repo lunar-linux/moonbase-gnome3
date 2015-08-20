@@ -1,7 +1,7 @@
-depends  dbus-glib
-depends  gnome-desktop
-depends  gsettings-desktop-schemas
-depends  libgnomekbd
-depends  systemd
+depends dbus-glib
+depends gnome-desktop
+depends gnome-common
+depends libgnomekbd
+depends systemd
 
-optional_depends gnome-backgrounds  ""  ""  "for GNOME backgrounds image files"
+optional_depends gnome-backgrounds "" "" "for GNOME backgrounds image files"
