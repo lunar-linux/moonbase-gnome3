@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 depends db
 depends nss
 depends libgweather
@@ -5,7 +6,14 @@ depends libical
 depends libgdata
 depends gnome-common
 depends vala
+=======
+depends  db
+depends  nss
+depends  libgweather
+depends  libical
+depends  libgdata
+>>>>>>> parent of 3bdeb65... libgdata: version bumped to 0.17.1.
 
-optional_depends "gnome-online-accounts" "--enable-goa"           "--disable-goa"           " for GNOME Online Accounts support"
-optional_depends "gobject-introspection" "--enable-introspection" "--disable-introspection" " for object introspection"
+optional_depends "gnome-online-accounts"  "--enable-goa"            "--disable-goa"            " for GNOME Online Accounts support"
+optional_depends "gobject-introspection"  "--enable-introspection"  "--disable-introspection"  " for object introspection"
 
