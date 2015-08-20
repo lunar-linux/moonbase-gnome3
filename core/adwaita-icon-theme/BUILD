@@ -1,4 +1,8 @@
-default_build &&
+default_config &&
+
+sedit "s:\$(prefix)/\$(DATADIRNAME):/usr/share:" Makefile po/Makefile &&
+
+default_make &&
 
 if [ ! -e /etc/gtk-3.0/settings.ini ]; then
    cat > settings.ini <<EOF &&

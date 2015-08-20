@@ -1,8 +1,11 @@
           MODULE=adwaita-icon-theme
-         VERSION=3.16.2
+         VERSION=3.16.2.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:9c6662ad739cdb32d0ffe638f54e5033c5ea6f53e7f8c2b412ec64b8e7e1b4c2
+         SOURCE2=adwaita-keep_po.patch
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:4}
+     SOURCE2_URL=$PATCH_URL
+      SOURCE_VFY=sha256:b4556dfbf555d4fac12d4d5c12f7519de0d43ec42a1b649611439a50bf7acb96
+     SOURCE2_VFY=sha256:0976de3b97122ea7dc83108274f475d692d15aebda9dda4ae4aab97c4ee3433e
         WEB_SITE=http://www.gnome.org
          ENTERED=20021202
          UPDATED=20150820
