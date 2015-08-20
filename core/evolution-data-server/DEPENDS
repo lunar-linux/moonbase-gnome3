@@ -1,9 +1,9 @@
-depends  db
-depends  nss
-depends  libgweather
-depends  libical
-depends  libgdata
+depends db
+depends nss
+depends libgweather
+depends libical
+depends libgdata
 
-optional_depends "gnome-online-accounts"  "--enable-goa"            "--disable-goa"            " for GNOME Online Accounts support"
-optional_depends "gobject-introspection"  "--enable-introspection"  "--disable-introspection"  " for object introspection"
+optional_depends "gnome-online-accounts" "--enable-goa"           "--disable-goa"           " for GNOME Online Accounts support"
+optional_depends "gobject-introspection" "--enable-introspection" "--disable-introspection" " for object introspection"
 

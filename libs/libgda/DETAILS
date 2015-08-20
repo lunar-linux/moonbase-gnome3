@@ -1,15 +1,15 @@
-          MODULE=libgda
-         VERSION=5.2.4
+          MODULE=libgdata
+         VERSION=0.17.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:2cee38dd583ccbaa5bdf6c01ca5f88cc08758b9b144938a51a478eb2684b765e
-        WEB_SITE=http://www.gnome-db.org
-         ENTERED=20020714
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}/
+      SOURCE_VFY=sha256:5ef1c0f246f60812c43e3a7d077442afc872913a03f3a5eb789698dc2319bd95
+        WEB_SITE=http://live.gnome.org/libgdata
+         ENTERED=20091006
          UPDATED=20150820
-           SHORT="A framework for developing database-oriented applications"
+           SHORT="Gnome's GData protocol library"
 
 cat << EOF
-libgda/libgnomedb are a complete framework for developing
-database-oriented applications, and actually allow access to PostgreSQL,
-MySQL, Oracle, Sybase, SQLite and ODBC data sources.
+Libgdata is a GLib-based library for accessing online service APIs using the
+GData protocol - most notably, Google's services. It provides APIs to access
+the common Google services, and has full asynchronous support.
 EOF
