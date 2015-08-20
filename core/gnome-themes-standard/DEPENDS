@@ -4,4 +4,4 @@ depends  xkeyboard-config
 depends  dejavu-ttf
 depends  cantarell-fonts
 
-optional_depends  "gtk-engines2"  ""  ""  "for HighContrast GTK theme"
+optional_depends gtk-engines2 "" "" "for HighContrast GTK theme"
