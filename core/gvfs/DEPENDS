@@ -1,19 +1,19 @@
-depends  dconf
-depends  dbus
-depends  intltool
-depends  gtk+-3
-depends  openssh
+depends dconf
+depends dbus
+depends intltool
+depends gtk+-3
+depends openssh
+depends libgudev
 
-optional_depends  "udisks2"      "--enable-udisks2"       "--disable-udisks2"        "for udisk support"
-optional_depends  "libsecret"    "--enable-keyring"       "--disable-keyring"        "for Keyring support"
-optional_depends  "libarchive"   "--enable-archive"       "--disable-archive"        "for archive support"
-optional_depends  "openobex"     "--enable-obexftp"       "--disable-obexftp"        "for ObexFTP support"
-optional_depends  "libsoup"      "--enable-http"          "--disable-http"           "for FTP/HTTP/WebDAV support"
-optional_depends  "libcdio"      "--enable-cdda"          "--disable-cdda"           "for CDDA support"
-optional_depends  "fuse"         "--enable-fuse"          "--disable-fuse"           "for FUSE support"
-optional_depends  "libgphoto2"   "--enable-gphoto2"       "--disable-gphoto2"        "for Gphoto2 support"
-optional_depends  "samba"        "--enable-samba"         "--disable-samba"          "for Samba support"
-optional_depends  "avahi"        "--enable-avahi"         "--disable-avahi"          "for avahi support"
-optional_depends  "libmtp"       "--enable-libmtp"        "--disable-libmtp"         "for mtp support"
-optional_depends  "gtk-doc"      "--enable-documentation" "--disable-documentation"  "for documentation generating"
-
+optional_depends  "udisks2"     "--enable-udisks2"       "--disable-udisks2"        "for udisk support"
+optional_depends  "libsecret"   "--enable-keyring"       "--disable-keyring"        "for Keyring support"
+optional_depends  "libarchive"  "--enable-archive"       "--disable-archive"        "for archive support"
+optional_depends  "openobex"    "--enable-obexftp"       "--disable-obexftp"        "for ObexFTP support"
+optional_depends  "libsoup"     "--enable-http"          "--disable-http"           "for FTP/HTTP/WebDAV support"
+optional_depends  "libcdio"     "--enable-cdda"          "--disable-cdda"           "for CDDA support"
+optional_depends  "fuse"        "--enable-fuse"          "--disable-fuse"           "for FUSE support"
+optional_depends  "libgphoto2"  "--enable-gphoto2"       "--disable-gphoto2"        "for Gphoto2 support"
+optional_depends  "samba"       "--enable-samba"         "--disable-samba"          "for Samba support"
+optional_depends  "avahi"       "--enable-avahi"         "--disable-avahi"          "for avahi support"
+optional_depends  "libmtp"      "--enable-libmtp"        "--disable-libmtp"         "for mtp support"
+optional_depends  "gtk-doc"     "--enable-documentation" "--disable-documentation"  "for documentation generating"
