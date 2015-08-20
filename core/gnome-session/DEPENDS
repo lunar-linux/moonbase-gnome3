@@ -1,14 +1,11 @@
 depends dconf
-depends dbus-glib
 depends json-glib
 depends hicolor-icon-theme
+depends gnome-desktop
 depends gsettings-desktop-schemas
 depends mesa-lib
 depends libSM
 depends libXtst
 depends xtrans
-#depends upower
-#depends polkit-gnome
 
 optional_depends systemd "--enable-systemd" "--disable-systemd" "for systemd support"
-optional_depends GConf   "--enable-gconf"   "--disable-gconf"   "for GConf-based autostart"
