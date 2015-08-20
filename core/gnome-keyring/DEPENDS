@@ -1,5 +1,4 @@
-depends  gtk+-3
-depends  libgcrypt
-depends  libtasn1
-depends  libcap-ng
-depends  gcr
+depends libcap-ng
+depends gcr
+
+optional_depends gtk-doc "--enable-doc" "--disable-doc" "for doc install"
