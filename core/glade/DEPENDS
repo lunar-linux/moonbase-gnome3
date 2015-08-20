@@ -1,10 +1,15 @@
-depends  gtk+-3
-depends  desktop-file-utils
-depends  hicolor-icon-theme
-depends  libxml2
-depends  docbook-xsl
-depends  gobject-introspection
-depends  pygobject
-depends  intltool
-depends  gtk-doc
+depends gtk+-3
+depends desktop-file-utils
+depends hicolor-icon-theme
+depends libxml2
+depends docbook-xsl
+depends pygobject
+depends intltool
+depends itstool
 
+optional_depends gtk-doc "--enable-gtk-doc" "--disable-gtk-doc" "for documentation install"
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
