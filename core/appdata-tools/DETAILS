@@ -3,7 +3,7 @@
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://people.freedesktop.org/~hughsient/releases/
       SOURCE_VFY=sha256:401583d27f0f91bbc03de09f53efd4bf86b20da37d6930ff7bff297d7f1e5461
-        WEB_SITE=http://github.com/hughsie/appdata-ools/
+        WEB_SITE=http://github.com/hughsie/appdata-tools/
          ENTERED=20140413
          UPDATED=20141018
           SHORT="Validate AppData descriptions for standards compliance"

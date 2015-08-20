@@ -1,16 +1,21 @@
-(
+cd $SOURCE_DIRECTORY/js/src &&
 
-  cd $SOURCE_DIRECTORY/js/src &&
+rm -rf editline ctypes/libffi &&
 
-  OPTS+=" --with-system-nspr --enable-threadsafe" &&
+OPTS+=" --with-system-nspr  \
+        --enable-threadsafe \
+        --enable-readline   \
+        --enable-system-ffi \
+        --disable-static"  &&
 
-  CXXFLAGS+=" -fpermissive" &&
+unset CPPFLAGS &&
+CXXFLAGS+=" -fpermissive" &&
 
-  default_build &&
+default_config &&
 
-  #for backwards compatibility
-  ln -sf /usr/lib/libmozjs${VERSION%\.*}.a /usr/lib/libjs_static.a &&
+sedit "s;mozjs-;mozjs-${VERSION::2};" Makefile &&
 
-  ln -sf /usr/bin/js17 /usr/bin/js
+default_make
 
-) > $C_FIFO 2>&1
+#for backwards compatibility
+ln -sf /usr/bin/js /usr/bin/js17
