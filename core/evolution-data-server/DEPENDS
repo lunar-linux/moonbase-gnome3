@@ -3,6 +3,8 @@ depends nss
 depends libgweather
 depends libical
 depends libgdata
+depends gnome-common
+depends vala
 
 optional_depends "gnome-online-accounts" "--enable-goa"           "--disable-goa"           " for GNOME Online Accounts support"
 optional_depends "gobject-introspection" "--enable-introspection" "--disable-introspection" " for object introspection"
