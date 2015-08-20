@@ -1,11 +1,11 @@
           MODULE=gnome-power-manager
-         VERSION=3.14.1
+         VERSION=3.16.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:07790a9e8274fe950a6dd653a4e2f4a0f52cb9d89eb9d5320fa6e1b3b3aa9624
+      SOURCE_VFY=sha256:86cd15c186451627d0d428da70a179dec0ac9a5f180d8b8f5ebc713313df917f
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20141019
-         UPDATED=20141019
+         UPDATED=20150820
            SHORT="GNOME system power information and statistics"
 
 cat << EOF
