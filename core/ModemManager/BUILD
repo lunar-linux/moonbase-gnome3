@@ -1,4 +1,3 @@
+OPTS+=" --with-udev-base-dir=/usr/lib" &&
 
-  OPTS+=" --with-udev-base-dir=/usr/lib" &&
-
-  default_build
+default_build
