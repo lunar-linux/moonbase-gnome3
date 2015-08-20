@@ -1,6 +1,6 @@
 depends  hicolor-icon-theme
-depends  gobject-introspection
 depends  gtk+-3
 depends  pygobject
 depends  gtk-doc
 depends  gjs
+depends  gobject-introspection
