@@ -1,1 +1,10 @@
-depends  gnome-keyring
+depends dbus
+depends libgcrypt
+depends gnome-keyring
+depends intltool
+depends vala
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
