@@ -1,3 +1,11 @@
-depends  libXres
-depends  gtk+-3
-depends  startup-notification
+depends libXres
+depends gtk+-3
+depends startup-notification
+depends intltool
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
+
+
