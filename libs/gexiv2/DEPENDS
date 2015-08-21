@@ -1,2 +1,8 @@
 depends exiv2
 depends pygobject
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
+
