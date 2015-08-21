@@ -2,10 +2,10 @@
          VERSION=2.30.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:ad63d489a6530df5da2559f602c839fd5701a188
+      SOURCE_VFY=sha256:463bcbe5737b1b93f3345ee34abf601e8eb864f507c49ff1921c2737abafc1e5
         WEB_SITE=http://www.gnome.org
          ENTERED=20020714
-         UPDATED=20140525
+         UPDATED=20150821
            SHORT="A library to provide top functionality to applications"
 
 cat << EOF
