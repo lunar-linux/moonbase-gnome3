@@ -2,11 +2,11 @@
          VERSION=0.105
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/$VERSION
-      SOURCE_VFY=sha1:948bad76395834a1b45b65bd191d46145f5c0b9f
+      SOURCE_VFY=sha256:
         WEB_SITE=http://hal.freedesktop.org/releases
          ENTERED=20100227
-         UPDATED=20130216
-           SHORT="authentication agent for polkit on GNOME"
+         UPDATED=20150821
+           SHORT="Authentication agent for polkit on GNOME"
 
 cat << EOF
 The polkit-gnome package provides an authentication agent for

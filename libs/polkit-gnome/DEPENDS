@@ -1,2 +1,4 @@
-depends  gtk+-3
-depends  polkit
+depends gtk+-3
+depends polkit
+depends intltool
+
