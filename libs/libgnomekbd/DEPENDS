@@ -1,5 +1,4 @@
 depends dconf
-depends gtk+-3
 depends libxklavier
 depends intltool
 
