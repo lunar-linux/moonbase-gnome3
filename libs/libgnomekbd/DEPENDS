@@ -1,2 +1,9 @@
-depends  dconf
-depends  libxklavier
+depends dconf
+depends gtk+-3
+depends libxklavier
+depends intltool
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"

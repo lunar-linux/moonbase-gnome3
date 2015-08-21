@@ -2,10 +2,10 @@
          VERSION=3.6.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha1:4375d2cb8cbdbad7a4f59a8b99edd58cfa328597
+      SOURCE_VFY=sha256:c41ea5b0f64da470925ba09f9f1b46b26b82d4e433e594b2c71eab3da8856a09
         WEB_SITE=http://www.gnome.org
          ENTERED=20070315
-         UPDATED=20130216
+         UPDATED=20150821
            SHORT="The GNOME keyboard configuration library"
 
 cat << EOF
