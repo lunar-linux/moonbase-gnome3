@@ -1,8 +1,8 @@
           MODULE=uhttpmock
-         VERSION=0.3.3
+         VERSION=0.5.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://tecnocode.co.uk/downloads/$MODULE/
-      SOURCE_VFY=sha256:7cc1eda146b5e7a434ed31413f6f12660db00c34d10083f693b93683a28bd57e
+      SOURCE_VFY=sha256:26da182a2db2579c5ba4dad9096d52099e0766228c295cfbaed6de4046f7d16e
         WEB_SITE=https://gitorious.org/uhttpmock/pages/Home/
          ENTERED=20141019
          UPDATED=20150821
