@@ -3,4 +3,3 @@ depends intltool
 depends hicolor-icon-theme
 depends icon-naming-utils
 depends librsvg
-
