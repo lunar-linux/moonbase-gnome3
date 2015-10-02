@@ -8,4 +8,12 @@ depends libSM
 depends libXtst
 depends xtrans
 
-optional_depends systemd "--enable-systemd" "--disable-systemd" "for systemd support"
+optional_depends systemd \
+                 "--enable-systemd" \
+                 "--disable-systemd" \
+                 "for systemd support"
+
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for building documentation"
