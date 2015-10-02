@@ -1,15 +1,18 @@
-depends  dconf
-depends  gtk+-3
-depends  gnome-icon-theme
-depends  libexif
-depends  lcms2
-depends  desktop-file-utils
-depends  gsettings-desktop-schemas
-depends  exempi
-depends  librsvg
-depends  intltool
-depends  libpeas
+depends dconf
+depends gtk+-3
+depends gnome-icon-theme
+depends libexif
+depends lcms2
+depends desktop-file-utils
+depends gsettings-desktop-schemas
+depends exempi
+depends librsvg
+depends intltool
+depends libpeas
 
-optional_depends  "gtk-doc" "--enable-gtk-doc" "--disable-gtk-doc" "for GTK documentation"
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for GTK documentation"
 
 
