@@ -1,7 +1,3 @@
-(
+OPTS+=" --enable-tracker=no" &&
 
-  OPTS+=" --enable-tracker=no"
-
-  default_build
-
-) > $C_FIFO 2>&1
+default_build
