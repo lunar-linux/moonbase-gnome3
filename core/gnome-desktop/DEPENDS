@@ -5,8 +5,8 @@ depends libxkbfile
 depends xkeyboard-config
 depends itstool
 
-optional_depends gobject-introspection     \
-                 "--enable-introspection"  \
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
                  "--disable-introspection" \
                  "for object introspection"
 
