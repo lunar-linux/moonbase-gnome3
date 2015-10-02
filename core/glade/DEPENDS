@@ -7,7 +7,10 @@ depends pygobject
 depends intltool
 depends itstool
 
-optional_depends gtk-doc "--enable-gtk-doc" "--disable-gtk-doc" "for documentation install"
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for documentation install"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
