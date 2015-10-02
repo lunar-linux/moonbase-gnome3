@@ -4,7 +4,7 @@ depends lcms2
 depends intltool
 depends vala
 
-optional_depends  "gtk-doc"           \
-                  "--enable-gtk-doc"  \
-                  "--disable-gtk-doc" \
-                  "for building documentation"
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for building documentation"

@@ -1,7 +1,9 @@
-depends  intltool
-depends  libsoup
-depends  json-glib
-depends  guile
+depends intltool
+depends libsoup
+depends json-glib
+depends intltool
+
+optional_depends geoip "" "" "for IP-to-country conversion support"
 
 optional_depends  "NetworkManager" \
                   "--enable-network-manager" \
@@ -12,3 +14,5 @@ optional_depends  "ModemManager" \
                   "--enable-3g-source --enable-cdma-source --enable-modem-gps-source" \
                   "--disable-3g-source --disable-cdma-source --disable-modem-gps-source" \
                   "build modem backends support"
+
+optional_depends systemd "" "" "for systemd support"
