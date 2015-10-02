@@ -1,4 +1,4 @@
-depends  intltool
-depends  gtk+-3
-depends  gnome-common
-depends  libsoup
+depends gtk+-3
+depends gnome-common
+depends libsoup
+depends intltool
