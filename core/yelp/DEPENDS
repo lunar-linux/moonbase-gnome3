@@ -1,0 +1,7 @@
+depends dconf
+depends desktop-file-utils
+depends hicolor-icon-theme
+depends yelp-xsl
+depends bzip2
+depends xz
+
