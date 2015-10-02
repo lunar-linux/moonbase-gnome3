@@ -1,4 +1,7 @@
 depends libcap-ng
 depends gcr
 
-optional_depends gtk-doc "--enable-doc" "--disable-doc" "for doc install"
+optional_depends gtk-doc \
+                 "--enable-doc" \
+                 "--disable-doc" \
+                 "for doc install"
