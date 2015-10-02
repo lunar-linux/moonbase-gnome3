@@ -1,12 +1,12 @@
           MODULE=gtkmm3
-         VERSION=3.14.0
+         VERSION=3.18.0
           SOURCE=gtkmm-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/gtkmm-$VERSION
       SOURCE_URL=$GNOME_URL/sources/gtkmm/${VERSION%.*}
-      SOURCE_VFY=sha256:d9f528a62c6ec226fa08287c45c7465b2dce5aae5068e9ac48d30a64a378e48b
+      SOURCE_VFY=sha256:829fa113daed74398c49c3f2b7672807f58ba85d0fa463f5bc726e1b0138b86b
         WEB_SITE=http://gtkmm.org
          ENTERED=20021225
-         UPDATED=20141018
+         UPDATED=20151002
            SHORT="C++ bindings for GTK+3"
 
 cat << EOF
