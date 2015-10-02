@@ -1,5 +1,4 @@
-OPTS+=" --libexec=/usr/lib/gcr \
-        --disable-static \
+OPTS+=" --disable-static \
         --disable-update-mime \
         --disable-schemas-compile" &&
 
