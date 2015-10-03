@@ -7,7 +7,6 @@ depends libsecret
 depends util-linux
 depends systemd
 depends libgudev
-depends YAML
 
 optional_depends gnome-bluetooth "" "" "for Bluetooth support"
 
