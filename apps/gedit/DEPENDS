@@ -10,9 +10,9 @@ depends libpeas
 
 # Needs pygobject compiled with Python-3
 #optional_depends pygobject \
-                  "--enable-python" \
-                  "--disable-python" \
-                  "for Python 3.x bindings"
+#                  "--enable-python" \
+#                  "--disable-python" \
+#                  "for Python 3.x bindings"
 
 optional_depends vala \
                  "--enable-vala" \
