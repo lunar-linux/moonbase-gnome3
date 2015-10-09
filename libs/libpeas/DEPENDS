@@ -1,6 +1,13 @@
-depends  hicolor-icon-theme
-depends  gtk+-3
-depends  pygobject
-depends  gtk-doc
-depends  gjs
-depends  gobject-introspection
+depends gtk+-3
+depends pygobject
+depends intltool
+
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for building documentation"
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
