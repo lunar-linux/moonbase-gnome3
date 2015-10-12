@@ -16,3 +16,5 @@ optional_depends  "ModemManager" \
                   "build modem backends support"
 
 optional_depends systemd "" "" "for systemd support"
+
+optional_depends avahi "" "--disable-nmea-source" "avahi support"
