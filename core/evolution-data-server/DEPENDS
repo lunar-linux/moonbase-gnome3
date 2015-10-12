@@ -6,7 +6,10 @@ depends libgdata
 depends gnome-common
 depends vala
 
-optional_depends gtk-doc "--enable-gtk-doc" "--disable-gtk-doc" "for documentation install"
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for documentation install"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
