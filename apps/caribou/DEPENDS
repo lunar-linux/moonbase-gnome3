@@ -1,8 +1,13 @@
-depends  dconf
-depends  at-spi2-atk
-depends  pyatspi
-depends  pygobject
-depends  libxklavier
-depends  libgee
-depends  clutter
-depends  gtk+-3
+depends at-spi2-atk
+depends clutter
+depends dconf
+depends libgee
+depends gtk+-3
+depends pyatspi
+depends pygobject
+depends libxklavier
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
