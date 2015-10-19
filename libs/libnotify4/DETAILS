@@ -8,13 +8,13 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$PAKNAME-$VERSION
         WEB_SITE=http://www.galago-project.org
          ENTERED=20060526
          UPDATED=20131004
-           SHORT="the desktop notification framework library"
+           SHORT="Desktop notification framework library"
 
 cat << EOF
 The Desktop Notifications framework provides a standard way of doing
-passive pop-up notifications on the Linux desktop.  These are designed
+passive pop-up notifications on the Linux desktop. These are designed
 to notify the user of something without interrupting their work with a
-dialog box that they must close.  Passive popups can automatically
-disappear after a short period of time.  This project consists of a
+dialog box that they must close. Passive popups can automatically
+disappear after a short period of time. This project consists of a
 specification and implementation (libnotify and notification-daemon).
 EOF
