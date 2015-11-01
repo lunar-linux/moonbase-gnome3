@@ -1,6 +1,7 @@
 depends gtk+-3
 depends vala
 depends intltool
+depends gnutls
 
 optional_depends pygtk \
                  "--enable-python" \
