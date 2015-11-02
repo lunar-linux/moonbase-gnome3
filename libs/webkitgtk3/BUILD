@@ -1,17 +1,13 @@
-
-patch_it $SOURCE2 1 &&
-
 # breaks without webgl for now
-OPTS+=" --enable-x11-target           \
-        --enable-optimizations        \
-        --enable-introspection        \
-        --disable-glibtest            \
-        --enable-video                \
-        --enable-webgl                \
-        --disable-gtk-doc-html"      &&
+OPTS+=" --enable-video         \
+        --enable-webgl         \
+        --enable-x11-target    \
+        --enable-optimizations \
+        --enable-introspection \
+        --disable-glibtest"   &&
 
 #make build work even if gtk-doc is not installed
-if ! module_installed gtk-doc ; then
+if ! module_installed gtk-doc; then
   sed -i '/gtkdoc --rebase/s:^:# :' GNUmakefile.in
 fi &&
 

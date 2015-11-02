@@ -1,27 +1,35 @@
-depends  libXt
-depends  gobject-introspection
-depends  gtk+-3
-depends  icu4c
-depends  gperf
-depends  libxslt
-depends  sqlite
-depends  %JPEG
-depends  libpng
-depends  libwebp
-depends  freetype2
-depends  libsoup
-depends  libsecret
-depends  harfbuzz
-depends  enchant
-depends  gst-plugins-base-1.0
-depends  gst-plugins-good-1.0
-depends  ruby
-depends  geoclue2
+depends ruby
+depends libXt
+depends gtk+-3
+depends icu4c
+depends gperf
+depends libxslt
+depends sqlite
+depends %JPEG
+depends libpng
+depends libwebp
+depends freetype2
+depends libsoup
+depends libsecret
+depends harfbuzz
+depends enchant
+depends geoclue2
+depends mesa-lib
 
 # workaround for make_names.pl
 depends Switch
 
-optional_depends "librsvg" \
+optional_depends gst-plugins-good-1.0 "" "" "for gstreamer support"
+depends gst-libav                     "" "" "for gstreamer video support"
+
+optional_depends librsvg \
                  "--enable-svg --enable-svg-fonts" \
-                 "--disable-svg"  \
+                 "--disable-svg" \
                  "for svg graphics support"
+
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for building documentation"
+
+depends gobject-introspection
