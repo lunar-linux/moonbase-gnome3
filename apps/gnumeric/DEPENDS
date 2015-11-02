@@ -24,7 +24,7 @@ optional_depends libgnomedb \
                  "" " " \
                  "required for the Gnome Database Access plugin"
 
-optional_depends psiconv" \
+optional_depends psiconv \
                  "--with-psiconv" \
                  "--without-psiconv" \
                  "compile with Psiconv support"
