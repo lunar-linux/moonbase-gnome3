@@ -3,9 +3,7 @@ OPTS+=" --enable-exchange      \
         --enable-flickr        \
         --enable-google        \
         --enable-imap-smtp     \
-        --enable-kerberos      \
         --enable-owncloud      \
-        --enable-telepathy     \
         --enable-windows-live  \
         --enable-media-server" &&
 
