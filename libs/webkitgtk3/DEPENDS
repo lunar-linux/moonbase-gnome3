@@ -1,41 +1,25 @@
+depends which
+depends libpng
+depends mesa-lib
+depends libwebp
+depends icu4c
+depends enchant
 depends ruby
 depends libXt
-depends gtk+-3
-depends icu4c
-depends gperf
 depends libxslt
+depends cmake
+depends gobject-introspection
+depends harfbuzz
+depends freetype2
+depends gtk+-3
+depends gtk+-2
+depends gst-plugins-base-1.0
+depends gperf
 depends sqlite
 depends %JPEG
-depends libpng
-depends libwebp
-depends freetype2
 depends libsoup
 depends libsecret
-depends harfbuzz
-depends enchant
-depends mesa-lib
 
-optional_depends gtk+-2 "" " " "also build gtk+-2 version of webkit"
-
-# workaround for make_names.pl
-depends Switch
-
-optional_depends gst-plugins-good-1.0 "" "" "for gstreamer support"
-depends gst-libav                     "" "" "for gstreamer video support"
-
-optional_depends librsvg \
-                 "--enable-svg --enable-svg-fonts" \
-                 "--disable-svg" \
-                 "for svg graphics support"
-
-optional_depends geoclue2 \
-                 "--enable-geolocation" \
-                 "--disable-geolocation" \
-                 "for geolocation support"
-
-optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
-                 "for building documentation"
-
-depends gobject-introspection
+optional_depends hyphen     "-DUSE_LIBHYPHEN=1"      "-DUSE_LIBHYPHEN=0"      "To support hyphenation and justification"
+optional_depends libnotify4 "-DUSE_LIBNOTIFY=1"      "-DUSE_LIBNOTIFY=0"      "For notification support"
+optional_depends geoclue2   "-DENABLE_GEOLOCATION=1" "-DENABLE_GEOLOCATION=0" "For geolocation support"
