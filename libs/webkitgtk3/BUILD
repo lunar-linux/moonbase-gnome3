@@ -1,5 +1,3 @@
- sed -e 's/“/\"/' -e 's/”/\"/' -i Source/WebCore/xml/XMLViewer.{css,js} &&
-
  OPTS+=" -DENABLE_MINIBROWSER=1" &&
 
  default_cmake_build &&
