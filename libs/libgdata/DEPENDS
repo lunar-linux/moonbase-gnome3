@@ -6,6 +6,6 @@ depends intltool
 depends vala
 
 optional_depends gobject-introspection \
-                 "--enable-introspection"  \
+                 "--enable-introspection" \
                  "--disable-introspection" \
                  "for introspection support"
