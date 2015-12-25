@@ -12,16 +12,16 @@ optional_depends gnome-bluetooth "" "" "for Bluetooth support"
 
 optional_depends ModemManager    "--with-modem-manager-1" "" "for mobile broadband modem support"
 
-optional_depends nss             "--with-crypto=nss"    ""                    "for NSS crypto support"
-optional_depends gnutls          "--with-crypto=gnutls" ""                    "for TLS crypto support"
-optional_depends dhcp            "--with-dhclient=yes"  "--with-dhclient=no"  "for standard DHCP client"
-optional_depends dhcpcd          "--with-dhcpcd=yes"    "--with-dhcpcd=no"    "for alternative DHCP client"
-optional_depends dnsmasq         "--with-dnsmasq"       ""                    "for DNS forwarder and DHCP server with connection sharing support"
-optional_depends libsoup         "--with-libsoup=yes"   "--with-libsoup=no"   "for libsoup support"
-optional_depends polkit          "--enable-polkit=yes"  "--enable-polkit=no"  "for polkit support"
-optional_depends vala            "--enable-vala=yes"    "--enable-vala=no"    "for vala support"
-optional_depends valgrind        "--with-valgrind=yes"  "--with-valgrind=no"  "for valgrind support"
-optional_depends gtk-doc         "--enable-gtk-doc"     ""                    "for documentation generation"
+optional_depends nss             "--with-crypto=nss"    ""                   "for NSS crypto support"
+optional_depends gnutls          "--with-crypto=gnutls" ""                   "for TLS crypto support"
+optional_depends dhcp            "--with-dhclient=yes"  "--with-dhclient=no" "for standard DHCP client"
+optional_depends dhcpcd          "--with-dhcpcd=yes"    "--with-dhcpcd=no"   "for alternative DHCP client"
+optional_depends dnsmasq         "--with-dnsmasq"       ""                   "for DNS forwarder and DHCP server with connection sharing support"
+optional_depends libsoup         "--with-libsoup=yes"   "--with-libsoup=no"  "for libsoup support"
+optional_depends polkit          "--enable-polkit=yes"  "--enable-polkit=no" "for polkit support"
+optional_depends vala            "--enable-vala=yes"    "--enable-vala=no"   "for vala support"
+optional_depends valgrind        "--with-valgrind=yes"  "--with-valgrind=no" "for valgrind support"
+optional_depends gtk-doc         "--enable-gtk-doc"     "--disable-gtk-doc"  "for documentation generation"
 
 if in_depends gtk-doc; then
   depends YAML
