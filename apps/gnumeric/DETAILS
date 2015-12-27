@@ -1,11 +1,11 @@
           MODULE=gnumeric
-         VERSION=1.12.24
+         VERSION=1.12.25
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:c59d5271b27366008bccb4d53ad8333da36d837003a018892f2da325c1449551
+      SOURCE_VFY=sha256:9709a8fccfc371a07b1590d037a43e525531d5a46f31c5c5fe223c6054cecdb6
         WEB_SITE=http://www.gnumeric.org
          ENTERED=20021224
-         UPDATED=20151102
+         UPDATED=20151227
            SHORT="The GNOME spreadsheet application"
 
 cat << EOF
