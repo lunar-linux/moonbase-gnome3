@@ -4,7 +4,7 @@ depends libnotify4
 depends libsecret
 depends rest
 depends docbook-xsl
-depends webkitgtk3
+depends webkit2gtk3
 depends intltool
 
 optional_depends krb5 \
