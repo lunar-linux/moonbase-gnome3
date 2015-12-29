@@ -1,0 +1,25 @@
+depends which
+depends libpng
+depends mesa-lib
+depends libwebp
+depends icu4c
+depends enchant
+depends ruby
+depends libXt
+depends libxslt
+depends cmake
+depends gobject-introspection
+depends harfbuzz
+depends freetype2
+depends gtk+-3
+depends gtk+-2
+depends gst-plugins-base-1.0
+depends gperf
+depends sqlite
+depends %JPEG
+depends libsoup
+depends libsecret
+
+optional_depends hyphen     "-DUSE_LIBHYPHEN=1"      "-DUSE_LIBHYPHEN=0"      "To support hyphenation and justification"
+optional_depends libnotify4 "-DUSE_LIBNOTIFY=1"      "-DUSE_LIBNOTIFY=0"      "For notification support"
+optional_depends geoclue2   "-DENABLE_GEOLOCATION=1" "-DENABLE_GEOLOCATION=0" "For geolocation support"
