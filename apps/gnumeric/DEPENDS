@@ -30,6 +30,6 @@ optional_depends libgnomedb \
 #                 "compile with Psiconv support"
 
 # intentionally a single blank - disabled in PRE_BUILD
-optional_depends scrollkeeper \
+optional_depends rarian \
                   "" " " \
                   "use documentation"
