@@ -1,3 +1,3 @@
-OPTS+=" --disable-schemas-compile --disble-static" &&
+OPTS+=" --disable-schemas-compile --disable-static" &&
 
 default_build
