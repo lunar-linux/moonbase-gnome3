@@ -5,3 +5,13 @@ depends intltool
 depends vala
 
 optional_depends gnome-keyring "" "" "for key storage service"
+
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for building documentation"
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
