@@ -1,13 +1,13 @@
-# BUILD OPTIONS IN CONFIGURE/DEPENDS WORK AGAIN!
           MODULE=webkitgtk3
-         VERSION=2.10.5
+# 2.4.9 is *the last* release that supports the webkit-1 bump webkit2gtk3 instead
+         VERSION=2.4.9
           SOURCE=webkitgtk-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/webkitgtk-$VERSION
       SOURCE_URL=http://www.webkitgtk.org/releases
-      SOURCE_VFY=sha256:785d5e98eaf07be15fb8891b7d5b13a2df7072c609b3ee631ca07d5dea1d79fa
+      SOURCE_VFY=sha256:afdf29e7828816cad0be2604cf19421e96d96bf493987328ffc8813bb20ac564
         WEB_SITE=http://www.webkit.org
          ENTERED=20070919
-         UPDATED=20160123
+         UPDATED=20151210
            SHORT="gtk+ web rendering engine"
 
 cat << EOF
