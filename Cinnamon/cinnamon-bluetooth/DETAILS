@@ -1,0 +1,13 @@
+          MODULE=cinnamon-bluetooth
+         VERSION=3.8.11
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/linuxmint/cinnamon-bluetooth/archive/$VERSION.tar.gz
+      SOURCE_VFY=sha256:16e152616820c9e9eb038c86dad8e2fda489cc38fec68ba390215770c00af3e7
+        WEB_SITE=http://github.com/linuxmint/$MODULE/
+         ENTERED=20151023
+         UPDATED=20151023
+           SHORT="BlueTooth support for Cinnamon"
+
+cat <<EOF
+BlueTooth support for Cinnamon.
+EOF

@@ -1,0 +1,9 @@
+depends bluez-5
+depends gtk+-3
+depends libnotify4
+depends hicolor-icon-theme
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
