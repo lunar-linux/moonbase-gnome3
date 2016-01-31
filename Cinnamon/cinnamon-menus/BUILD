@@ -1,9 +1,9 @@
-./autogen.sh --prefix=/usr     \
+./autogen.sh --prefix=/usr \
              --sysconfdir=/etc \
-             --localstatedir=/var \
+             --localstatedir=/var\
              --libexecdir=/usr/lib/cinnamon \
              --disable-static \
-             $OPTS           &&
+             $OPTS &&
 
 default_make
 
