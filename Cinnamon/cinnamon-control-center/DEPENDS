@@ -1,13 +1,13 @@
-depends  cinnamon-menus
-depends  cinnamon-settings-daemon
-depends  cinnamon-translations
-depends  network-manager-applet
-depends  libgnomekbd
+depends cinnamon-menus
+depends cinnamon-settings-daemon
+depends cinnamon-translations
+depends network-manager-applet
+depends libgnomekbd
 
-optional_depends  "gnome-color-manager"  "" ""  "for color management tasks"
-optional_depends  "cups"                 "" ""  "for CUPS support"
+optional_depends gnome-color-manager "" "" "for color management tasks"
+optional_depends cups                "" "" "for CUPS support"
 
-optional_depends  "systemd"           \
-                  "--enable-systemd"  \
-                  "--disable-systemd" \
-                   "for systemd support"
+optional_depends systemd \
+                 "--enable-systemd" \
+                 "--disable-systemd" \
+                 "for systemd support"
