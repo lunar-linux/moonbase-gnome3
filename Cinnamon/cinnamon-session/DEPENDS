@@ -1,7 +1,7 @@
-depends  cinnamon-desktop
-depends  upower
-depends  gnome-common
-depends  json-glib
-depends  xtrans
+depends cinnamon-desktop
+depends upower
+depends gnome-common
+depends json-glib
+depends xtrans
 
 
