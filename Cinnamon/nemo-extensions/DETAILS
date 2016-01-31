@@ -1,0 +1,13 @@
+          MODULE=nemo-extensions
+         VERSION=2.8.x
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/linuxmint/nemo-extensions/archive/$VERSION.tar.gz
+      SOURCE_VFY=sha256:21ecb2f197e17fba2046ef16493e1b4292a8cc0389c65e0ccc4562b1d0982fe5
+        WEB_SITE=http://github.com/linuxmint/nemo-extensions/
+         ENTERED=20151023
+         UPDATED=20151023
+           SHORT="Cinnamon file manager (Nautilus fork) extensions"
+
+cat <<EOF
+Extensions for nemo, the file manager for the Cinnamon desktop environment.
+EOF

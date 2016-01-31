@@ -1,0 +1,4 @@
+depends Python
+depends gtk+-3
+depends readline
+
