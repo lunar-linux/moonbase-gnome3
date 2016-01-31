@@ -1,6 +1,8 @@
-depends  cairo
-depends  gobject-introspection
-depends  mozjs
-depends  dbus-glib
+depends cairo
+depends mozjs
+depends dbus-glib
 
-
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
