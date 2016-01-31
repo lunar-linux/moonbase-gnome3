@@ -1,0 +1,14 @@
+          MODULE=Cinnamon
+         VERSION=2.8.6
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=http://github.com/linuxmint/Cinnamon/archive/$VERSION.tar.gz
+      SOURCE_VFY=sha256:c262ae64320d4db8bffdfa7f05ab5a82449e96035b35dd8fb9353741323cb9a2
+        WEB_SITE=http://cinnamon.linuxmint.com/
+         ENTERED=20130210
+         UPDATED=20151214
+           SHORT="A Linux desktop based on GTK+-3"
+
+cat <<EOF
+Linux desktop which provides advanced innovative features and a traditional
+user experience and is based on GTK+-3.
+EOF
