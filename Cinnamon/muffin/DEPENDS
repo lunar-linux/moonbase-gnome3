@@ -1,9 +1,16 @@
-depends  clutter
-depends  dconf
-depends  gobject-introspection
-depends  startup-notification
-depends  zenity
-depends  gnome-doc-utils
-depends  cinnamon-desktop
+depends clutter
+depends dconf
+depends startup-notification
+depends zenity
+depends gnome-doc-utils
+depends cinnamon-desktop
 
-optional_depends  "libcanberra"  "--with-libcanberra"  "--without-libcanberra"  "for sounds support using libcanberra"
+optional_depends libcanberra \
+                 "--with-libcanberra" \
+                 "--without-libcanberra" \
+                 "for sounds support using libcanberra"
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"

@@ -1,7 +1,12 @@
-autoreconf -vfi &&
+./autogen.sh --prefix=/usr \
+             --sysconfdir=/etc \
+             --libexecdir=/usr/lib/cinnamon \
+             --localstatedir=/var \
+             --disable-static \
+             --disable-schemas-compile \
+             --enable-compile-warnings=minimum \
+             $OPTS &&
 
-OPTS+=" --disable-static \
-        --disable-schemas-compile \
-        --enable-compile-warnings=minimum"
+sedit "s:-Werror:-W :" Makefile &&
 
-default_build
+default_make
