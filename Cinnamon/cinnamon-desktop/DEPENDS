@@ -1,5 +1,9 @@
-depends  gtk+-3
-depends  libxkbfile
-depends  gnome-common
-depends  gobject-introspection
-depends  intltool
+depends gtk+-3
+depends libxkbfile
+depends gnome-common
+depends intltool
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
