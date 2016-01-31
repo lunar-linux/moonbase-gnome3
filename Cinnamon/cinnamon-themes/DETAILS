@@ -1,0 +1,13 @@
+          MODULE=cinnamon-themes
+         VERSION=2.8.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=git://github.com/linuxmint/cinnamon-themes
+#      SOURCE_VFY=sha256:
+        WEB_SITE=http://github.com/linuxmint/$MODULE/
+         ENTERED=20151023
+         UPDATED=20151023
+           SHORT="Themes for Cinnamon"
+
+cat <<EOF
+Themes for Cinnamon desktop.
+EOF
