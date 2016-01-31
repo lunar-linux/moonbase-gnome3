@@ -1,11 +1,12 @@
-./autogen.sh --prefix=/usr                  \
-             --sysconfdir=/etc              \
+./autogen.sh --prefix=/usr \
+             --sysconfdir=/etc \
              --libexecdir=/usr/lib/cinnamon \
-             --localstatedir=/var           \
-             --disable-static               \
-             --enable-compile-warnings=no   \
-             $OPTS                         &&
+             --localstatedir=/var \
+             --disable-static \
+             $OPTS &&
 
-sedit "s:-Werror:-W :" Makefile  &&
+#             --enable-compile-warnings=no \
+
+sedit "s:-Werror:-W :" Makefile &&
 
 default_make
