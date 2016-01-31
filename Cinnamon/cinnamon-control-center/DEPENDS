@@ -1,13 +1,9 @@
-depends cinnamon-menus
-depends cinnamon-settings-daemon
-depends cinnamon-translations
-depends network-manager-applet
-depends libgnomekbd
+depends gtk+-3
+depends libxkbfile
+depends gnome-common
+depends intltool
 
-optional_depends gnome-color-manager "" "" "for color management tasks"
-optional_depends cups                "" "" "for CUPS support"
-
-optional_depends systemd \
-                 "--enable-systemd" \
-                 "--disable-systemd" \
-                 "for systemd support"
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
