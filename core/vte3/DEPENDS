@@ -3,8 +3,7 @@ depends vala
 depends intltool
 
 optional_depends pygtk \
-                 "--enable-python" \
-                 "--disable-python" \
+                 "--enable-python" "" \
                  "for the python bindings"
 
 optional_depends gobject-introspection \
