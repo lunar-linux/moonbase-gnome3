@@ -1,2 +1,9 @@
 depends gtk+-3
 depends libxml2
+depends vala
+depends intltool
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for introspection support"
