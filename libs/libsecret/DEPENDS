@@ -1,6 +1,6 @@
+depends docbook-xsl
 depends dbus-glib
 depends libgcrypt
-depends docbook-xsl
 depends intltool
 depends vala
 
