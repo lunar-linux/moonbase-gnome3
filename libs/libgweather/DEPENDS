@@ -1,4 +1,10 @@
 depends gtk+-3
-depends gnome-common
+depends vala
 depends libsoup
+depends geocode-glib
 depends intltool
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
