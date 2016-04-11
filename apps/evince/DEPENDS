@@ -6,12 +6,13 @@ depends gobject-introspection
 depends libsecret
 depends itstool
 depends adwaita-icon-theme
+depends intltool
 
 optional_depends dconf   "" "" "to save user settings"
 optional_depends gsfonts "" "" "for URW+Postcript core 35 fonts"
 
 optional_depends tiff \
-                 "--enable-tiff"  \
+                 "--enable-tiff" \
                  "--disable-tiff" \
                  "support multi-page TIFF files"
 
@@ -20,7 +21,7 @@ optional_depends dbus-glib \
                  "for DBus support"
 
 optional_depends libspectre \
-                 "--enable-ps"  \
+                 "--enable-ps" \
                  "--disable-ps" \
                  "compile with PostScript support"
 
