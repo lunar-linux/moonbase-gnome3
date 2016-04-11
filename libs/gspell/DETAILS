@@ -1,0 +1,19 @@
+          MODULE=gspell
+         VERSION=1.0.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:6a50257c871c318445881c115bdd11bb8da6672f7d5b99e96c2e7b5c00f077da
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20160411
+         UPDATED=20160411
+           SHORT="An API to implement the spell checking in a GTK+ application"
+
+cat << EOF
+gspell provides a flexible API to add spell checking to a GTK+ application.
+Features:
+  GObject wrappers around Enchant
+  An inline spell checker for GtkTextView (enhanced version of GtkSpell)
+  A spell checker dialog for GtkTextView
+  Support of the no-spell-check tag defined by GtkSourceView
+  Language choosers (button and dialog).
+EOF

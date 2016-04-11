@@ -1,0 +1,11 @@
+depends gtk+-3
+depends enchant
+depends iso-codes
+depends intltool
+depends vala
+depends libxml2
+
+optional_depends "gobject-introspection" \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 " for object introspection"
