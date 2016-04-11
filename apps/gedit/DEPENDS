@@ -1,20 +1,13 @@
 depends dconf
-depends gtk+-3
-depends enchant
-depends iso-codes
+depends gspell
 depends gtksourceview
 depends desktop-file-utils
 depends gsettings-desktop-schemas
-depends intltool
 depends libpeas
+depends vala
 
 # Needs pygobject compiled with Python-3
 #optional_depends pygobject \
 #                  "--enable-python" \
 #                  "--disable-python" \
 #                  "for Python 3.x bindings"
-
-optional_depends vala \
-                 "--enable-vala" \
-                 "--enable-vala" \
-                 "for vala bindings"
