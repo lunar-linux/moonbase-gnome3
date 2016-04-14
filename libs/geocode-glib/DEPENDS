@@ -1,5 +1,5 @@
-depends intltool
-depends gobject-introspection
 depends libsoup
 depends json-glib
+depends intltool
+depends gobject-introspection
 
