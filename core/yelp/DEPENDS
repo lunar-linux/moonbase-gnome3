@@ -4,4 +4,6 @@ depends hicolor-icon-theme
 depends yelp-xsl
 depends bzip2
 depends xz
-
+depends intltool
+depends itstool
+depends webkit2gtk3
