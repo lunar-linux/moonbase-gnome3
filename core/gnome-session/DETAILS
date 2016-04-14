@@ -1,11 +1,11 @@
           MODULE=gnome-session
-         VERSION=3.18.1.2
+         VERSION=3.20.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:b37d823d57ff2e3057401a426279954699cfe1e44e59a4cbdd941687ff928a45
+      SOURCE_VFY=sha256:2ae9f53dc74f851222fbefbe0dc08db0a78cc76ceeb156f92ebd4d40fd038913
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20120706
-         UPDATED=20151016
+         UPDATED=20160414
            SHORT="The GNOME Session Handler"
 
 cat << EOF

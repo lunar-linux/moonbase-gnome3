@@ -1,4 +1,6 @@
-OPTS+="--localstatedir=/var --libexecdir=/usr/lib/gnome-session \
-       --disable-schemas-compile"  &&
+OPTS+=" --disable-gconf \
+        --disable-schemas-compile" &&
+
+OPTS+=" --libexecdir=/usr/lib/gnome-session" &&
 
 default_build
