@@ -1,4 +1,6 @@
-OPTS+=" --disable-schemas-compile" &&
+OPTS+=" --disable-schemas-compile \
+        --disable-desktop-update \
+        --disable-icon-update" &&
 
 default_build
 
