@@ -5,9 +5,9 @@ sedit "s:\$(prefix)/\$(DATADIRNAME):/usr/share:" Makefile po/Makefile &&
 default_make &&
 
 if [ ! -e /etc/gtk-3.0/settings.ini ]; then
-   cat > settings.ini <<EOF &&
+  cat > settings.ini <<EOF &&
 [Settings]
 gtk-fallback-icon-theme = gnome
 EOF
-   install -Dm0644 {,/etc/gtk-3.0/}settings.ini
+  install -Dm0644 {,/etc/gtk-3.0/}settings.ini
 fi
