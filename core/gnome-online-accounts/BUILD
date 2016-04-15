@@ -7,4 +7,6 @@ OPTS+=" --enable-exchange      \
         --enable-windows-live  \
         --enable-media-server" &&
 
+OPTS+=" --libexecdir=/usr/lib/$MODULE" &&
+
 default_build
