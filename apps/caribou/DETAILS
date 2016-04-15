@@ -1,11 +1,11 @@
           MODULE=caribou
-         VERSION=0.4.19
+         VERSION=0.4.20
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:3}/
-      SOURCE_VFY=sha256:2f0bd0c14c5f94cf5ac3a7627018919addf7a054ac84aaa8e62356957c175a44
+      SOURCE_VFY=sha256:3a6664d5698c2b62a6c1c115743630d339ac237a7324bb354f2e5d55b4bb50d9
         WEB_SITE=http://live.gnome.org/Caribou/
          ENTERED=20130210
-         UPDATED=20151013
+         UPDATED=20160415
            SHORT="A text entry and UI navigation application for Gtk+-3"
 
 cat <<EOF
