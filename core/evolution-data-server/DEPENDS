@@ -1,10 +1,16 @@
+depends boost
 depends db
 depends nss
 depends libgweather
 depends libical
 depends libgdata
 depends gnome-common
+depends gnome-online-accounts
 depends vala
+
+optional_depends krb5 \
+                 "--with-krb5=/usr" "" \
+                 "for Kerberos install"
 
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
@@ -15,4 +21,3 @@ optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
                  "for object introspection"
-
