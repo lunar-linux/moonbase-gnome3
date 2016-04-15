@@ -2,6 +2,5 @@ depends dbus-glib
 depends gnome-desktop
 depends gnome-common
 depends libgnomekbd
-depends systemd
 
 optional_depends gnome-backgrounds "" "" "for GNOME backgrounds image files"
