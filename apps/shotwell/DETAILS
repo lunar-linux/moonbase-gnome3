@@ -2,7 +2,7 @@
          VERSION=0.23.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://download.gnome.org/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:
+      SOURCE_VFY=sha256:1d64bf1456d4d955c8db69225a63e1f6b652ab91f3121a022486428799bbf1fd
         WEB_SITE=http://yorba.org/shotwell
          ENTERED=20100909
          UPDATED=20150427
