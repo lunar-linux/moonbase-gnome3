@@ -1,11 +1,11 @@
           MODULE=cinnamon-menus
-         VERSION=2.8.0
+         VERSION=3.0.0
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/linuxmint/cinnamon-menus/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:06a6e0a11644dfba8459b2b77fac61563184a3d734bd0e7c0f7a6654df1b3a1c
+      SOURCE_VFY=sha256:88894d8a5128573771085bcea58b89964755a18255edeab12d14e30cd3b24eb0
         WEB_SITE=http://github.com/linuxmint/$MODULE/
          ENTERED=20140512
-         UPDATED=20151023
+         UPDATED=20160428
            SHORT="Cinnamon menu specifications"
 
 cat <<EOF
