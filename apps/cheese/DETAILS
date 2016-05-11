@@ -1,8 +1,8 @@
           MODULE=cheese
-         VERSION=3.20.1
+         VERSION=3.20.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:13b454a84be4032832e0bd9b3ec5b0a6ba50cf329800a212fd1133d95fa33a4c
+      SOURCE_VFY=sha256:b7c18719b708e039c063ef09278ee813923556e06af4a7e9598c5d3bdeb83775
         WEB_SITE=http://www.gnome.org/projects/cheese
          ENTERED=20080817
          UPDATED=20160414
