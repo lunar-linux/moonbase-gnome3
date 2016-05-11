@@ -3,6 +3,7 @@ depends dbus
 depends gtk+-3
 depends openssh
 depends libgudev
+depends psmisc
 depends intltool
 
 optional_depends udisks2    "--enable-udisks2" "--disable-udisks2" "for udisk support"
