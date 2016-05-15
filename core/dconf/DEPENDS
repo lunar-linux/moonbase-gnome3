@@ -1,11 +1,16 @@
 depends glib-2
-depends intltool
-depends docbook-xsl
 depends gtk+-3
+depends intltool
 
-optional_depends vala "" "" "to compile .vala source files"
+optional_depends vala "" "" "to compile vala source files"
+
+optional_depends docbook-xsl \
+                 "--enable-man" \
+                 "--disable-man" \
+                 "for building man pages"
 
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
                  "--disable-gtk-doc" \
                  "for building documentation"
+
