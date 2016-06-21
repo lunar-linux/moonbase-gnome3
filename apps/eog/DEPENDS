@@ -15,4 +15,7 @@ optional_depends gtk-doc \
                  "--disable-gtk-doc" \
                  "for GTK documentation"
 
-
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
