@@ -3,6 +3,7 @@ depends poppler
 depends gnome-icon-theme-symbolic
 depends desktop-file-utils
 depends gobject-introspection
+depends libarchive
 depends libsecret
 depends itstool
 depends adwaita-icon-theme
@@ -11,19 +12,29 @@ depends intltool
 optional_depends dconf   "" "" "to save user settings"
 optional_depends gsfonts "" "" "for URW+Postcript core 35 fonts"
 
-optional_depends tiff \
-                 "--enable-tiff" \
-                 "--disable-tiff" \
-                 "support multi-page TIFF files"
-
 optional_depends dbus-glib \
                  "" "--disable-dbus" \
                  "for DBus support"
 
+optional_depends gst-plugins-base \
+                 "--enable-multimedia"  \
+                 "--disable-multimedia" \
+                 "for multimedia support"
+
+optional_depends tiff \
+                 "--enable-tiff" \
+                 "--disable-tiff" \
+                 "for multi-page TIFF files support"
+
+optional_depends djvulibre \
+                 "--enable-djvu" \
+                 "--disable-djvu" \
+                 "for DjVu files support"
+
 optional_depends libspectre \
                  "--enable-ps" \
                  "--disable-ps" \
-                 "compile with PostScript support"
+                 "for with PostScript support"
 
 optional_depends texlive \
                  "--enable-dvi"  \
@@ -37,12 +48,12 @@ optional_depends t1lib \
 optional_depends nautilus \
                  "--enable-nautilus"  \
                  "--disable-nautilus" \
-                 "compile the nautilus plugin"
+                 "for the nautilus plugin"
 
 optional_depends  gtk-doc \
                   "--enable-gtk-doc" \
                   "--disable-gtk-doc" \
-                  "build documentation"
+                  "for documentation building"
 
 optional_depends  gobject-introspection \
                   "--enable-introspection" \
