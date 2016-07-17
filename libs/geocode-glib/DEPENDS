@@ -1,5 +1,9 @@
 depends libsoup
 depends json-glib
 depends intltool
-depends gobject-introspection
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
 
