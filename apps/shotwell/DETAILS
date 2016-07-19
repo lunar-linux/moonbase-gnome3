@@ -1,11 +1,11 @@
           MODULE=shotwell
-         VERSION=0.23.2
+         VERSION=0.23.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://download.gnome.org/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:d52caae4e3204f2f78e2eb828d955848ea6fef5c91d3ac6e9eb0b185c0490b39
+      SOURCE_VFY=sha256:8727d9258f6017839e31017361df474b2c8ae5509c38da6c00f86856076a6f70
         WEB_SITE=http://yorba.org/shotwell
          ENTERED=20100909
-         UPDATED=20160621
+         UPDATED=20160719
            SHORT="A photo organizer"
 #PSAFE=no
 
