@@ -40,7 +40,6 @@ optional_depends ppp \
                  "--enable-ppp" \
                  "--disable-ppp" "for Point-to-Point Protocol with dial-up networking support"
 
-
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
