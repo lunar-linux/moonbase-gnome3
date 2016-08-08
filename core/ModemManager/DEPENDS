@@ -2,8 +2,6 @@ depends hicolor-icon-theme
 depends polkit
 depends ppp
 depends libqmi
-depends libmbim
-depends libgudev
 depends vala
 depends intltool
 
