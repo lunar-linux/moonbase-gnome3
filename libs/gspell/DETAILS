@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:d95905e6c631e34911e8e3feeb364815bf3fd7ccd1dac118a34bcbae70261bd5
         WEB_SITE=http://www.gnome.org
          ENTERED=20160411
-         UPDATED=20160714
+         UPDATED=20160813
            SHORT="An API to implement the spell checking in a GTK+ application"
 
 cat << EOF
