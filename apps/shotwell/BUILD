@@ -1,8 +1,9 @@
+OPTS+=" --disable-icon-update \
+        --disable-desktop-update \
+        --disable-schemas-compile" &&
+
 ./configure --prefix=/usr \
-            --release \
-            --install-headers \
-            --disable-desktop-update \
-            --disable-icon-update \
+            --libexec=/usr/lib \
             $OPTS &&
 
 default_make
