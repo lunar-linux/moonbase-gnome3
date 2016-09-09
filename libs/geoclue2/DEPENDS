@@ -15,6 +15,6 @@ optional_depends ModemManager \
                  "--disable-3g-source --disable-cdma-source --disable-modem-gps-source" \
                  "build modem backends support"
 
-optional_depends systemd "" "" "for systemd support"
-
 optional_depends avahi "" "--disable-nmea-source" "avahi support"
+
+optional_depends systemd "" "" "for systemd support"

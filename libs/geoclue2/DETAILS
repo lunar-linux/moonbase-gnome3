@@ -1,12 +1,12 @@
           MODULE=geoclue2
-         VERSION=2.4.3
+         VERSION=2.4.4
           SOURCE=geoclue-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/geoclue-$VERSION
       SOURCE_URL=http://freedesktop.org/software/geoclue/releases/${VERSION%.*}
-      SOURCE_VFY=sha256:ada9dba870dd79e1b21923aeda4d82b66cbda39e57978fbe3d83d356cc3c605e
+      SOURCE_VFY=sha256:9c43fb9d0c12067ea64400500abb0640194947d4c2c55e38545afe5d9c5c315c
         WEB_SITE=http://www.gnome.org
          ENTERED=20140413
-         UPDATED=20151216
+         UPDATED=20160909
            SHORT="A modular geoinformation service"
 
 cat << EOF
