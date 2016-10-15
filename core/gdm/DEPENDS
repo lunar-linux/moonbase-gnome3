@@ -1,10 +1,10 @@
-depends systemd
-depends intltool
+depends gnome-session
 depends yelp-tools
 depends check
 depends itstool
+depends systemd
 
-optional_depends "gobject-introspection" \
+optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
                  " for object introspection"
