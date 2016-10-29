@@ -1,5 +1,3 @@
-OPTS+-" --disable-static" &&
-
-OPTS+=" --libexecdir=/usr/lib/$MODULE" &&
+OPTS+=" --disable-static --libexecdir=/usr/lib/$MODULE" &&
 
 default_build
