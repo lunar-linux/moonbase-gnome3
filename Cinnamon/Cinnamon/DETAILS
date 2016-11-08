@@ -1,14 +1,14 @@
           MODULE=Cinnamon
-         VERSION=3.0.7
+         VERSION=3.2.0
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/linuxmint/Cinnamon/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:0aa0ce174a4638f54ddb2f0dc1f93a847678fa225c7a4fae718ffd14f1c8694f
+      SOURCE_VFY=sha256:c1473aabb01329c07bf1e28148cb410255700f4dd237195b7790e9bcdb69b89d
         WEB_SITE=http://cinnamon.linuxmint.com/
          ENTERED=20130210
-         UPDATED=20160717
-           SHORT="A Linux desktop based on GTK+-3"
+         UPDATED=20161108
+           SHORT="A Linux desktop based on GTK"
 
 cat <<EOF
 Linux desktop which provides advanced innovative features and a traditional
-user experience and is based on GTK+-3.
+user experience and is based on GTK.
 EOF
