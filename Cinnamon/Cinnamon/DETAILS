@@ -1,8 +1,8 @@
           MODULE=Cinnamon
-         VERSION=3.2.0
+         VERSION=3.2.1
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/linuxmint/Cinnamon/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:c1473aabb01329c07bf1e28148cb410255700f4dd237195b7790e9bcdb69b89d
+      SOURCE_VFY=sha256:4fc7021815fe138d932d63de95b879ae557bca90d39f41bc015d42ce131aa998
         WEB_SITE=http://cinnamon.linuxmint.com/
          ENTERED=20130210
          UPDATED=20161108
