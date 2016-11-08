@@ -1,11 +1,11 @@
           MODULE=cinnamon-themes
-         VERSION=3.0.0
+         VERSION=3.2.0
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=git+https://github.com/linuxmint/cinnamon-themes
 #      SOURCE_VFY=sha256:
         WEB_SITE=http://github.com/linuxmint/$MODULE/
          ENTERED=20151023
-         UPDATED=20160428
+         UPDATED=20161108
            SHORT="Themes for Cinnamon"
 
 cat <<EOF
