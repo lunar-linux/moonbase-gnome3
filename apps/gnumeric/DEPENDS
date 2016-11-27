@@ -1,11 +1,9 @@
-depends glib-2
 depends gtk+-3
-depends libgsf
 depends goffice
 depends libxml2
 depends pango
 
-optional_depends pygtk \
+optional_depends pygobject \
                  "--with-python" \
                  "--without-python" \
                  "compile the Python plugin loader"
@@ -20,16 +18,17 @@ optional_depends libgda \
                  "--without-gda" \
                  "compile the Gnome Database Access plugin"
 
-optional_depends libgnomedb \
-                 "" " " \
-                 "required for the Gnome Database Access plugin"
-
 #optional_depends psiconv \
 #                 "--with-psiconv" \
 #                 "--without-psiconv" \
 #                 "compile with Psiconv support"
 
 # intentionally a single blank - disabled in PRE_BUILD
-optional_depends rarian \
-                  "" " " \
-                  "use documentation"
+optional_depends libgnomedb "" " " "required for the Gnome Database Access plugin"
+optional_depends rarian     "" " " "use documentation"
+optional_depends yelp       "" " " "for viewing the help manual"
+
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for building documentation"
