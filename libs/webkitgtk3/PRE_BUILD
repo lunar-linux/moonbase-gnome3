@@ -1,0 +1,4 @@
+default_pre_build &&
+
+sedit 's@\([ (]\)abs(@\1std::abs(@g' Source/WebCore/platform/gtk/GtkClickCounter.cpp \
+                                     Source/WebCore/platform/gtk/LocalizedStringsGtk.cpp
