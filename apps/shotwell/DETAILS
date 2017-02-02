@@ -1,8 +1,8 @@
           MODULE=shotwell
-         VERSION=0.24.4
+         VERSION=0.24.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://download.gnome.org/sources/$MODULE/${VERSION%.*}/
-      SOURCE_VFY=sha256:6bad4aeeb75c32a7a04b3a774da0fe44933c727ed559a7b9e0d6a3ff2f038767
+      SOURCE_VFY=sha256:4936c2c8c63b701ac0cf15b7bd6619ee3241a6d08b4187f2475348642ff9c1fd
          WEB_SITE=http://yorba.org/shotwell/
          ENTERED=20100909
          UPDATED=20170202
