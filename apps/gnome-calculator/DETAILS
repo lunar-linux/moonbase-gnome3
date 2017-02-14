@@ -1,11 +1,11 @@
           MODULE=gnome-calculator
-         VERSION=3.22.1
+         VERSION=3.22.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:93a72a9de919b21f35b6581a0bf9e910c98691a7fccd47da42467d287c1dac11
+      SOURCE_VFY=sha256:8dba14b449a6a141aaf86b2ce8d8722bd03b3c398892ba583127d2a2995e52ca
         WEB_SITE=http://www.gnome.org
          ENTERED=20131020
-         UPDATED=20161013
+         UPDATED=20160214
            SHORT="GNOME Scientific calculator"
 
 cat << EOF
