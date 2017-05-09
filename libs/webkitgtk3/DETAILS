@@ -2,12 +2,15 @@
 # 2.4.10 is *the last* release that supports the webkit-1 bump webkit2gtk3 instead
          VERSION=2.4.11
           SOURCE=webkitgtk-$VERSION.tar.xz
+         SOURCE2=webkitgtk3-icu59.patch.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/webkitgtk-$VERSION
       SOURCE_URL=http://www.webkitgtk.org/releases
+     SOURCE2_URL=$PATCH_URL
       SOURCE_VFY=sha256:588aea051bfbacced27fdfe0335a957dca839ebe36aa548df39c7bbafdb65bf7
+     SOURCE2_VFY=sha256:48372cc719f559ca300ed7b27a509903dfa4eb8583f11b66fa375e9ca0242b87
         WEB_SITE=http://www.webkit.org
          ENTERED=20070919
-         UPDATED=20161217
+         UPDATED=20170509
            SHORT="gtk+ web rendering engine"
 
 cat << EOF
