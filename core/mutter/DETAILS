@@ -1,11 +1,11 @@
           MODULE=mutter
-         VERSION=3.22.3
+         VERSION=3.24.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION::4}
-      SOURCE_VFY=sha256:537eda8e5fdd4a70602da913b885ad745a7510678c24006b91ceba83ccab209a
+      SOURCE_VFY=sha256:51a453b60b727adb11dcf70ba21ce7b8dccb38256d39ae06a1177118d5bea504
         WEB_SITE=http://www.gnome.org
          ENTERED=20131020
-         UPDATED=20170219
+         UPDATED=20170624
            SHORT="A window manager for GNOME"
 
 cat << EOF
