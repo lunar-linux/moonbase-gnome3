@@ -1,11 +1,11 @@
           MODULE=cjs
-         VERSION=3.4.1
+         VERSION=3.4.2
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/linuxmint/cjs/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:83254b01984452cc234891768e746f688924fe2904b6c1c76e214528ff44c060
+      SOURCE_VFY=sha256:56d3533da49b15f5f92d6fe93b41511917f51fd0b566a37b324cbd9fff327412
         WEB_SITE=http://github.com/linuxmint/$MODULE/
          ENTERED=20131019
-         UPDATED=20170524
+         UPDATED=20170627
            SHORT="Javascript Bindings for Cinnamon"
 
 cat <<EOF
