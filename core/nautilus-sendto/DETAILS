@@ -1,11 +1,11 @@
           MODULE=nautilus-sendto
-         VERSION=3.8.4
+         VERSION=3.8.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:51065c6e2601560a8bc507c7aee8e967dc6c6f355c6a05a1d4e7e1fe76b908e7
+      SOURCE_VFY=sha256:8c6a2889e00edefbe13f2443512447e3e9ee87a707f483e096e3c0079ba90901
         WEB_SITE=http://www.gnome.org
          ENTERED=20131020
-         UPDATED=20160615
+         UPDATED=20170629
            SHORT="Nautilus context menu for sending files"
 
 cat << EOF
