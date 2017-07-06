@@ -2,7 +2,7 @@
          VERSION=3.4.3
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/linuxmint/cinnamon-translations/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:
+      SOURCE_VFY=sha256:f76e21043587a1eeee062815db04ea81f15b0ac6e1f5a7013e12b0d65b1b9972
         WEB_SITE=http://github.com/linuxmint/$MODULE/
          ENTERED=20131019
          UPDATED=20170701
