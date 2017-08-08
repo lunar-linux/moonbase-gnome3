@@ -1,9 +1,8 @@
           MODULE=cinnamon-screensaver
-         VERSION=3.4.1
+         VERSION=3.4.2
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/linuxmint/cinnamon-screensaver/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:
-e25b68c74d7307eb0db30cf31d2f819981e25cf7371b339a08895c0506d55341  cinnamon-screensaver-3.4.1.tar.gz
+      SOURCE_VFY=sha256:9a86449eb6b2c1c2c31e3e18a336106c2fbfd0d6b68647ada1eff22867605335
         WEB_SITE=http://github.com/linuxmint/$MODULE/
          ENTERED=20130303
          UPDATED=20170622
