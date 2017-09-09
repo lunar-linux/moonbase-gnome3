@@ -1,11 +1,11 @@
           MODULE=cinnamon-settings-daemon
-         VERSION=3.4.3
+         VERSION=3.4.4
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/linuxmint/cinnamon-settings-daemon/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:058d3e3e952a6e2c8e1b3d703628aa5f6fd6b7ceca898d884573b9c35f223e75
+      SOURCE_VFY=sha256:b883879a13f9120d2e17ad22fa2cf3ebe50a87d814c82e2f067b2bc32e7273f1
         WEB_SITE=http://github.com/linuxmint/$MODULE/
          ENTERED=20131019
-         UPDATED=20170808
+         UPDATED=20170909
            SHORT="The Cinnamon Settings daemon"
 
 cat <<EOF
