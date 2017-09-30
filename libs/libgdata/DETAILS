@@ -1,11 +1,11 @@
           MODULE=libgdata
-         VERSION=0.17.8
+         VERSION=0.17.9
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}/
-      SOURCE_VFY=sha256:e5e735bfac219c6cbe4a14df481cb3cb4b1c4b8b5e70f9a105a884035bc3a161
+      SOURCE_VFY=sha256:85c4f7674c0098ffaf060ae01b6b832cb277b3673d54ace3bdedaad6b127453a
         WEB_SITE=http://live.gnome.org/libgdata
          ENTERED=20091006
-         UPDATED=20170422
+         UPDATED=20170930
            SHORT="Gnome's GData protocol library"
 
 cat << EOF
