@@ -1,11 +1,11 @@
           MODULE=cheese
-         VERSION=3.24.0
+         VERSION=3.26.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:26d0324c11d858a53a8a78f60babda63310a2b6f46c8fa3a4f6aa36ca9d0f372
+      SOURCE_VFY=sha256:8ef52fc41de1817c4e4274e23eb7c29d28b64ae0f0d1fec52e184e99aea6c605
         WEB_SITE=http://www.gnome.org/projects/cheese
          ENTERED=20080817
-         UPDATED=20170419
+         UPDATED=20170930
            SHORT="A webcam picture taker"
 
 cat << EOF
