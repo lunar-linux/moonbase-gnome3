@@ -1,11 +1,11 @@
           MODULE=cinnamon-desktop
-         VERSION=3.4.2
+         VERSION=3.6.0
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/linuxmint/cinnamon-desktop/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:58d594a896f2ce843b8dbc4430e1e538caa5f795e0bca07e5429ba953523c2c9
+      SOURCE_VFY=sha256:28de27897f50c955ea03727c6d57467e0551c0e853c0f4685275a8a631243526
         WEB_SITE=http://github.com/linuxmint/$MODULE/
          ENTERED=20131019
-         UPDATED=20170621
+         UPDATED=20171025
            SHORT="A library with common API for various Cinnamon modules"
 
 cat <<EOF
