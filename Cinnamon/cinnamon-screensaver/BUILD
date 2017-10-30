@@ -1,7 +1,7 @@
 ./autogen.sh --prefix=/usr \
              --sysconfdir=/etc \
              --localstatedir=/var \
-             --libexecdir=/usr/lib/cinnamon-screensaver \
+             --libexecdir=/usr/lib/$MODULE \
              --disable-static \
              --with-mit-ext \
              $OPTS &&
