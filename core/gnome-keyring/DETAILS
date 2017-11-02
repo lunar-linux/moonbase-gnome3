@@ -1,11 +1,11 @@
           MODULE=gnome-keyring
-         VERSION=3.20.0
+         VERSION=3.20.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:bc17cecd748a0e46e302171d11c3ae3d76bba5258c441fabec3786f418e7ec99
+      SOURCE_VFY=sha256:97964e723f454be509c956ed5e38b5c2fd7363f43bd3f153b94a4a63eb888c8c
         WEB_SITE=http://www.gnome.org
          ENTERED=20031208
-         UPDATED=20160415
+         UPDATED=20171101
            SHORT="The GNOME keyring services (daemon and tools)"
 
 cat << EOF
