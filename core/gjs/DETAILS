@@ -1,11 +1,11 @@
           MODULE=gjs
-         VERSION=1.50.0
+         VERSION=1.50.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:2d529d315fc926995c5174d0ac45dacd604e52b9213ba3c4cd77f30bc4aec945
+      SOURCE_VFY=sha256:41519fd63978745d17dbccb688a55f1850a7ba72f3c86274ca985d88dbff9fdf
         WEB_SITE=http://live.gnome.org/Gjs
          ENTERED=20130210
-         UPDATED=20170930
+         UPDATED=20171114
            SHORT="Javascript bindings for GNOME"
 
 cat <<EOF
