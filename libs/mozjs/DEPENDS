@@ -1,5 +1,7 @@
 depends Python
+depends icu4c
 depends readline
 depends libffi
 depends nspr
 depends zip
+depends zlib

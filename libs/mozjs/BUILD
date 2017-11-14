@@ -3,6 +3,7 @@ cd $SOURCE_DIRECTORY/js/src &&
 rm -rf editline ctypes/libffi &&
 
 OPTS+=" --with-system-nspr  \
+        --with-system-icu   \
         --enable-threadsafe \
         --enable-readline   \
         --enable-system-ffi \
@@ -11,11 +12,7 @@ OPTS+=" --with-system-nspr  \
 unset CPPFLAGS &&
 CXXFLAGS+=" -fpermissive" &&
 
-default_config &&
-
-sedit "s;mozjs-;mozjs-${VERSION::2};" Makefile &&
-
-default_make
+default_build &&
 
 #for backwards compatibility
 ln -sf /usr/bin/js /usr/bin/js17
