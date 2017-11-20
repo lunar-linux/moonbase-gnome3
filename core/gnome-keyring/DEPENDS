@@ -1,5 +1,8 @@
 depends libcap-ng
+depends Linux-PAM
 depends gcr
+depends gnome-common
+depends intltool
 
 optional_depends gtk-doc \
                  "--enable-doc" \

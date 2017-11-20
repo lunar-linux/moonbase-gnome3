@@ -1,0 +1,3 @@
+default_pre_build &&
+
+sedit 's/MATE/MATE;Cinnamon/' -i daemon/*.desktop.in.in
