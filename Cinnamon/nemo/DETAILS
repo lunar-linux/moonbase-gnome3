@@ -1,8 +1,8 @@
           MODULE=nemo
-         VERSION=3.6.3
+         VERSION=3.6.4
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/linuxmint/nemo/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:75a0051a981ca1b5547b70872f481275fc432bd7eddb44fad6d0fad39c0e3e81
+      SOURCE_VFY=sha256:22efeb1f94eaa7178bf675d364102efa559ee67f9bb1055330b62ad0c566ea99
         WEB_SITE=http://github.com/linuxmint/nemo/
          ENTERED=20130302
          UPDATED=20171120
