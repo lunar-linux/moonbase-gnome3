@@ -2,7 +2,7 @@
          VERSION=2.4.7
           SOURCE=geoclue-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/geoclue-$VERSION
-      SOURCE_URL=http://freedesktop.org/software/geoclue/releases/${VERSION%.*}
+      SOURCE_URL=https://freedesktop.org/software/geoclue/releases/${VERSION%.*}
       SOURCE_VFY=sha256:d17b96bb5799a84723385ea5704235565e9c3dedd2b7afac475a06e550ae0ea6
         WEB_SITE=http://www.gnome.org
          ENTERED=20140413
