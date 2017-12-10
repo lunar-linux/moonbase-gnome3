@@ -1,11 +1,11 @@
           MODULE=gtksourceview
-         VERSION=3.24.4
+         VERSION=3.24.6
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:207fb1958087d89393521eafac05f6dd67448ef6edb43ec2c708a79f3b1aa793
+      SOURCE_VFY=sha256:7aa6bdfebcdc73a763dddeaa42f190c40835e6f8495bb9eb8f78587e2577c188
         WEB_SITE=http://www.gnome.org
          ENTERED=20030510
-         UPDATED=20171001
+         UPDATED=20171210
            SHORT="Text widget that extends the gtk+-3 text widget GtkTextView"
 
 cat << EOF
