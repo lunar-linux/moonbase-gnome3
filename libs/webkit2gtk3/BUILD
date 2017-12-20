@@ -1,4 +1,4 @@
-OPTS+=" -DENABLE_MINIBROWSER=1 -DPORT=GTK" &&
+OPTS+=" -DENABLE_MINIBROWSER=1 -DPORT=GTK -DUSE_LD_GOLD=0" &&
 
 default_cmake_build &&
 
