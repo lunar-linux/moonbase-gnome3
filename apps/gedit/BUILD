@@ -3,6 +3,4 @@ OPTS+=" --enable-python \
         --disable-updater \
         --disable-schemas-compile" &&
 
-OPTS+=" --libexecdir=/usr/lib" &&
-
 default_build

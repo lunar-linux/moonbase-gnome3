@@ -6,6 +6,4 @@ OPTS+=" --enable-ipv6 \
         --without-tcp-wrappers \
         --disable-schemas-compile" &&
 
-OPTS+=" --libexecdir=/usr/lib/gdm" &&
-
 default_build

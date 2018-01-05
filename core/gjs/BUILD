@@ -1,4 +1,3 @@
-OPTS+=" --disable-static \
-        --libexecdir=/usr/lib" &&
+OPTS+=" --disable-static" &&
 
 default_build

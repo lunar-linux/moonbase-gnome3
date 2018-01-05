@@ -2,8 +2,6 @@ OPTS+=" --disable-static \
         --disable-update-mime \
         --disable-schemas-compile" &&
 
-OPTS+=" --libexec=/usr/lib/gcr" &&
-
 default_build &&
 
 install -m0644 $SCRIPT_DIRECTORY/61-gnome-bluetooth-rfkill.rules /usr/lib/udev/rules.d/
