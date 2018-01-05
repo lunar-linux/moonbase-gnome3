@@ -1,6 +1,5 @@
 ./autogen.sh --prefix=/usr \
              --sysconfdir=/etc \
-             --libexecdir=/usr/lib/nemo \
              --localstatedir=/var \
              --disable-static \
              --disable-update-mimedb \

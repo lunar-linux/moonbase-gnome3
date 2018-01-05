@@ -1,6 +1,5 @@
 ./autogen.sh --prefix=/usr \
              --sysconfdir=/etc \
-             --libexecdir=/usr/lib/cinnamon \
              --localstatedir=/var \
              --disable-static \
              --disable-schemas-compile \
