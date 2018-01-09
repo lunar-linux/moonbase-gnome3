@@ -21,5 +21,5 @@ depends libsoup
 depends libsecret
 
 optional_depends hyphen     "-DUSE_LIBHYPHEN=1"      "-DUSE_LIBHYPHEN=0"      "To support hyphenation and justification"
-optional_depends libnotify4 "-DUSE_LIBNOTIFY=1"      "-DUSE_LIBNOTIFY=0"      "For notification support"
+optional_depends libnotify  "-DUSE_LIBNOTIFY=1"      "-DUSE_LIBNOTIFY=0"      "For notification support"
 optional_depends geoclue2   "-DENABLE_GEOLOCATION=1" "-DENABLE_GEOLOCATION=0" "For geolocation support"

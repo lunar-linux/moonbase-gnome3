@@ -3,7 +3,7 @@ depends dconf
 depends desktop-file-utils
 depends gnome-desktop
 depends gnome-icon-theme
-depends libnotify4
+depends libnotify
 depends cinnamon-desktop
 depends cinnamon-translations
 

@@ -5,7 +5,7 @@ depends exempi
 depends gvfs
 depends desktop-file-utils
 depends gnome-icon-theme
-depends libnotify4
+depends libnotify
 depends nautilus-sendto
 
 optional_depends gobject-introspection \

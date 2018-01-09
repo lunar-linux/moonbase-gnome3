@@ -1,7 +1,7 @@
 depends dconf
 depends gnome-desktop
 depends hicolor-icon-theme
-depends libnotify4
+depends libnotify
 depends nss
 depends libcanberra
 depends pulseaudio

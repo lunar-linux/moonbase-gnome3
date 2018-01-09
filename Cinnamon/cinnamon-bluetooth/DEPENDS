@@ -1,6 +1,6 @@
 depends bluez-5
 depends gtk+-3
-depends libnotify4
+depends libnotify
 depends hicolor-icon-theme
 
 optional_depends gobject-introspection \

@@ -1,5 +1,5 @@
 depends gtk+-3
-depends libnotify4
+depends libnotify
 depends libsecret
 depends iso-codes
 depends NetworkManager

@@ -8,7 +8,7 @@ depends libSM
 depends shared-mime-info
 depends libcanberra
 depends cdrtools
-depends libnotify4
+depends libnotify
 depends gnome-common
 depends libburn
 depends libisofs

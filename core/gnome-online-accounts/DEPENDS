@@ -1,6 +1,6 @@
 depends gcr
 depends json-glib
-depends libnotify4
+depends libnotify
 depends libsecret
 depends rest
 depends docbook-xsl

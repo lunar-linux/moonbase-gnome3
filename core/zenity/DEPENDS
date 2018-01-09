@@ -3,7 +3,7 @@ depends gtk+-3
 depends itstool
 depends yelp-tools
 
-optional_depends libnotify4 \
+optional_depends libnotify \
                  "--enable-notify" \
                  "--disable-notify" \
                  "for libnotify support"
