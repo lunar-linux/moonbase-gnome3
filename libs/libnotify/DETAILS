@@ -1,13 +1,11 @@
-          MODULE=libnotify4
-         PAKNAME=libnotify
+          MODULE=libnotify
          VERSION=0.7.7
-          SOURCE=$PAKNAME-$VERSION.tar.xz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$PAKNAME-$VERSION
-      SOURCE_URL=http://ftp.gnome.org/pub/GNOME/sources/$PAKNAME/${VERSION%.*}
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=http://ftp.gnome.org/pub/GNOME/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha256:9cb4ce315b2655860c524d46b56010874214ec27e854086c1a1d0260137efc04
-        WEB_SITE=http://www.galago-project.org
+        WEB_SITE=http://www.galago-project.org/
          ENTERED=20060526
-         UPDATED=20161015
+         UPDATED=20180109
            SHORT="Desktop notification framework library"
 
 cat << EOF
