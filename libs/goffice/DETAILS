@@ -1,11 +1,11 @@
           MODULE=goffice
-         VERSION=0.10.37
+         VERSION=0.10.38
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:51b4e05dbfca5566409a7461e03b08b8882ba5f5e1b322de19eea05009700fe1
+      SOURCE_VFY=sha256:443199d7a9833fddaadfc4f9065c289e639eed480de316f37da816e396bb9764
         WEB_SITE=www.gnome.org
          ENTERED=20071104
-         UPDATED=20171204
+         UPDATED=20180123
            SHORT="A glib/gtk set of document centric objects and utilities"
 
 cat << EOF
