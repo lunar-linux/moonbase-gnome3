@@ -1,6 +1,13 @@
+depends pcre2
+depends gnutls
 depends gtk+-3
 depends vala
 depends intltool
+
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for building documentation"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
