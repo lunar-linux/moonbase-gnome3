@@ -1,19 +1,29 @@
 depends cdrdao
+depends cdrtools
+depends dvd+rw-tools
 depends dconf
-depends gtk+-3
+depends gvfs
 depends gst-plugins-good-1.0
 depends desktop-file-utils
 depends hicolor-icon-theme
 depends libSM
 depends shared-mime-info
 depends libcanberra
-depends cdrtools
 depends libnotify
 depends gnome-common
-depends libburn
-depends libisofs
-depends gobject-introspection
 depends GConf
 depends docbook-xsl
 depends intltool
 
+optional_depends libburn  "" "" "alternative back-end"
+optional_depends libisofs "" "" "libburn backend"
+
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for building documentation"
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"

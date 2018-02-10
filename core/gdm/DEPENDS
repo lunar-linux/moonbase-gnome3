@@ -2,7 +2,7 @@ depends gnome-session
 depends yelp-tools
 depends check
 depends itstool
-depends systemd
+depends %UDEV
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \

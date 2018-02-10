@@ -5,7 +5,7 @@ depends libnl3
 depends libndp
 depends libsecret
 depends util-linux
-depends systemd
+depends %UDEV
 depends libgudev
 depends jansson
 
