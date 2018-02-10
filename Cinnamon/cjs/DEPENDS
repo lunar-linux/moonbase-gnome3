@@ -1,6 +1,7 @@
 depends cairo
 depends mozjs
 depends dbus-glib
+depends autoconf-archive
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \

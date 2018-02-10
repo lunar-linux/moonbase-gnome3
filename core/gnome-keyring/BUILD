@@ -1,3 +1,5 @@
-OPTS+=" --disable-static --disable-schemas-compile" &&
+OPTS+=" --disable-static \
+        --disable-schemas-compile \
+        --libexecdir=/usr/lib/$MODULE"
 
 default_build
