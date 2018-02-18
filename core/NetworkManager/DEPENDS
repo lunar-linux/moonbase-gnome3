@@ -8,7 +8,6 @@ depends libsecret
 depends util-linux
 depends %UDEV
 depends libgudev
-depends jansson
 
 optional_depends gnome-bluetooth "" "" "for Bluetooth support"
 
@@ -23,7 +22,8 @@ optional_depends libsoup         "--with-libsoup=yes"   "--with-libsoup=no"  "fo
 optional_depends polkit          "--enable-polkit=yes"  "--enable-polkit=no" "for polkit support"
 optional_depends vala            "--enable-vala=yes"    "--enable-vala=no"   "for vala support"
 optional_depends valgrind        "--with-valgrind=yes"  "--with-valgrind=no" "for valgrind support"
-optional_depends gtk-doc         "--enable-gtk-doc"     "--disable-gtk-doc"  "for documentation generation"
+optional_depends gtk-doc         "--enable-gtk-doc"     "--disable-gtk-doc"  "for documentation generation" n
+optional_depends jansson         "--enable-ovs"         "--disable-ovs"      "for open virtual switch support" n 
 
 if in_depends gtk-doc; then
   depends YAML
