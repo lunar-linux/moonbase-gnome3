@@ -1,12 +1,12 @@
           MODULE=glade
-         VERSION=3.20.3
+         VERSION=3.20.4
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:1739d5478fc54ec8174ff3faa8026053c21c6a10fe38a49c66138f9deada08d4
+      SOURCE_VFY=sha256:4b82dfe635165b996ed75f95742bce788be8c8a45bf75c81892e3519902635d9
         WEB_SITE=http://glade.gnome.org
          ENTERED=20131020
-         UPDATED=20180218
+         UPDATED=20180304
            SHORT="User interface builder for GTK+ and GNOME"
 
 cat << EOF
