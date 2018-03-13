@@ -3,10 +3,9 @@ depends libgee
 depends gexiv2
 depends libgphoto2
 depends libsoup
-depends libunique
+depends libunique-3
 depends librsvg
 depends json-glib
-depends gtk+-3
 depends webkitgtk3
 depends LibRaw
 depends rest
