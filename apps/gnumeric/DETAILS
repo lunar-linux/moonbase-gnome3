@@ -1,19 +1,18 @@
           MODULE=gnumeric
-         VERSION=1.12.38
+         VERSION=1.12.39
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:3435d7d93a47a32764b1ec2d03f7fbb348a97af52530815e49370803a1a69c65
+      SOURCE_VFY=sha256:26cceb7fa97dc7eee7181a79a6251a85b1f1464dcaaaf7624829f7439c5f7d3f
         WEB_SITE=http://www.gnumeric.org
          ENTERED=20021224
-         UPDATED=20171229
+         UPDATED=20180314
            SHORT="The GNOME spreadsheet application"
 
 cat << EOF
-Gnumeric is a powerful spreadsheet application that interoperates well
-with other spreadsheets. It comes with plugins that enable it to deal
-with commonly-used spreadsheet file formats. Gnumeric is intended to
-be a drop-in replacement for commercial spreadsheets.
-Gnumeric will import your existing Excel, 1-2-3, Applix, Sylk, XBase
-and Oleo files. Gnumeric can export to LaTeX 2e (.tex), TROFF (.me)
-and HTML as well.
+Gnumeric is a powerful spreadsheet application that interoperates well with
+other spreadsheets. It comes with plugins that enable it to deal with
+commonly-used spreadsheet file formats. Gnumeric is intended to be a drop-in
+replacement for commercial spreadsheets.
+Gnumeric will import your existing Excel, 1-2-3, Applix, Sylk, XBase and Oleo
+files. Gnumeric can export to LaTeX 2e (.tex), TROFF (.me) and HTML as well.
 EOF
