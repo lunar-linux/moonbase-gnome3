@@ -3,4 +3,3 @@ depends iso-codes
 depends enchant
 depends gtk+-3
 depends intltool
-
