@@ -1,7 +1,7 @@
           MODULE=gvfs
          VERSION=1.34.2.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/1.34/
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:4}/
       SOURCE_VFY=sha256:d5251673ebdaa7c99f28608b576f36eaf7b369867d787c419035638e7afcb5ea
         WEB_SITE=http://www.gnome.org
          ENTERED=20080312
