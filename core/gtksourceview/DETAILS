@@ -1,15 +1,15 @@
           MODULE=gtksourceview
-         VERSION=3.24.6
+         VERSION=3.24.7
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:7aa6bdfebcdc73a763dddeaa42f190c40835e6f8495bb9eb8f78587e2577c188
+      SOURCE_VFY=sha256:a5c20d3a6347533689358f3ea52486409f6dd41d5a69c65eab7570cfaffee8e6
         WEB_SITE=http://www.gnome.org
          ENTERED=20030510
-         UPDATED=20171210
+         UPDATED=20180316
            SHORT="Text widget that extends the gtk+-3 text widget GtkTextView"
 
 cat << EOF
-GtkSourceView is a text widget that extends the standard gtk+-3 text
-widget GtkTextView. It improves GtkTextView by implementing syntax
-highlighting and other features typical of a source editor.
+GtkSourceView is a text widget that extends the standard gtk+-3 text widget
+GtkTextView. It improves GtkTextView by implementing syntax highlighting and
+other features typical of a source editor.
 EOF
