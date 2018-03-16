@@ -9,13 +9,14 @@ depends exempi
 depends librsvg
 depends intltool
 depends libpeas
+depends meson
 
 optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "-Denable-gtk-doc=true" \
+                 "-Denable-gtk-doc=false" \
                  "for GTK documentation"
 
 optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
+                 "-Denable-introspection=true" \
+                 "-Denable-introspection=false" \
                  "for object introspection"
