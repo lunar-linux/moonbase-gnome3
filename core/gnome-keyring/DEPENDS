@@ -4,5 +4,12 @@ depends gcr
 depends gnome-common
 depends intltool
 
-optional_depends gtk-doc "--enable-doc" "--disable-doc" "for doc install"
-optional_depends Linux-PAM "--with-pam-dir=/lib/security" "--disable-pam" "for PAM support"
+optional_depends Linux-PAM \
+                 "--with-pam-dir=/lib/security" \
+                 "--disable-pam" \
+                 "for PAM support"
+
+optional_depends gtk-doc \
+                 "--enable-doc" \
+                 "--disable-doc" \
+                 "for doc install"
