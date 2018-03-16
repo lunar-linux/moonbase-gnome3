@@ -1,12 +1,12 @@
           MODULE=vte3
-         VERSION=0.50.1
+         VERSION=0.52.0
           SOURCE=vte-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/vte-$VERSION
       SOURCE_URL=$GNOME_URL/sources/vte/${VERSION%.*}
-      SOURCE_VFY=sha256:cf1708e3e573160e1db107014b3ef70888fefe6b668373fed70e8d1cac45a8c2
+      SOURCE_VFY=sha256:d5ae72dddd57af493afa10ca2a290f284e588021b0bd8aaaa63dbb75de7c0567
         WEB_SITE=http://www.gnome.org
          ENTERED=20021013
-         UPDATED=20171003
+         UPDATED=20180316
            SHORT="A Virtual Terminal Emulator widget"
 
 cat << EOF
