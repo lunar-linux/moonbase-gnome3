@@ -1,11 +1,11 @@
           MODULE=gnome-bluetooth
-         VERSION=3.26.0
+         VERSION=3.28.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha256:e8f9dfc049a6322fd8b4e4ac0b8fb968a3a157a11b9ea61552aa94a5625cc127
         WEB_SITE=http://live.gnome.org/GnomeBluetooth
          ENTERED=20130316
-         UPDATED=20171001
+         UPDATED=20180316
            SHORT="Bluetooth app for GNOME"
 
 cat << EOF
