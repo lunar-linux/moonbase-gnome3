@@ -1,15 +1,15 @@
           MODULE=dconf
-         VERSION=0.26.1
+         VERSION=0.28.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:d583b1f7fc93b879e2956acc6a26ea05a445a0002158aeef80c8e378e1414535
+      SOURCE_VFY=sha256:61d3b3865ef58b729c3b39aa0979f886c014aa8362f93dcfc74bf5648ed9c742
         WEB_SITE=http://live.gnome.org/dconf
          ENTERED=20101128
-         UPDATED=20171006
+         UPDATED=20180316
            SHORT="Simple low-level configuration system"
 
 cat << EOF
-dconf is a low-level configuration system. Its main purpose is to
-provide a back-end to GSettings on platforms that don't already have
-configuration storage systems.
+dconf is a low-level configuration system. Its main purpose is to provide a
+back-end to GSettings on platforms that don't already have configuration
+storage systems.
 EOF
