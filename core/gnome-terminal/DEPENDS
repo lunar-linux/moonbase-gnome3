@@ -1,6 +1,6 @@
 depends libSM
 depends GConf
 depends gsettings-desktop-schemas
-#depends appstream-glib
 depends vte3
 depends itstool
+#depends appstream-glib
