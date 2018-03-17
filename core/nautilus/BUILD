@@ -1,9 +1,11 @@
 mkdir -p build &&
  
-meson build --prefix /usr \
-            -Dselinux=false \
-            -Denable_docs=false \
-            -Denable-extensions=false &&
+OPTS+=" --prefix /usr \
+        -Ddocs=false \
+        -Dselinux=false \
+        -Denable-extensions=false"
+
+meson build $OPTS &&
 
 ninja -C build &&
 

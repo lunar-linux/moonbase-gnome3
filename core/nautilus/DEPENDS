@@ -10,9 +10,5 @@ depends gnome-autoar
 depends libnotify
 depends tracker
 depends meson
-#depends nautilus-sendto
 
-optional_depends gobject-introspection \
-                 "-Denable-introspection=true" \
-                 "-Denable-introspection=false" \
-                 "for object introspection"
+#depends nautilus-sendto
