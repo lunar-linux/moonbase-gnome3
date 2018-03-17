@@ -1,0 +1,11 @@
+depends libXrandr
+depends libXext
+depends libXcomposite
+depends mesa-lib
+depends gdk-pixbuf
+depends pango
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
