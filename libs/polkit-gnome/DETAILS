@@ -9,6 +9,6 @@
            SHORT="Authentication agent for polkit on GNOME"
 
 cat << EOF
-The polkit-gnome package provides an authentication agent for
-polkit that integrates well with the GNOME desktop environment.
+The polkit-gnome package provides an authentication agent for polkit that
+integrates well with the GNOME desktop environment.
 EOF
