@@ -11,6 +11,6 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$PKGNAME-$VERSION
            SHORT="Window Navigator Construction Kit (GTK+3)"
 
 cat << EOF
-libwnck is Window Navigator Construction Kit, i.e. a library to use
-for writing pagers and taskslists and stuff.
+libwnck is Window Navigator Construction Kit, i.e. a library to use for
+writing pagers and taskslists and stuff.
 EOF
