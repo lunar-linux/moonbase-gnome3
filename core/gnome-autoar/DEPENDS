@@ -1,0 +1,16 @@
+depends libarchive
+depends gtk+-3
+depends gnome-common
+depends vala
+depends intltool
+depends gtk-doc
+
+#optional_depends gtk-doc \
+#                 "--enable-gtk-doc" \
+#                 "--disable-gtk-doc" \
+#                 "for building documentation"
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"

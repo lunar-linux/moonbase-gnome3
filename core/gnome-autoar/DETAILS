@@ -1,0 +1,47 @@
+          MODULE=gnome-autoar
+         VERSION=0.2.3
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=https://git.gnome.org/browse/gnome-autoar/snapshot/
+      SOURCE_VFY=sha256:f8522f48d9fd121662bc750f23605748cccdc38b0e9cc92d3fd563f7248b7e57
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20180317
+         UPDATED=20180317
+           SHORT="GNOME automatic archives creating and extracting library"
+
+cat << EOF
+gnome-autoar is a wrapper for libarchive.
+Many things are different between the API provided by libarchive and
+gnome-autoar:
+
+gnome-autoar uses GIO for nearly all operations related to archives. Some
+operations which are not supported by GIO will use POSIX functions instead if
+they are available.
+
+gnome-autoar uses GSettings to store user preferences. You can use one function
+to retrive user preferences and use one object to set preferences when creating
+and extracting archives. It use the "org.gnome.desktop.archives" schema ID by
+default, but you can change it.
+
+gnome-autoar will create exactly one directory or file when extracting an
+archive. No file will be created outside the output directory, so users do not
+have to worry about malicious archives because all absolute paths in the
+archives are converted to paths relative to the output directory. The name of
+the output directory or file is based on the name of the source archive. Even
+if you do not notify users about the output, users can easily figure it out
+themselves.
+
+gnome-autoar will prepend a common prefix directory to all paths in the archive
+if you want to archive more than one file or directory. Users who receive the
+archive created by gnome-autoar can safely use commands such as bsdtar -xf to
+extract it.
+
+gnome-autoar redefines the format code and filter code which are defined by
+libarchive as consecutive positive integer. It is easier for applications to
+show all available options to users. Some formats and filters such as mtree and
+uuencode are omitted because they are not suitable for regular use.
+
+gnome-autoar provides functions for applications to check whether a file should
+be regarded as an archive. There are whitelists stored in GSettings. Package
+files such as rpm, deb, jar are not listed, so applications should know these
+files should not be extracted.
+EOF
