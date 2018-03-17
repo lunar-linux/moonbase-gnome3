@@ -1,26 +1,54 @@
-depends which
-depends libpng
-depends mesa-lib
-depends libwebp
-depends icu4c
-depends enchant1
+depends cmake
 depends ruby
+depends which
+depends %JPEG
+depends libpng
+depends libwebp
+depends mesa-lib
+depends icu4c
+depends enchant
 depends libXt
 depends libxslt
-depends cmake
 depends gobject-introspection
 depends harfbuzz
 depends freetype2
-depends gtk+-3
 depends gtk+-2
-depends gst-plugins-base-1.0
+depends gtk+-3
+depends gst-plugins-bad-1.0
 depends gperf
 depends sqlite
-depends %JPEG
 depends libsoup
 depends libsecret
 depends upower
+depends zlib
 
-optional_depends hyphen     "-DUSE_LIBHYPHEN=1"      "-DUSE_LIBHYPHEN=0"      "To support hyphenation and justification"
-optional_depends libnotify  "-DUSE_LIBNOTIFY=1"      "-DUSE_LIBNOTIFY=0"      "For notification support"
-optional_depends geoclue2   "-DENABLE_GEOLOCATION=1" "-DENABLE_GEOLOCATION=0" "For geolocation support"
+optional_depends hyphen \
+                 "-DUSE_LIBHYPHEN=ON" \
+                 "-DUSE_LIBHYPHEN=OFF" \
+                 "for hyphenation and justification support"
+
+optional_depends libnotify \
+                 "-DUSE_LIBNOTIFY=ON" \
+                 "-DUSE_LIBNOTIFY=OFF" \
+                 "for notification support"
+
+optional_depends geoclue2 \
+                 "-DENABLE_GEOLOCATION=ON" \
+                 "-DENABLE_GEOLOCATION=OFF" \
+                 "for geolocation support"
+
+optional_depends wayland \
+                 "-DENABLE_WAYLAND_TARGET=ON" \
+                 "-DENABLE_WAYLAND_TARGET=OFF" \
+                 "for Waylang support"
+
+
+optional_depends gtk-doc \
+                 "-DENABLE_GTKDOC=ON" \
+                 "-DENABLE_GTKDOK=OFF" \
+                 "for building documentation"
+
+optional_depends gobject-introspection \
+                 "-DENABLE_INTROINSPECTION=ON" \
+                 "-DENABLE_INTROINSPECTION=OFF" \
+                 "for object introspection"

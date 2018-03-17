@@ -1,19 +1,19 @@
           MODULE=webkit2gtk3
-         VERSION=2.19.6
+         VERSION=2.20.0
           SOURCE=webkitgtk-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/webkitgtk-$VERSION
       SOURCE_URL=http://www.webkitgtk.org/releases
-      SOURCE_VFY=sha256:c97c87a0db3814f97812edeadc79c330affa51eb43dadbdc7a764b01db38d82b
+      SOURCE_VFY=sha256:57f640f720bd9a8a7207f3321cf803a15c2f207b4e7b75ff1be17bc1eeb00a3c
         WEB_SITE=http://www.webkit.org
          ENTERED=20070919
-         UPDATED=20180307
+         UPDATED=20180317
            SHORT="gtk+ web rendering engine"
 
 cat << EOF
-WebKitGTK+ is a web content engine, derived from KHTML and KJS from KDE,
-and used primarily in Apple's Safari browser. It is made to be embedded
-in other applications, such as mail readers, or web browsers.
-It is able to display content such as HTML, SVG, XML, and others. It
-also supports DOM, XMLHttpRequest, XSLT, CSS, Javascript/ECMAscript
-and more.
+WebKitGTK+ is a web content engine, derived from KHTML and KJS from KDE, and
+used primarily in Apple's Safari browser. It is made to be embedded in other
+applications, such as mail readers, or web browsers. It is able to display
+content such as HTML, SVG, XML, and others.
+It also supports DOM, XMLHttpRequest, XSLT, CSS, Javascript/ECMAscript and
+more.
 EOF
