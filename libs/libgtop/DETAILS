@@ -9,9 +9,8 @@
            SHORT="A library to provide top functionality to applications"
 
 cat << EOF
-libgtop is a library that fetches information about the running
-system such as cpu and memory usage, active processes etc. On Linux
-systems, these information are taken directly from the /proc filesystem
-while on other systems a server is used to read those information from
-/dev/kmem or similar.
+libgtop is a library that fetches information about the running system such as
+cpu and memory usage, active processes etc. On Linux systems, these information
+are taken directly from the /proc filesystem while on other systems a server is
+used to read those information from /dev/kmem or similar.
 EOF
