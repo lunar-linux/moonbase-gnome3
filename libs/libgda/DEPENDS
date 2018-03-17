@@ -1,5 +1,4 @@
 depends glib-2
-depends gtk-doc
 depends readline
 
 optional_depends sqlite \
@@ -16,10 +15,20 @@ optional_depends %MYSQL     "--with-mysql"     "--without-mysql"     "for mysql 
 optional_depends postgresql "--with-postgres"  "--without-postgres"  "for postgresql backend support"
 optional_depends openldap   "--with-ldap"      "--without-ldap"      "for LDAP backend support"
 
+optional_depends vala \
+                 "--enable-vala VALA_API_VERSION=0.40" \
+                 "--disable-vala" \
+                 "for vala support"
+
 optional_depends gtksourceview \
                  "--with-gtksourceview" \
                  "--without-gtksourceview" \
-                 "for gtk source view support"
+                 "for gtksourceview support"
+
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for building documentation"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \

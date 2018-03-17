@@ -3,6 +3,6 @@ OPTS+=" --prefix=${GNOME210_PREFIX:-/usr} \
         --sysconfdir=/etc \
         --localstatedir=/var \
         --infodir=${GNOME210_PREFIX:-/usr}/share/info \
-        --mandir=${GNOME210_PREFIX:-/usr}/share/man" &&
+        --mandir=${GNOME210_PREFIX:-/usr}/share/man"
 
 default_build
