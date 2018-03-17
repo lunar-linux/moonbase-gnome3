@@ -1,10 +1,10 @@
 depends gettext
-depends gtk+-3
+depends gnome-common
 depends itstool
 depends yelp-tools
+depends webkit2gtk3
 
 optional_depends libnotify \
                  "--enable-notify" \
                  "--disable-notify" \
                  "for libnotify support"
-
