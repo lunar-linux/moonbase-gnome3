@@ -1,9 +1,8 @@
 depends libSM
 depends dconf
-depends gtk+-3
 depends gsettings-desktop-schemas
 depends libcanberra
 depends libgtop
 depends startup-notification
 depends zenity
-depends itstool
+depends intltool
