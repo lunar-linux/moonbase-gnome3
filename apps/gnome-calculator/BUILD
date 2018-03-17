@@ -1,6 +1,8 @@
 mkdir -p build &&
- 
-meson build --prefix /usr &&
+
+OPTS+=" --prefix /usr" 
+
+meson build $OPTS &&
             
 ninja -C build &&
 

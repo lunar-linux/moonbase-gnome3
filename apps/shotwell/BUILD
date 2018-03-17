@@ -1,8 +1,8 @@
-OPTS+=" --disable-icon-update \
+OPTS+=" --prefix=/usr \
+        --disable-icon-update \
         --disable-desktop-update \
         --disable-schemas-compile" &&
 
-./configure --prefix=/usr \
-            $OPTS &&
+./configure $OPTS &&
 
 default_make
