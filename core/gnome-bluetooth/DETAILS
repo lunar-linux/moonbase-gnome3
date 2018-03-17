@@ -2,7 +2,7 @@
          VERSION=3.28.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:e8f9dfc049a6322fd8b4e4ac0b8fb968a3a157a11b9ea61552aa94a5625cc127
+      SOURCE_VFY=sha256:771472f6df7bf16bdcb2266f4e52b7aa8c5e723509481d734ad22b9ae9fcfe60
         WEB_SITE=http://live.gnome.org/GnomeBluetooth
          ENTERED=20130316
          UPDATED=20180316

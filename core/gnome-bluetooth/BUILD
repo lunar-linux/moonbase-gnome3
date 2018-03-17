@@ -1,6 +1,9 @@
 mkdir -p build &&
- 
-meson build --prefix /usr -Denable_docs=false &&
+
+OPTS+=" --prefix /usr -Denable_docs=false"
+
+meson build $OPTS &&
+
 ninja -C build &&
 
 prepare_install &&
