@@ -6,11 +6,11 @@ depends meson
 optional_depends vala "" "" "to compile vala source files"
 
 optional_depends docbook-xsl \
-                 "--enable-man" \
-                 "--disable-man" \
+                 "-Denable-man=true" \
+                 "-Denable-man=false" \
                  "for building man pages"
 
 optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "-Denable-gtk-doc=true" \
+                 "-Denable-gtk-doc=false" \
                  "for building documentation"
