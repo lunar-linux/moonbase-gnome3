@@ -2,8 +2,17 @@ depends exiv2
 depends pygobject
 depends meson
 
-optional_depends gobject-introspection \
-                 "-Denable-introspection=true" \
-                 "-Denable-introspection=false" \
-                 "for object introspection"
+optional_depends vala \
+                 "-Ddisable-vala=false" \
+                 "-Ddisable-vala=true" \
+                 "for vala support"
 
+optional_depends gtk-doc \
+                 "-Denable-gtk-doc=true" \
+                 "-Denable-gtk-doc=false" \
+                 "for building documentation"
+
+optional_depends gobject-introspection \
+                 "-Ddisable-introspection=false" \
+                 "-Ddisable-introspection=true" \
+                 "for object introspection"
