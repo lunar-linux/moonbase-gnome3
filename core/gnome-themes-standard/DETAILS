@@ -9,6 +9,6 @@
            SHORT="Default themes for the GNOME desktop"
 
 cat << EOF
-Gnome-themes is the collection of offical desktop themes for the GNOME
-desktop environment.
+Gnome-themes is the collection of offical desktop themes for the GNOME desktop
+environment.
 EOF

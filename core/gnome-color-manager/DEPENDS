@@ -6,4 +6,3 @@ depends libcanberra
 depends libexif
 depends vte3
 depends yelp-tools
-
