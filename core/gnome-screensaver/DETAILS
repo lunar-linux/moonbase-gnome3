@@ -10,8 +10,8 @@
 
 cat << EOF
 gnome-screensaver is a screensaver designed to replace xscreensaver.
-It is designed to integrate well with the desktop and provide a
-control interface that is desktop neutral. It simplifies and
-streamlines the experience for the user and provides more capability
-for the system administrator and vendor.
+It is designed to integrate well with the desktop and provide a control
+interface that is desktop neutral. It simplifies and streamlines the experience
+for the user and provides more capability for the system administrator and
+vendor.
 EOF
