@@ -1,9 +1,7 @@
 depends Python
 depends intltool
-depends glib-2
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
                  "for object introspection"
-
