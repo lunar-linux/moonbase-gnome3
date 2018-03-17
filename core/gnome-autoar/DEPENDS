@@ -1,9 +1,9 @@
 depends libarchive
 depends gtk+-3
 depends gnome-common
-depends vala
 depends intltool
 depends gtk-doc
+depends vala
 
 #optional_depends gtk-doc \
 #                 "--enable-gtk-doc" \
