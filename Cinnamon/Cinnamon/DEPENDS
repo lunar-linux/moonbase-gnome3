@@ -7,6 +7,8 @@ depends caribou
 depends cjs
 depends cinnamon-control-center
 depends cinnamon-session
+depends gnome-backgrounds
+depends gnome-bluetooth
 depends gnome-settings-daemon
 depends libgnome-keyring
 depends muffin
