@@ -6,14 +6,24 @@ depends gsettings-desktop-schemas
 depends mesa-lib
 depends libSM
 depends libXtst
-depends xtrans
+depends meson
 
 optional_depends systemd \
-                 "--enable-systemd" \
-                 "--disable-systemd" \
-                 "for systemd support"
+                 "-Dsystemd=true -Dsystemd_journal=true" \
+                 "-Dsystemd=false -Dsystemd_journal=false" \
+                "for systemd support"
+
+optional_depends docbook-xsl \
+                 "-Ddocbook=true" \
+                 "-Ddocbook=false" \
+                "for documentation install"
+
+optional_depends xmlto \
+                 "-Dman=true" \
+                 "-Dman=false" \
+                "for manpages install"
 
 optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "-Denable-gtk-doc=true" \
+                 "-Denable-gtk-doc=false" \
                  "for building documentation"

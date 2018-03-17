@@ -1,4 +1,14 @@
-OPTS+=" --disable-gconf \
-        --disable-schemas-compile" &&
+mkdir -p build &&
 
-default_build
+OPTS+=" --prefix /usr \
+        -Denable_docs=false \
+        -Dsession_selector=true \
+        -Denable-consolekit=false"
+
+meson build $OPTS &&
+
+ninja -C build &&
+
+prepare_install &&
+
+ninja -C build install

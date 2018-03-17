@@ -1,8 +1,8 @@
+depends upower
 depends gnome-session
 depends yelp-tools
 depends check
 depends itstool
-depends %UDEV
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
