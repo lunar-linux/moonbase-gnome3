@@ -2,3 +2,4 @@ depends dconf
 depends gtksourceview
 depends vala
 depends intltool
+depends meson
