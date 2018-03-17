@@ -3,13 +3,16 @@ depends gnome-desktop
 depends libexif
 depends exempi
 depends gvfs
+depends gexiv2
 depends desktop-file-utils
 depends gnome-icon-theme
+depends gnome-autoar
 depends libnotify
-depends nautilus-sendto
+depends tracker
+depends meson
+#depends nautilus-sendto
 
 optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
+                 "-Denable-introspection=true" \
+                 "-Denable-introspection=false" \
                  "for object introspection"
-

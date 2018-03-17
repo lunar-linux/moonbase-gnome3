@@ -1,6 +1,12 @@
-OPTS+=" --enable-tracker=no \
-        --disable-static \
-        -disable-update-mimedb \
-        --disable-schemas-compile" &&
+mkdir -p build &&
+ 
+meson build --prefix /usr \
+            -Dselinux=false \
+            -Denable_docs=false \
+            -Denable-extensions=false &&
 
-default_build
+ninja -C build &&
+
+prepare_install &&
+
+ninja -C build install
