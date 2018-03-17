@@ -1,3 +1,4 @@
+depends clutter
 depends libSM
 depends dconf
 depends intltool
@@ -9,11 +10,7 @@ depends gnome-desktop
 depends upower
 depends libxkbcommon
 depends libgudev
-
-optional_depends wayland \
-                 "--enable-wayland" \
-                 "--disable-wayland" \
-                 "for Wayland support"
+depends wayland-protocols
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
