@@ -1,4 +1,4 @@
-depends gtk+-3
+depends gnome-desktop
 depends poppler
 depends gnome-icon-theme-symbolic
 depends desktop-file-utils
