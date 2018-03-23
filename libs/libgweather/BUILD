@@ -1,3 +1,11 @@
-OPTS+=" --disable-static" &&
+mkdir -p build &&
 
-default_build
+OPTS+=" --prefix /usr"
+
+meson build $OPTS &&
+
+ninja -C build &&
+
+prepare_install &&
+
+ninja -C build install

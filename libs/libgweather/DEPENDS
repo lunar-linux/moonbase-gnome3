@@ -3,8 +3,14 @@ depends vala
 depends libsoup
 depends geocode-glib
 depends intltool
+depends meson
 
-optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
+optional_depends vala \
+                 "-Denable-vala=true" \
+                 "-Denable_vala=false" \
                  "for object introspection"
+
+optional_depends gtk-doc \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc-false" \
+                 "for building documentation"
