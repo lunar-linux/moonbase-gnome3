@@ -1,15 +1,15 @@
           MODULE=gtk-doc
-         VERSION=1.27
+         VERSION=1.28
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/$VERSION
-      SOURCE_VFY=sha256:e26bd3f7080c749b1cb66c46c6bf8239e2f320a949964fb9c6d56e1b0c6d9a6f
+      SOURCE_VFY=sha256:911e29e302252c96128965ee1f4067d5431a88e00ad1023a8bc1d6b922af5715
         WEB_SITE=http://www.gtk.org/gtk-doc
          ENTERED=20020716
-         UPDATED=20171210
+         UPDATED=20180324
            SHORT="Tools for authors of the GTK+ reference documentation"
 
 cat << EOF
-GTK-Doc is used to document C code. It is typically used to document
-the public API of libraries, such as the GTK+ and GNOME libraries, but
-it can also be used to document application code.
+GTK-Doc is used to document C code. It is typically used to document the public
+API of libraries, such as the GTK+ and GNOME libraries, but it can also be used
+to document application code.
 EOF

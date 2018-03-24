@@ -1,6 +1,7 @@
+depends bc
 depends docbook-xsl
-depends itstool
 depends pkgconfig
+depends itstool
 
 optional_depends dblatex  "" "" "for PDF support"
 optional_depends jadetex  "" "" "for SGML support (use this or openjade not both)"
