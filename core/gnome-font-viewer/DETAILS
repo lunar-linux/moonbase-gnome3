@@ -1,0 +1,13 @@
+          MODULE=gnome-font-viewer
+         VERSION=3.28.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:a327109563405de531f729d2fa405b69a5b38d2d02626a2dfe6895229c10b79a
+        WEB_SITE=http://www.gnome.org/gnome-3
+         ENTERED=20180325
+         UPDATED=20180325
+           SHORT="The GNOME fontviewer utility"
+
+cat << EOF
+A font viewer utility for GNOME.
+EOF
