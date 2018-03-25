@@ -6,4 +6,8 @@ OPTS+=" --enable-ipv6 \
         --without-tcp-wrappers \
         --disable-schemas-compile" &&
 
+if module_installed systemd; then
+   OPTS+=" --enable-systemd-journal"
+fi &&
+
 default_build

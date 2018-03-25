@@ -1,8 +1,16 @@
 depends upower
 depends gnome-session
-depends yelp-tools
+depends accountsservice
+depends libcanberra
+depends iso-codes
+depends xrdb
 depends check
-depends itstool
+depends yelp-tools
+depends systemd
+
+optional_depends Linux-PAM \
+                 "--enable-authntication-scheme=pam" "" \
+                 "for PAM authentication"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
