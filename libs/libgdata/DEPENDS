@@ -4,6 +4,7 @@ depends liboauth
 depends libsoup
 depends intltool
 depends vala
+depends uhttpmock
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
