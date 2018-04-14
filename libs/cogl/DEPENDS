@@ -1,14 +1,20 @@
-depends libXrandr
 depends libXext
+depends libXdamage
+depends libXrandr
 depends libXcomposite
 depends mesa-lib
 depends gdk-pixbuf
 depends pango
 
 optional_depends wayland \
-                 "--enable-waylang-egl-platform --enable-wayland-egl-server" \
-                 "--disable-wayland-egl-platform --disable-wayland-egl-server" \
+                 "--enable-waylang-egl-platform=yes --enable-wayland-egl-server=yes" \
+                 "--enable-wayland-egl-platform=no  --enable-wayland-egl-server=no" \
                  "for Wayland support"
+
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for building documentation"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
