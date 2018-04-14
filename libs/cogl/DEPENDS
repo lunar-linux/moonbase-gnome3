@@ -5,6 +5,11 @@ depends mesa-lib
 depends gdk-pixbuf
 depends pango
 
+optional_depends wayland \
+                 "--enable-waylang-egl-platform --enable-wayland-egl-server" \
+                 "--disable-wayland-egl-platform --disable-wayland-egl-server" \
+                 "for Wayland support"
+
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
