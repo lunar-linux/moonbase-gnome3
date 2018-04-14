@@ -1,6 +1,0 @@
-depends libsoup
-depends gdk-pixbuf
-depends libarchive
-depends gtk+-3
-depends yaml
-
