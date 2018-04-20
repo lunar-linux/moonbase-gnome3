@@ -1,0 +1,42 @@
+From 2dc04b8a26fa7a672c579ed62a70dca6c6e4b295 Mon Sep 17 00:00:00 2001
+From: Clement Lefebvre <clement.lefebvre@linuxmint.com>
+Date: Tue, 20 Feb 2018 18:55:49 +0000
+Subject: [PATCH] Change gnome-terminal.desktop -> org.gnome.Terminal.desktop
+
+gnome-terminal updated its desktop filename,
+not all distros kept the old one (Debian didn't).
+---
+ data/org.cinnamon.gschema.xml.in                                        | 2 +-
+ debian/cinnamon.gsettings-override                                      | 2 +-
+ .../cinnamon/applets/panel-launchers@cinnamon.org/settings-schema.json  | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+--- ./data/org.cinnamon.gschema.xml.in
++++ ./data/org.cinnamon.gschema.xml.in
+@@ -412,7 +412,7 @@
+     </key>
+ 
+     <key name="favorite-apps" type="as">
+-      <default>[ 'firefox.desktop', 'mintinstall.desktop', 'cinnamon-settings.desktop', 'hexchat.desktop', 'gnome-terminal.desktop', 'nemo.desktop' ]</default>
++      <default>[ 'firefox.desktop', 'mintinstall.desktop', 'cinnamon-settings.desktop', 'hexchat.desktop', 'org.gnome.Terminal.desktop', 'nemo.desktop' ]</default>
+       <_summary>List of desktop file IDs for favorite applications</_summary>
+       <_description>
+         The applications corresponding to these identifiers
+--- ./debian/cinnamon.gsettings-override
++++ ./debian/cinnamon.gsettings-override
+@@ -1,3 +1,3 @@
+ [org.cinnamon]
+-favorite-apps=[ 'firefox.desktop', 'mintinstall.desktop', 'cinnamon-settings.desktop', 'xchat.desktop', 'gnome-terminal.desktop', 'nemo.desktop' ]
++favorite-apps=[ 'firefox.desktop', 'mintinstall.desktop', 'cinnamon-settings.desktop', 'xchat.desktop', 'org.gnome.Terminal.desktop', 'nemo.desktop' ]
+ 
+--- ./files/usr/share/cinnamon/applets/panel-launchers@cinnamon.org/settings-schema.json
++++ ./files/usr/share/cinnamon/applets/panel-launchers@cinnamon.org/settings-schema.json
+@@ -5,7 +5,7 @@
+     },
+     "launcherList": {
+         "type": "generic",
+-        "default": ["firefox.desktop", "gnome-terminal.desktop", "nemo.desktop"]
++        "default": ["firefox.desktop", "org.gnome.Terminal.desktop", "nemo.desktop"]
+     },
+     "allow-dragging": {
+         "type": "switch",
