@@ -4,5 +4,3 @@ depends xkeyboard-config
 depends dejavu-ttf
 depends cantarell-fonts
 depends intltool
-
-optional_depends gtk-engines2 "" "" "for HighContrast GTK theme"
