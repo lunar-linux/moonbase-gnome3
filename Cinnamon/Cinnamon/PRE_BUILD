@@ -3,4 +3,6 @@ default_pre_build &&
 cd $SOURCE_DIRECTORY &&
 
 sedit 's:--warn-all --warn-error::' src/Makefile.am &&
+
+# Set default theme
 sedit 's:<default>""</default>:<default>"cinnamon"</default>:'data/org.cinnamon.gschema.xml.in

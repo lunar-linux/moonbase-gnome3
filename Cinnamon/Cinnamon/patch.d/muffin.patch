@@ -1,0 +1,34 @@
+From 5c9848a48da3387825f627117ad58521474e0b2e Mon Sep 17 00:00:00 2001
+From: Clement Lefebvre <clement.lefebvre@linuxmint.com>
+Date: Wed, 24 Jan 2018 14:17:00 +0000
+Subject: [PATCH] Titlebar button layout: Stop using org.cinnamon.muffin
+ button-layout
+
+Use org.cinnamon.desktop.wm.preferences button-layout instead.
+---
+ files/usr/share/cinnamon/cinnamon-settings/modules/cs_windows.py | 2 +-
+ js/ui/workspace.js                                               | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+--- ./files/usr/share/cinnamon/cinnamon-settings/modules/cs_windows.py
++++ ./files/usr/share/cinnamon/cinnamon-settings/modules/cs_windows.py
+@@ -137,7 +137,7 @@ def on_module_selected(self):
+ 
+ class TitleBarButtonsOrderSelector(SettingsBox):
+     def __init__(self):
+-        self.schema = "org.cinnamon.muffin"
++        self.schema = "org.cinnamon.desktop.wm.preferences"
+         self.key = "button-layout"
+ 
+         super(TitleBarButtonsOrderSelector, self).__init__(_("Buttons"))
+--- ./js/ui/workspace.js
++++ ./js/ui/workspace.js
+@@ -29,7 +29,7 @@ const SCROLL_SCALE_AMOUNT = 50;
+ const LIGHTBOX_FADE_TIME = 0.1;
+ const CLOSE_BUTTON_FADE_TIME = 0.1;
+ 
+-const BUTTON_LAYOUT_SCHEMA = 'org.cinnamon.muffin';
++const BUTTON_LAYOUT_SCHEMA = 'org.cinnamon.desktop.wm.preferences';
+ const BUTTON_LAYOUT_KEY = 'button-layout';
+ 
+ const DEMANDS_ATTENTION_CLASS_NAME = "window-list-item-demands-attention";
