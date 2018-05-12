@@ -19,7 +19,6 @@ optional_depends dnsmasq "--with-dnsmasq"       "" "for DNS forwarder and DHCP s
 
 optional_depends dhcp     "--with-dhclient=yes" "--with-dhclient=no" "for standard DHCP client"
 optional_depends dhcpcd   "--with-dhcpcd=yes"   "--with-dhcpcd=no"   "for alternative DHCP client"
-optional_depends libsoup  "--with-libsoup=yes"  "--with-libsoup=no"  "for libsoup support"
 optional_depends polkit   "--enable-polkit=yes" "--enable-polkit=no" "for polkit support"
 optional_depends vala     "--enable-vala=yes"   "--enable-vala=no"   "for vala support"
 optional_depends valgrind "--with-valgrind=yes" "--with-valgrind=no" "for valgrind support"

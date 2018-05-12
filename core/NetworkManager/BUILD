@@ -1,5 +1,4 @@
-OPTS+=" --disable-migration \
-        --disable-static \
+OPTS+=" --disable-static \
         --disable-ifcfg-rh \
         --disable-ifcfg-suse \
         --disable-ifupdown \
