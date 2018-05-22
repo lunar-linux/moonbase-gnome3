@@ -1,3 +1,5 @@
+./autogen.sh &&
+
 OPTS+=" --disable-static \
         --with-polkit=permissive \
         --with-udev-base-dir=/usr/lib/udev"
