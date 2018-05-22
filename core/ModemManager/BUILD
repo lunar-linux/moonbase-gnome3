@@ -1,4 +1,5 @@
-OPTS+=" --with-udev-base-dir=/usr/lib/udev\
-        --with-polkit=permissive" &&
+OPTS+=" --disable-static \
+        --with-polkit=permissive \
+        --with-udev-base-dir=/usr/lib/udev"
 
 default_build
