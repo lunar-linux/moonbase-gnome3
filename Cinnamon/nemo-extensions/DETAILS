@@ -1,11 +1,11 @@
           MODULE=nemo-extensions
-         VERSION=3.6.0
+         VERSION=3.8.0
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/linuxmint/nemo-extensions/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:593aaf206ef50a8185e1f71c9018ce6a8b4bcb82b4684494e069f9045ba11fd1
+      SOURCE_VFY=sha256:15855cf7880290c8e9956f894d8e3c6fb0bee996783b2af63ae66dc019e739a8
         WEB_SITE=http://github.com/linuxmint/nemo-extensions/
          ENTERED=20151023
-         UPDATED=20171025
+         UPDATED=20180608
            SHORT="Cinnamon file manager (Nautilus fork) extensions"
 
 cat <<EOF
