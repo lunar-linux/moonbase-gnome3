@@ -1,0 +1,27 @@
+depends desktop-file-utils
+depends gnome-bluetooth
+depends gnome-menus
+depends gnome-session
+depends gnome-themes-standard
+depends libpeas
+depends libwnck3
+depends mutter
+depends nautilus
+depends polkit
+depends upower
+depends vala
+depends meson
+
+#optional_depends gnome-control-center "" "" "for system settings"
+optional_depends gnome-backgrounds    "" "" "for default background"
+optional_depends gnome-screensaver    "" "" "for screen lock"
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection"
+
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for building documentation"
