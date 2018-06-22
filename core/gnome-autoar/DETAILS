@@ -2,7 +2,7 @@
          VERSION=0.2.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://git.gnome.org/browse/gnome-autoar/snapshot/
-      SOURCE_VFY=sha256:f8522f48d9fd121662bc750f23605748cccdc38b0e9cc92d3fd563f7248b7e57
+      SOURCE_VFY=sha256:5de9db0db028cd6cab7c2fec46ba90965474ecf9cd68cfd681a6488cf1fb240a
         WEB_SITE=http://www.gnome.org
          ENTERED=20180317
          UPDATED=20180317
