@@ -1,8 +1,8 @@
           MODULE=tracker
          VERSION=2.0.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=https://git.gnome.org/browse/tracker/snapshot/
-      SOURCE_VFY=sha256:545518adab8558175867d9f75f84ecc475c05d64c023d73158a68f95e8f5bf36
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:3}/
+      SOURCE_VFY=sha256:5a2fb274c128ec67a920944937b5147ceaf5db16fef6691ea22c4cb841e20580
         WEB_SITE=https://wiki.gnome.org/Projects/Tracker/
          ENTERED=20180317
          UPDATED=20180317
