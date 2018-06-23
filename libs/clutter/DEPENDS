@@ -1,10 +1,6 @@
 depends gtk+-3
 depends cogl
 
-#optional_depends libinput "--enable-evdev-input" \
-#                          "--disable-evdev-input" \
-#                          "for direct input support"
-
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
                  "--disable-gtk-doc" \
