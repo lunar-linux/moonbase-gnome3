@@ -1,8 +1,7 @@
-OPTS+=" -DENABLE_MINIBROWSER=ON \
-        -DENABLE_WEBKIT_LEGACY=OFF \
-        -DENABLE_PLUGIN_PROCESS_GTK2=OFF \
+OPTS+=" -DPORT=GTK \
         -DUSE_WOFF2=OFF \
-        -DPORT=GTK" &&
+        -DCMAKE_SKIP_RPATH=ON \
+        -DENABLE_WEBKIT_LEGACY=OFF"
 
 default_cmake_build &&
 
