@@ -10,7 +10,8 @@ depends gnome-desktop
 depends upower
 depends libxkbcommon
 depends libgudev
-depends wayland-protocols
+
+optional_depends wayland-protocols "" "--disable-wayland" "for Wayland support"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
