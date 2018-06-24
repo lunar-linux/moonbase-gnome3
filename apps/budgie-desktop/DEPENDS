@@ -4,6 +4,7 @@ depends gnome-bluetooth
 depends gnome-menus
 depends gnome-session
 depends gnome-themes-standard
+depends gnome-settings-daemon
 depends libpeas
 depends pulseaudio
 depends libwnck3
