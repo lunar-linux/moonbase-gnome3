@@ -1,0 +1,13 @@
+          MODULE=accountsservice
+         VERSION=0.6.49
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=https://www.freedesktop.org/software/accountsservice/
+      SOURCE_VFY=sha256:e34efbc79098b1a5a48e19389e6472b3b56fa9cc64c60017679e61ecc43d130d
+        WEB_SITE=https://www.freedesktop.org/software/accountsservice/
+         ENTERED=20180624
+         UPDATED=20180624
+           SHORT="D-Bus interface for user account query and manipulation"
+
+cat << EOF
+D-Bus interface for user account query and manipulation.
+EOF
