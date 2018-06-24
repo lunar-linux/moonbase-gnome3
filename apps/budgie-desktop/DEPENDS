@@ -10,6 +10,7 @@ depends libwnck3
 depends mutter
 depends vala
 depends ibus
+depends sassc
 depends meson
 
 #optional_depends gnome-control-center "" "" "for system settings"
