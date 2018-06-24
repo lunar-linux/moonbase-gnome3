@@ -4,24 +4,19 @@ depends gnome-menus
 depends gnome-session
 depends gnome-themes-standard
 depends libpeas
+depends pulseaudio
 depends libwnck3
 depends mutter
-depends nautilus
 depends polkit
-depends upower
 depends vala
+depends ibus
 depends meson
 
 #optional_depends gnome-control-center "" "" "for system settings"
 optional_depends gnome-backgrounds    "" "" "for default background"
 optional_depends gnome-screensaver    "" "" "for screen lock"
 
-optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
-                 "for object introspection"
-
 optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "-D with-gtk-doc=true" \
+                 "-D with-gtk-doc=false" \
                  "for building documentation"
