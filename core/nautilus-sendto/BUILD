@@ -1,3 +1,1 @@
-OPTS+=" --disable-schemas-compile" &&
-
-default_build
+default_meson_build
