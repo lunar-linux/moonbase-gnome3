@@ -6,8 +6,8 @@ depends gsettings-desktop-schemas
 depends libpeas
 depends vala
 
-# Needs pygobject compiled with Python-3
-#optional_depends pygobject \
+# Needs python-pygobject compiled with Python-3
+#optional_depends python-pygobject \
 #                  "--enable-python" \
 #                  "--disable-python" \
 #                  "for Python 3.x bindings"
