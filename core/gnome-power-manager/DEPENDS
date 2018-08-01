@@ -1,5 +1,5 @@
 depends intltool
 depends dconf
-depends gtk+-3
 depends hicolor-icon-theme
 depends upower
+depends meson

@@ -1,3 +1,3 @@
-OPTS+=" --disable-schemas-compile" &&
+OPTS+=" --prefix /usr -Denable-tests=false"
 
-default_build
+default_meson_build
