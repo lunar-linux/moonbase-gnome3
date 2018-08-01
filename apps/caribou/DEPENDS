@@ -4,7 +4,7 @@ depends dconf
 depends libgee
 depends gtk+-3
 depends pyatspi
-depends pygobject
+depends python-pygobject
 depends libxklavier
 
 optional_depends gobject-introspection \

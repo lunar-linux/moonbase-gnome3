@@ -3,7 +3,7 @@ depends desktop-file-utils
 depends hicolor-icon-theme
 depends libxml2
 depends docbook-xsl
-depends pygobject
+depends python-pygobject
 depends intltool
 depends itstool
 

@@ -3,7 +3,7 @@ depends goffice
 depends libxml2
 depends pango
 
-optional_depends pygobject \
+optional_depends python-pygobject \
                  "--with-python" \
                  "--without-python" \
                  "compile the Python plugin loader"
