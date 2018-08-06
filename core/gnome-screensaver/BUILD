@@ -1,4 +1,4 @@
-OPTS+="--with-x --with-mit-ext" &&
+OPTS+="--with-x --with-mit-ext"
 
 if module_installed systemd; then
   OPTS+="  --with-systemd"

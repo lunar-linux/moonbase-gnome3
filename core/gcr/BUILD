@@ -1,6 +1,6 @@
 OPTS+=" --disable-static \
         --disable-update-mime \
-        --disable-schemas-compile" &&
+        --disable-schemas-compile"
 
 default_build &&
 

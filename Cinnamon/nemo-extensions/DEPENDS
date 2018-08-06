@@ -1,4 +1,4 @@
-depends python2
+depends python
 depends gtk+-3
 depends readline
 

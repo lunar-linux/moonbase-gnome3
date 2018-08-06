@@ -1,6 +1,6 @@
 depends bc
 depends docbook-xsl
-depends %PKGCONF
+depends pkgconf
 depends itstool
 
 optional_depends dblatex  "" "" "for PDF support"

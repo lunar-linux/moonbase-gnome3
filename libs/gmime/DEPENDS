@@ -1,6 +1,6 @@
-depends %PKGCONF
 depends vala
 depends zlib
+depends pkgconf
 
 optional_depends gpgme "" "" "for GnuPG crypto support"
 

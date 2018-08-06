@@ -1,6 +1,6 @@
 OPTS+=" --enable-python \
         --enable-vala \
         --disable-updater \
-        --disable-schemas-compile" &&
+        --disable-schemas-compile"
 
 default_build

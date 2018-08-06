@@ -1,7 +1,7 @@
 OPTS+=" --prefix=/usr \
         --disable-icon-update \
         --disable-desktop-update \
-        --disable-schemas-compile" &&
+        --disable-schemas-compile"
 
 ./configure $OPTS &&
 

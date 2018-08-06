@@ -1,13 +1,5 @@
-mkdir -p build &&
 
-OPTS+=" --prefix /usr \
-        -Denable_docs=false \
-        -Denable-consolekit=false"
+OPTS+=" -D enable_docs=false \
+        -D enable-consolekit=false"
 
-meson build $OPTS &&
-
-ninja -C build &&
-
-prepare_install &&
-
-ninja -C build install
+default_meson_build

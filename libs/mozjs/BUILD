@@ -7,7 +7,7 @@ OPTS+=" --with-system-nspr  \
         --enable-threadsafe \
         --enable-readline   \
         --enable-system-ffi \
-        --disable-static"  &&
+        --disable-static"
 
 unset CPPFLAGS &&
 CXXFLAGS+=" -fpermissive" &&
