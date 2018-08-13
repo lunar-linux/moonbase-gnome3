@@ -1,11 +1,11 @@
           MODULE=libmbim
-         VERSION=1.16.0
+         VERSION=1.16.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://www.freedesktop.org/software/$MODULE/
-      SOURCE_VFY=sha256:c8ca50beeddd4b43309df5b698917268303bf176cea58fe4fe53d5bf0e93fac2
+      SOURCE_VFY=sha256:eb494fee2c200daf4f5cc8a40061d24a3dfafe8c59151c95c6a826fd96dcb262
         WEB_SITE=https://www.freedesktop.org/wiki/Software/libmbim/
          ENTERED=20140413
-         UPDATED=20180126
+         UPDATED=20180813
            SHORT="MBIM modem protocol helper library"
 
 cat << EOF
