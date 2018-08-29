@@ -1,0 +1,24 @@
+depends accountsservice
+depends desktop-file-utils
+depends gnome-bluetooth
+depends gnome-menus
+depends gnome-session
+depends gnome-themes-standard
+depends gnome-settings-daemon
+depends libpeas
+depends pulseaudio
+depends libwnck3
+depends mutter
+depends vala
+depends ibus
+depends sassc
+depends meson
+
+#optional_depends gnome-control-center "" "" "for system settings"
+optional_depends gnome-backgrounds    "" "" "for default background"
+optional_depends gnome-screensaver    "" "" "for screen lock"
+
+optional_depends gtk-doc \
+                 "-D with-gtk-doc=true" \
+                 "-D with-gtk-doc=false" \
+                 "for building documentation"

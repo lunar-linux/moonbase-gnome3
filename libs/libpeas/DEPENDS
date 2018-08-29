@@ -1,5 +1,5 @@
 depends gtk+-3
-depends pygobject
+depends python-pygobject
 depends intltool
 
 optional_depends gtk-doc \

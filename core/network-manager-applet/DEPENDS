@@ -6,5 +6,5 @@ depends NetworkManager
 depends gnome-icon-theme
 depends libgudev
 
-optional_depends "gnome-bluetooth" "" "" "Bluetooth support"
-optional_depends "ModemManager"    "" "" "Mobile broadband modem support"
+optional_depends gnome-bluetooth "" "" "Bluetooth support"
+optional_depends ModemManager    "" "" "Mobile broadband modem support"

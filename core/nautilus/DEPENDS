@@ -6,7 +6,7 @@ depends gvfs
 depends gexiv2
 depends desktop-file-utils
 depends gnome-icon-theme
-depends gnome-autoar
+#depends gnome-autoar
 depends libnotify
 depends tracker
 depends meson

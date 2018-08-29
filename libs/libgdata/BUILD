@@ -1,3 +1,3 @@
-OPTS+=" --disable-static --disable-tests" &&
+OPTS+=" --disable-static --disable-tests"
 
 default_build

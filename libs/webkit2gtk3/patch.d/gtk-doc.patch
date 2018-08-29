@@ -1,0 +1,15 @@
+--- ./Source/PlatformGTK.cmake	2018-05-07 10:30:18.000000000 +0200
++++ ./Source/PlatformGTK.cmake	2018-05-07 18:03:44.333500803 +0200
+@@ -15,10 +15,10 @@
+ 
+ if (ENABLE_GTKDOC)
+     install(DIRECTORY ${CMAKE_BINARY_DIR}/Documentation/webkit2gtk-${WEBKITGTK_API_VERSION}/html/webkit2gtk-${WEBKITGTK_API_VERSION}
+-            DESTINATION "${CMAKE_INSTALL_DATADIR}/gtk-doc/html/webkit2gtk-${WEBKITGTK_API_VERSION}"
++            DESTINATION "${CMAKE_INSTALL_DATADIR}/gtk-doc/html"
+     )
+     install(DIRECTORY ${CMAKE_BINARY_DIR}/Documentation/webkitdomgtk-${WEBKITGTK_API_VERSION}/html/webkitdomgtk-${WEBKITGTK_API_VERSION}
+-            DESTINATION "${CMAKE_INSTALL_DATADIR}/gtk-doc/html/webkitdomgtk-${WEBKITGTK_API_VERSION}"
++            DESTINATION "${CMAKE_INSTALL_DATADIR}/gtk-doc/html"
+     )
+ endif ()
+ 

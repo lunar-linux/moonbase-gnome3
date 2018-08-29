@@ -1,7 +1,7 @@
 depends gstreamer
 depends clutter-gtk
 depends librsvg
-depends lxml
+depends python-lxml
 depends accountsservice
 depends caribou
 depends cjs

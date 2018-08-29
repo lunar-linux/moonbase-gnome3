@@ -4,7 +4,7 @@ OPTS+=" --enable-video         \
         --enable-x11-target    \
         --enable-optimizations \
         --enable-introspection \
-        --disable-glibtest"   &&
+        --disable-glibtest"
 
 # see webkit2gtk3 module for this
 OPTS+=" --disable-webkit2" &&

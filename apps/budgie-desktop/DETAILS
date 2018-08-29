@@ -1,0 +1,16 @@
+          MODULE=budgie-desktop
+         VERSION=10.4
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=http://github.com/solus-project/budgie-desktop/releases/download/v$VERSION/
+      SOURCE_VFY=sha256:17da8efe56a73426117f89eed8f2a1236c592042acb8d3fec063b24ebe124245
+        WEB_SITE=http://github.com/solus-project/budgie-desktop/
+         ENTERED=20160105
+         UPDATED=20180612
+           SHORT="Simple GTK3 desktop from Solus Project"
+
+cat << EOF
+Budgie is the flagship desktop of the Solus Operating System, and is part of the
+Solus Project. Designed with the modern user in mind, it focuses on simplicity
+and elegance. A huge advantage for the Budgie desktop is that it is not a fork
+of another project, but rather one written from scratch with integration in mind.
+EOF

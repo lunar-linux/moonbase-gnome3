@@ -1,15 +1,14 @@
 depends gtk+-3
 depends intltool
 depends meson
-
-optional_depends vala "" "" "to compile vala source files"
+depends vala
 
 optional_depends docbook-xsl \
-                 "-Denable-man=true" \
-                 "-Denable-man=false" \
+                 "-D enable-man=true" \
+                 "-D enable-man=false" \
                  "for building man pages"
 
 optional_depends gtk-doc \
-                 "-Denable-gtk-doc=true" \
-                 "-Denable-gtk-doc=false" \
+                 "-D enable-gtk-doc=true" \
+                 "-D enable-gtk-doc=false" \
                  "for building documentation"

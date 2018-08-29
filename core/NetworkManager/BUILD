@@ -7,6 +7,6 @@ OPTS+=" --disable-static \
         --disable-more-logging \
         --disable-more-warnings \
         --with-nmtui \
-        --with-nmcli" &&
+        --with-nmcli"
 
 default_build

@@ -1,3 +1,3 @@
-OPTS+=" --enable-smime --disable-static" &&
+OPTS+=" --enable-smime --disable-static"
 
 default_build

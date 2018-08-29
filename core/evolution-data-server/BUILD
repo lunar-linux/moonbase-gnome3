@@ -1,3 +1,3 @@
-OPTS+=" --enable-vala-bindings --disable-uoa" &&
+OPTS+=" --enable-vala-bindings --disable-uoa"
 
 default_build

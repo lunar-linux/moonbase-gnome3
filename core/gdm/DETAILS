@@ -1,14 +1,11 @@
           MODULE=gdm
-         VERSION=3.28.0
+         VERSION=3.28.4
           SOURCE=$MODULE-$VERSION.tar.xz
-         SOURCE2=gdm-dont_start_ssh_agent.patch
       SOURCE_URL=$GNOME_URL/sources/gdm/${VERSION%.*}
-     SOURCE2_URL=$PATCH_URL
-     SOURCE_VFY=sha256:3a20dde3d02a0d27710ba883f4eaa4ce07c703c5fb15441f4295eee64cfeb944
-    SOURCE2_VFY=sha256:4c8cc2682492169b18f1aff5e7b13400246fe6229ba67a711330fed8c4f8fda7
+     SOURCE_VFY=sha256:799f524278eb1a663c1d693589878c12ce8fad2293a66ef336e9626e1f933a3b
         WEB_SITE=http://www.gnome.org
          ENTERED=20141019
-         UPDATED=20180325
+         UPDATED=20180823
            SHORT="GDM support library"
 
 cat << EOF

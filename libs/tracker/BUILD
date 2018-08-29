@@ -1,5 +1,5 @@
-OPTS+=" --disable-static" &&
+OPTS+=" --disable-static"
 
-./autogen.sh &&
+./configure &&
 
 default_build
