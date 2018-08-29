@@ -42,7 +42,6 @@ optional_depends wayland \
                  "-DENABLE_WAYLAND_TARGET=OFF" \
                  "for Waylang support"
 
-
 optional_depends gtk-doc \
                  "-DENABLE_GTKDOC=ON" \
                  "-DENABLE_GTKDOK=OFF" \
