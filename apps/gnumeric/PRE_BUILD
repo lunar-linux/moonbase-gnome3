@@ -1,0 +1,4 @@
+default_pre_build &&
+
+# cs makes itstool segfault?
+sedit 's:cs de es:de es:' doc/Makefile.{am,in}
