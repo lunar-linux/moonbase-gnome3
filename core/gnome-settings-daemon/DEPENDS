@@ -14,3 +14,8 @@ depends geocode-glib
 depends geoclue2
 depends libgweather
 depends libgudev
+
+optional_depends network-manager \
+                 "--enable-network-manager" \
+                 "--disable-network-manager" \
+                 "Enable support for Network Manager"
