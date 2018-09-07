@@ -1,7 +1,11 @@
-OPTS+=" -DPORT=GTK \
+OPTS+=" -DENABLE_WEBKIT_LEGACY=OFF \
+        -DENABLE_PLUGIN_PROCESS_GTK2=OFF \
         -DUSE_WOFF2=OFF \
-        -DCMAKE_SKIP_RPATH=ON \
-        -DENABLE_WEBKIT_LEGACY=OFF"
+        -DPORT=GTK"
+
+if [[ $MINIBROWSER == "y" ]] ; then
+OPTS+=" -DENABLE_MINIBROWSER=ON"
+fi &&
 
 default_cmake_build &&
 
