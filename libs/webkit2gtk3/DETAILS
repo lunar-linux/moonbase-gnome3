@@ -1,12 +1,12 @@
           MODULE=webkit2gtk3
-         VERSION=2.20.3
+         VERSION=2.20.5
           SOURCE=webkitgtk-$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/webkitgtk-$VERSION
       SOURCE_URL=http://www.webkitgtk.org/releases
-      SOURCE_VFY=sha256:579b307d78fa16a73f112790178022166d7ad17d4147492ced9b9fba48f20dd8
+      SOURCE_VFY=sha256:15c0f8d26e9605afe0948d161ba5fd82efee8eda2debd409fd40a440ac3af990
         WEB_SITE=http://www.webkit.org
          ENTERED=20070919
-         UPDATED=20180612
+         UPDATED=20180911
            SHORT="gtk+ web rendering engine"
 
 cat << EOF
