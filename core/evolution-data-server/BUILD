@@ -1,3 +1,1 @@
-OPTS+=" --enable-vala-bindings --disable-uoa"
-
-default_build
+default_cmake_build
