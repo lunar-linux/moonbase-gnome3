@@ -1,3 +1,4 @@
+depends autoconf-mozilla
 depends python2
 depends icu4c
 depends readline

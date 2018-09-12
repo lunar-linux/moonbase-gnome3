@@ -1,18 +1,10 @@
 cd $SOURCE_DIRECTORY/js/src &&
 
-rm -rf editline ctypes/libffi &&
+if [[ $STATIC_LIBRARY == "n" ]]; then
+  sedit 's/FORCE_STATIC_LIB = True/FORCE_STATIC_LIB = False/'
+fi && 
 
-OPTS+=" --with-system-nspr  \
-        --with-system-icu   \
-        --enable-threadsafe \
-        --enable-readline   \
-        --enable-system-ffi \
-        --disable-static"
-
-unset CPPFLAGS &&
-CXXFLAGS+=" -fpermissive" &&
-
-default_build &&
-
-#for backwards compatibility
-ln -sf /usr/bin/js /usr/bin/js17
+./configure --prefix=/usr &&
+make &&
+prepare_install &&
+make install
