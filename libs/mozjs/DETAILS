@@ -1,15 +1,12 @@
           MODULE=mozjs
-         VERSION=45.0.2
-          SOURCE=$MODULE-$VERSION.tar.bz2
-         SOURCE2=$MODULE-patch_js_src_configure.patch
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/mozjs-$VERSION
-      SOURCE_URL=https://ftp.mozilla.org/pub/spidermonkey/releases/$VERSION/
-     SOURCE2_URL=$PATCH_URL
-      SOURCE_VFY=sha256:570530b1e551bf4a459d7cae875f33f99d5ef0c29ccc7742a1b6f588e5eadbee
-     SOURCE2_VFY=sha256:7466defadd00131567ae6daf6fa3716facae9db2387706290061e7f49a1af461  
+         VERSION=52.6.0
+          SOURCE=$MODULE-${VERSION}gnome1.tar.xz
+      SOURCE_URL=$GNOME_URL/teams/releng/tarballs-needing-help/mozjs
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE
+      SOURCE_VFY=sha256:786647e0ee743ab8ebd67d307ab406f93d50363ead7d7d05e29eeb113ebbf525
         WEB_SITE=http://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Releases/24/
          ENTERED=20140418
-         UPDATED=20170930
+         UPDATED=20180912
            SHORT="JavaScript interpreter and libraries"
            PSAFE=no
 
