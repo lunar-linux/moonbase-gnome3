@@ -1,0 +1,14 @@
+          MODULE=xapps
+         VERSION=1.2.2
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/linuxmint/xapps/archive/$VERSION.tar.gz
+      SOURCE_VFY=sha256:9ce6a5b19637df18d4521dfdc8ed6bc9fdadcb87bda2c324f3471407a7b551d6
+        WEB_SITE=http://github.com/linuxmint/xapps/
+         ENTERED=20130302
+         UPDATED=20180913
+           SHORT="Common library for X-Apps project"
+
+cat <<EOF
+This project gathers the components which are common to multiple desktop
+environments and required to implement cross-DE solutions.
+EOF

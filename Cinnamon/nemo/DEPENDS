@@ -6,17 +6,21 @@ depends gnome-icon-theme
 depends libnotify
 depends cinnamon-desktop
 depends cinnamon-translations
-
-#optional_depends gksu "" "" "open it as root"
-
-optional_depends exempi "" "" "for XMP metadata support"
+depends xapps
+depends meson
 
 optional_depends libexif \
-                 "--enable-libexif" \
-                 "--disable-libexif" \
-                 "for exif support"
+                 "-D exif=true" \
+		 "-D exif=false" \
+		 "for EXIF parsing support"
+
+optional_depends exempi \
+                 "-D xmp=true" \
+		 "-D xmp=false" \
+		 "for XMP support"
 
 optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
-                 "for building documentation"
+                 "-D gtk_doc=true" \
+		 "-D gtk_doc=false" \
+		 "for API reference documentation"
+
