@@ -3,8 +3,4 @@ depends libxkbfile
 depends gnome-common
 depends intltool
 depends pulseaudio
-
-optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
-                 "for object introspection"
+depends meson
