@@ -5,6 +5,6 @@
              --enable-compile-warnings=no \
              $OPTS &&
 
-sedit "s:-Werror:-W :" src/Makefile  &&
+sedit "s:-Werror:-W :" src/Makefile &&
 
 default_make
