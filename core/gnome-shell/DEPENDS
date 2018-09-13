@@ -1,0 +1,9 @@
+depends gdm
+depends polkit
+depends gjs
+depends gnome-session
+
+optional_depends NetworkManager \
+                 "-Dnetworkmanager=TRUE" \
+                 "-Dnetworkmanager=FALSE" \
+                 "for NetworkManager support"
