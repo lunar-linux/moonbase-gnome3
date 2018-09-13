@@ -6,7 +6,7 @@
         WEB_SITE=http://github.com/linuxmint/nemo/
          ENTERED=20130302
          UPDATED=20180913
-           SHORT="Cinnamon file manager (Nautilus fork)"
+           SHORT="Cinnamon file manager (a Nautilus fork)"
 
 cat <<EOF
 Nemo is the file manager for the Cinnamon desktop environment.
