@@ -1,4 +1,5 @@
 depends libXres
+depends wayland
 depends gtk+-3
 depends startup-notification
 depends intltool
