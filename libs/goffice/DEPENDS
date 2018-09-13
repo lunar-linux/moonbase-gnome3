@@ -4,6 +4,7 @@ depends cairo
 depends pango
 depends librsvg
 depends gdk-pixbuf
+depends wayland
 depends gtk+-3
 
 optional_depends libspectre "" "" "support embedded EPS"
