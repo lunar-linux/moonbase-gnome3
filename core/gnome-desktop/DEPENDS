@@ -3,6 +3,7 @@ depends iso-codes
 depends gsettings-desktop-schemas
 depends libxkbfile
 depends xkeyboard-config
+depends libseccomp
 depends itstool
 
 optional_depends gobject-introspection \
