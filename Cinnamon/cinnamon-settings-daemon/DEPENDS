@@ -4,7 +4,6 @@ depends pulseaudio
 depends libcanberra
 depends librsvg
 depends libgnomekbd
-depends docbook-xsl
 depends libnotify
 depends libgudev
 depends colord
