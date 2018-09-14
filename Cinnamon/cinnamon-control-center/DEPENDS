@@ -2,7 +2,13 @@ depends gtk+-3
 depends libxkbfile
 depends gnome-common
 depends libgnomekbd
+depends cinnamon-menus
+depends cinnamon-settings-daemon
 depends intltool
+
+optional_depends NetworkManager \
+                 "" "--disable-networkmanager --disable-modemmanager" \
+                 for NetworkManager support"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
