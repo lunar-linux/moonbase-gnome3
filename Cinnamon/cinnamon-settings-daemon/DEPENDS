@@ -1,11 +1,14 @@
-depends cinnamon-desktop
+depends nss
+depends upower
 depends pulseaudio
 depends libcanberra
 depends librsvg
 depends libgnomekbd
-depends nss
-depends upower
-depends gnome-common
 depends docbook-xsl
 depends libnotify
 depends libgudev
+depends colord
+depends gnome-common
+depends cinnamon-desktop
+
+optional_depends cups "" "--disable-cups" "for CUPS printing support"
