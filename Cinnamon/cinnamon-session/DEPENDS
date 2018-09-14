@@ -1,7 +1,20 @@
-depends cinnamon-desktop
 depends upower
 depends gnome-common
 depends json-glib
-depends xtrans
+depends xapps
+depends meson
 
+optional_depends GConf \
+                 "-D with-gconf=true" \
+                 "-D with-gconf=false" \
+                 "for GConf support"
 
+optional_depends xtrans \
+                 "-D with-xtrans=true" \
+                 "-D with-xtrans=false" \
+                 "for xtrans support"
+
+optional_depends docbook-xsl \
+                 "-D with-docbook=true" \
+                 "-D with-docbook=false" \
+                 "for documentation install"
