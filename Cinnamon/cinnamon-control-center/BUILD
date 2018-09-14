@@ -1,12 +1,19 @@
 sedit "s:subdir-objects::g" configure.ac &&
 
-./autogen.sh --prefix=/usr \
-             --sysconfdir=/etc \
-             --localstatedir=/var \
-             --disable-static \
-             --enable-compile-warnings=no \
-             $OPTS &&
+OPTS+=" --prefix=/usr \
+        --sysconfdir=/etc \
+        --localstatedir=/var \
+        --disable-wacom \
+        --disable-static \
+        --disable-onlineaccounts \
+        --enable-compile-warnings=no"
 
-sedit "s:-Werror:-W :" Makefile &&
+if ! module_installed cupd; then
+   OPTS+=" --disable-cups"
+fi
 
-default_make
+./autogen.sh $OPTS &&
+
+#sedit "s:-Werror:-W :" Makefile &&
+
+default_build
