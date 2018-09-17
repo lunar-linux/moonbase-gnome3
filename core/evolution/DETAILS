@@ -1,0 +1,22 @@
+          MODULE=evolution
+           MAJOR=3.28
+         VERSION=$MAJOR.5
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/$MAJOR
+      SOURCE_VFY=sha256:bb282ec7caf32872191c9885f3447adb190a7744b3b3cdb29d84b834d47336e0
+        WEB_SITE=http://gnome.org/projects/evolution
+         ENTERED=20011109
+         UPDATED=20180917
+           SHORT="email, calendar and notes information management solution"
+
+cat << EOF
+Evolution is the premiere personal and workgroup information
+management solution for Linux and UNIX-based systems.  The software
+seamlessly integrates email, calendaring, meeting scheduling, contact
+management and online task lists in one powerful, fast, and easy to
+use application.  Evolution also delivers a comprehensive set
+of features that help you keep your work organized and your projects
+on track.  Automatic email indexing keeps your information at your
+fingertips. The unique vFolders^(TM) are virtual folders you use
+to create and save powerful contextual views of your email messages.
+EOF
