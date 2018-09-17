@@ -1,0 +1,38 @@
+depends  evolution-data-server
+depends  hicolor-icon-theme
+optional_depends  libcanberra \
+                  "-DENABLE_CANBERRA=ON" \
+                  "-DENABLE_CANBERRA=OFF" \
+                  "for canberra support"
+
+optional_depends  libnotify    ""  ""  "for libnotify popups"
+
+optional_depends  gnome-spell \
+                  "-DENABLE_GTKSPELL=ON" \
+                  "-DENABLE_GTKSPELL=OFF" \
+                  "for spellcheck support"
+
+optional_depends  openldap  \
+                  "-DWITH_OPENLDAP=ON"  \
+                  "-DWITH_OPENLDAP=OFF"  \
+                  "for LDAP support (needed for evolution-exchange too)"
+
+optional_depends  gtk-doc  \
+                  "-DENABLE_GTK_DOC=ON"  \
+                  "-DENABLE_GTK_DOC=OFF"  \
+                  "for gtk-doc support"
+
+optional_depends  libpst \
+                  "-DENABLE_PST_IMPORT=ON"  \
+                  "-DENABLE_PST_IMPORT=OFF"  \
+                  "for Outlook pst import plugin support"
+
+optional_depends  libgweather  \
+                  "-DENABLE_WEATHER=ON" \
+                  "-DENABLE_WEATHER=OFF" \
+                  "for calendar-weather plugin"
+
+optional_depends  spamassassin \
+                  "-DWITH_SPAMASSASIN=ON" \
+                  "-DWITH_SPAMASSASIN=OFF" \
+                  "for spam filtering"
