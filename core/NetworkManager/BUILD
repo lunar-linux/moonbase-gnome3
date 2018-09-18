@@ -6,6 +6,7 @@ OPTS+=" --disable-static \
         --disable-lto \
         --disable-more-logging \
         --disable-more-warnings \
+        --with-libnm_glib \
         --with-nmtui \
         --with-nmcli"
 
