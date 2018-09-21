@@ -4,11 +4,11 @@ depends meson
 depends vala
 
 optional_depends docbook-xsl \
-                 "-D enable-man=true" \
-                 "-D enable-man=false" \
+                 "-D man=true" \
+                 "-D man=false" \
                  "for building man pages"
 
 optional_depends gtk-doc \
-                 "-D enable-gtk-doc=true" \
-                 "-D enable-gtk-doc=false" \
+                 "-D gtk_doc=true" \
+                 "-D gtk_doc=false" \
                  "for building documentation"
