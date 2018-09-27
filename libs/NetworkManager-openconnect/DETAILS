@@ -1,0 +1,12 @@
+          MODULE=NetworkManager-openconnect
+         VERSION=1.2.4
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:a177e0cf683b63e225ecc08049a1d57f05868b5660f0907c65d5ecab39474996
+        WEB_SITE=http://wiki.gnome.org/Projects/NetworkManager
+         ENTERED=20180926
+         UPDATED=20180926
+           SHORT="NetworkManager VPN plugin for OpenConnect"
+
+cat << EOF
+EOF

@@ -1,11 +1,11 @@
           MODULE=tracker
-         VERSION=2.0.3
+         VERSION=2.1.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:3}/
-      SOURCE_VFY=sha256:5a2fb274c128ec67a920944937b5147ceaf5db16fef6691ea22c4cb841e20580
+      SOURCE_VFY=sha256:b234b7573773b904dc3e885ff5ec44e86b035767cde783bc50d65d12cd72861e
         WEB_SITE=https://wiki.gnome.org/Projects/Tracker/
          ENTERED=20180317
-         UPDATED=20180317
+         UPDATED=20180927
            SHORT="Desktop-neutral user information store, search tool and indexer"
 
 cat << EOF
