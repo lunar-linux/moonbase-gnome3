@@ -1,0 +1,42 @@
+SUPPORTED_PUBLISHERS="flickr picasa piwigo youtube gallery3 tumblr"
+
+make_publishers_checklist() {
+  for target in $SUPPORTED_PUBLISHERS; do
+    title=$target
+    echo "\"$target\" \"$title\" \"off\" "
+  done
+}
+
+select_publishers() {
+  BACKTITLE="Shotwell Publishers Configuration"
+      TITLE="Publishers Selection"
+       HELP="Select publishers you want to be supported"
+  make_publishers_checklist | xargs  \
+  dialog --backtitle "$BACKTITLE" \
+         --title     "$TITLE"     \
+         --stdout                 \
+         --separate-output        \
+         --checklist "$HELP"      \
+         0 0 0
+}
+
+if ! grep -q CONFIGURED $MODULE_CONFIG; then
+  if grep -q "PUBLISHERS=" $MODULE_CONFIG; then
+    message "Selecting PUBLISHERS is optional"
+  fi
+
+  if query "Would you like to select which publisher will be supported? If not selected, no publisher plugin ill be installed." n; then
+    TARGETLIST=`select_publishers`
+    TEMP=`grep -v "TARGETLIST="          $MODULE_CONFIG`
+    echo "$TEMP"                       > $MODULE_CONFIG
+
+
+    echo "TARGETLIST=\"$TARGETLIST\"" >> $MODULE_CONFIG
+  else
+    echo "TARGETLIST=\"\"" >> $MODULE_CONFIG
+  fi
+
+  echo "OPTS=\"\$OPTS $OPTS\"" >> $MODULE_CONFIG
+  echo "CONFIGURED=y"          >> $MODULE_CONFIG
+fi
+
