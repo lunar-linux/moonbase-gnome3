@@ -1,0 +1,13 @@
+          MODULE=alacarte
+         VERSION=3.11.91
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/GNOME/alacarte/archive/$VERSION.tar.gz
+      SOURCE_VFY=sha256:ea2810b917ca6f4fc8694683b893d008bdb2fb7cd5ce503917a4828c3f282605
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20160218
+         UPDATED=20181006
+           SHORT="Menu editor for Gnome"
+
+cat << EOF
+Alacarte is a menu editor for Gnome.
+EOF

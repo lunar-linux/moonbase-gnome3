@@ -1,0 +1,5 @@
+depends gnome-common
+depends gnome-menus
+depends hicolor-icon-theme
+depends libxslt
+depends docbook-xsl
