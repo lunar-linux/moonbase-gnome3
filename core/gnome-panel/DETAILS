@@ -1,0 +1,27 @@
+          MODULE=gnome-panel
+         VERSION=3.30.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:1cbfba664df24c0b7bd9d09927c127c1aea1a6407bdf7ea221f443e3f9a1008b
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20160218
+         UPDATED=20181006
+           SHORT="Panel for GNOME"
+
+cat << EOF
+Gnome Panel provides panels and default applets for the desktop.
+A panel is a horizontal or vertical bar that can be added to each side of the
+screen. By default there is one panel on the top of the screen and one on the
+bottom, but this is configurable. The panels are used to add applets such as
+a menu bar to open applications, a clock and indicator applets which provide
+access to configure features of the system such as the network, sound or the
+current keyboard layout. On the bottom panel there is usually a list of open
+applications.
+Default Applets:
+  The Workspace Switcher
+  The Window List
+  The Window Selector
+  The Notification Area
+  The Clock
+  The infamous 'Wanda the Fish'.
+EOF
