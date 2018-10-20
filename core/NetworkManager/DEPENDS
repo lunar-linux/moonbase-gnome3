@@ -11,7 +11,7 @@ depends libgudev
 
 optional_depends gnome-bluetooth "" "" "for Bluetooth support"
 
-optional_depends ModemManager    "--with-modem-manager-1" "" "for mobile broadband modem support"
+optional_depends ModemManager "--with-modem-manager-1" "" "for mobile broadband modem support"
 
 optional_depends nss     "--with-crypto=nss"    "" "for NSS crypto support"
 optional_depends gnutls  "--with-crypto=gnutls" "" "for TLS crypto support"
@@ -31,16 +31,19 @@ fi
 
 optional_depends wpa_supplicant \
                  "--enable-wifi" \
-                 "--disable-wifi" "for Wifi networking support"
+                 "--disable-wifi" \
+                 "for Wifi networking support"
 
 # rp-pppoe depend implies ppp installed too
 optional_depends rp-pppoe  \
                  "--enable-ppp" \
-                 "--disable-ppp" "for Roaring Penguin's Point-to-Point Protocol over Ethernet support"
+                 "--disable-ppp" \
+                 "for Roaring Penguin's Point-to-Point Protocol over Ethernet support"
 
 optional_depends ppp \
                  "--enable-ppp" \
-                 "--disable-ppp" "for Point-to-Point Protocol with dial-up networking support"
+                 "--disable-ppp" \
+                 "for Point-to-Point Protocol with dial-up networking support"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
