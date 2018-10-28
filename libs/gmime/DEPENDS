@@ -1,3 +1,4 @@
+depends libidn2
 depends vala
 depends zlib
 depends pkgconf
