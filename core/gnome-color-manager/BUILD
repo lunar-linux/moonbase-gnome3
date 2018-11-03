@@ -1,3 +1,3 @@
-OPTS+=" --disable-static --disable-man-pages"
+OPTS+=" --prefix /usr -Dpackagekit=false -Denable_docs=false" &&
 
-default_build
+default_meson_build
