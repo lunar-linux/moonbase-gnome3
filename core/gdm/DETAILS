@@ -1,11 +1,11 @@
           MODULE=gdm
-         VERSION=3.30.1
+         VERSION=3.30.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/gdm/${VERSION%.*}
-     SOURCE_VFY=sha256:4b3d11856adf9fc26b43b2742c196e9e9dc2d2a5eff8bb34d906537288e2732f
+     SOURCE_VFY=sha256:be90ede158fd5d2ff0b97db617ffd77c1033964824cb04fcfac0865c8c6f56c1
         WEB_SITE=http://www.gnome.org
          ENTERED=20141019
-         UPDATED=20180926
+         UPDATED=20181107
            SHORT="GDM support library"
 
 cat << EOF
