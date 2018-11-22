@@ -1,0 +1,138 @@
+Author: "La Ode Muh. Fadlun Akbar" <fadlun.net@gmail.com>
+Last-Update: 2018-09-17
+Description: Add null guards to prevent occasional workspace crashes
+Bug: https://github.com/solus-project/budgie-desktop/issues/1548
+Origin: https://github.com/alunux/budgie-desktop/commit/1a10f388c1433a858a444c139d99dd38b8366c60
+Forwarded: No
+---
+ src/applets/icon-tasklist/DesktopHelper.vala      | 6 +++++-
+ src/applets/icon-tasklist/IconTasklistApplet.vala | 6 +++++-
+ src/applets/workspaces/WindowIcon.vala            | 3 ++-
+ src/applets/workspaces/WorkspaceItem.vala         | 3 ++-
+ src/applets/workspaces/WorkspacesApplet.vala      | 6 ++++--
+ src/wm/wm.vala                                    | 9 +++++++++
+ 6 files changed, 27 insertions(+), 6 deletions(-)
+
+diff --git a/src/applets/icon-tasklist/DesktopHelper.vala b/src/applets/icon-tasklist/DesktopHelper.vala
+index e1febadc..98b56f69 100644
+--- a/src/applets/icon-tasklist/DesktopHelper.vala
++++ b/src/applets/icon-tasklist/DesktopHelper.vala
+@@ -78,7 +78,11 @@ public class DesktopHelper : GLib.Object
+         GLib.List<unowned Wnck.Window> list = new GLib.List<unowned Wnck.Window>();
+         screen.get_windows_stacked().foreach((window) => {
+             if (window.get_class_group() == class_group && !window.is_skip_tasklist()) {
+-                if (window.get_workspace() == get_active_workspace()) {
++                var workspace = window.get_workspace();
++                if (workspace == null) {
++                    return;
++                }
++                if (workspace == get_active_workspace()) {
+                     list.append(window);
+                 }
+             }
+diff --git a/src/applets/icon-tasklist/IconTasklistApplet.vala b/src/applets/icon-tasklist/IconTasklistApplet.vala
+index f66f465e..53fe7111 100644
+--- a/src/applets/icon-tasklist/IconTasklistApplet.vala
++++ b/src/applets/icon-tasklist/IconTasklistApplet.vala
+@@ -212,7 +212,11 @@ public class IconTasklistApplet : Budgie.Applet
+             bool visible = true;
+
+             if (this.restrict_to_workspace) {
+-                visible = button.has_window_on_workspace(this.wnck_screen.get_active_workspace());
++                var workspace = this.wnck_screen.get_active_workspace();
++                if (workspace == null) {
++                    return;
++                }
++                visible = button.has_window_on_workspace(workspace);
+             }
+
+             if (this.only_show_pinned) {
+diff --git a/src/applets/workspaces/WindowIcon.vala b/src/applets/workspaces/WindowIcon.vala
+index a0bea8f6..3514424d 100644
+--- a/src/applets/workspaces/WindowIcon.vala
++++ b/src/applets/workspaces/WindowIcon.vala
+@@ -52,7 +52,8 @@ public class WindowIcon : Gtk.Button
+         if (event.button != 1) {
+             return false;
+         }
+-        if (WorkspacesApplet.wnck_screen.get_active_workspace() == window.get_workspace()) {
++        var workspace = WorkspacesApplet.wnck_screen.get_active_workspace();
++        if (workspace != null && workspace == window.get_workspace()) {
+             window.activate(event.time);
+             return false;
+         }
+diff --git a/src/applets/workspaces/WorkspaceItem.vala b/src/applets/workspaces/WorkspaceItem.vala
+index 28c2bfa8..a058866f 100644
+--- a/src/applets/workspaces/WorkspaceItem.vala
++++ b/src/applets/workspaces/WorkspaceItem.vala
+@@ -283,7 +283,8 @@ public class WorkspaceItem : Gtk.EventBox
+     public override bool button_release_event(Gdk.EventButton event)
+     {
+         if (event.button == 1) {
+-            if (WorkspacesApplet.wnck_screen.get_active_workspace() == workspace) {
++            var _workspace = WorkspacesApplet.wnck_screen.get_active_workspace();
++            if (_workspace != null && _workspace == workspace) {
+                 return Gdk.EVENT_STOP;
+             }
+             workspace.activate(event.time);
+diff --git a/src/applets/workspaces/WorkspacesApplet.vala b/src/applets/workspaces/WorkspacesApplet.vala
+index 1bd52efd..2a6b3a38 100644
+--- a/src/applets/workspaces/WorkspacesApplet.vala
++++ b/src/applets/workspaces/WorkspacesApplet.vala
+@@ -270,7 +270,8 @@ public class WorkspacesApplet : Budgie.Applet
+     private void workspace_added(Wnck.Workspace space)
+     {
+         WorkspaceItem item = new WorkspaceItem(space);
+-        if (wnck_screen.get_active_workspace() == space) {
++        var _workspace = wnck_screen.get_active_workspace();
++        if (_workspace != null && _workspace == space) {
+             item.get_style_context().add_class("current-workspace");
+         }
+         item.remove_workspace.connect(remove_workspace);
+@@ -424,7 +425,8 @@ public class WorkspacesApplet : Budgie.Applet
+
+         wm_proxy.RemoveWorkspaceByIndex(index, time);
+
+-        if (wnck_screen.get_active_workspace() == workspace) {
++        var _workspace = wnck_screen.get_active_workspace();
++        if (_workspace != null && _workspace == workspace) {
+             var previous = wnck_screen.get_workspace((index == 0) ? index : index - 1);
+             previous.activate(time);
+         }
+diff --git a/src/wm/wm.vala b/src/wm/wm.vala
+index 134dfb5d..d0f3084c 100644
+--- a/src/wm/wm.vala
++++ b/src/wm/wm.vala
+@@ -643,6 +643,9 @@ public class BudgieWM : Meta.Plugin
+     public void store_focused()
+     {
+         var workspace = get_display().get_workspace_manager().get_active_workspace();
++        if (workspace == null) {
++            return;
++        }
+         foreach (var window in workspace.list_windows()) {
+             if (window.has_focus()) {
+                 focused_window = window;
+@@ -1163,6 +1166,9 @@ public class BudgieWM : Meta.Plugin
+         uint32 cur_time = display.get_current_time();
+
+         var workspace = display.get_workspace_manager().get_active_workspace();
++        if (workspace == null) {
++            return;
++        }
+
+         string? data = null;
+         if ((data = workspace.get_data("__flagged")) == null) {
+@@ -1196,6 +1202,9 @@ public class BudgieWM : Meta.Plugin
+         uint32 cur_time = display.get_current_time();
+
+         var workspace = display.get_workspace_manager().get_active_workspace();
++        if (workspace == null) {
++            return;
++        }
+
+         string? data = null;
+         if ((data = workspace.get_data("__flagged")) == null) {
+--
+2.17.1
+
