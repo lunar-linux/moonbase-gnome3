@@ -1,21 +1,30 @@
+depends alsa-lib
+depends pulseaudio
+depends nss
 depends dconf
 depends gnome-desktop
 depends hicolor-icon-theme
 depends libnotify
-depends nss
 depends libcanberra
-depends pulseaudio
 depends upower
 depends libxslt
 depends ibus
-depends xf86-input-wacom
 depends libwacom
+depends xf86-input-wacom
 depends geocode-glib
 depends geoclue2
 depends libgweather
 depends libgudev
+depends colord
+depends NetworkManager
+depends meson
 
-optional_depends NetworkManager \
-                 "--enable-network-manager" \
-                 "--disable-network-manager" \
-                 "Enable support for Network Manager"
+optional_depends wayland \
+                 "-D wayland=true" \
+                 "-D wayland=false" \
+                 "Enable support for Wayland"
+
+optional_depends cups \
+                 "-D cups=true" \
+                 "-D cups=false" \
+                 "Enable support for CUPS"
