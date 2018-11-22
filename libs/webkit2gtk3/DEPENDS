@@ -19,6 +19,7 @@ depends gperf
 depends sqlite
 depends libsoup
 depends libsecret
+depends wayland-protocols
 depends upower
 depends zlib
 
@@ -40,7 +41,7 @@ optional_depends geoclue2 \
 optional_depends wayland \
                  "-DENABLE_WAYLAND_TARGET=ON" \
                  "-DENABLE_WAYLAND_TARGET=OFF" \
-                 "for Waylang support"
+                 "for Wayland support"
 
 optional_depends gtk-doc \
                  "-DENABLE_GTKDOC=ON" \
