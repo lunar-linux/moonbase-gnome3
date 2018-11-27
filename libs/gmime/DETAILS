@@ -1,11 +1,11 @@
           MODULE=gmime
-         VERSION=3.2.2
+         VERSION=3.2.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:613014ffcd327b3f6b06aa45cf4bf3adc25cd831f14537c4132880022dda7209
+      SOURCE_VFY=sha256:6a0875eeb552ab447dd54853a68ced62217d863631048737dd97eaa2713e7311
         WEB_SITE=http://spruce.sourceforge.net/gmime
          ENTERED=20040721
-         UPDATED=20181101
+         UPDATED=20181127
            SHORT="MIME creation/parsing library and toolset"
 
 cat << EOF
