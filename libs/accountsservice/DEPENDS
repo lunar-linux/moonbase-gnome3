@@ -1,19 +1,23 @@
-depends glib-2
-depends gdbus-codegen
 depends polkit
 depends vala
+depends meson
 
 optional_depends systemd \
-                 "--enable-systemd" \
-                 "--disable-systemd" \
+                 "-D systemd=true" \
+                 "-D systemd=false -D systemdsystemunitdir=no" \
                  "for systemd support"
 
+optional_depends elogind \
+                 "-D elogind=true" \
+                 "-D elogind=false" \
+                 "for elogind support"
+
 optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "-D gtk_doc=true" \
+                 "-D gtk_doc=false" \
                  "for building documentation"
 
 optional_depends gobject-introspection \
-                "--enable-introspection" \
-                "--disable-introspection" \
+                "-D introspection=true" \
+                "-D introspection=false" \
                 "for introspection support"
