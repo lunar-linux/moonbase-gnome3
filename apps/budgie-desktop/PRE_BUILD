@@ -1,6 +1,0 @@
-default_pre_build &&
-
-sedit 's/verion/version/' meson.build &&
-
-git config --local submodule.subprojects/gvc.url libgnome-volume-control
-git submodule update --init
