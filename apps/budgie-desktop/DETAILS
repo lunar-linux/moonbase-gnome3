@@ -2,7 +2,7 @@
          VERSION=10.4+git20180830.02.f2dbc215fdb
           SOURCE=${MODULE}_$VERSION.orig.tar.xz
       SOURCE_URL=http://archive.ubuntu.com/ubuntu/pool/universe/b/budgie-desktop/
-      SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-10.4
+      SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-${VERSION%+*}
       SOURCE_VFY=sha256:4642534fa4afd3c49c0db1299f4b00d257bd6c1d8b542dfc6ab79486c5c2754f
         WEB_SITE=http://github.com/solus-project/budgie-desktop/
          ENTERED=20160105
