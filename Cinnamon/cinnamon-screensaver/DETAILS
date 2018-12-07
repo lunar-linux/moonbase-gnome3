@@ -1,11 +1,11 @@
           MODULE=cinnamon-screensaver
-         VERSION=4.0.1
+         VERSION=4.0.2
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/linuxmint/cinnamon-screensaver/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:099c95713716310eeb23b3420048814a903d02ea0880b311cf74be77d7d4fa4f
+      SOURCE_VFY=sha256:43bb4356e19419818f55809f82dbe2136d41376f4cf69386ff555d6529e969cb
         WEB_SITE=http://github.com/linuxmint/$MODULE/
          ENTERED=20130303
-         UPDATED=20181112
+         UPDATED=20181207
            SHORT="Cinnamon screenaver"
 
 cat <<EOF
