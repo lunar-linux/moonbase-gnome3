@@ -1,11 +1,11 @@
           MODULE=cinnamon-translations
-         VERSION=4.0.1
+         VERSION=4.0.2
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/linuxmint/cinnamon-translations/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:d6e493502dad384d3c2173e43340090de5207656876f8090d3bcc45b27be20a6
+      SOURCE_VFY=sha256:07efa3d387aa91813dcc480e81237ae1daf1c8f817178ef7cbb2377ce8fba37d
         WEB_SITE=http://github.com/linuxmint/$MODULE/
          ENTERED=20131019
-         UPDATED=20181128
+         UPDATED=20181216
            SHORT="Translations for Cinnamon and Nemo"
 
 cat <<EOF
