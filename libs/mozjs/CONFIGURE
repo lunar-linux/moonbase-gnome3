@@ -1,1 +1,0 @@
-mquery STATIC_LIB "Build static library of mozjs (~ 500MB), not needed for gjs?" n
