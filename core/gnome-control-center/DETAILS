@@ -1,0 +1,12 @@
+          MODULE=gnome-control-center
+         VERSION=3.30.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:a1e82b40ab59870697f739eb946f142b01ca66232e13af6ed5a95df22cc8c466
+        WEB_SITE=https://gitlab.gnome.org/GNOME/gnome-control-center
+         ENTERED=20070920
+         UPDATED=20190102
+           SHORT="GNOME's main interface to configure various aspects of the desktop"
+
+cat << EOF
+EOF
