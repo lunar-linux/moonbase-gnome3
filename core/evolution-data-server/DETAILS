@@ -1,11 +1,11 @@
           MODULE=evolution-data-server
-         VERSION=3.30.3
+         VERSION=3.30.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION::4}
-      SOURCE_VFY=sha256:a39c12bfc14f72a1a577a63ab1f6d4a3b77ca25df8cdc7996261993b98be3ce0
+      SOURCE_VFY=sha256:de9cc30bdfaeff9dea561d7d1d43f31dfd24d0fdf3c231cfd3a9fc4f00e514c9
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20141019
-         UPDATED=20181210
+         UPDATED=20190107
            SHORT="Centralized access to appointments and contacts"
 
 cat << EOF
