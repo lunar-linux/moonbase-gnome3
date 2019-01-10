@@ -1,7 +1,3 @@
 depends gtk+-3
 depends mozjs
-
-optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
-                 "for object introspection"
+depends gobject-introspection
