@@ -1,8 +1,8 @@
           MODULE=totem-pl-parser
-         VERSION=3.26.1
+         VERSION=3.26.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:6ae2c4b8acaf052af21b8db256b6314385de031ba721a2dbdb361e90d4b4b74c
+      SOURCE_VFY=sha256:d386acf965a44597e25ddee4a42ccde3c649a55b657e3a605648815b70861c3a
         WEB_SITE=https://wiki.gnome.org/Projects/Grilo
          ENTERED=20080312
          UPDATED=20190102
