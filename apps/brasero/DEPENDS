@@ -3,7 +3,7 @@ depends cdrtools
 depends dvd+rw-tools
 depends dconf
 depends gvfs
-depends gst-plugins-good-1.0
+depends gst-plugins-good
 depends desktop-file-utils
 depends hicolor-icon-theme
 depends libSM

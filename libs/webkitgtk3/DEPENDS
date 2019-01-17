@@ -20,8 +20,8 @@ optional_depends gtk+-2 "" " " "also build gtk+-2 version of webkit"
 # workaround for make_names.pl
 depends Switch
 
-optional_depends gst-plugins-good-1.0 "" "" "for gstreamer support"
-optional_depends gst-libav            "" "" "for gstreamer video support"
+optional_depends gst-plugins-good "" "" "for gstreamer support"
+optional_depends gst-libav        "" "" "for gstreamer video support"
 
 optional_depends librsvg \
                  "--enable-svg --enable-svg-fonts" \

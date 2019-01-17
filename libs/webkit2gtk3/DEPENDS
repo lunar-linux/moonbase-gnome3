@@ -14,7 +14,7 @@ depends harfbuzz
 depends freetype2
 depends gtk+-2
 depends gtk+-3
-depends gst-plugins-bad-1.0
+depends gst-plugins-bad
 depends gperf
 depends sqlite
 depends libsoup
