@@ -4,6 +4,7 @@ depends colord-gtk
 depends libgtop
 depends grilo
 depends libwacom
+depends gnome-bluetooth
 
 optional_depends "wayland" \
                  "-Dwayland=true" \
