@@ -1,8 +1,9 @@
-OPTS+=" --disable-static"
+OPTS+=" -D gudev=true -D goa=false -D google=false"
 
 if ! ( module_installed systemd ); then
-  OPTS+=" --disable-libsystemd-login"
+  OPTS+=" -D systemduserunitdir=\'no\' \
+          -D tmpfilesdir=\'no\'
+          -D logind=false"
 fi
-./autogen.sh &&
 
-default_build
+default_meson_build

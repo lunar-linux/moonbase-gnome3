@@ -4,24 +4,29 @@ depends gtk+-3
 depends openssh
 depends libgudev
 depends psmisc
-depends gcr
 depends polkit
 depends gtk-doc
 depends intltool
+depends meson
 
-optional_depends libsecret  "--enable-keyring" "--disable-keyring" "for storing secrets support"
-optional_depends libarchive "--enable-archive" "--disable-archive" "for archive support"
-optional_depends libsoup    "--enable-http"    "--disable-http"    "for FTP/HTTP/WebDAV support"
-optional_depends libcdio    "--enable-cdda"    "--disable-cdda"    "for CDDA support"
-optional_depends libgphoto2 "--enable-gphoto2" "--disable-gphoto2" "for Gphoto2 support"
-optional_depends libmtp     "--enable-libmtp"  "--disable-libmtp"  "for mtp support"
-optional_depends libnfs     "--enable-nfs"     "--disable-nfs"     "for NFS support"
-optional_depends fuse       "--enable-fuse"    "--disable-fuse"    "for FUSE support"
-optional_depends samba      "--enable-samba"   "--disable-samba"   "for Samba support"
-optional_depends avahi      "--enable-avahi"   "--disable-avahi"   "for avahi support"
-optional_depends udisks2    "--enable-udisks2" "--disable-udisks2" "for udisk support"
+optional_depends libarchive "-D archive=true"  "-D archive=false"  "for archive support"
+optional_depends libgcrypt  "-D gcrypt=true"   "-D gcrypt=false"   "for encryption support"
+optional_depends libsecret  "-D keyring=true"  "-D keyring=false"  "for storing secrets support"
+optional_depends libsoup    "-D http=true"     "-D http=false"     "for FTP/HTTP/WebDAV support"
+optional_depends libcdio    "-D cdda=true"     "-D cdda=false"     "for CDDA support"
+optional_depends libgphoto2 "-D gphoto2=true"  "-D gphoto2=false"  "for Gphoto2 support"
+optional_depends libmtp     "-D mtp=true"      "-D mtp=false"      "for mtp support"
+optional_depends libnfs     "-D nfs=true"      "-D nfs=false"      "for NFS support"
+optional_depends libusb     "-D libusb=true"   "-D libusb=false"   "for USB support"
+optional_depends fuse       "-D fuse=true"     "-D fuse=false"     "for FUSE support"
+optional_depends samba      "-D smb=true"      "-D smb=false"      "for Samba support"
+optional_depends udisks2    "-D udisks2=true"  "-D udisks2=false"  "for udisk support"
+optional_depends libbluray  "-D bluray=true"   "-D bluray=false"   "for Bluray DVD support"
+optional_depends gcr        "-D gcr=true"      "-D gcr=false"      "for gcr certificate support"
+optional_depends libsecret  "-D keyring=true"  "-D keyring=false"  "for storing secrets support"
+optional_depends avahi      "-D dnssd=true"    "-D dnssd=false"    "for Avahi supporti with dndsd support"
 
-#optional_depends gtk-doc \
-#                 "--enable-documentation" \
-#                 "--disable-documentation"\
-#                 "for documentation generating"
+optional_depends libimobile \
+                 "-D afc=true" \
+                 "-D afc=false" \
+                 "for afc backend and volume monitor support"
