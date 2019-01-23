@@ -4,6 +4,7 @@ depends iproute2
 depends iptables
 depends libnl3
 depends libndp
+depends libpsl
 depends libsecret
 depends util-linux
 depends %UDEV
