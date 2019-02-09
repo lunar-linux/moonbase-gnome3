@@ -6,7 +6,8 @@
         WEB_SITE=https://gitlab.gnome.org/GNOME/gnome-control-center
          ENTERED=20070920
          UPDATED=20190208
-           SHORT="GNOME's main interface to configure various aspects of the desktop"
+           SHORT="GNOME's main configure interface for the desktop"
 
 cat << EOF
+GNOME's main interface to configure various aspects of the desktop.
 EOF
