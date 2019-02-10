@@ -1,0 +1,4 @@
+default_pre_build &&
+
+# Fix build with vala 0.42.x
+sedit 's;^unlock skip;@&;' library/GnomeKeyring-1.0.metadata
