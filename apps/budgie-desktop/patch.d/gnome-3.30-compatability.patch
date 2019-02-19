@@ -1,135 +1,297 @@
 Description: [PATCH] Port to mutter-3 from GNOME 3.30
  This drops support for the old mutter versions. It's too much work to
  support them all.
-Author: Iain Lane <iain@orangesquash.org.uk>
-Last Update: 2018-08-06
-Commit: https://github.com/UbuntuBudgie/budgie-desktop/commit/0938c69f062cd58f7ca1ad0f492bc6b594e884be
+Author: Iain Lane <iain@orangesquash.org.uk>, David Mohammed <fossfreedom@ubuntu.com>
+Forwarded: https://github.com/solus-project/budgie-desktop/pull/1591
+Last-Update: 2019-02-18
 
----
- src/daemon/settings.vala                      |    1 -
- src/panel/settings/settings_wm.vala           |    6 +-
- ...0_solus-project.budgie.wm.gschema.override |    4 +
- src/wm/background.vala                        |   14 +-
- .../com.solus-project.budgie.wm.gschema.xml   |   27 -
- src/wm/keyboard.vala                          |   13 +-
- src/wm/meson.build                            |   33 +-
- src/wm/shim.vala                              |    2 +-
- src/wm/wm.vala                                |   90 +-
- vapi/Meta-3.metadata                          |   66 +
- vapi/README.md                                |    4 +
- vapi/libmutter-3-custom.vala                  |    6 +
- vapi/libmutter-3.deps                         |    9 +
- vapi/libmutter-3.vapi                         | 1380 +++++++++++++++++
- 14 files changed, 1534 insertions(+), 121 deletions(-)
- create mode 100644 src/wm/20_solus-project.budgie.wm.gschema.override
- create mode 100644 vapi/Meta-3.metadata
- create mode 100644 vapi/libmutter-3-custom.vala
- create mode 100644 vapi/libmutter-3.deps
- create mode 100644 vapi/libmutter-3.vapi
-
-Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/daemon/settings.vala
-===================================================================
---- budgie-desktop-10.4+git20180806.01.933f78fc03d.orig/src/daemon/settings.vala
-+++ budgie-desktop-10.4+git20180806.01.933f78fc03d/src/daemon/settings.vala
-@@ -114,7 +114,6 @@ public class SettingsManager
-             break;
+--- budgie-desktop-10.5~git20190218.orig/src/applets/icon-tasklist/DesktopHelper.vala
++++ budgie-desktop-10.5~git20190218/src/applets/icon-tasklist/DesktopHelper.vala
+@@ -79,7 +79,11 @@ public class DesktopHelper : GLib.Object
+         GLib.List<unowned Wnck.Window> list = new GLib.List<unowned Wnck.Window>();
+         screen.get_windows_stacked().foreach((window) => {
+             if (window.get_class_group() == class_group && !window.is_skip_tasklist()) {
+-                if (window.get_workspace() == get_active_workspace()) {
++                var workspace = window.get_workspace();
++                if (workspace == null) {
++                    return;
++                }
++                if (workspace == get_active_workspace()) {
+                     list.append(window);
+                 }
+             }
+--- budgie-desktop-10.5~git20190218.orig/src/applets/icon-tasklist/Icon.vala
++++ budgie-desktop-10.5~git20190218/src/applets/icon-tasklist/Icon.vala
+@@ -20,8 +20,8 @@ public class Icon : Gtk.Image
+     private int wait_cycle_counter = 0;
+     private int attention_cycle_counter = 0;
+ 
+-    private double bounce_amount = 0;
+-    private double attention_amount = 0;
++    private double bounce_amount = 0.0;
++    private double attention_amount = 0.0;
+ 
+     public double bounce {
+         public set {
+@@ -31,7 +31,7 @@ public class Icon : Gtk.Image
+         public get {
+             return bounce_amount;
          }
+-        default = 0.0;
++        //default = 0.0;
+     }
+ 
+     public double attention {
+@@ -42,7 +42,7 @@ public class Icon : Gtk.Image
+         public get {
+             return attention_amount;
+         }
+-        default = 0.0;
++        //default = 0.0;
+     }
+ 
+     public double icon_opacity {
+@@ -56,7 +56,7 @@ public class Icon : Gtk.Image
+         public get {
+             return opacity;
+         }
+-        default = 1.0;
++        //default = 1.0;
+     }
+ 
+     public Icon() {
+--- budgie-desktop-10.5~git20190218.orig/src/applets/icon-tasklist/IconTasklistApplet.vala
++++ budgie-desktop-10.5~git20190218/src/applets/icon-tasklist/IconTasklistApplet.vala
+@@ -228,7 +228,11 @@ public class IconTasklistApplet : Budgie
+             bool visible = true;
+ 
+             if (this.restrict_to_workspace) {
+-                visible = button.has_window_on_workspace(this.wnck_screen.get_active_workspace());
++                var workspace = this.wnck_screen.get_active_workspace();
++                if (workspace == null) {
++                    return;
++                }
++                visible = button.has_window_on_workspace(workspace);
+             }
+ 
+             if (this.only_show_pinned) {
+--- budgie-desktop-10.5~git20190218.orig/src/applets/status/PowerIndicator.vala
++++ budgie-desktop-10.5~git20190218/src/applets/status/PowerIndicator.vala
+@@ -30,7 +30,7 @@ public class BatteryIcon : Gtk.Box
+         public get {
+             return this.percent_label.visible;
+         }
+-        default = false;
++        //default = false;
+     }
+ 
+     public BatteryIcon(Up.Device battery) {
+--- budgie-desktop-10.5~git20190218.orig/src/applets/workspaces/WindowIcon.vala
++++ budgie-desktop-10.5~git20190218/src/applets/workspaces/WindowIcon.vala
+@@ -52,7 +52,8 @@ public class WindowIcon : Gtk.Button
+         if (event.button != 1) {
+             return false;
+         }
+-        if (WorkspacesApplet.wnck_screen.get_active_workspace() == window.get_workspace()) {
++        var workspace = WorkspacesApplet.wnck_screen.get_active_workspace();
++        if (workspace != null && workspace == window.get_workspace()) {
+             window.activate(event.time);
+             return false;
+         }
+--- budgie-desktop-10.5~git20190218.orig/src/applets/workspaces/WorkspaceItem.vala
++++ budgie-desktop-10.5~git20190218/src/applets/workspaces/WorkspaceItem.vala
+@@ -283,7 +283,8 @@ public class WorkspaceItem : Gtk.EventBo
+     public override bool button_release_event(Gdk.EventButton event)
+     {
+         if (event.button == 1) {
+-            if (WorkspacesApplet.wnck_screen.get_active_workspace() == workspace) {
++            var _workspace = WorkspacesApplet.wnck_screen.get_active_workspace();
++            if (_workspace != null && _workspace == workspace) {
+                 return Gdk.EVENT_STOP;
+             }
+             workspace.activate(event.time);
+--- budgie-desktop-10.5~git20190218.orig/src/applets/workspaces/WorkspacesApplet.vala
++++ budgie-desktop-10.5~git20190218/src/applets/workspaces/WorkspacesApplet.vala
+@@ -270,7 +270,8 @@ public class WorkspacesApplet : Budgie.A
+     private void workspace_added(Wnck.Workspace space)
+     {
+         WorkspaceItem item = new WorkspaceItem(space);
+-        if (wnck_screen.get_active_workspace() == space) {
++        var _workspace = wnck_screen.get_active_workspace();
++        if (_workspace != null && _workspace == space) {
+             item.get_style_context().add_class("current-workspace");
+         }
+         item.remove_workspace.connect(remove_workspace);
+@@ -424,7 +425,8 @@ public class WorkspacesApplet : Budgie.A
+ 
+         wm_proxy.RemoveWorkspaceByIndex(index, time);
+ 
+-        if (wnck_screen.get_active_workspace() == workspace) {
++        var _workspace = wnck_screen.get_active_workspace();
++        if (_workspace != null && _workspace == workspace) {
+             var previous = wnck_screen.get_workspace((index == 0) ? index : index - 1);
+             previous.activate(time);
+         }
+--- budgie-desktop-10.5~git20190218.orig/src/daemon/settings.vala
++++ budgie-desktop-10.5~git20190218/src/daemon/settings.vala
+@@ -1,8 +1,8 @@
+ /*
+  * This file is part of budgie-desktop
+- * 
++ *
+  * Copyright (C) 2017-2018 Budgie Desktop Developers
+- * 
++ *
+  * This program is free software; you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
+  * the Free Software Foundation; either version 2 of the License, or
+@@ -285,8 +285,7 @@ public class SettingsManager {
+         }
+ 
          this.xoverrides.set_value("overrides", xset);
 -        this.wm_settings.set_string("button-layout", wm_set);
+-        this.gnome_wm_settings.set_string("button-layout", wm_set);
++        this.gnome_wm_settings.set_value("button-layout", wm_set);
      }
-
+ 
      /**
-Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/panel/settings/settings_wm.vala
-===================================================================
---- budgie-desktop-10.4+git20180806.01.933f78fc03d.orig/src/panel/settings/settings_wm.vala
-+++ budgie-desktop-10.4+git20180806.01.933f78fc03d/src/panel/settings/settings_wm.vala
+--- budgie-desktop-10.5~git20190218.orig/src/panel/panel.vala
++++ budgie-desktop-10.5~git20190218/src/panel/panel.vala
+@@ -120,7 +120,7 @@ public class Panel : Budgie.Toplevel
+         public get {
+             return render_scale;
+         }
+-        default = 0.0;
++        //default = 0.0;
+     }
+ 
+     public bool activate_action(int remote_action)
+--- budgie-desktop-10.5~git20190218.orig/src/panel/settings/settings_wm.vala
++++ budgie-desktop-10.5~git20190218/src/panel/settings/settings_wm.vala
+@@ -1,8 +1,8 @@
+ /*
+  * This file is part of budgie-desktop
+- * 
++ *
+  * Copyright © 2015-2019 Budgie Desktop Developers
+- * 
++ *
+  * This program is free software; you can redistribute it and/or modify
+  * it under the terms of the GNU General Public License as published by
+  * the Free Software Foundation; either version 2 of the License, or
 @@ -16,6 +16,7 @@ namespace Budgie {
   */
  public class WindowsPage : Budgie.SettingsPage {
-
+ 
 +    private GLib.Settings gnome_wm_settings;
      private GLib.Settings budgie_wm_settings;
-     private Gtk.ComboBox combo_layouts;
-     private Gtk.Switch switch_dialogs;
-@@ -78,10 +79,11 @@ public class WindowsPage : Budgie.Settin
-               "Use this if you are having graphical or performance issues with dedicated GPUs")));
-
+     private Gtk.Switch center_windows;
+     private Gtk.Switch disable_night_light;
+@@ -95,16 +96,17 @@ public class WindowsPage : Budgie.Settin
+         combo_layouts.set_id_column(0);
+ 
          /* Hook up settings */
 +        gnome_wm_settings = new GLib.Settings("org.gnome.mutter");
          budgie_wm_settings = new GLib.Settings("com.solus-project.budgie-wm");
 -        budgie_wm_settings.bind("attach-modal-dialogs", switch_dialogs,  "active", SettingsBindFlags.DEFAULT);
 +        gnome_wm_settings.bind("attach-modal-dialogs", switch_dialogs,  "active", SettingsBindFlags.DEFAULT);
          budgie_wm_settings.bind("button-style", combo_layouts,  "active-id", SettingsBindFlags.DEFAULT);
+         budgie_wm_settings.bind("center-windows", center_windows, "active", SettingsBindFlags.DEFAULT);
+         budgie_wm_settings.bind("disable-night-light-on-fullscreen", disable_night_light, "active", SettingsBindFlags.DEFAULT);
 -        budgie_wm_settings.bind("edge-tiling", switch_tiling,  "active", SettingsBindFlags.DEFAULT);
 +        gnome_wm_settings.bind("edge-tiling", switch_tiling,  "active", SettingsBindFlags.DEFAULT);
          budgie_wm_settings.bind("focus-mode", switch_focus, "active", SettingsBindFlags.DEFAULT);
          budgie_wm_settings.bind("force-unredirect", switch_unredirect, "active", SettingsBindFlags.DEFAULT);
      }
-Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/20_solus-project.budgie.wm.gschema.override
-===================================================================
+-    
++
+ } /* End class */
+ 
+ } /* End namespace */
+--- budgie-desktop-10.5~git20190218.orig/src/raven/headerwidget.vala
++++ budgie-desktop-10.5~git20190218/src/raven/headerwidget.vala
+@@ -34,7 +34,7 @@ public class HeaderExpander : Gtk.Button
+         public get {
+             return this._expanded;
+         }
+-        default = false;
++        //default = false;
+     }
+ 
+     public HeaderExpander(HeaderWidget? owner)
+--- budgie-desktop-10.5~git20190218.orig/src/raven/raven.vala
++++ budgie-desktop-10.5~git20190218/src/raven/raven.vala
+@@ -170,7 +170,7 @@ public class Raven : Gtk.Window
+         public get {
+             return this._screen_edge;
+         }
+-        default = Gtk.PositionType.RIGHT;
++        //default = Gtk.PositionType.RIGHT;
+     }
+ 
+     int our_width = 0;
 --- /dev/null
-+++ budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/20_solus-project.budgie.wm.gschema.override
-@@ -0,0 +1,4 @@
++++ budgie-desktop-10.5~git20190218/src/wm/20_solus-project.budgie.wm.gschema.override
+@@ -0,0 +1,7 @@
 +[org.gnome.mutter:Budgie]
 +edge-tiling = true
 +attach-modal-dialogs = true
++
++[org.gnome.desktop.wm.preferences:Budgie]
 +button-layout = 'appmenu:minimize,maximize,close'
-Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/background.vala
-===================================================================
---- budgie-desktop-10.4+git20180806.01.933f78fc03d.orig/src/wm/background.vala
-+++ budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/background.vala
-@@ -23,7 +23,7 @@ public const string GNOME_COLOR_HACK
++
+--- budgie-desktop-10.5~git20190218.orig/src/wm/background.vala
++++ budgie-desktop-10.5~git20190218/src/wm/background.vala
+@@ -24,7 +24,7 @@ public const string ACCOUNTS_SCHEMA
  public class BudgieBackground : Meta.BackgroundGroup
  {
-
+ 
 -    public unowned Meta.Screen? screen { construct set ; public get; }
 +    public unowned Meta.Display? display { construct set ; public get; }
      public int index { construct set ; public get; }
-
+ 
      private Settings? settings = null;
-@@ -52,9 +52,9 @@ public class BudgieBackground : Meta.Bac
+@@ -53,9 +53,9 @@ public class BudgieBackground : Meta.Bac
          return false;
      }
-
+ 
 -    public BudgieBackground(Meta.Screen? screen, int index)
 +    public BudgieBackground(Meta.Display? display, int index)
      {
 -        Object(screen: screen, index: index);
 +        Object(display: display, index: index);
          Meta.Rectangle rect;
-
+ 
          cache = Meta.BackgroundImageCache.get_default();
-@@ -62,7 +62,7 @@ public class BudgieBackground : Meta.Bac
+@@ -63,7 +63,7 @@ public class BudgieBackground : Meta.Bac
          settings = new Settings("org.gnome.desktop.background");
          gnome_bg = new Gnome.BG();
-
+ 
 -        rect = screen.get_monitor_geometry(this.index);
 +        rect = display.get_monitor_geometry(this.index);
          this.set_position(rect.x, rect.y);
          this.set_size(rect.width, rect.height);
-
-@@ -161,11 +161,11 @@ public class BudgieBackground : Meta.Bac
+ 
+@@ -198,11 +198,11 @@ public class BudgieBackground : Meta.Bac
          Clutter.Color? primary_color = Clutter.Color();
          Clutter.Color? secondary_color = Clutter.Color();
-
+ 
 -        var actor = new Meta.BackgroundActor(screen, index);
 -        var background = new Meta.Background(screen);
 +        var actor = new Meta.BackgroundActor(display, index);
 +        var background = new Meta.Background(display);
          actor.set_background(background);
-
+ 
 -        rect = screen.get_monitor_geometry(index);
 +        rect = display.get_monitor_geometry(index);
          actor.set_size(rect.width, rect.height);
          actor.set("opacity", 0);
          actor.show();
-Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/com.solus-project.budgie.wm.gschema.xml
-===================================================================
---- budgie-desktop-10.4+git20180806.01.933f78fc03d.orig/src/wm/com.solus-project.budgie.wm.gschema.xml
-+++ budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/com.solus-project.budgie.wm.gschema.xml
-@@ -7,18 +7,6 @@
+--- budgie-desktop-10.5~git20190218.orig/src/wm/com.solus-project.budgie.wm.gschema.xml
++++ budgie-desktop-10.5~git20190218/src/wm/com.solus-project.budgie.wm.gschema.xml
+@@ -7,17 +7,6 @@
    </enum>
-
+ 
    <schema path="/com/solus-project/budgie-wm/" id="com.solus-project.budgie-wm">
 -    <key type="b" name="edge-tiling">
 -      <default>true</default>
@@ -142,14 +304,13 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/com.solus-project.b
 -      <summary>Attach modal dialog to the parent window</summary>
 -      <description>This key overrides the key in org.gnome.mutter when running Budgie.</description>
 -    </key>
--
-     <key type="b" name="focus-mode">
+ 
+     <key type="b" name="center-windows">
        <default>false</default>
-       <summary>Window focus mode to indicate how windows are activated</summary>
-@@ -49,21 +37,6 @@
+@@ -115,21 +104,6 @@
        <description>The binding to use to toggle Raven notifications</description>
      </key>
-
+ 
 -    <key name="button-layout" type="s">
 -      <default>'appmenu:minimize,maximize,close'</default>
 -      <summary>Arrangement of buttons on the titlebar</summary>
@@ -168,17 +329,15 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/com.solus-project.b
      <key enum="com.solus-project.budgie-wm.ButtonPosition" name="button-style">
        <default>'traditional'</default>
        <summary>Button layout style</summary>
-Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/keyboard.vala
-===================================================================
---- budgie-desktop-10.4+git20180806.01.933f78fc03d.orig/src/wm/keyboard.vala
-+++ budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/keyboard.vala
+--- budgie-desktop-10.5~git20190218.orig/src/wm/keyboard.vala
++++ budgie-desktop-10.5~git20190218/src/wm/keyboard.vala
 @@ -103,9 +103,9 @@ public class KeyboardManager : GLib.Obje
          on_settings_changed("sources");
      }
-
+ 
 -	public delegate void KeyHandlerFunc (Meta.Display display, Meta.Screen screen, Meta.Window? window, Clutter.KeyEvent? event, Meta.KeyBinding binding);
 +	public delegate void KeyHandlerFunc (Meta.Display display, Meta.Window? window, Clutter.KeyEvent? event, Meta.KeyBinding binding);
-
+ 
 -    void switch_input_source(Meta.Display display, Meta.Screen screen,
 +    void switch_input_source(Meta.Display display,
                               Meta.Window? window, Clutter.KeyEvent? event,
@@ -187,23 +346,23 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/keyboard.vala
 @@ -115,7 +115,7 @@ public class KeyboardManager : GLib.Obje
          this.apply_ibus();
      }
-
+ 
 -    void switch_input_source_backward(Meta.Display display, Meta.Screen screen,
 +    void switch_input_source_backward(Meta.Display display,
                                        Meta.Window? window, Clutter.KeyEvent? event,
                                        Meta.KeyBinding binding)
      {
 @@ -127,8 +127,7 @@ public class KeyboardManager : GLib.Obje
-
+ 
      public void hook_extra()
      {
 -        var screen = wm.get_screen();
 -        var display = screen.get_display();
 +        var display = wm.get_display();
-
+ 
          /* Hook into GNOME defaults */
          var schema = new Settings("org.gnome.desktop.wm.keybindings");
-@@ -303,7 +302,7 @@ public class KeyboardManager : GLib.Obje
+@@ -316,7 +315,7 @@ public class KeyboardManager : GLib.Obje
          if (!is_keyboard_held) {
              return;
          }
@@ -211,8 +370,8 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/keyboard.vala
 +        wm.get_display().ungrab_keyboard(wm.get_display().get_current_time());
          is_keyboard_held = false;
      }
-
-@@ -315,7 +314,7 @@ public class KeyboardManager : GLib.Obje
+ 
+@@ -328,7 +327,7 @@ public class KeyboardManager : GLib.Obje
          if (is_keyboard_held) {
              return;
          }
@@ -221,49 +380,21 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/keyboard.vala
          is_keyboard_held = true;
      }
  }
-Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/meson.build
-===================================================================
---- budgie-desktop-10.4+git20180806.01.933f78fc03d.orig/src/wm/meson.build
-+++ budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/meson.build
-@@ -15,34 +15,8 @@ budgie_wm_sources = [
+--- budgie-desktop-10.5~git20190218.orig/src/wm/meson.build
++++ budgie-desktop-10.5~git20190218/src/wm/meson.build
+@@ -15,8 +15,8 @@ budgie_wm_sources = [
      'wm.vala',
  ]
-
--vapi_mutter = 'libmutter'
--dep_mutter = dependency('libmutter', version: gnome_minimum_version, required: false)
--
--if not dep_mutter.found()
--    dep_mutter = dependency('libmutter-0', version: gnome_minimum_version, required: false)
--    if dep_mutter.found()
--        message('Using stable libmutter-0 ABI from GNOME 3.24')
--        vapi_mutter = 'libmutter-0'
--    endif
--endif
--
--# now try libmutter-1 ...
--if not dep_mutter.found()
--    dep_mutter = dependency('libmutter-1', version: gnome_minimum_version, required: false)
--    if dep_mutter.found()
--        message('Using new libmutter-1 ABI from GNOME 3.26')
--        vapi_mutter = 'libmutter-1'
--    endif
--endif
--
--# now try libmutter-2 ...
--if not dep_mutter.found()
--    dep_mutter = dependency('libmutter-2', version: gnome_minimum_version)
--    if dep_mutter.found()
--        message('Using new libmutter-2 ABI from GNOME 3.28')
--        vapi_mutter = 'libmutter-2'
--    endif
--endif
+ 
+-vapi_mutter = 'libmutter-2'
+-dep_mutter = dependency('libmutter-2', version: gnome_minimum_version)
 +vapi_mutter = 'libmutter-3'
 +dep_mutter = dependency('libmutter-3', version: gnome_minimum_version)
-
+ 
  budgie_wm_deps = [
      link_libconfig,
-@@ -84,6 +58,7 @@ executable(
-
+@@ -58,6 +58,7 @@ executable(
+ 
  # gschemas
  install_data(
 -    'com.solus-project.budgie.wm.gschema.xml',
@@ -271,63 +402,86 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/meson.build
 +          '20_solus-project.budgie.wm.gschema.override'),
      install_dir: join_paths(datadir, 'glib-2.0', 'schemas'),
  )
-Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/shim.vala
-===================================================================
---- budgie-desktop-10.4+git20180806.01.933f78fc03d.orig/src/wm/shim.vala
-+++ budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/shim.vala
+--- budgie-desktop-10.5~git20190218.orig/src/wm/shim.vala
++++ budgie-desktop-10.5~git20190218/src/wm/shim.vala
 @@ -150,7 +150,7 @@ public class ShellShim : GLib.Object
          grabs = new HashTable<uint,string>(direct_hash, direct_equal);
          watches = new HashTable<string,uint>(str_hash, str_equal);
-
+ 
 -        display = wm.get_screen().get_display();
 +        display = wm.get_display();
          display.accelerator_activated.connect(on_accelerator_activated);
-
+ 
          handler = new SessionHandler();
-Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/wm.vala
-===================================================================
---- budgie-desktop-10.4+git20180806.01.933f78fc03d.orig/src/wm/wm.vala
-+++ budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/wm.vala
-@@ -155,7 +155,7 @@ public class BudgieWM : Meta.Plugin
+--- budgie-desktop-10.5~git20190218.orig/src/wm/wm.vala
++++ budgie-desktop-10.5~git20190218/src/wm/wm.vala
+@@ -158,7 +158,7 @@ public class BudgieWM : Meta.Plugin
      private bool force_unredirect = false;
-
+ 
      HashTable<Meta.WindowActor?,AnimationState?> state_map;
 -    Clutter.Actor? screen_group;
 +    Clutter.Actor? display_group;
-     ulong current_window_resize;
-
+     bool enabled_experimental_run_diag_as_menu = false;
+ 
      construct
-@@ -288,7 +288,7 @@ public class BudgieWM : Meta.Plugin
+@@ -291,7 +291,7 @@ public class BudgieWM : Meta.Plugin
      }
-
+ 
+     /* Binding for take-full-screenshot */
+-    void on_take_full_screenshot(Meta.Display display, Meta.Screen screen, Meta.Window? window, Clutter.KeyEvent? event, Meta.KeyBinding binding) {
++    void on_take_full_screenshot(Meta.Display display, Meta.Window? window, Clutter.KeyEvent? event, Meta.KeyBinding binding) {
+         try {
+             Process.spawn_command_line_async ("gnome-screenshot");
+         } catch (SpawnError e) {
+@@ -300,7 +300,7 @@ public class BudgieWM : Meta.Plugin
+     }
+ 
+     /* Binding for take-region-screenshot */
+-    void on_take_region_screenshot(Meta.Display display, Meta.Screen screen, Meta.Window? window, Clutter.KeyEvent? event, Meta.KeyBinding binding) {
++    void on_take_region_screenshot(Meta.Display display, Meta.Window? window, Clutter.KeyEvent? event, Meta.KeyBinding binding) {
+         try {
+             Process.spawn_command_line_async ("gnome-screenshot -a");
+         } catch (SpawnError e) {
+@@ -309,7 +309,7 @@ public class BudgieWM : Meta.Plugin
+     }
+ 
+     /* Binding for take-window-screenshot */
+-    void on_take_window_screenshot(Meta.Display display, Meta.Screen screen, Meta.Window? window, Clutter.KeyEvent? event, Meta.KeyBinding binding) {
++    void on_take_window_screenshot(Meta.Display display, Meta.Window? window, Clutter.KeyEvent? event, Meta.KeyBinding binding) {
+         try {
+             Process.spawn_command_line_async ("gnome-screenshot -w -b");
+         } catch (SpawnError e) {
+@@ -318,7 +318,7 @@ public class BudgieWM : Meta.Plugin
+     }
+ 
      /* Binding for clear-notifications activated */
 -    void on_raven_notification_clear(Meta.Display display, Meta.Screen screen,
 +    void on_raven_notification_clear(Meta.Display display,
                                        Meta.Window? window, Clutter.KeyEvent? event,
                                        Meta.KeyBinding binding)
      {
-@@ -304,7 +304,7 @@ public class BudgieWM : Meta.Plugin
+@@ -334,7 +334,7 @@ public class BudgieWM : Meta.Plugin
      }
-
+ 
      /* Binding for toggle-raven activated */
 -    void on_raven_main_toggle(Meta.Display display, Meta.Screen screen,
 +    void on_raven_main_toggle(Meta.Display display,
                                Meta.Window? window, Clutter.KeyEvent? event,
                                Meta.KeyBinding binding)
      {
-@@ -320,7 +320,7 @@ public class BudgieWM : Meta.Plugin
+@@ -350,7 +350,7 @@ public class BudgieWM : Meta.Plugin
      }
-
+ 
      /* Binding for toggle-notifications activated */
 -    void on_raven_notification_toggle(Meta.Display display, Meta.Screen screen,
 +    void on_raven_notification_toggle(Meta.Display display,
                                        Meta.Window? window, Clutter.KeyEvent? event,
                                        Meta.KeyBinding binding)
      {
-@@ -369,14 +369,14 @@ public class BudgieWM : Meta.Plugin
+@@ -407,14 +407,14 @@ public class BudgieWM : Meta.Plugin
      }
-
-
+ 
+ 
 -    void launch_menu(Meta.Display display, Meta.Screen screen,
 +    void launch_menu(Meta.Display display,
                       Meta.Window? window, Clutter.KeyEvent? event,
@@ -335,14 +489,14 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/wm.vala
      {
          on_overlay_key();
      }
-
+ 
 -    void launch_rundialog(Meta.Display display, Meta.Screen screen,
 +    void launch_rundialog(Meta.Display display,
                              Meta.Window? window, Clutter.KeyEvent? event,
                              Meta.KeyBinding binding)
      {
-@@ -430,18 +430,12 @@ public class BudgieWM : Meta.Plugin
-
+@@ -468,18 +468,12 @@ public class BudgieWM : Meta.Plugin
+ 
      public override void start()
      {
 -        var screen = this.get_screen();
@@ -353,61 +507,69 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/wm.vala
 +        var display = this.get_display();
 +        display_group = Meta.Compositor.get_window_group_for_display(display);
 +        var stage = Meta.Compositor.get_stage_for_display(display);
-
+ 
          state_map = new HashTable<Meta.WindowActor?,AnimationState?>(GLib.direct_hash, GLib.direct_equal);
-
+ 
 -        Meta.Prefs.override_preference_schema(MUTTER_EDGE_TILING, WM_SCHEMA);
 -        Meta.Prefs.override_preference_schema(MUTTER_MODAL_ATTACH, WM_SCHEMA);
 -        Meta.Prefs.override_preference_schema(MUTTER_BUTTON_LAYOUT, WM_SCHEMA);
 -
          iface_settings = new Settings("org.gnome.desktop.interface");
          iface_settings.bind("enable-animations", this, "use-animations", SettingsBindFlags.DEFAULT);
-
-@@ -491,14 +485,15 @@ public class BudgieWM : Meta.Plugin
-
+ 
+@@ -533,18 +527,21 @@ public class BudgieWM : Meta.Plugin
+ 
          background_group = new Meta.BackgroundGroup();
          background_group.set_reactive(true);
 -        screen_group.insert_child_below(background_group, null);
 +        display_group.insert_child_below(background_group, null);
          background_group.button_release_event.connect(on_background_click);
-
+ 
 -        screen.monitors_changed.connect(on_monitors_changed);
 -        on_monitors_changed(screen);
 +	var monitor_manager = Meta.MonitorManager.get();
 +        monitor_manager.monitors_changed.connect(on_monitors_changed);
 +        on_monitors_changed();
-
+ 
          background_group.show();
 -        screen_group.show();
 +        display_group.show();
          stage.show();
-
+ 
          keyboard = new KeyboardManager(this);
-@@ -538,11 +533,11 @@ public class BudgieWM : Meta.Plugin
-             return;
-         }
-
--        var screen = this.get_screen();
-+        var display = this.get_display();
-         if (enab) {
--            Meta.Util.enable_unredirect_for_screen(screen);
-+            Meta.Compositor.enable_unredirect_for_display(display);
-         } else {
--            Meta.Util.disable_unredirect_for_screen(screen);
-+            Meta.Compositor.disable_unredirect_for_display(display);
-         }
-         this.force_unredirect = enab;
+         keyboard.hook_extra();
++
++        display.get_workspace_manager().override_workspace_layout(Meta.DisplayCorner.TOPLEFT, false, 1, -1);
      }
-@@ -576,12 +571,13 @@ public class BudgieWM : Meta.Plugin
+ 
+     /**
+@@ -580,12 +577,12 @@ public class BudgieWM : Meta.Plugin
+             if (enab == this.force_unredirect) {
+                 return;
+             }
+-    
+-            var screen = this.get_screen();
++
++            var display = this.get_display();
+             if (enab) {
+-                Meta.Util.enable_unredirect_for_screen(screen);
++                Meta.Compositor.enable_unredirect_for_display(display);
+             } else {
+-                Meta.Util.disable_unredirect_for_screen(screen);
++                Meta.Compositor.disable_unredirect_for_display(display);
+             }
+             this.force_unredirect = enab;
+         }
+@@ -620,12 +617,13 @@ public class BudgieWM : Meta.Plugin
          }
      }
-
+ 
 -    void on_monitors_changed(Meta.Screen? screen)
 +    void on_monitors_changed()
      {
 +	var display = get_display();
          background_group.destroy_all_children();
-
+ 
 -        for (int i = 0; i < screen.get_n_monitors(); i++) {
 -            var actor = new BudgieBackground(screen, i);
 +        for (int i = 0; i < display.get_n_monitors(); i++) {
@@ -415,16 +577,19 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/wm.vala
              background_group.add_child(actor);
          }
      }
-@@ -646,7 +642,7 @@ public class BudgieWM : Meta.Plugin
+@@ -690,7 +688,10 @@ public class BudgieWM : Meta.Plugin
       */
      public void store_focused()
      {
 -        var workspace = get_screen().get_active_workspace();
 +        var workspace = get_display().get_workspace_manager().get_active_workspace();
++        if (workspace == null) {
++            return;
++        }
          foreach (var window in workspace.list_windows()) {
              if (window.has_focus()) {
                  focused_window = window;
-@@ -663,7 +659,7 @@ public class BudgieWM : Meta.Plugin
+@@ -707,7 +708,7 @@ public class BudgieWM : Meta.Plugin
          if (focused_window == null) {
              return;
          }
@@ -432,107 +597,104 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/wm.vala
 +        focused_window.focus(get_display().get_current_time());
          focused_window = null;
      }
-
-@@ -814,7 +810,7 @@ public class BudgieWM : Meta.Plugin
-         Meta.Rectangle target_rect = actor.get_meta_window().get_frame_rect();
-         Meta.Rectangle source_rect = info.old_rect;
-
--        screen_group.add(actor_clone);
-+        display_group.add(actor_clone);
-
-         actor.set_size(target_rect.width, target_rect.height);
-         actor_clone.set_size(source_rect.width, source_rect.height);
-@@ -1045,14 +1041,14 @@ public class BudgieWM : Meta.Plugin
+ 
+@@ -935,14 +936,14 @@ public class BudgieWM : Meta.Plugin
      /* Ported from old budgie-wm, in turn ported from Mutter's default plugin */
      public override void show_tile_preview(Meta.Window window, Meta.Rectangle tile_rect, int tile_monitor_num)
      {
 -        var screen = this.get_screen();
 +        var display = this.get_display();
-
+ 
          if (this.tile_preview == null) {
              this.tile_preview = new ScreenTilePreview();
              this.tile_preview.transitions_completed.connect(tile_preview_transition_complete);
-
+ 
 -            var screen_group = Meta.Compositor.get_window_group_for_screen(screen);
 -            screen_group.add_child(this.tile_preview);
 +            var display_group = Meta.Compositor.get_window_group_for_display(display);
 +            display_group.add_child(this.tile_preview);
-
+ 
              default_tile_opacity = this.tile_preview.get_opacity();
          }
-@@ -1160,13 +1156,13 @@ public class BudgieWM : Meta.Plugin
-
+@@ -1050,13 +1051,16 @@ public class BudgieWM : Meta.Plugin
+ 
      public const uint32 MAX_TAB_ELAPSE = 2000;
-
+ 
 -    public void switch_windows_backward(Meta.Display display, Meta.Screen screen,
 +    public void switch_windows_backward(Meta.Display display,
                       Meta.Window? window, Clutter.KeyEvent? event,
                       Meta.KeyBinding binding)
      {
          uint32 cur_time = display.get_current_time();
-
+ 
 -        var workspace = screen.get_active_workspace();
 +        var workspace = display.get_workspace_manager().get_active_workspace();
-
++        if (workspace == null) {
++            return;
++        }
+ 
          string? data = null;
          if ((data = workspace.get_data("__flagged")) == null) {
-@@ -1193,13 +1189,13 @@ public class BudgieWM : Meta.Plugin
+@@ -1083,13 +1087,16 @@ public class BudgieWM : Meta.Plugin
          switch_switcher(true); /* true as in "yes, backward" */
      }
-
+ 
 -    public void switch_windows(Meta.Display display, Meta.Screen screen,
 +    public void switch_windows(Meta.Display display,
                       Meta.Window? window, Clutter.KeyEvent? event,
                       Meta.KeyBinding binding)
      {
          uint32 cur_time = display.get_current_time();
-
+ 
 -        var workspace = screen.get_active_workspace();
 +        var workspace = display.get_workspace_manager().get_active_workspace();
-
++        if (workspace == null) {
++            return;
++        }
+ 
          string? data = null;
          if ((data = workspace.get_data("__flagged")) == null) {
-@@ -1272,9 +1268,9 @@ public class BudgieWM : Meta.Plugin
-
+@@ -1161,9 +1168,9 @@ public class BudgieWM : Meta.Plugin
+ 
      void switch_workspace_done()
      {
 -        var screen = this.get_screen();
 +        var display = this.get_display();
-
+ 
 -        foreach (var actor in Meta.Compositor.get_window_actors(screen)) {
 +        foreach (var actor in Meta.Compositor.get_window_actors(display)) {
              actor.show();
-
+ 
              Clutter.Actor? orig_parent = actor.get_data("orig-parent");
-@@ -1320,21 +1316,21 @@ public class BudgieWM : Meta.Plugin
+@@ -1218,21 +1225,21 @@ public class BudgieWM : Meta.Plugin
          out_group = new Clutter.Actor();
          in_group = new Clutter.Actor();
-
+ 
 -        var screen = this.get_screen();
 -        var stage = Meta.Compositor.get_stage_for_screen(screen);
 +        var display = this.get_display();
 +        var stage = Meta.Compositor.get_stage_for_display(display);
-
+ 
          stage.add_child(in_group);
          stage.add_child(out_group);
          stage.set_child_above_sibling(in_group, null);
-
+ 
 -        screen.get_size(out screen_width, out screen_height);
 +        display.get_size(out screen_width, out screen_height);
-
+ 
          /* TODO: Windows should slide "under" the panel/dock
           * Move "in-between" workspaces, e.g. 1->3 shows 2 */
-
-
+ 
+ 
 -        foreach (var actor in Meta.Compositor.get_window_actors(screen)) {
 -            var window = actor.get_meta_window();
 +        foreach (var actor in Meta.Compositor.get_window_actors(display)) {
 +            var window = (actor as Meta.WindowActor).get_meta_window();
-
+ 
              if (!window.showing_on_its_workspace() || window.is_on_all_workspaces()) {
                  continue;
-@@ -1444,18 +1440,18 @@ public class BudgieWMDBUS : GLib.Object
-
+@@ -1342,18 +1349,18 @@ public class BudgieWMDBUS : GLib.Object
+ 
      public void RemoveWorkspaceByIndex(int index, uint32 time)
      {
 -        unowned Meta.Screen screen = this.wm.get_screen();
@@ -545,7 +707,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/wm.vala
 -        screen.remove_workspace(workspace, time);
 +        wsm.remove_workspace(workspace, time);
      }
-
+ 
      public int AppendNewWorkspace(uint32 time)
      {
 -        unowned Meta.Screen screen = this.wm.get_screen();
@@ -554,11 +716,9 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/src/wm/wm.vala
 +        unowned Meta.Workspace? space = wsm.append_new_workspace(false, time);
          return space.index();
      }
-
-Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/Meta-3.metadata
-===================================================================
+ 
 --- /dev/null
-+++ budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/Meta-3.metadata
++++ budgie-desktop-10.5~git20190218/vapi/Meta-3.metadata
 @@ -0,0 +1,66 @@
 +Backend cheader_filename="meta/meta-backend.h"
 +Background cheader_filename="meta/meta-background.h"
@@ -626,22 +786,18 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/Meta-3.metadata
 +run skip=false
 +show_dialog skip=false
 +get_backend cheader_filename="meta/meta-backend.h"
-Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/README.md
-===================================================================
---- budgie-desktop-10.4+git20180806.01.933f78fc03d.orig/vapi/README.md
-+++ budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/README.md
+--- budgie-desktop-10.5~git20190218.orig/vapi/README.md
++++ budgie-desktop-10.5~git20190218/vapi/README.md
 @@ -7,3 +7,7 @@ To refresh the Polkit vapi files:
      vapigen --library polkit-agent-1 /usr/share/gir-1.0/PolkitAgent-1.0.gir --pkg gio-unix-2.0 --pkg polkit-gobject-1 --girdir=. --vapidir=.
-
+ 
  Then have fun un-mangling it to support vala async syntax
 +
 +For mutter, something like:
 +
 +vapigen --library libmutter-3 /usr/lib/x86_64-linux-gnu/mutter/Meta-3.gir --girdir /usr/lib/x86_64-linux-gnu/mutter/ -d . --pkg cairo --pkg gdk-3.0 --pkg gdk-pixbuf-2.0 --pkg gtk+-3.0 --pkg x11 --pkg json-glib-1.0 --girdir . --vapidir . --metadatadir . --girdir /usr/lib/x86_64-linux-gnu/mutter/
-Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3-custom.vala
-===================================================================
 --- /dev/null
-+++ budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3-custom.vala
++++ budgie-desktop-10.5~git20190218/vapi/libmutter-3-custom.vala
 @@ -0,0 +1,6 @@
 +namespace Meta {
 +	public abstract class MonitorManager : Meta.DBusDisplayConfigSkeleton, GLib.DBusInterface {
@@ -649,10 +805,8 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3-custom.va
 +		public signal void monitors_changed ();
 +	}
 +}
-Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.deps
-===================================================================
 --- /dev/null
-+++ budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.deps
++++ budgie-desktop-10.5~git20190218/vapi/libmutter-3.deps
 @@ -0,0 +1,9 @@
 +cairo
 +gsettings-desktop-schemas
@@ -663,10 +817,8 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.deps
 +xfixes-4.0
 +clutter-1.0
 +cogl-1.0
-Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
-===================================================================
 --- /dev/null
-+++ budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
++++ budgie-desktop-10.5~git20190218/vapi/libmutter-3.vapi
 @@ -0,0 +1,1380 @@
 +/* libmutter-3.vapi generated by vapigen, do not modify. */
 +
@@ -888,7 +1040,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		[CCode (has_construct_function = false, type = "ClutterActor*")]
 +		public BackgroundGroup ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_background_image_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-background-image.h", type_id = "meta_background_image_get_type ()")]
 +	public class BackgroundImage : GLib.Object {
 +		[CCode (has_construct_function = false)]
 +		protected BackgroundImage ();
@@ -905,7 +1057,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public Meta.BackgroundImage load (GLib.File file);
 +		public void purge (GLib.File file);
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_barrier_get_type ()")]
++	[CCode (cheader_filename = "meta/barrier.h", type_id = "meta_barrier_get_type ()")]
 +	public class Barrier : GLib.Object {
 +		[CCode (has_construct_function = false)]
 +		protected Barrier ();
@@ -927,7 +1079,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public signal void hit (Meta.BarrierEvent event);
 +		public signal void left (Meta.BarrierEvent event);
 +	}
-+	[CCode (cheader_filename = "meta/main.h", copy_function = "g_boxed_copy", free_function = "g_boxed_free", type_id = "meta_barrier_event_get_type ()")]
++	[CCode (cheader_filename = "meta/barrier.h", copy_function = "g_boxed_copy", free_function = "g_boxed_free", type_id = "meta_barrier_event_get_type ()")]
 +	[Compact]
 +	public class BarrierEvent {
 +		public int dt;
@@ -940,7 +1092,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public double x;
 +		public double y;
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_cursor_tracker_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-cursor-tracker.h", type_id = "meta_cursor_tracker_get_type ()")]
 +	public class CursorTracker : GLib.Object {
 +		[CCode (has_construct_function = false)]
 +		protected CursorTracker ();
@@ -951,7 +1103,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public void set_pointer_visible (bool visible);
 +		public signal void cursor_changed ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_dbus_display_config_skeleton_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-monitor-manager.h", type_id = "meta_dbus_display_config_skeleton_get_type ()")]
 +	public class DBusDisplayConfigSkeleton : GLib.DBusInterfaceSkeleton, GLib.DBusInterface {
 +		[CCode (has_construct_function = false)]
 +		protected DBusDisplayConfigSkeleton ();
@@ -1025,7 +1177,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public signal void x11_display_closing ();
 +		public signal void x11_display_opened ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_dnd_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-dnd.h", type_id = "meta_dnd_get_type ()")]
 +	public class Dnd : GLib.Object {
 +		[CCode (has_construct_function = false)]
 +		protected Dnd ();
@@ -1033,11 +1185,11 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public signal void dnd_leave ();
 +		public signal void dnd_position_change (int object, int p0);
 +	}
-+	[CCode (cheader_filename = "meta/main.h", has_type_id = false)]
++	[CCode (cheader_filename = "meta/common.h", has_type_id = false)]
 +	[Compact]
 +	public class Frame {
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_idle_monitor_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-idle-monitor.h", type_id = "meta_idle_monitor_get_type ()")]
 +	public class IdleMonitor : GLib.Object {
 +		[CCode (has_construct_function = false)]
 +		protected IdleMonitor ();
@@ -1050,7 +1202,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		[NoAccessorMethod]
 +		public int device_id { get; construct; }
 +	}
-+	[CCode (cheader_filename = "meta/main.h", copy_function = "g_boxed_copy", free_function = "g_boxed_free", type_id = "meta_key_binding_get_type ()")]
++	[CCode (cheader_filename = "meta/keybindings.h", copy_function = "g_boxed_copy", free_function = "g_boxed_free", type_id = "meta_key_binding_get_type ()")]
 +	[Compact]
 +	public class KeyBinding {
 +		public uint get_mask ();
@@ -1131,26 +1283,26 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		[NoWrapper]
 +		public virtual bool xevent_filter (X.Event event);
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_remote_access_controller_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-remote-access-controller.h", type_id = "meta_remote_access_controller_get_type ()")]
 +	public class RemoteAccessController : GLib.Object {
 +		[CCode (has_construct_function = false)]
 +		protected RemoteAccessController ();
 +		public signal void new_handle (Meta.RemoteAccessHandle object);
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_remote_access_handle_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-remote-access-controller.h", type_id = "meta_remote_access_handle_get_type ()")]
 +	public class RemoteAccessHandle : GLib.Object {
 +		[CCode (has_construct_function = false)]
 +		protected RemoteAccessHandle ();
 +		public virtual void stop ();
 +		public signal void stopped ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", has_type_id = false)]
++	[CCode (cheader_filename = "meta/meta-settings.h", has_type_id = false)]
 +	[Compact]
 +	public class Settings {
 +		public int get_font_dpi ();
 +		public int get_ui_scaling_factor ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", ref_function = "meta_shadow_ref", type_id = "meta_shadow_get_type ()", unref_function = "meta_shadow_unref")]
++	[CCode (cheader_filename = "meta/meta-shadow-factory.h", ref_function = "meta_shadow_ref", type_id = "meta_shadow_get_type ()", unref_function = "meta_shadow_unref")]
 +	[Compact]
 +	public class Shadow {
 +		public void get_bounds (int window_x, int window_y, int window_width, int window_height, Cairo.RectangleInt bounds);
@@ -1158,7 +1310,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public Meta.Shadow @ref ();
 +		public void unref ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_shadow_factory_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-shadow-factory.h", type_id = "meta_shadow_factory_get_type ()")]
 +	public class ShadowFactory : GLib.Object {
 +		[CCode (has_construct_function = false)]
 +		public ShadowFactory ();
@@ -1168,7 +1320,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public void set_params (string class_name, bool focused, Meta.ShadowParams @params);
 +		public signal void changed ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_shaped_texture_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-shaped-texture.h", type_id = "meta_shaped_texture_get_type ()")]
 +	public class ShapedTexture : Clutter.Actor, Atk.Implementor, Clutter.Animatable, Clutter.Container, Clutter.Scriptable {
 +		[CCode (has_construct_function = false)]
 +		protected ShapedTexture ();
@@ -1180,18 +1332,18 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public bool update_area (int x, int y, int width, int height);
 +		public signal void size_changed ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_stage_get_type ()")]
++	[CCode (cheader_filename = "meta/compositor-mutter.h", type_id = "meta_stage_get_type ()")]
 +	public class Stage : Clutter.Stage, Atk.Implementor, Clutter.Animatable, Clutter.Container, Clutter.Scriptable {
 +		[CCode (has_construct_function = false)]
 +		protected Stage ();
 +		public static bool is_focused (Meta.Display display);
 +	}
-+	[CCode (cheader_filename = "meta/main.h", has_type_id = false)]
++	[CCode (cheader_filename = "meta/theme.h", has_type_id = false)]
 +	[Compact]
 +	public class Theme {
 +		public void free ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_window_get_type ()")]
++	[CCode (cheader_filename = "meta/window.h", type_id = "meta_window_get_type ()")]
 +	public abstract class Window : GLib.Object {
 +		[CCode (has_construct_function = false)]
 +		protected Window ();
@@ -1344,7 +1496,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public signal void unmanaged ();
 +		public signal void workspace_changed ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_window_actor_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-window-actor.h", type_id = "meta_window_actor_get_type ()")]
 +	public class WindowActor : Clutter.Actor, Atk.Implementor, Clutter.Animatable, Clutter.Container, Clutter.Scriptable {
 +		[CCode (has_construct_function = false)]
 +		protected WindowActor ();
@@ -1361,12 +1513,12 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public signal void effects_completed ();
 +		public signal void first_frame ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_window_group_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-window-group.h", type_id = "meta_window_group_get_type ()")]
 +	public class WindowGroup : Clutter.Actor, Atk.Implementor, Clutter.Animatable, Clutter.Container, Clutter.Scriptable {
 +		[CCode (has_construct_function = false)]
 +		protected WindowGroup ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", ref_function = "meta_window_shape_ref", type_id = "meta_window_shape_get_type ()", unref_function = "meta_window_shape_unref")]
++	[CCode (cheader_filename = "meta/meta-window-shape.h", ref_function = "meta_window_shape_ref", type_id = "meta_window_shape_get_type ()", unref_function = "meta_window_shape_unref")]
 +	[Compact]
 +	public class WindowShape {
 +		[CCode (has_construct_function = false)]
@@ -1378,7 +1530,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public Cairo.Region to_region (int center_width, int center_height);
 +		public void unref ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_workspace_get_type ()")]
++	[CCode (cheader_filename = "meta/workspace.h", type_id = "meta_workspace_get_type ()")]
 +	public class Workspace : GLib.Object {
 +		[CCode (has_construct_function = false)]
 +		protected Workspace ();
@@ -1398,7 +1550,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public signal void window_added (Meta.Window object);
 +		public signal void window_removed (Meta.Window object);
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_workspace_manager_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-workspace-manager.h", type_id = "meta_workspace_manager_get_type ()")]
 +	public class WorkspaceManager : GLib.Object {
 +		[CCode (has_construct_function = false)]
 +		protected WorkspaceManager ();
@@ -1416,7 +1568,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public signal void workspace_removed (int object);
 +		public signal void workspace_switched (int object, int p0, Meta.MotionDirection p1);
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_x11_display_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-x11-display.h", type_id = "meta_x11_display_get_type ()")]
 +	public class X11Display : GLib.Object {
 +		[CCode (has_construct_function = false)]
 +		protected X11Display ();
@@ -1429,7 +1581,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public void set_input_focus_window (Meta.Window window, bool focus_frame, uint32 timestamp);
 +		public bool xwindow_is_a_no_focus_window (X.Window xwindow);
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_cname = "MetaCloseDialogInterface", type_id = "meta_close_dialog_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-close-dialog.h", type_cname = "MetaCloseDialogInterface", type_id = "meta_close_dialog_get_type ()")]
 +	public interface CloseDialog : GLib.Object {
 +		public abstract void focus ();
 +		public abstract void hide ();
@@ -1440,7 +1592,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		[HasEmitter]
 +		public signal void response (Meta.CloseDialogResponse response);
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_cname = "MetaInhibitShortcutsDialogInterface", type_id = "meta_inhibit_shortcuts_dialog_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-inhibit-shortcuts-dialog.h", type_cname = "MetaInhibitShortcutsDialogInterface", type_id = "meta_inhibit_shortcuts_dialog_get_type ()")]
 +	public interface InhibitShortcutsDialog : GLib.Object {
 +		public abstract void hide ();
 +		public abstract void show ();
@@ -1449,7 +1601,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		[HasEmitter]
 +		public signal void response (Meta.InhibitShortcutsDialogResponse response);
 +	}
-+	[CCode (cheader_filename = "meta/main.h", has_type_id = false)]
++	[CCode (cheader_filename = "meta/common.h", has_type_id = false)]
 +	public struct ButtonLayout {
 +		[CCode (array_length = false)]
 +		public weak Meta.ButtonFunction left_buttons[5];
@@ -1460,13 +1612,13 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		[CCode (array_length = false)]
 +		public weak bool right_buttons_has_spacer[5];
 +	}
-+	[CCode (cheader_filename = "meta/main.h", has_type_id = false)]
++	[CCode (cheader_filename = "meta/boxes.h", has_type_id = false)]
 +	public struct Edge {
 +		public Meta.Rectangle rect;
 +		public Meta.Side side_type;
 +		public Meta.EdgeType edge_type;
 +	}
-+	[CCode (cheader_filename = "meta/main.h", has_type_id = false)]
++	[CCode (cheader_filename = "meta/common.h", has_type_id = false)]
 +	public struct FrameBorders {
 +		public Gtk.Border visible;
 +		public Gtk.Border invisible;
@@ -1481,14 +1633,14 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public weak string license;
 +		public weak string description;
 +	}
-+	[CCode (cheader_filename = "meta/main.h", has_type_id = false)]
++	[CCode (cheader_filename = "meta/meta-plugin.h", has_type_id = false)]
 +	public struct PluginVersion {
 +		public uint version_major;
 +		public uint version_minor;
 +		public uint version_micro;
 +		public uint version_api;
 +	}
-+	[CCode (cheader_filename = "meta/main.h", type_id = "meta_rectangle_get_type ()")]
++	[CCode (cheader_filename = "meta/boxes.h", type_id = "meta_rectangle_get_type ()")]
 +	public struct Rectangle {
 +		public int x;
 +		public int y;
@@ -1506,7 +1658,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public Meta.Rectangle union (Meta.Rectangle rect2);
 +		public bool vert_overlap (Meta.Rectangle rect2);
 +	}
-+	[CCode (cheader_filename = "meta/main.h", has_type_id = false)]
++	[CCode (cheader_filename = "meta/meta-shadow-factory.h", has_type_id = false)]
 +	public struct ShadowParams {
 +		public int radius;
 +		public int top_fade;
@@ -1514,12 +1666,12 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		public int y_offset;
 +		public uint8 opacity;
 +	}
-+	[CCode (cheader_filename = "meta/main.h", has_type_id = false)]
++	[CCode (cheader_filename = "meta/boxes.h", has_type_id = false)]
 +	public struct Strut {
 +		public Meta.Rectangle rect;
 +		public Meta.Side side;
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_BARRIER_DIRECTION_", type_id = "meta_barrier_direction_get_type ()")]
++	[CCode (cheader_filename = "meta/barrier.h", cprefix = "META_BARRIER_DIRECTION_", type_id = "meta_barrier_direction_get_type ()")]
 +	[Flags]
 +	public enum BarrierDirection {
 +		POSITIVE_X,
@@ -1527,7 +1679,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		NEGATIVE_X,
 +		NEGATIVE_Y
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_BUTTON_FUNCTION_", type_id = "meta_button_function_get_type ()")]
++	[CCode (cheader_filename = "meta/common.h", cprefix = "META_BUTTON_FUNCTION_", type_id = "meta_button_function_get_type ()")]
 +	public enum ButtonFunction {
 +		MENU,
 +		MINIMIZE,
@@ -1536,12 +1688,12 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		APPMENU,
 +		LAST
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_CLOSE_DIALOG_RESPONSE_", type_id = "meta_close_dialog_response_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-close-dialog.h", cprefix = "META_CLOSE_DIALOG_RESPONSE_", type_id = "meta_close_dialog_response_get_type ()")]
 +	public enum CloseDialogResponse {
 +		WAIT,
 +		FORCE_CLOSE
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_COMP_EFFECT_", type_id = "meta_comp_effect_get_type ()")]
++	[CCode (cheader_filename = "meta/compositor.h", cprefix = "META_COMP_EFFECT_", type_id = "meta_comp_effect_get_type ()")]
 +	public enum CompEffect {
 +		CREATE,
 +		UNMINIMIZE,
@@ -1549,7 +1701,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		MINIMIZE,
 +		NONE
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_CURSOR_", type_id = "meta_cursor_get_type ()")]
++	[CCode (cheader_filename = "meta/common.h", cprefix = "META_CURSOR_", type_id = "meta_cursor_get_type ()")]
 +	public enum Cursor {
 +		NONE,
 +		DEFAULT,
@@ -1572,7 +1724,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		IBEAM,
 +		LAST
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_DEBUG_", type_id = "meta_debug_topic_get_type ()")]
++	[CCode (cheader_filename = "meta/util.h", cprefix = "META_DEBUG_", type_id = "meta_debug_topic_get_type ()")]
 +	[Flags]
 +	public enum DebugTopic {
 +		VERBOSE,
@@ -1600,7 +1752,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		EDGE_RESISTANCE,
 +		DBUS
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_DIRECTION_", type_id = "meta_direction_get_type ()")]
++	[CCode (cheader_filename = "meta/common.h", cprefix = "META_DIRECTION_", type_id = "meta_direction_get_type ()")]
 +	[Flags]
 +	public enum Direction {
 +		LEFT,
@@ -1612,21 +1764,21 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		HORIZONTAL,
 +		VERTICAL
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_DISPLAY_", type_id = "meta_display_corner_get_type ()")]
++	[CCode (cheader_filename = "meta/display.h", cprefix = "META_DISPLAY_", type_id = "meta_display_corner_get_type ()")]
 +	public enum DisplayCorner {
 +		TOPLEFT,
 +		TOPRIGHT,
 +		BOTTOMLEFT,
 +		BOTTOMRIGHT
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_DISPLAY_", type_id = "meta_display_direction_get_type ()")]
++	[CCode (cheader_filename = "meta/display.h", cprefix = "META_DISPLAY_", type_id = "meta_display_direction_get_type ()")]
 +	public enum DisplayDirection {
 +		UP,
 +		DOWN,
 +		LEFT,
 +		RIGHT
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_EDGE_", type_id = "meta_edge_type_get_type ()")]
++	[CCode (cheader_filename = "meta/boxes.h", cprefix = "META_EDGE_", type_id = "meta_edge_type_get_type ()")]
 +	public enum EdgeType {
 +		WINDOW,
 +		MONITOR,
@@ -1637,7 +1789,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		SUCCESS,
 +		ERROR
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_FRAME_", type_id = "meta_frame_flags_get_type ()")]
++	[CCode (cheader_filename = "meta/common.h", cprefix = "META_FRAME_", type_id = "meta_frame_flags_get_type ()")]
 +	[Flags]
 +	public enum FrameFlags {
 +		ALLOWS_DELETE,
@@ -1659,7 +1811,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		TILED_LEFT,
 +		TILED_RIGHT
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_FRAME_TYPE_", type_id = "meta_frame_type_get_type ()")]
++	[CCode (cheader_filename = "meta/common.h", cprefix = "META_FRAME_TYPE_", type_id = "meta_frame_type_get_type ()")]
 +	public enum FrameType {
 +		NORMAL,
 +		DIALOG,
@@ -1671,7 +1823,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		LAST;
 +		public unowned string to_string ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_GRAB_OP_", type_id = "meta_grab_op_get_type ()")]
++	[CCode (cheader_filename = "meta/common.h", cprefix = "META_GRAB_OP_", type_id = "meta_grab_op_get_type ()")]
 +	public enum GrabOp {
 +		NONE,
 +		WINDOW_BASE,
@@ -1698,12 +1850,12 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		KEYBOARD_RESIZING_SE,
 +		KEYBOARD_RESIZING_W
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_INHIBIT_SHORTCUTS_DIALOG_RESPONSE_", type_id = "meta_inhibit_shortcuts_dialog_response_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-inhibit-shortcuts-dialog.h", cprefix = "META_INHIBIT_SHORTCUTS_DIALOG_RESPONSE_", type_id = "meta_inhibit_shortcuts_dialog_response_get_type ()")]
 +	public enum InhibitShortcutsDialogResponse {
 +		ALLOW,
 +		DENY
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_KEYBINDING_ACTION_", type_id = "meta_key_binding_action_get_type ()")]
++	[CCode (cheader_filename = "meta/prefs.h", cprefix = "META_KEYBINDING_ACTION_", type_id = "meta_key_binding_action_get_type ()")]
 +	public enum KeyBindingAction {
 +		NONE,
 +		WORKSPACE_1,
@@ -1798,7 +1950,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		ROTATE_MONITOR,
 +		LAST
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_KEY_BINDING_", type_id = "meta_key_binding_flags_get_type ()")]
++	[CCode (cheader_filename = "meta/prefs.h", cprefix = "META_KEY_BINDING_", type_id = "meta_key_binding_flags_get_type ()")]
 +	[Flags]
 +	public enum KeyBindingFlags {
 +		NONE,
@@ -1807,7 +1959,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		IS_REVERSED,
 +		NON_MASKABLE
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_LATER_", type_id = "meta_later_type_get_type ()")]
++	[CCode (cheader_filename = "meta/util.h", cprefix = "META_LATER_", type_id = "meta_later_type_get_type ()")]
 +	public enum LaterType {
 +		RESIZE,
 +		CALC_SHOWING,
@@ -1816,25 +1968,25 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		BEFORE_REDRAW,
 +		IDLE
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_LOCALE_DIRECTION_", type_id = "meta_locale_direction_get_type ()")]
++	[CCode (cheader_filename = "meta/util.h", cprefix = "META_LOCALE_DIRECTION_", type_id = "meta_locale_direction_get_type ()")]
 +	public enum LocaleDirection {
 +		LTR,
 +		RTL
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_MAXIMIZE_", type_id = "meta_maximize_flags_get_type ()")]
++	[CCode (cheader_filename = "meta/window.h", cprefix = "META_MAXIMIZE_", type_id = "meta_maximize_flags_get_type ()")]
 +	[Flags]
 +	public enum MaximizeFlags {
 +		HORIZONTAL,
 +		VERTICAL,
 +		BOTH
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_MODAL_", type_id = "meta_modal_options_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-plugin.h", cprefix = "META_MODAL_", type_id = "meta_modal_options_get_type ()")]
 +	[Flags]
 +	public enum ModalOptions {
 +		POINTER_ALREADY_GRABBED,
 +		KEYBOARD_ALREADY_GRABBED
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_MONITOR_SWITCH_CONFIG_", type_id = "meta_monitor_switch_config_type_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-monitor-manager.h", cprefix = "META_MONITOR_SWITCH_CONFIG_", type_id = "meta_monitor_switch_config_type_get_type ()")]
 +	public enum MonitorSwitchConfigType {
 +		ALL_MIRROR,
 +		ALL_LINEAR,
@@ -1842,7 +1994,7 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		BUILTIN,
 +		UNKNOWN
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_MOTION_", type_id = "meta_motion_direction_get_type ()")]
++	[CCode (cheader_filename = "meta/common.h", cprefix = "META_MOTION_", type_id = "meta_motion_direction_get_type ()")]
 +	public enum MotionDirection {
 +		UP,
 +		DOWN,
@@ -1853,13 +2005,13 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		DOWN_LEFT,
 +		DOWN_RIGHT
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_PAD_ACTION_", type_id = "meta_pad_action_type_get_type ()")]
++	[CCode (cheader_filename = "meta/display.h", cprefix = "META_PAD_ACTION_", type_id = "meta_pad_action_type_get_type ()")]
 +	public enum PadActionType {
 +		BUTTON,
 +		RING,
 +		STRIP
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_PREF_", type_id = "meta_preference_get_type ()")]
++	[CCode (cheader_filename = "meta/prefs.h", cprefix = "META_PREF_", type_id = "meta_preference_get_type ()")]
 +	public enum Preference {
 +		MOUSE_BUTTON_MODS,
 +		FOCUS_MODE,
@@ -1896,27 +2048,27 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		DRAG_THRESHOLD;
 +		public unowned string to_string ();
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_SHADOW_MODE_", type_id = "meta_shadow_mode_get_type ()")]
++	[CCode (cheader_filename = "meta/meta-window-actor.h", cprefix = "META_SHADOW_MODE_", type_id = "meta_shadow_mode_get_type ()")]
 +	public enum ShadowMode {
 +		AUTO,
 +		FORCED_OFF,
 +		FORCED_ON
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_SIDE_", type_id = "meta_side_get_type ()")]
++	[CCode (cheader_filename = "meta/common.h", cprefix = "META_SIDE_", type_id = "meta_side_get_type ()")]
 +	public enum Side {
 +		LEFT,
 +		RIGHT,
 +		TOP,
 +		BOTTOM
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_SIZE_CHANGE_", type_id = "meta_size_change_get_type ()")]
++	[CCode (cheader_filename = "meta/compositor.h", cprefix = "META_SIZE_CHANGE_", type_id = "meta_size_change_get_type ()")]
 +	public enum SizeChange {
 +		MAXIMIZE,
 +		UNMAXIMIZE,
 +		FULLSCREEN,
 +		UNFULLSCREEN
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_LAYER_", type_id = "meta_stack_layer_get_type ()")]
++	[CCode (cheader_filename = "meta/common.h", cprefix = "META_LAYER_", type_id = "meta_stack_layer_get_type ()")]
 +	public enum StackLayer {
 +		DESKTOP,
 +		BOTTOM,
@@ -1926,19 +2078,19 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		OVERRIDE_REDIRECT,
 +		LAST
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_TAB_LIST_", type_id = "meta_tab_list_get_type ()")]
++	[CCode (cheader_filename = "meta/display.h", cprefix = "META_TAB_LIST_", type_id = "meta_tab_list_get_type ()")]
 +	public enum TabList {
 +		NORMAL,
 +		DOCKS,
 +		GROUP,
 +		NORMAL_ALL
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_TAB_SHOW_", type_id = "meta_tab_show_type_get_type ()")]
++	[CCode (cheader_filename = "meta/display.h", cprefix = "META_TAB_SHOW_", type_id = "meta_tab_show_type_get_type ()")]
 +	public enum TabShowType {
 +		ICON,
 +		INSTANTLY
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_VIRTUAL_", type_id = "meta_virtual_modifier_get_type ()")]
++	[CCode (cheader_filename = "meta/common.h", cprefix = "META_VIRTUAL_", type_id = "meta_virtual_modifier_get_type ()")]
 +	[Flags]
 +	public enum VirtualModifier {
 +		SHIFT_MASK,
@@ -1952,17 +2104,17 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		MOD4_MASK,
 +		MOD5_MASK
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_WINDOW_CLIENT_TYPE_", type_id = "meta_window_client_type_get_type ()")]
++	[CCode (cheader_filename = "meta/window.h", cprefix = "META_WINDOW_CLIENT_TYPE_", type_id = "meta_window_client_type_get_type ()")]
 +	public enum WindowClientType {
 +		WAYLAND,
 +		X11
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_WINDOW_MENU_", type_id = "meta_window_menu_type_get_type ()")]
++	[CCode (cheader_filename = "meta/common.h", cprefix = "META_WINDOW_MENU_", type_id = "meta_window_menu_type_get_type ()")]
 +	public enum WindowMenuType {
 +		WM,
 +		APP
 +	}
-+	[CCode (cheader_filename = "meta/main.h", cprefix = "META_WINDOW_", type_id = "meta_window_type_get_type ()")]
++	[CCode (cheader_filename = "meta/window.h", cprefix = "META_WINDOW_", type_id = "meta_window_type_get_type ()")]
 +	public enum WindowType {
 +		NORMAL,
 +		DESKTOP,
@@ -1981,45 +2133,45 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +		DND,
 +		OVERRIDE_OTHER
 +	}
-+	[CCode (cheader_filename = "meta/main.h", instance_pos = 2.9)]
++	[CCode (cheader_filename = "meta/meta-idle-monitor.h", instance_pos = 2.9)]
 +	public delegate void IdleMonitorWatchFunc (Meta.IdleMonitor monitor, uint watch_id);
-+	[CCode (cheader_filename = "meta/main.h", instance_pos = 4.9)]
++	[CCode (cheader_filename = "meta/prefs.h", instance_pos = 4.9)]
 +	public delegate void KeyHandlerFunc (Meta.Display display, Meta.Window window, [CCode (type = "ClutterKeyEvent*")] Clutter.KeyEvent? event, Meta.KeyBinding binding);
-+	[CCode (cheader_filename = "meta/main.h", instance_pos = 1.9)]
++	[CCode (cheader_filename = "meta/prefs.h", instance_pos = 1.9)]
 +	public delegate void PrefsChangedFunc (Meta.Preference pref);
-+	[CCode (cheader_filename = "meta/main.h", instance_pos = 1.9)]
++	[CCode (cheader_filename = "meta/window.h", instance_pos = 1.9)]
 +	public delegate bool WindowForeachFunc (Meta.Window window);
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_CURRENT_TIME")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_CURRENT_TIME")]
 +	public const int CURRENT_TIME;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_DEFAULT_ICON_NAME")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_DEFAULT_ICON_NAME")]
 +	public const string DEFAULT_ICON_NAME;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_ICON_HEIGHT")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_ICON_HEIGHT")]
 +	public const int ICON_HEIGHT;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_ICON_WIDTH")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_ICON_WIDTH")]
 +	public const int ICON_WIDTH;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_MAJOR_VERSION")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_MAJOR_VERSION")]
 +	public const int MAJOR_VERSION;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_MICRO_VERSION")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_MICRO_VERSION")]
 +	public const int MICRO_VERSION;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_MINI_ICON_HEIGHT")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_MINI_ICON_HEIGHT")]
 +	public const int MINI_ICON_HEIGHT;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_MINI_ICON_WIDTH")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_MINI_ICON_WIDTH")]
 +	public const int MINI_ICON_WIDTH;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_MINOR_VERSION")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_MINOR_VERSION")]
 +	public const int MINOR_VERSION;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_PLUGIN_API_VERSION")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_PLUGIN_API_VERSION")]
 +	public const int PLUGIN_API_VERSION;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_PRIORITY_BEFORE_REDRAW")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_PRIORITY_BEFORE_REDRAW")]
 +	public const int PRIORITY_BEFORE_REDRAW;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_PRIORITY_PREFS_NOTIFY")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_PRIORITY_PREFS_NOTIFY")]
 +	public const int PRIORITY_PREFS_NOTIFY;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_PRIORITY_REDRAW")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_PRIORITY_REDRAW")]
 +	public const int PRIORITY_REDRAW;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_PRIORITY_RESIZE")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_PRIORITY_RESIZE")]
 +	public const int PRIORITY_RESIZE;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_VIRTUAL_CORE_KEYBOARD_ID")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_VIRTUAL_CORE_KEYBOARD_ID")]
 +	public const int VIRTUAL_CORE_KEYBOARD_ID;
-+	[CCode (cheader_filename = "meta/main.h", cname = "META_VIRTUAL_CORE_POINTER_ID")]
++	[CCode (cheader_filename = "meta/common.h", cname = "META_VIRTUAL_CORE_POINTER_ID")]
 +	public const int VIRTUAL_CORE_POINTER_ID;
 +	[CCode (cheader_filename = "meta/main.h")]
 +	public static bool activate_session ();
@@ -2045,6 +2197,6 @@ Index: budgie-desktop-10.4+git20180806.01.933f78fc03d/vapi/libmutter-3.vapi
 +	public static void set_gnome_wm_keybindings (string wm_keybindings);
 +	[CCode (cheader_filename = "meta/main.h")]
 +	public static void set_wm_name (string wm_name);
-+	[CCode (cheader_filename = "meta/main.h")]
++	[CCode (cheader_filename = "meta/meta-x11-display.h")]
 +	public static bool x11_init_gdk_display () throws GLib.Error;
 +}
