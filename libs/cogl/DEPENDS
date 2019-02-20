@@ -7,7 +7,7 @@ depends gdk-pixbuf
 depends pango
 
 optional_depends wayland \
-                 "--enable-waylang-egl-platform=yes --enable-wayland-egl-server=yes" \
+                 "--enable-wayland-egl-platform=yes --enable-wayland-egl-server=yes" \
                  "--enable-wayland-egl-platform=no  --enable-wayland-egl-server=no" \
                  "for Wayland support"
 
