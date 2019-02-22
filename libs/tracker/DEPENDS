@@ -6,14 +6,11 @@ depends json-glib
 depends libseccomp
 depends util-linux
 depends vala
+depends meson
 depends intltool
+depends gobject-introspection
 
 optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "-D docs=true" \
+                 "-D docs=false" \
                  "for building documentation"
-
-optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
-                 "for object introspection"

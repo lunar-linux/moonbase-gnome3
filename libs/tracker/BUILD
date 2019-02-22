@@ -1,5 +1,3 @@
-OPTS+=" --disable-static"
+OPTS+=" -D b_lto=false"
 
-./configure &&
-
-default_build
+default_meson_build
