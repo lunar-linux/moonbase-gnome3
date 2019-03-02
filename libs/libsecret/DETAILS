@@ -1,11 +1,11 @@
           MODULE=libsecret
-         VERSION=0.18.7
+         VERSION=0.18.8
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}/
-      SOURCE_VFY=sha256:0d66fe1fc4561b3e046ee281d7c5a703a9baac88a8c4fb42ebc739d31dabd487
+      SOURCE_VFY=sha256:3bfa889d260e0dbabcf5b9967f2aae12edcd2ddc9adc365de7a5cc840c311d15
         WEB_SITE=http://www.gnome.org
          ENTERED=20130316
-         UPDATED=20181230
+         UPDATED=20190302
            SHORT="A library for storing and retrieving passwords and other secrets"
 
 cat << EOF
