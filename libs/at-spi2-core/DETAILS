@@ -1,11 +1,11 @@
           MODULE=at-spi2-core
-         VERSION=2.30.0
+         VERSION=2.30.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:0175f5393d19da51f4c11462cba4ba6ef3fa042abf1611a70bdfed586b7bfb2b
+      SOURCE_VFY=sha256:48d7df351e73a63062648d3c4c15f4b353e8c835be2fa772f50308533d5a9eb0
         WEB_SITE=http://www.gnome.org
          ENTERED=20120706
-         UPDATED=20180909
+         UPDATED=20190304
            SHORT="Protocol definitions for D-Bus at-spi"
 
 cat << EOF
