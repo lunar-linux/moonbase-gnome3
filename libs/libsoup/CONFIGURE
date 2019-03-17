@@ -1,1 +1,1 @@
-mquery DOCS "Build docs?" n
+mquery DOCS "Build docs?" n "-D docs=false" "-D docs=true"
