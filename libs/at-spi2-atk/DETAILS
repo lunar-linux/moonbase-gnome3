@@ -1,11 +1,11 @@
           MODULE=at-spi2-atk
-         VERSION=2.30.1
+         VERSION=2.32.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:d93bb958f23d022e746cce262b63409a878cef14f8a645d0f3ac22f766bab8e7
+      SOURCE_VFY=sha256:0b51e6d339fa2bcca3a3e3159ccea574c67b107f1ac8b00047fa60e34ce7a45c
         WEB_SITE=http://www.gnome.org
          ENTERED=20120706
-         UPDATED=20190310
+         UPDATED=20190317
            SHORT="gtk-module that bridges ATK and D-BUS AT-SPI"
 
 cat << EOF

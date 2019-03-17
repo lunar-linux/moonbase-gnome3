@@ -1,11 +1,11 @@
           MODULE=atk
-         VERSION=2.30.0
+         VERSION=2.32.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:dd4d90d4217f2a0c1fee708a555596c2c19d26fef0952e1ead1938ab632c027b
+      SOURCE_VFY=sha256:cb41feda7fe4ef0daa024471438ea0219592baf7c291347e5a858bb64e4091cc
         WEB_SITE=http://www.gtk.org
          ENTERED=20020313
-         UPDATED=20180909
+         UPDATED=20190317
            SHORT="A library of useful C routines required for gtk+"
 
 cat << EOF
