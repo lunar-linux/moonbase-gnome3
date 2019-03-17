@@ -1,0 +1,19 @@
+          MODULE=file-roller
+           MAJOR=3.32
+         VERSION=$MAJOR.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/$MAJOR
+      SOURCE_VFY=sha256:03283027f1b9747c5fc5747eb672e0c155023c7fd74bec7b8faeb7b7b071a7c5
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20021013
+         UPDATED=20190318
+           SHORT="An archive manager for the GNOME environment"
+
+cat << EOF
+File Roller is an archive manager for the GNOME environment.
+Archive manager means that you can:
+o Create and modify archives.
+o View the content of an archive.
+o View a file contained in the archive.
+o Extract files from the archive.
+EOF

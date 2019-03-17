@@ -1,5 +1,6 @@
 depends cmake
 depends ruby
+depends python2
 depends which
 depends %JPEG
 depends libpng

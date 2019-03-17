@@ -1,6 +1,3 @@
-OPTS+=" --disable-static \
-        --disable-egl-device \
-        --disable-schemas-compile \
-        --enable-compile-warnings=minimum"
-
-default_build
+#remote desktop needs pipewire that is not yet included as a package
+OPTS+=" -Dremote_desktop=false"
+default_meson_build

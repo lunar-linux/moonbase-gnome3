@@ -1,11 +1,11 @@
           MODULE=gnome-online-accounts
-         VERSION=3.30.1
+         VERSION=3.31.90
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:4}/
-      SOURCE_VFY=sha256:7e968a325e959f0b2419bed5a4c5b6d3a9327aceebd72f4fb01478c78ce85b41
+      SOURCE_VFY=sha256:5d43d28fd4e33d4a59bbd91b4f2d06aa1383f06361f2fa6ac98461c5648e5270
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20141019
-         UPDATED=20190211
+         UPDATED=20190318
            SHORT="GNOME service to access online accounts"
 
 cat << EOF

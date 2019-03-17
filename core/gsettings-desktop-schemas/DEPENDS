@@ -1,6 +1,6 @@
 depends intltool
 
 optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
+                 "-Dintrospection=true" \
+                 "-Dintrospection=false" \
                  "for object introspection"

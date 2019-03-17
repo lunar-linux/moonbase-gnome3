@@ -1,11 +1,11 @@
           MODULE=gnome-shell
-         VERSION=3.30.2
+         VERSION=3.32.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:22632c9bbccef11fe3130fc8d642e37de223d089e004bdb58dae309a38694c4d
+      SOURCE_VFY=sha256:22f9833ae7d3fb8d5f817c75c79288724ff10d5deb1c2e1c1d0bbab135d753b6
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20180913
-         UPDATED=20181114
+         UPDATED=20190318
            SHORT="GNOME system power information and statistics"
 
 cat << EOF

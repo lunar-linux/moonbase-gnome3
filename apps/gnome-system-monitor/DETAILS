@@ -1,0 +1,15 @@
+          MODULE=gnome-system-monitor
+         VERSION=3.32.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:af00c4a42dd1db17d9abe88edb11c7751b20982db1a8a2a467bab206fd8a77e3
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20050316
+         UPDATED=20190318
+           SHORT="process viewer and system resource monitor for GNOME"
+
+cat << EOF
+gnome-system-monitor allows you to graphically view and manipulate the
+running processes on your system. It also provides an overview of
+available resources such as CPU and memory.
+EOF

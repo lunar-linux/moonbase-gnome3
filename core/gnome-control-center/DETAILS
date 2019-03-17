@@ -1,8 +1,9 @@
           MODULE=gnome-control-center
-         VERSION=3.30.3
-          SOURCE=$MODULE-$VERSION.tar.xz
+         VERSION=3.32.0
+          SOURCE=$MODULE-$VERSION.1.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:39615b45fee4b9662f9263d70ad4ad112cf828d5041c30ee1c00ed852b0b303e
+      SOURCE_VFY=sha256:86795715bf439aafb5b74a42065ac1d86cac53075b1cc8044bc27a964e15c012
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION.1
         WEB_SITE=https://gitlab.gnome.org/GNOME/gnome-control-center
          ENTERED=20070920
          UPDATED=20190208

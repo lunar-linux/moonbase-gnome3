@@ -1,19 +1,22 @@
 depends dconf
 depends dbus
 depends gtk+-3
-depends openssh
-depends libgudev
 depends psmisc
 depends polkit
 depends gtk-doc
 depends intltool
 depends meson
 
+optional_depends openssh    "-D sftp=true"     "-D sftp=false"     "for sftp support"
+optional_depends libgudev   "-D gudev=true"    "-D gudev=false"    "for gudev support"
 optional_depends libarchive "-D archive=true"  "-D archive=false"  "for archive support"
 optional_depends libgcrypt  "-D gcrypt=true"   "-D gcrypt=false"   "for encryption support"
 optional_depends libsecret  "-D keyring=true"  "-D keyring=false"  "for storing secrets support"
 optional_depends libsoup    "-D http=true"     "-D http=false"     "for FTP/HTTP/WebDAV support"
-optional_depends libcdio    "-D cdda=true"     "-D cdda=false"     "for CDDA support"
+optional_depends libcdio    "-D cdda=true"     "-D cdda=false"     "for CDDA support (if y libcdio-paranoia will be installed too)"
+if in_depends $MODULE libcdio; then
+  depends libcdio-paranoia
+fi
 optional_depends libgphoto2 "-D gphoto2=true"  "-D gphoto2=false"  "for Gphoto2 support"
 optional_depends libmtp     "-D mtp=true"      "-D mtp=false"      "for mtp support"
 optional_depends libnfs     "-D nfs=true"      "-D nfs=false"      "for NFS support"
@@ -25,8 +28,6 @@ optional_depends libbluray  "-D bluray=true"   "-D bluray=false"   "for Bluray D
 optional_depends gcr        "-D gcr=true"      "-D gcr=false"      "for gcr certificate support"
 optional_depends libsecret  "-D keyring=true"  "-D keyring=false"  "for storing secrets support"
 optional_depends avahi      "-D dnssd=true"    "-D dnssd=false"    "for Avahi supporti with dndsd support"
-
-optional_depends libimobile \
-                 "-D afc=true" \
-                 "-D afc=false" \
-                 "for afc backend and volume monitor support"
+optional_depends libimobile "-D afc=true"      "-D afc=false"      "for afc backend and volume monitor support"
+optional_depends gnome-online-accounts "-Dgoa=true" "-Dgoa=false"  "for gnome-online-accounts support"
+optional_depends libgdata   "-D google=true"   "-D google=false"   "for google support"

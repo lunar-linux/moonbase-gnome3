@@ -1,0 +1,12 @@
+          MODULE=gnome-shell-extensions
+         VERSION=3.32.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:85de915dda1ec20e071b8bd996cb800a4e381f1aea37ea4939446f73e18ef973
+        WEB_SITE=http://www.gnome.org/gnome-3
+         ENTERED=20190318
+         UPDATED=20190318
+           SHORT=""
+
+cat << EOF
+EOF

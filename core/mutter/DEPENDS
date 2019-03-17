@@ -10,9 +10,17 @@ depends upower
 depends libxkbcommon
 depends libgudev
 
-optional_depends wayland-protocols "" "--disable-wayland" "for Wayland support"
+optional_depends wayland-protocols \
+                 "-Dwayland=true" \
+                 "-Dwayland=false" \
+                 "for Wayland support"
 
 optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
-                 "for object introspection"
+                 "-Dintrospection=true" \
+                 "-Dintrospection=false" \
+                 "Enable introspeciton support"
+
+optional_depends libwacom \
+                 "-Dlibwacom=true" \
+                 "-Dlibwacom=false" \
+                 "Enable wacom support"
