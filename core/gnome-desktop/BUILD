@@ -1,4 +1,1 @@
-OPTS+=" --disable-statici \
-	--disable-gtk-doc"
-
-default_build
+default_meson_build
