@@ -1,5 +1,6 @@
-depends glib-2
+depends python2
 depends readline
+depends libgee
 
 optional_depends sqlite \
                  "--enable-system-sqlite" \
