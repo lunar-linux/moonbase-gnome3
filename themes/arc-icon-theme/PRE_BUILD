@@ -1,0 +1,3 @@
+default_pre_build &&
+
+sedit "s/Inherits=.*/Inherits=Paper,elementary,Adwaita,gnome,hicolor/" Arc/index.theme
