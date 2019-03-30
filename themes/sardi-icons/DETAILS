@@ -1,0 +1,14 @@
+          MODULE=sardi-icons
+         VERSION=9.6-22
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_URL=http://downloads.sourceforge.net/project/sardi/
+      SOURCE_VFY=shas256:fd5dc9d3c416f936542986cc703e18b3ae3c8c3f6596c0a0f4cbb9f5fa512b06
+        WEB_SITE=http://sourceforge.net/projects/sardi/
+         ENTERED=20190326
+         UPDATED=20190326
+           SHORT="An icon collection for any linux distro"
+
+cat << EOF
+Sardi is an icon collection for any linux distro with 6 different circular
+icons and 10 different kind of folders.
+EOF
