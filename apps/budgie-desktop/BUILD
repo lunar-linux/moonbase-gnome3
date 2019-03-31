@@ -1,8 +1,8 @@
 OPTS+=" --prefix=/usr \
         --libdir=/usr/lib \
         --sysconfdir=/etc \
-        -D with-polkit=true \
-        -D with-bluetooth=true \
-        -D with-desktop-icons=none"
+        -Dwith-polkit=true \
+        -Dwith-bluetooth=true \
+        -Dwith-desktop-icons=none"
 
 default_meson_build

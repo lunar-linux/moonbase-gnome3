@@ -10,17 +10,17 @@ depends xapps
 depends meson
 
 optional_depends libexif \
-                 "-D exif=true" \
-		 "-D exif=false" \
-		 "for EXIF parsing support"
+                 "-Dexif=true" \
+                 "-Dexif=false" \
+                 "for EXIF parsing support"
 
 optional_depends exempi \
-                 "-D xmp=true" \
-		 "-D xmp=false" \
-		 "for XMP support"
+                 "-Dxmp=true" \
+                 "-Dxmp=false" \
+                 "for XMP support"
 
 optional_depends gtk-doc \
-                 "-D gtk_doc=true" \
-		 "-D gtk_doc=false" \
-		 "for API reference documentation"
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
+                 "for API reference documentation"
 

@@ -8,6 +8,6 @@ OPTS+=" --enable-ipv6 \
 
 if module_installed systemd; then
    OPTS+=" --enable-systemd-journal"
-fi &&
+fi
 
 default_build

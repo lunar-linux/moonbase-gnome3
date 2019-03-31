@@ -2,6 +2,6 @@ depends intltool
 depends meson
 
 optional_depends gobject-introspection \
-                 "-D introspection=true" \
-                 "-D introspection=false" \
+                 "-Dintrospection=true" \
+                 "-Dintrospection=false" \
                  "for object introspection"

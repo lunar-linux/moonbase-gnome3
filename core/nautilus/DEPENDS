@@ -9,8 +9,7 @@ depends libnotify
 depends tracker
 depends meson
 
-optional_depends "gexiv2" \
-                 " -Dextensions=true" \
-                 " -Dextensions=false" \
+optional_depends gexiv2 \
+                 "-Dextensions=true" \
+                 "-Dextensions=false" \
                  "Build extension support on nautilus"
-                 

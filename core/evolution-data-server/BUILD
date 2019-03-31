@@ -1,2 +1,3 @@
-OPTS+=" -DENABLE_UOA=OFF" &&
+OPTS+=" -DENABLE_UOA=OFF"
+
 default_cmake_build

@@ -1,23 +1,19 @@
-
-depends meson
 depends colord-gtk
 depends libgtop
 depends grilo
 depends libwacom
 depends gnome-bluetooth
+depends meson
 
-optional_depends "wayland" \
+optional_depends wayland \
                  "-Dwayland=true" \
                  "-Dwayland=false" \
                  "Enable wayland support"
 
-optional_depends "cheese" \
+optional_depends cheese \
                  "-Dcheese=true" \
                  "-Dcheese=false" \
                  "Enable cheese(webcam) support"
 
-optional_depends "samba" \
-                 "" "" "Enable printer Applet support"
-
-optional_depends "krb5" \
-                 "" "" "Enable printer Applet support"
+optional_depends samba "" "" "Enable printer Applet support"
+optional_depends krb5 "" "" "Enable printer Applet support"
