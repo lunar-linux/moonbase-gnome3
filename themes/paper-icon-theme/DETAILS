@@ -7,7 +7,7 @@
          ENTERED=20190330
          UPDATED=20190330
            SHORT="Paper Icon Theme"
-
+ARCHIVE=off
 cat << EOF
 Paper is a modern freedesktop icon theme whose design is based around the use
 of bold colours and simple geometric shapes to compose icons. Each icon has

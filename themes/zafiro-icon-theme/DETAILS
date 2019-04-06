@@ -8,7 +8,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/Zafiro-icons-$VERSION
          ENTERED=20190109
          UPDATED=20190311
            SHORT="A icon pack flat with light colors"
-
+ARCHIVE=off
 cat << EOF
 Minimalist icons created with the flat-desing technique, utilizing washed out
 colors and always accompanied by white. The priority is simplicity.

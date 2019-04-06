@@ -8,7 +8,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/icons-$VERSION
          ENTERED=20181223
          UPDATED=20190228
            SHORT="Named, vector icons for elementary OS"
-
+ARCHIVE=off
 cat << EOF
 An original set of vector icons designed specifically for elementary OS and
 its desktop environment: Pantheon.

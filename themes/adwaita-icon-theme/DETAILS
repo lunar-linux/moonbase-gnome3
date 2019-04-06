@@ -7,7 +7,7 @@
          ENTERED=20021202
          UPDATED=20190322
            SHORT="Adwaita icon theme"
-
+ARCHIVE=off
 cat << EOF
 Adwaita icon theme.
 EOF

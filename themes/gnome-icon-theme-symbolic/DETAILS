@@ -7,7 +7,7 @@
          ENTERED=20130706
          UPDATED=20150820
            SHORT="Symbolic icon theme for GNOME"
-
+ARCHIVE=off
 cat << EOF
 Purpose of this icon theme is to extend the base gnome icon theme that follows
 the Tango style guidelines for speciic purposes. This would include OSD

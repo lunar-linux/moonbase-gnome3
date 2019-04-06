@@ -7,7 +7,7 @@
          ENTERED=20190326
          UPDATED=20190326
            SHORT="An icon collection for any linux distro"
-
+ARCHIVE=off
 cat << EOF
 Sardi is an icon collection for any linux distro with 6 different circular
 icons and 10 different kind of folders.

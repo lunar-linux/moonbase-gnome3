@@ -7,7 +7,7 @@
          ENTERED=20190330
          UPDATED=20190330
            SHORT="Arc icon theme"
-
+ARCHIVE=off
 cat << EOF
 This theme doesn't provide application icons, it needs another icon theme to
 inherit them.

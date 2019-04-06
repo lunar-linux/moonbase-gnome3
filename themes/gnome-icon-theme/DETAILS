@@ -7,7 +7,7 @@
          ENTERED=20021202
          UPDATED=20150820
            SHORT="Default icon themes for GNOME"
-
+ARCHIVE=off
 cat << EOF
 gnome-icon-theme contains the default icon theme used by the GNOME desktop.
 The icons are used in the panel menu, in nautilus, and other applications.

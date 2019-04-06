@@ -8,7 +8,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/stylesheet-$VERSION
          ENTERED=20190330
          UPDATED=20190330
            SHORT="The official elementary GTK theme"
-
+ARCHIVE=off
 cat << EOF
 The official elementary GTK+ stylesheet designed to be smooth, attractive,
 fast, and usable.

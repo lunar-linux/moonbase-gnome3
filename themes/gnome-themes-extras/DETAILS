@@ -7,7 +7,7 @@
          ENTERED=20030612
          UPDATED=20080413
            SHORT="A collection GTK+-2 themes"
-
+ACHIVE=off
 cat << EOF
 Extra gtk+-2 SVG themes provided by gnome.org
 EOF
