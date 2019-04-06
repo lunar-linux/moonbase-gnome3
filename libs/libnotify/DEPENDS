@@ -1,7 +1,18 @@
 depends gtk+-3
 depends gdk-pixbuf
+depends meson
+
+optional_depends gtk-doc \
+                 "-Dgtk-doc=true" \
+                 "-Dgtk-doc=false" \
+                 "for building documentation" n
+
+optional_depends xmlto \
+                 "-Ddocbook_docs=enabled" \
+                 "-Ddocbook_docs=disabled" \
+                 "for building docbook documentation" n
 
 optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
+                 "-Dintrospection=enabled" \
+                 "-Dintrospection=disabled" \
                  "for object introspection"
