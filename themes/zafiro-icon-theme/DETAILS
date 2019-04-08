@@ -1,0 +1,15 @@
+          MODULE=zafiro-icon-theme
+         VERSION=0.9
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/Zafiro-icons-$VERSION
+ SOURCE_URL_FULL=https://github.com/zayronxio/Zafiro-icons/archive/v$VERSION.tar.gz
+      SOURCE_VFY=shas256:03ba41f1fc6380188cef8382b768fef7160d9b948b6f74d373628b0ed84bf24d
+        WEB_SITE=https://github.com/elementary/icons/
+         ENTERED=20190109
+         UPDATED=20190311
+           SHORT="A icon pack flat with light colors"
+ARCHIVE=off
+cat << EOF
+Minimalist icons created with the flat-desing technique, utilizing washed out
+colors and always accompanied by white. The priority is simplicity.
+EOF

@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:a6393dc5fc29fc0652ac84c73b3da205d0b0168128c4cf6d27797a08f3d07b54
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20120706
-         UPDATED=20190318
+         UPDATED=20190322
            SHORT="Library with common API for various GNOME modules"
 
 cat << EOF

@@ -1,0 +1,4 @@
+depends hicolor-icon-theme
+
+optional_depends paper-icon-theme      "" "" "secondary icon theme fallback"
+optional_depends elementary-icon-theme "" "" "another icon theme fallback"

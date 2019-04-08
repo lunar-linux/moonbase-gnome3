@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:c850c64b2074265fe59e099a340b8689cf3dd4658dc9feddd2ab5e95f1a74b74
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20120706
-         UPDATED=20190318
+         UPDATED=20190322
            SHORT="GNOME menu specifications"
 
 cat << EOF

@@ -7,7 +7,7 @@
          ENTERED=20130217
          UPDATED=20171001
            SHORT="Default themes for the GNOME desktop"
-
+ARCHIVE=off
 cat << EOF
 Gnome-themes is the collection of offical desktop themes for the GNOME desktop
 environment.

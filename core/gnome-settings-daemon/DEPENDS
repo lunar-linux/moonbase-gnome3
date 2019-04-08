@@ -20,11 +20,11 @@ depends NetworkManager
 depends meson
 
 optional_depends wayland \
-                 "-D wayland=true" \
-                 "-D wayland=false" \
+                 "-Dwayland=true" \
+                 "-Dwayland=false" \
                  "Enable support for Wayland"
 
 optional_depends cups \
-                 "-D cups=true" \
-                 "-D cups=false" \
+                 "-Dcups=true" \
+                 "-Dcups=false" \
                  "Enable support for CUPS"

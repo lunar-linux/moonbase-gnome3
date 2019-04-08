@@ -5,16 +5,16 @@ depends xapps
 depends meson
 
 optional_depends GConf \
-                 "-D with-gconf=true" \
-                 "-D with-gconf=false" \
+                 "-Dwith-gconf=true" \
+                 "-Dwith-gconf=false" \
                  "for GConf support"
 
 optional_depends xtrans \
-                 "-D with-xtrans=true" \
-                 "-D with-xtrans=false" \
+                 "-Dwith-xtrans=true" \
+                 "-Dwith-xtrans=false" \
                  "for xtrans support"
 
 optional_depends docbook-xsl \
-                 "-D with-docbook=true" \
-                 "-D with-docbook=false" \
+                 "-Dwith-docbook=true" \
+                 "-Dwith-docbook=false" \
                  "for documentation install"

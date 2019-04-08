@@ -1,0 +1,15 @@
+          MODULE=elementary-icon-theme
+         VERSION=5.0.3
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/icons-$VERSION
+ SOURCE_URL_FULL=https://github.com/elementary/icons/archive/$VERSION.tar.gz
+      SOURCE_VFY=shas2561:51ea67854f70990227576137498f8145468c4cf98c54417d4415bf702517d10a
+        WEB_SITE=https://github.com/elementary/icons/
+         ENTERED=20181223
+         UPDATED=20190228
+           SHORT="Named, vector icons for elementary OS"
+ARCHIVE=off
+cat << EOF
+An original set of vector icons designed specifically for elementary OS and
+its desktop environment: Pantheon.
+EOF

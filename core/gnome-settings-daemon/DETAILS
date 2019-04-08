@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:c3b8035aced4971ac49d3f3a5faa301a0825607e73248666a5f8078793d58397
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20120706
-         UPDATED=20190318
+         UPDATED=20190322
            SHORT="The GNOME Settings daemon"
 
 cat << EOF

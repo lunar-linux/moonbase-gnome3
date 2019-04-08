@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:58f539b0386f36300b76f3afea3a508de4914b27e78f58ee4d142486a42f926a
         WEB_SITE=http://wiki.gnome.org/Projects/gexiv2/
          ENTERED=20100909
-         UPDATED=20190317
+         UPDATED=20190322
            SHORT="GObject-based wrapper around exiv2"
 
 cat << EOF

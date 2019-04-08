@@ -1,11 +1,11 @@
           MODULE=libgnomekbd
-         VERSION=3.26.0
+         VERSION=3.26.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:ea3b418c57c30615f7ee5b6f718def7c9d09ce34637324361150744258968875
+      SOURCE_VFY=sha256:f7ca02631576e9b88aee1b1bae37ac1488b80ee7975f20a97f29e761a7172679
         WEB_SITE=http://www.gnome.org
          ENTERED=20070315
-         UPDATED=20180317
+         UPDATED=20190322
            SHORT="The GNOME keyboard configuration library"
 
 cat << EOF

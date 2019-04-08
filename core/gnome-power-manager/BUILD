@@ -1,5 +1,5 @@
 OPTS+=" --prefix /usr \
-        -D docbook2man=false \
-        -D enable-tests=false"
+        -Ddocbook2man=false \
+        -Denable-tests=false"
 
 default_meson_build

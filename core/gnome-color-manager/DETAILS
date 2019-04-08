@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:7c3c178faacfcbf11d56de22cd265946a7d58aa10e3cd968c2938e2fbf50fdee
         WEB_SITE=http://www.gnome.org
          ENTERED=20130415
-         UPDATED=20190318
+         UPDATED=20190322
            SHORT="Color profile manager for the GNOME desktop"
 PSAFE=no
 cat << EOF

@@ -1,0 +1,14 @@
+          MODULE=arc-icon-theme
+         VERSION=20161122
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/horst3180/arc-icon-theme/archive/$VERSION.tar.gz
+      SOURCE_VFY=sha256:0b448dde34138b12ab2d5f224f001cf8203fff55e6b19b013b0461b4376641f9
+        WEB_SITE=https://github.com/horst3180/arc-icon-theme/
+         ENTERED=20190330
+         UPDATED=20190330
+           SHORT="Arc icon theme"
+ARCHIVE=off
+cat << EOF
+This theme doesn't provide application icons, it needs another icon theme to
+inherit them.
+EOF

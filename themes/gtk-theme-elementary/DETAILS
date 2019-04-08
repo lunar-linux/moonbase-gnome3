@@ -1,0 +1,15 @@
+          MODULE=gtk-theme-elementary
+         VERSION=5.2.1
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/stylesheet-$VERSION
+ SOURCE_URL_FULL=https://github.com/elementary/stylesheet/archive/$VERSION.tar.gz
+      SOURCE_VFY=sha256:b6104a5380a77ea1634706afb749b6ea482e98af970d134fe00a7b0fcb841934
+        WEB_SITE=https://launchpad.net/egtk
+         ENTERED=20190330
+         UPDATED=20190330
+           SHORT="The official elementary GTK theme"
+ARCHIVE=off
+cat << EOF
+The official elementary GTK+ stylesheet designed to be smooth, attractive,
+fast, and usable.
+EOF

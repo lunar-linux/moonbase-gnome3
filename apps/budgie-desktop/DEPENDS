@@ -19,6 +19,6 @@ optional_depends gnome-backgrounds "" "" "for default background"
 optional_depends gnome-screensaver "" "" "for screen lock"
 
 optional_depends gtk-doc \
-                 "-D with-gtk-doc=true" \
-                 "-D with-gtk-doc=false" \
+                 "-Dwith-gtk-doc=true" \
+                 "-Dwith-gtk-doc=false" \
                  "for building documentation"

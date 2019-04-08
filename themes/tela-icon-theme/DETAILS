@@ -1,0 +1,13 @@
+          MODULE=tela-icon-theme
+         VERSION=git
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=git+https://github.com/vinceliuice/Tela-icon-theme/
+#      SOURCE_VFY=sha256:
+        WEB_SITE=https://github.com/vinceliuice/Tela-icon-theme/
+         ENTERED=20190406
+         UPDATED=20190406
+           SHORT="A flat colorful Design icon theme"
+ARCHIVE=off
+cat << EOF
+A flat colorful Design icon theme.
+EOF

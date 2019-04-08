@@ -6,7 +6,7 @@ OPTS+=" --enable-ipv6 \
 
 if module_installed systemd; then
    OPTS+=" --enable-systemd-journal"
-fi &&
+fi
 
 if module_installed wayland; then
    OPTS+=" --enable-wayland-support"

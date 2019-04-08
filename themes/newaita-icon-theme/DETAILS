@@ -1,0 +1,13 @@
+          MODULE=newaita-icon-theme
+         VERSION=git
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=git+https://github.com/cbrnix/Newaita
+#      SOURCE_VFY=sha256:
+        WEB_SITE=https://github.com/cbrnix/Newaita/
+         ENTERED=20190406
+         UPDATED=20190406
+           SHORT="A theme combining old style and color of material design"
+ARCHIVE=off
+cat << EOF
+Linux icon theme combining old style and color of material design.
+EOF

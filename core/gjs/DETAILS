@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:64a7ad5554adb0105fabb432abcfa690033c177d8e650872b469b7cbf475ec1a
         WEB_SITE=http://live.gnome.org/Gjs
          ENTERED=20130210
-         UPDATED=20190318
+         UPDATED=20190322
            SHORT="Javascript bindings for GNOME"
 
 cat <<EOF

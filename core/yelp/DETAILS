@@ -1,11 +1,11 @@
           MODULE=yelp
-         VERSION=3.30.0
+         VERSION=3.32.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:647fb00a592e92c95815d59e86016339ef1bd1a0aea309bd3367962005480a18
+      SOURCE_VFY=sha256:a756148145ffaab0d8ef7bd21192547d6f1a540ced212178f1073558c5a41324
         WEB_SITE=http://www.gnome.org
          ENTERED=20151002
-         UPDATED=20180918
+         UPDATED=20190322
            SHORT="A help browser for GNOME"
 
 cat << EOF

@@ -1,0 +1,16 @@
+          MODULE=flat-remix-icon-theme
+         VERSION=20190109
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/flat-remix-$VERSION
+ SOURCE_URL_FULL=https://github.com/daniruiz/flat-remix/archive/$VERSION.tar.gz
+      SOURCE_VFY=shas256:89ce8260c8725cce439c29ca50673196d1dbccf5e485a57334961be6fd4a87b1
+        WEB_SITE=https://github.com/daniruiz/Flat-Remix/
+         ENTERED=20190406
+         UPDATED=20190406
+           SHORT="A pretty simple icon theme inspired on material design"
+ARCHIVE=off
+cat << EOF
+Flat Remix icon theme is a pretty simple Linux icon theme inspired on material
+design. It is mostly flat with some shadows, highlights and gradients for some
+depth, and uses a colorful palette with nice contrasts.
+EOF

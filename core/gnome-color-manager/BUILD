@@ -1,3 +1,5 @@
-OPTS+=" --prefix /usr -Dpackagekit=false" &&
+OPTS+=" --prefix /usr \
+        -Dpackagekit=false \
+        -Denable_docs=false"
 
 default_meson_build

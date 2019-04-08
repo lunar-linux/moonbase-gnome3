@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:ff0430e7baf88cd6dc7eb4ccd0f38d3ef4557db9be19c513f70109120196ac00
         WEB_SITE=http://www.gnome.org
          ENTERED=20131020
-         UPDATED=20190318
+         UPDATED=20190322
            SHORT="An image viewing and cataloging program"
 
 cat << EOF

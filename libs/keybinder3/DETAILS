@@ -1,12 +1,12 @@
           MODULE=keybinder3
-         VERSION=0.3.1
+         VERSION=0.3.2
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/engla/keybinder/archive/keybinder-3.0-v$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/keybinder-keybinder-3.0-v$VERSION
-      SOURCE_VFY=sha256:0ebd17f026ce4ff6f0fb4248a95c2962d76b60b8cbccf07de28b07d7c5e42204
+      SOURCE_VFY=sha256:2eec50be6dfafa672d719e719f639df10403f270b2473e60deb2fb8455d13c51
         WEB_SITE=http://github.com/engla/keybinder/
          ENTERED=20160220
-         UPDATED=20180323
+         UPDATED=20190322
            SHORT="A library for registering global keyboard shortcuts"
 
 cat << EOF

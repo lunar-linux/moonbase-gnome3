@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:2246e34d3c0818714aee104c38d5b2f8836dc3db4a17f59ae2b31daa9c18d0de
         WEB_SITE=http://www.gnome.org
          ENTERED=20131020
-         UPDATED=20190318
+         UPDATED=20190322
            SHORT="GNOME file manager"
 
 cat << EOF

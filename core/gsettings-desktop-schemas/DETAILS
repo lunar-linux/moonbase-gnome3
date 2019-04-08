@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:2d59b4b3a548859dfae46314ee4666787a00d5c82db382e97df7aa9d0e310a35
         WEB_SITE=http://live.gnome.org
          ENTERED=20130210
-         UPDATED=20180317
+         UPDATED=20190322
            SHORT="Shared GSettings schemas for the desktop"
 
 cat <<EOF

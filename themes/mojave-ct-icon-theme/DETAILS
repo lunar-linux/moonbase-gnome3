@@ -1,0 +1,17 @@
+          MODULE=mojave-ct-icon-theme
+         VERSION=0.9.7
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/Mojave-CT-$VERSION
+ SOURCE_URL_FULL=https://github.com/zayronxio/Mojave-CT/archive/v$VERSION.tar.gz
+      SOURCE_VFY=sha256:ce02f54f9ac5775487cdc703e556e223264984a3a01b4a5a6ea7fd0dd849d369
+        WEB_SITE=https://github.com/zayronxio/Mojave-CT/
+         ENTERED=20190406
+         UPDATED=20190406
+           SHORT="MacOS Mojave icon pack"
+ARCHIVE=off
+cat << EOF
+Mojave CT icons is the set of icons of similar appearance to MacOS, more
+complete at the moment, its name is derived from the word "Mojave" used in the
+latest version of the apple operating system, and the letters "CT" derives from
+the old project "Cratos Lion" which was also inspired by MacOS.
+EOF
