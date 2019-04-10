@@ -20,8 +20,9 @@ depends sqlite
 depends libsoup
 depends libsecret
 depends wayland-protocols
-depends upower
 depends zlib
+
+#depends upower
 
 optional_depends hyphen \
                  "-DUSE_LIBHYPHEN=ON" \
@@ -52,8 +53,3 @@ optional_depends gobject-introspection \
                  "-DENABLE_INTROINSPECTION=ON" \
                  "-DENABLE_INTROINSPECTION=OFF" \
                  "for object introspection"
-
-optional_depends gtk+-2 \
-                 "-DENABLE_PLUGIN_PROCESS_GTK2=ON" \
-                 "-DENABLE_PLUGIN_PROCESS_GTK2=OFF" \
-                 "for supporting old NPAPI plugin system through gtk+-2 (add installation size for about 40Mb)"
