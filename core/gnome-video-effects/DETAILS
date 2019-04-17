@@ -1,8 +1,8 @@
           MODULE=gnome-video-effects
          VERSION=0.4.3
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=https://git.gnome.org/browse/gnome-video-effects/snapshot/
-      SOURCE_VFY=sha256:b889de76ca848867213af8fb7e55e3bd63114401f409bf70caa6e4f1467fc2cf
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:5a7ee0f5ade4b7d921f1b99f3b97d7d7bb830f2fef0f1daee20a7a1867708219
         WEB_SITE=http://www.gnome.org
          ENTERED=20130415
          UPDATED=20180317
