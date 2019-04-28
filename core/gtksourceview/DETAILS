@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:c431eb234dc83c7819e58f77dd2af973252c7750da1c9d125ddc94268f94f675
         WEB_SITE=http://www.gnome.org
          ENTERED=20030510
-         UPDATED=20190318
+         UPDATED=20190428
            SHORT="Text widget that extends the gtk+-3 text widget GtkTextView"
 
 cat << EOF
