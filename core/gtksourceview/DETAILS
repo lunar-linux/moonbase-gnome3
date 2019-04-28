@@ -1,8 +1,8 @@
           MODULE=gtksourceview
-         VERSION=3.24.10
+         VERSION=4.2.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:ab5406cdd0bdcf66afcd52b1e048a2f43c0f3ab391644ee30d9ac419b93cd59b
+      SOURCE_VFY=sha256:c431eb234dc83c7819e58f77dd2af973252c7750da1c9d125ddc94268f94f675
         WEB_SITE=http://www.gnome.org
          ENTERED=20030510
          UPDATED=20190318
