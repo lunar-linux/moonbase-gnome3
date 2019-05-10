@@ -1,0 +1,13 @@
+          MODULE=vimix-icon-theme
+         VERSION=2019-05-04
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/vinceliuice/vimix-icon-theme/archive/$VERSION.tar.gz
+      SOURCE_VFY=shas256:fd6cb3b3ca9b431e5fcbcea83d7ea75f2a643e9a2ad0148c1874bc399070fba3
+        WEB_SITE=https://github.com/vinceliuice/vimix-icon-theme/
+         ENTERED=20190510
+         UPDATED=20190510
+           SHORT="Fresh and simple personality icon theme"
+ARCHIVE=off
+cat << EOF
+A Material Design icon theme, based on Paper-Icon-Theme.
+EOF
