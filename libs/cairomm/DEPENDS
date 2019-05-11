@@ -1,0 +1,3 @@
+depends cairo
+depends pkgconf
+depends libsigc++2
