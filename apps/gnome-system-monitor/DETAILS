@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:48c131335091bd927862f40ef56400f997981df2acfc82abea662bf91a1ea4f1
         WEB_SITE=http://www.gnome.org
          ENTERED=20050316
-         UPDATED=20190417
+         UPDATED=20190511
            SHORT="process viewer and system resource monitor for GNOME"
 
 cat << EOF
