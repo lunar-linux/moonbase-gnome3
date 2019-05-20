@@ -1,11 +1,11 @@
           MODULE=gtk-doc
-         VERSION=1.29
+         VERSION=1.30
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/$VERSION
-      SOURCE_VFY=sha256:14578e002496567276d310a62c9ffd6c56ee8806ce5079ffb0b81c4111f586b1
+      SOURCE_VFY=sha256:a4f6448eb838ccd30d76a33b1fd095f81aea361f03b12c7b23df181d21b7069e
         WEB_SITE=http://www.gtk.org/gtk-doc
          ENTERED=20020716
-         UPDATED=20180830
+         UPDATED=20190520
            SHORT="Tools for authors of the GTK+ reference documentation"
 
 cat << EOF
