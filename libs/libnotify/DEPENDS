@@ -3,8 +3,8 @@ depends gdk-pixbuf
 depends meson
 
 optional_depends gtk-doc \
-                 "-Dgtk-doc=true" \
-                 "-Dgtk-doc=false" \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
                  "for building documentation" n
 
 optional_depends xmlto \
