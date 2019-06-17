@@ -1,21 +1,20 @@
           MODULE=evolution
-         VERSION=3.32.2
+         VERSION=3.32.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:a56435ddf52eb66e2fbcb3ca043c5183e07ada82c3824bff18ea73d5e00766e9
+      SOURCE_VFY=sha256:b653a65f8dac956d4832af6d1f1d9ecad59d198e5e9d2e6743829a5e2b891c3e
         WEB_SITE=http://gnome.org/projects/evolution
          ENTERED=20011109
-         UPDATED=20190506
+         UPDATED=20190617
            SHORT="email, calendar and notes information management solution"
 
 cat << EOF
-Evolution is the premiere personal and workgroup information
-management solution for Linux and UNIX-based systems.  The software
-seamlessly integrates email, calendaring, meeting scheduling, contact
-management and online task lists in one powerful, fast, and easy to
-use application.  Evolution also delivers a comprehensive set
-of features that help you keep your work organized and your projects
-on track.  Automatic email indexing keeps your information at your
+Evolution is the premiere personal and workgroup informationi management
+solution for Linux and UNIX-based systems. The software seamlessly integrates
+email, calendaring, meeting scheduling, contact management and online task lists
+in one powerful, fast, and easy to use application. Evolution also delivers a
+comprehensive set of features that help you keep your work organized and your
+projects on track.  Automatic email indexing keeps your information at your
 fingertips. The unique vFolders^(TM) are virtual folders you use
 to create and save powerful contextual views of your email messages.
 EOF

@@ -8,7 +8,6 @@ optional_depends libcanberra \
                  "-DENABLE_CANBERRA=OFF" \
                  "for canberra support"
 
-
 optional_depends gnome-spell \
                  "-DENABLE_GTKSPELL=ON" \
                  "-DENABLE_GTKSPELL=OFF" \
