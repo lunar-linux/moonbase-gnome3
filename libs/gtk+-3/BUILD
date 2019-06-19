@@ -1,4 +1,3 @@
-OPTS+=" --disable-schemas-compile \
-        --enable-x11-backend"
+OPTS+=" -Ddemos=false -Dexamples=false -Dtests=false"
 
-default_build
+default_meson_build
