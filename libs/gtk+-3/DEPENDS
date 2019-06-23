@@ -6,7 +6,7 @@ depends libxkbcommon
 depends libepoxy
 
 optional_depends cups \
-                 "-Dprit_backends=file,cups" \
+                 "-Dprint_backends=file,cups" \
                  "-Dprint_backends=file" \
                  "enable CUPS as print backend"
 
@@ -15,7 +15,6 @@ if module_installed cups; then
 fi
 
 #optional_depends json-glib "-Dprint_backends=cloudprint" "--disable-cloudprint" "also required by cloudprint"
-#optional_depends rest      "--enable-cloudprint" "--disable-cloudprint" "for Google Cloud Print Support"
 
 optional_depends %X \
                  "-Dx11_backend=true" \
