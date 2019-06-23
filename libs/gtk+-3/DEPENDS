@@ -22,8 +22,8 @@ optional_depends %X \
                  "for the X11 backend (recommended)"
 
 optional_depends wayland-protocols \
-                 "-Dwayland-backend=true -Dbroadway_backend=true" \
-                 "-Dwayland-backend=false -Dbroadway_backend=false" \
+                 "-Dwayland-backend=true" \
+                 "-Dwayland-backend=false" \
                  "for the waylany backend"
 
 # Documentation and introspection
