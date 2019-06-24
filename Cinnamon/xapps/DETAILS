@@ -1,11 +1,11 @@
           MODULE=xapps
-         VERSION=1.4.5
+         VERSION=1.4.7
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/linuxmint/xapps/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:6b139fba9b7a185ee9d3c81e5096591316b3e3b793ea448a3b49fb3cc1b9a706
+      SOURCE_VFY=sha256:5124506d10d80fdbffcdba04083542c65e3e0ed4b967b12c3e1618de99db2409
         WEB_SITE=http://github.com/linuxmint/xapps/
          ENTERED=20130302
-         UPDATED=20181212
+         UPDATED=20190624
            SHORT="Common library for X-Apps project"
 
 cat <<EOF
