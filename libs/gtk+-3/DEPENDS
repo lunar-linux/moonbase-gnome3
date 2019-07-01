@@ -1,3 +1,4 @@
+depends at-spi2-atk
 depends atk
 depends pango
 depends gdk-pixbuf
