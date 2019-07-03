@@ -1,6 +1,6 @@
           MODULE=budgie-desktop
          VERSION=10.5
-          SOURCE=${MODULE}_$VERSION.orig.tar.xz
+          SOURCE=${MODULE}-$VERSION.tar.xz
       SOURCE_URL=https://github.com/solus-project/budgie-desktop/releases/download/$VERSION/
       SOURCE_DIRECTORY=$BUILD_DIRECTORY/budgie-desktop-10.5/
       SOURCE_VFY=sha256:2de2c01530ac3577162e53fac11f00e8db9baa4d8dc954bf77ccd2b0209d62c3
