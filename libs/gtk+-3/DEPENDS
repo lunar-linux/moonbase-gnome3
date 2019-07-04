@@ -14,7 +14,10 @@ if module_installed cups; then
    depends colord
 fi
 
-#optional_depends json-glib "-Dprint_backends=cloudprint" "--disable-cloudprint" "also required by cloudprint"
+#optional_depends json-glib \
+#                 "-Dprint_backends=cloudprint" \
+#                 "--disable-cloudprint" \
+#                 "required by cloudprint"
 
 optional_depends %X \
                  "-Dx11_backend=true" \
