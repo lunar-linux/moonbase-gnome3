@@ -10,6 +10,10 @@ optional_depends NetworkManager \
                  "" "--disable-networkmanager --disable-modemmanager" \
                  "for NetworkManager support"
 
+optional_depends ModemManager \
+                 "" "--disable-modemmanager" \
+                 "for ModemManager support"
+
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
