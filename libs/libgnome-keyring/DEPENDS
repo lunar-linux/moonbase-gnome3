@@ -1,8 +1,9 @@
 depends dbus
 depends libgcrypt
-depends gnome-keyring
 depends intltool
 depends vala
+
+optional_depends gnome-keyring "" "" "for key storage service"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
