@@ -1,12 +1,12 @@
           MODULE=elementary-icon-theme
-         VERSION=5.0.3
+         VERSION=5.0.4
           SOURCE=$MODULE-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/icons-$VERSION
  SOURCE_URL_FULL=https://github.com/elementary/icons/archive/$VERSION.tar.gz
-      SOURCE_VFY=shas2561:51ea67854f70990227576137498f8145468c4cf98c54417d4415bf702517d10a
+      SOURCE_VFY=shas2561:48f0ccb3796bfe2d02acab972ddbdd240c97b09f4b0e914aa1f49a453f86d1a0
         WEB_SITE=https://github.com/elementary/icons/
          ENTERED=20181223
-         UPDATED=20190228
+         UPDATED=20190720
            SHORT="Named, vector icons for elementary OS"
 ARCHIVE=off
 cat << EOF
