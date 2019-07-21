@@ -12,6 +12,7 @@ depends libxslt
 depends gobject-introspection
 depends harfbuzz
 depends freetype2
+depends openjpeg-2
 depends gtk+-3
 depends gst-plugins-bad
 depends gperf
