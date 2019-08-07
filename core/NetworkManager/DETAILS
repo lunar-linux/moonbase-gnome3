@@ -1,11 +1,11 @@
           MODULE=NetworkManager
-         VERSION=1.18.2
+         VERSION=1.20.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION::4}
-      SOURCE_VFY=sha256:4dd97ca974cd1f97990746527258f551f4257cbf011fecd01d10b7d74a6fa5c3
+      SOURCE_VFY=sha256:b7e605055491ea8ef433bc149d55349111b9c789ad1cd0578f19ece39b1ac7c4
         WEB_SITE=http://gnome.org/projects/$MODULE
          ENTERED=20130216
-         UPDATED=20190726
+         UPDATED=20190807
            SHORT="Network Management daemon"
 
 cat << EOF
