@@ -46,7 +46,7 @@ optional_depends ppp \
                  "--disable-ppp" \
                  "for Point-to-Point Protocol with dial-up networking support"
 
-optional_depends gobject-introspection \
+optional_depends python-pygobject \
                  "--enable-introspection" \
                  "--disable-introspection" \
                  "for introspection support"
