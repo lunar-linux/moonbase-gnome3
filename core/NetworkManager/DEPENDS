@@ -21,7 +21,6 @@ optional_depends dnsmasq "--with-dnsmasq"       "" "for DNS forwarder and DHCP s
 optional_depends dhcp     "--with-dhclient=yes" "--with-dhclient=no" "for standard DHCP client"
 optional_depends dhcpcd   "--with-dhcpcd=yes"   "--with-dhcpcd=no"   "for alternative DHCP client"
 optional_depends polkit   "--enable-polkit=yes" "--enable-polkit=no" "for polkit support"
-optional_depends vala     "--enable-vala=yes"   "--enable-vala=no"   "for vala support"
 optional_depends valgrind "--with-valgrind=yes" "--with-valgrind=no" "for valgrind support"
 optional_depends jansson  "--enable-ovs"        "--disable-ovs"      "for open virtual switch support" n 
 optional_depends gtk-doc  "--enable-gtk-doc"    "--disable-gtk-doc"  "for documentation generation" n
@@ -46,7 +45,10 @@ optional_depends ppp \
                  "--disable-ppp" \
                  "for Point-to-Point Protocol with dial-up networking support"
 
+optional_depends vala "--enable-vala=yes" "--enable-vala=no" "for vala support (needs introspection support)"
+
 optional_depends python-pygobject \
                  "--enable-introspection" \
                  "--disable-introspection" \
                  "for introspection support"
+
