@@ -1,5 +1,3 @@
-OPTS+=" --disable-static \
-        --disable-werror \
-        --without-examples"
+OPTS+=" -Denable-werror=false"
 
-default_build
+default_meson_build
