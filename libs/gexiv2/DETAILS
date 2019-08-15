@@ -11,4 +11,3 @@
 cat << EOF
 GObject-based wrapper around exiv2
 EOF
-

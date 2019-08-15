@@ -11,4 +11,3 @@
 cat << EOF
 The Control Center for Cinnamon Desktop Environment.
 EOF
-

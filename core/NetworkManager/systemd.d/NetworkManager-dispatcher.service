@@ -12,4 +12,3 @@ KillMode=process
 
 [Install]
 Alias=dbus-org.freedesktop.nm-dispatcher.service
-

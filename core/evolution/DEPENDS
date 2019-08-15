@@ -37,4 +37,3 @@ optional_depends spamassassin \
                  "-DWITH_SPAMASSASIN=ON" \
                  "-DWITH_SPAMASSASIN=OFF" \
                  "for spam filtering"
-

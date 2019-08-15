@@ -39,4 +39,3 @@ if ! grep -q CONFIGURED $MODULE_CONFIG; then
   echo "OPTS=\"\$OPTS $OPTS\"" >> $MODULE_CONFIG
   echo "CONFIGURED=y"          >> $MODULE_CONFIG
 fi
-

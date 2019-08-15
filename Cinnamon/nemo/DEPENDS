@@ -23,4 +23,3 @@ optional_depends gtk-doc \
                  "-Dgtk_doc=true" \
                  "-Dgtk_doc=false" \
                  "for API reference documentation"
-
