@@ -1,12 +1,12 @@
           MODULE=flat-remix-gtk
-         VERSION=20190718
+         VERSION=20190816
           SOURCE=$MODULE-$VERSION.tar.gz
 #SOURCE_DIRECTORY=$BUILD_DIRECTORY/stylesheet-$VERSION
  SOURCE_URL_FULL=https://github.com/daniruiz/flat-remix-gtk/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:5e80c6f5056037dc1af63c061e8908c1c088007e93c86beacd39aa8571129790
+      SOURCE_VFY=sha256:022a6cc1b5a65b17c4683a53ff3607f9923c13040a1cb84f41288669126c33c6
         WEB_SITE=https://github.com/daniruiz/Flat-Remix-GTK/
          ENTERED=20190406
-         UPDATED=20190718
+         UPDATED=20190816
            SHORT="A pretty simple gtk window theme inspired on material design"
 ARCHIVE=off
 cat << EOF
