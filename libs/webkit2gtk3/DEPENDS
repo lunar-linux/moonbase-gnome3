@@ -53,3 +53,4 @@ optional_depends gobject-introspection \
                  "-DENABLE_INTROINSPECTION=ON" \
                  "-DENABLE_INTROINSPECTION=OFF" \
                  "for object introspection"
+
