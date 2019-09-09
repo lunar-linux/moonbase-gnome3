@@ -1,12 +1,12 @@
           MODULE=flat-remix-icon-theme
-         VERSION=20190830
+         VERSION=20190908
           SOURCE=$MODULE-$VERSION.tar.gz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/flat-remix-$VERSION
  SOURCE_URL_FULL=https://github.com/daniruiz/flat-remix/archive/$VERSION.tar.gz
-      SOURCE_VFY=shas256:531bc103f47271d7c2eff72bf174d6cc4801e24584b199d7fc5906893e4f276b
+      SOURCE_VFY=shas256:67d434ba4b81d0339dea6ee3be4f41e92fa8ab17d477199968491570f18bf09c
         WEB_SITE=https://github.com/daniruiz/Flat-Remix/
          ENTERED=20190406
-         UPDATED=20190830
+         UPDATED=20190909
            SHORT="A pretty simple icon theme inspired on material design"
 ARCHIVE=off
 cat << EOF
