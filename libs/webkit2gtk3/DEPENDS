@@ -19,6 +19,9 @@ depends gperf
 depends sqlite
 depends libsoup
 depends libsecret
+depends wpebackend-fdo
+depends bubblewrap
+depends xdg-dbus-proxy
 depends wayland-protocols
 depends zlib
 
