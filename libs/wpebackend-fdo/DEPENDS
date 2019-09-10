@@ -1,0 +1,3 @@
+depends libwpe
+depends wayland
+
