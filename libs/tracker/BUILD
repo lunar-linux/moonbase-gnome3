@@ -1,3 +1,3 @@
-OPTS+=" -D b_lto=false"
+OPTS+=" -Db_lto=false"
 
 default_meson_build

@@ -11,6 +11,6 @@ depends intltool
 depends gobject-introspection
 
 optional_depends gtk-doc \
-                 "-D docs=true" \
-                 "-D docs=false" \
+                 "-Ddocs=true" \
+                 "-Ddocs=false" \
                  "for building documentation"
