@@ -1,15 +1,26 @@
 depends pcre2
-depends gnutls
 depends gtk+-3
 depends vala
 depends intltool
+depends meson
+
+optional_depends gnutls \
+                 "-Dgnutls=true" \
+                 "-Dgnutls=false" \
+                 "for GNUTLS support"
+
+optional_depends fribidi \
+                 "-Dfribidi=true" \
+                 "-Dfribidi=false" \
+                 "for bidirectional text support"
 
 optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "-Ddoc=true" \
+                 "-Ddoc=false" \
                  "for building documentation"
 
 optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
+                 "-Dgir=true" \
+                 "-Dgir=false" \
                  "for object introspection"
+
