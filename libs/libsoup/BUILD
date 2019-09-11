@@ -1,3 +1,3 @@
-OPTS+=" -D tls-check=false -D gssapi=false"
+OPTS+=" -Dtls-check=false -Dgssapi=disabled"
 
 default_meson_build
