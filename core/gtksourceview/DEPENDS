@@ -2,8 +2,15 @@ depends gtk+-3
 depends libxml2
 depends vala
 depends intltool
+depends meson
 
 optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
+                 "-Dgir=true" \
+                 "-Dgir=false" \
                  "for introspection support"
+
+optional_depends gtk-doc \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
+                 "for building documentation"
+
