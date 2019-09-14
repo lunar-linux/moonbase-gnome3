@@ -1,11 +1,11 @@
           MODULE=gnome-terminal
-         VERSION=3.32.2
+         VERSION=3.34.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:759a2b093ca606107eb8fb53e407cdf9adce76ccee33f9fa0cd76bf594bd106a
+      SOURCE_VFY=sha256:85a60f8344118669396504e28245e7e03bc7d80e6749367148266b7763de8a71
         WEB_SITE=http://www.gnome.org
          ENTERED=20020714
-         UPDATED=20190507
+         UPDATED=20190914
            SHORT="The GNOME terminal emulator"
 
 cat << EOF
