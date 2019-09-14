@@ -1,11 +1,11 @@
           MODULE=gnome-settings-daemon
-         VERSION=3.32.1
+         VERSION=3.34.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION::4}
-      SOURCE_VFY=sha256:7a36d14f5ca1aaa5b5d4cd0a8a743017819c12014e8f4cc88a0ed72a1ed0a009
+      SOURCE_VFY=sha256:7ce4979817866911a94ecb75b36db56797e038c0c524c5c1a81aefccafc17337
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20120706
-         UPDATED=20190620
+         UPDATED=20190914
            SHORT="The GNOME Settings daemon"
 
 cat << EOF
