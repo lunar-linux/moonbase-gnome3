@@ -1,11 +1,11 @@
           MODULE=gnome-panel
-         VERSION=3.32.0
+         VERSION=3.34.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:6a6079d3d22d480d53cf552bbe18e061276d2d0b458cce4dfb822cb064883f29
+      SOURCE_VFY=sha256:b609ef7fa2038916b5ffed531b38efab4a81a21825a8b40ac3337b0bf6ad1a87
         WEB_SITE=http://www.gnome.org
          ENTERED=20160218
-         UPDATED=20190619
+         UPDATED=20190914
            SHORT="Panel for GNOME"
 
 cat << EOF
