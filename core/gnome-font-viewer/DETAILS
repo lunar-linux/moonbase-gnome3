@@ -1,11 +1,11 @@
           MODULE=gnome-font-viewer
-         VERSION=3.32.0
+         VERSION=3.34.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:43e1b0e759882d3597e650eb043e3d89c64cff9c124ceb6889e1a4a134286181
+      SOURCE_VFY=sha256:aa6f0583e5f93aec095e537f0638b29de3d02491f0131ef584a7c55d39d6b98b
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20180325
-         UPDATED=20190322
+         UPDATED=20190915
            SHORT="The GNOME fontviewer utility"
 
 cat << EOF
