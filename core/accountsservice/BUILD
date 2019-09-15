@@ -1,3 +1,4 @@
-OPTS+=" --disable-static"
+OPTS+=" -D docbook=false \
+        -D admin_group=wheel"
 
-default_build
+default_meson_build
