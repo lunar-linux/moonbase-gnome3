@@ -1,11 +1,11 @@
           MODULE=glibmm
-         VERSION=2.60.0
+         VERSION=2.62.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:a3a1b1c9805479a16c0018acd84b3bfff23a122aee9e3c5013bb81231aeef2bc
+      SOURCE_VFY=sha256:36659f13cc73282392d1305858f3bbca46fbd1ce2f078cc9db8b9f79b2e93cfe
         WEB_SITE=http://www.gtkmm.org
          ENTERED=20040409
-         UPDATED=20190319
+         UPDATED=20190919
            SHORT="C++ bindings for glib2"
 
 cat << EOF
