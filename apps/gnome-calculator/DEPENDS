@@ -3,3 +3,4 @@ depends gtksourceview
 depends vala
 depends intltool
 depends meson
+depends libgee
