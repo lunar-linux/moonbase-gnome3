@@ -3,11 +3,11 @@ depends python-pygobject
 depends intltool
 
 optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "-D gtk_doc=true" \
+                 "-D gtk_doc=false" \
                  "for building documentation"
 
 optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
-                 "for object introspection"
+                 "-D introspection=true" \
+                 "-D introspection=false" \
+                 "for object introspection" y
