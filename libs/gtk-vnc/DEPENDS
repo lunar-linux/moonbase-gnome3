@@ -1,5 +1,5 @@
 depends libgcrypt
-depends cyrus_sasl
+depends cyrus-sasl
 depends gnutls
 depends gtk+-3
 depends pulseaudio
