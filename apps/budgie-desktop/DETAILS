@@ -1,12 +1,12 @@
           MODULE=budgie-desktop
-         VERSION=10.5
+         VERSION=10.5.1
           SOURCE=${MODULE}-$VERSION.tar.xz
       SOURCE_URL=https://github.com/solus-project/budgie-desktop/releases/download/$VERSION/
       SOURCE_DIRECTORY=$BUILD_DIRECTORY/budgie-desktop-10.5/
-      SOURCE_VFY=sha256:8b2d9f604083948d74b3741a17717b7d7328ab592b841ccd4c2f65458b7057f8
+      SOURCE_VFY=sha256:
         WEB_SITE=http://github.com/solus-project/budgie-desktop/
          ENTERED=20160105
-         UPDATED=20190630
+         UPDATED=20191004
            SHORT="A GTK3 desktop from Solus Project"
 
 cat << EOF
