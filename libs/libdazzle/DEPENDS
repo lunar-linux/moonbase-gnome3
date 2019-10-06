@@ -1,0 +1,5 @@
+depends gtk+-3
+depends intltool
+depends meson
+depends vala
+
