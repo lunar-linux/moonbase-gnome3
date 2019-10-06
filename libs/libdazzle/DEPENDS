@@ -3,3 +3,13 @@ depends intltool
 depends meson
 depends vala
 
+optional_depends gtk-doc \
+                 "-Denable_gtk_doc=true" \
+                 "-Denable_gtk_doc=false" \
+                 "for building documentation"
+
+optional_depends gobject-introspection \
+                 "-Dintrospection=true" \
+                 "-Dintrospection=false" \
+                 "for object introspection" y
+
