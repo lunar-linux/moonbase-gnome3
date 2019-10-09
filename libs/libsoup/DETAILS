@@ -1,11 +1,11 @@
           MODULE=libsoup
-         VERSION=2.67.93
+         VERSION=2.68.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/`echo $VERSION | cut -d. -f1-2`
-      SOURCE_VFY=sha256:401cf57067669e6a5ac5a428bae153b93cbbd139c9e5c75d03d7a35d5cc0d13b
+      SOURCE_VFY=sha256:51ad3001a946fe3bcf29b692dc9ffe05cdf702ea6ca0ee8c3099a99a2f4e3933
         WEB_SITE=http://www.gnome.org
          ENTERED=20030413
-         UPDATED=20190911
+         UPDATED=20191009
            SHORT="A SOAP implementation in C"
 
 #PSAFE=no
