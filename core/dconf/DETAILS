@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:943a94ab16121de5580ceaed2605b87444d1bca1c6cd8beefb778bcb0aa2da52
         WEB_SITE=http://live.gnome.org/dconf
          ENTERED=20101128
-         UPDATED=20190911
+         UPDATED=20190914
            SHORT="Simple low-level configuration system"
 
 cat << EOF

@@ -1,0 +1,3 @@
+default_pre_build &&
+
+sedit "s|link_whole: libdconf_common,|link_with: libdconf_common,|g" common/meson.build
