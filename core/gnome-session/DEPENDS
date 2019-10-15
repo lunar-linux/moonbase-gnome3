@@ -2,11 +2,9 @@ depends dconf
 depends json-glib
 depends hicolor-icon-theme
 depends gnome-desktop
-depends gsettings-desktop-schemas
 depends mesa-lib
 depends libSM
 depends libXtst
-depends meson
 
 optional_depends systemd \
                  "-Dsystemd=true -Dsystemd_journal=true" \
