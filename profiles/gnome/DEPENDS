@@ -1,0 +1,12 @@
+depends gtk+-3
+depends gnome-control-center
+depends gnome-shell
+depends gnome-session
+depends gnome-terminal
+depends nautilus
+depends gnome-power-manager
+depends gnome-system-monitor
+
+optional_depends epiphany "" "" "install Epiphany browser"
+optional_depends gdm "" "" "install Gnome's display manager?"
+                

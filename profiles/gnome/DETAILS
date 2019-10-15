@@ -1,0 +1,11 @@
+          MODULE=gnome
+         VERSION=3.34
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20191015
+         UPDATED=20191015
+         PROFILE=yes
+           SHORT="profile for Gnome Window Manager"
+
+cat << EOF
+KDE profile for Gnome Window Manager.
+EOF
