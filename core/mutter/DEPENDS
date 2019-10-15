@@ -1,14 +1,9 @@
 depends libSM
-depends dconf
-depends intltool
 depends gsettings-desktop-schemas
 depends libcanberra
 depends startup-notification
-depends zenity
-depends gnome-desktop
-depends upower
 depends libxkbcommon
-depends libgudev
+depends gnome-settings-daemon
 
 optional_depends wayland-protocols \
                  "-Dwayland=true" \
