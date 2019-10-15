@@ -1,9 +1,19 @@
-depends gdm
-depends polkit
+depends gnome-autoar
+depends evolution-data-server
 depends gjs
-depends gnome-session
+depends mutter
+
+optional_depends gtk-doc \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
+                 "for building API reference" "n"
 
 optional_depends NetworkManager \
-                 "-Dnetworkmanager=TRUE" \
-                 "-Dnetworkmanager=FALSE" \
-                 "for NetworkManager support"
+                 "-Dnetworkmanager=true" \
+                 "-Dnetworkmanager=false" \
+                 "for NetworkManager support" "y"
+
+optional_depends systemd \
+                 "-Dsystemd=true" \
+                 "-Dsystemd=false" \
+                 "for systemd support" "y"
