@@ -1,4 +1,4 @@
-depends gnome-icon-theme
-depends librsvg
-depends libgtop
 depends gtkmm3
+depends libgtop
+depends librsvg
+optional_depends libwnck "-Dwnck=true" "-Dwnck=false" "enable wnck support, this will likely make system-monitor segfault" "n"
