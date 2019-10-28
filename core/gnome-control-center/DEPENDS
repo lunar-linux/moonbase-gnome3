@@ -1,9 +1,9 @@
-depends colord-gtk
 depends libgtop
 depends grilo
 depends libwacom
 depends gnome-bluetooth
-depends meson
+depends gnome-color-manager
+depends udisks2
 
 optional_depends wayland \
                  "-Dwayland=true" \
@@ -14,6 +14,11 @@ optional_depends cheese \
                  "-Dcheese=true" \
                  "-Dcheese=false" \
                  "Enable cheese(webcam) support"
+
+optional_depends "ibus" \
+                 "-Dibus=true" \
+                 "-Dibus=false" \
+                 "Enable ibus support"
 
 optional_depends samba "" "" "Enable printer Applet support"
 optional_depends krb5 "" "" "Enable printer Applet support"

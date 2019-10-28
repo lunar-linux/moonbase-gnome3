@@ -1,0 +1,2 @@
+mv /usr/bin/docbook2man.temp /usr/bin/docbook2man
+true

@@ -1,9 +1,9 @@
 depends colord-gtk
 depends desktop-file-utils
-depends exiv2
 depends hicolor-icon-theme
 depends libcanberra
 depends libexif
 depends vte3
 depends yelp-tools
 depends meson
+optional_depends exiv2 "-Dexiv=true" "-Dexiv=false" "enable exiv2 support" "y"
