@@ -7,5 +7,5 @@
            SHORT="profile for Gnome Window Manager"
 
 cat << EOF
-KDE profile for Gnome Window Manager.
+Profile for Gnome Window Manager.
 EOF
