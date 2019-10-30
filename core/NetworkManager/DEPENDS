@@ -35,8 +35,8 @@ optional_depends wpa_supplicant \
                  "for Wifi networking support"
 
 optional_depends iwd \
-                 "--enable-iwd" \
-                 "--disable-iwd" \
+                 "--with-iwd=yes" \
+                 "--with-iwd=no" \
                  "for iwd support for Wi-Fi networking"
 
 # rp-pppoe depend implies ppp installed too
