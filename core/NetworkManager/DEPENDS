@@ -35,8 +35,8 @@ optional_depends wpa_supplicant \
                  "for Wifi networking support"
 
 optional_depends iwd \
-                 "--enable-iwd" \
-                 "--disable-iwd" \
+                 "--with-iwd=yes" \
+                 "--with-iwd=no" \
                  "for iwd support for Wi-Fi networking"
 
 # rp-pppoe depend implies ppp installed too
@@ -50,9 +50,15 @@ optional_depends ppp \
                  "--disable-ppp" \
                  "for Point-to-Point Protocol with dial-up networking support"
 
-optional_depends vala "--enable-vala=yes" "--enable-vala=no" "for vala support (needs introspection support)"
-
-optional_depends python-pygobject \
+optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
                  "for introspection support"
+
+if in_depends "$MODULE" "gobject-introspection"; then
+    depends python-pygobject
+
+    optional_depends vala "--enable-vala=yes" "--enable-vala=no" "for vala support (needs introspection support)" y
+fi
+
+
