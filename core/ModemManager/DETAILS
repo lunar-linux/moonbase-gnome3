@@ -1,11 +1,11 @@
           MODULE=ModemManager
-         VERSION=1.10.6
+         VERSION=1.10.8
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://www.freedesktop.org/software/$MODULE
-      SOURCE_VFY=sha256:3c2ca73782215664141042422759899ca9846440fc26d6223c7cf7ea4dd3c996
+      SOURCE_VFY=sha256:cbe174078dbdf3f746a55f0004353d3c27da2a31da553036d90fc7dc34a0169a
         WEB_SITE=https://www.freedesktop.org/wiki/Software/ModemManager/
          ENTERED=20140413
-         UPDATED=20190913
+         UPDATED=20191031
            SHORT="Mobile broadband modem management service"
 
 cat << EOF
