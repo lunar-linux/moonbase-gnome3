@@ -5,15 +5,11 @@ depends libsecret
 depends rest
 depends docbook-xsl
 depends webkit2gtk3
-depends intltool
 
 optional_depends krb5 \
-                 "--enable-kerberos" "" \
+                 "--enable-kerberos" \
+                 "--enable-kerberos=no" \
                  "for Kerberos support"
-
-optional_depends telepathy-glib \
-                 "--enable-telepathy" "" \
-                 "for telepathy support"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
