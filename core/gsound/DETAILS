@@ -1,0 +1,13 @@
+          MODULE=gsound
+         VERSION=1.0.2
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:bba8ff30eea815037e53bee727bbd5f0b6a2e74d452a7711b819a7c444e78e53
+        WEB_SITE=https://gitlab.gnome.org/GNOME/gnome-control-center
+         ENTERED=20090317
+         UPDATED=20190317
+           SHORT="Small library for playing system sounds"
+
+cat << EOF
+Small library for playing system sounds
+EOF
