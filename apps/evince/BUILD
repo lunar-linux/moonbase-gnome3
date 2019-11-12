@@ -1,7 +1,4 @@
-OPTS+=" --enable-pdf \
-        --disable-xps \
-        --disable-static \
-        --disable-schemas-compile \
-        --disable-maintainer-mode"
+# only support gnome platform
+OTS+=" -Dplatform=gnome -Dxps=disabled"
 
-default_build
+default_meson_build

@@ -1,78 +1,68 @@
-depends gtk+-3
-depends libSM
+depends gnome-desktop
 
-#depends adwaita-icon-theme
-#depends gnome-icon-theme-symbolic
-#depends desktop-file-utils
-
-optional_depends dconf   "" "" "to save user settings"
-optional_depends gsfonts "" "" "for URW+Postcript core 35 fonts"
-
-optional_depends gnome-desktop \
-                 "--enable-libgnome-desktop"  \
-                 "--disable-libgnome-desktop" \
-                 "for GNOME desktop support"
+depends adwaita-icon-theme
 
 optional_depends nautilus \
-                 "--enable-nautilus"  \
-                 "--disable-nautilus" \
+                 "-Dnautilus=true"  \
+                 "-Dnautilus=false" \
                  "for GNOME nautilus file manager support"
 
 optional_depends dbus-glib \
-                 "--enable-dbus" \
-                 "--disable-dbus" \
+                 "-Ddbus=true" \
+                 "-Ddbus=false" \
                  "for DBus support"
 
 optional_depends poppler \
-                 "--enable-pdf"  \
-                 "--disable-pdf" \
+                 "-Dpdf=enabled"  \
+                 "-Dpdf=disabled" \
                  "for pdf file support"
 
 optional_depends libarchive \
-                 "--enable-comics"  \
-                 "--disable-comics" \
+                 "-Dcomics=enabled"  \
+                 "-Dcomics=disabled" \
                  "for comics file support"
 
 optional_depends gst-plugins-base \
-                 "--enable-multimedia"  \
-                 "--disable-multimedia" \
+                 "-Dmultimedia=enabled"  \
+                 "-Dmultimedia=disabled" \
                  "for multimedia support"
 
 optional_depends tiff \
-                 "--enable-tiff" \
-                 "--disable-tiff" \
+                 "-Dtiff=enabled" \
+                 "-Dtiff=disabled" \
                  "for multi-page TIFF files support"
 
 optional_depends djvulibre \
-                 "--enable-djvu" \
-                 "--disable-djvu" \
+                 "-Ddjvu=enabled" \
+                 "-Ddjvu=disabled" \
                  "for DjVu files support"
 
 optional_depends libspectre \
-                 "--enable-ps" \
-                 "--disable-ps" \
+                 "-Dps=enabled" \
+                 "-Dps=disabled" \
                  "for with PostScript support"
 
 optional_depends texlive \
-                 "--enable-dvi"  \
-                 "--disable-dvi" \
+                 "-Ddvi=enabled"  \
+                 "-Ddvi=disabled" \
                  "for DVI back-end support"
 
 optional_depends t1lib \
-                 "--enable-t1lib" "" \
+                 "-Dt1lib=enabled" \
+                 "-Dt1lib=disabled" \
                  "for Type 1 fonts in DVI"
 
 optional_depends gnome-keyring \
-                 "--with-keyring"  \
-                 "--without-keyring" \
+                 "-Dkeyring=enabled"  \
+                 "-Dkeyring=disabled" \
                  "for keyring support"
 
 optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
                  "for documentation building"
 
 optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
+                 "-Dintrospection=true" \
+                 "-Dintrospection=false" \
                  "for introspection support"
