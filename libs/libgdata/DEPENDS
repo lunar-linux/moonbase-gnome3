@@ -1,12 +1,29 @@
-depends gcr
-depends gnome-online-accounts
-depends liboauth
-depends libsoup
-depends intltool
-depends vala
-depends uhttpmock
+optional_depends gcr \
+                 "-Dgnome=enabled" \
+                 "-Dgnome=disabled" \
+                 "for enabling Gnome support" \
+                 "n"
+
+optional_depends gnome-online-accounts \
+                 "-Dgoa=enabled" \
+                 "-Dgoa=disabled" \
+                 "for enabling Gnome Online Accounts support" \
+                 "n"
 
 optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
-                 "for introspection support"
+                 "-Dintrospection=true" \
+                 "-Dintrospection=false" \
+                 "for introspection support" \
+                 "n"
+
+optional_depends uhttpmock \
+                 "-Dalways_build_tests=true" \
+                 "-Dalways_build_tests=false" \
+                 "for building tests" \
+                 "n"
+
+optional_depends gtk-doc \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
+                 "for building man pages" \
+                 "n"

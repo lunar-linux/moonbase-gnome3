@@ -1,12 +1,13 @@
           MODULE=libgdata
-         VERSION=0.17.9
+         VERSION=0.17.11
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}/
-      SOURCE_VFY=sha256:85c4f7674c0098ffaf060ae01b6b832cb277b3673d54ace3bdedaad6b127453a
+      SOURCE_VFY=sha256:6b9917122e4def6e6f78bcb660e49e146540832e296abcb5cde99829a04ea986
         WEB_SITE=http://live.gnome.org/libgdata
          ENTERED=20091006
-         UPDATED=20170930
+         UPDATED=20191112
            SHORT="Gnome's GData protocol library"
+            TYPE=meson
 
 cat << EOF
 Libgdata is a GLib-based library for accessing online service APIs using the
