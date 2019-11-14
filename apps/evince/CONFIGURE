@@ -1,2 +1,3 @@
-mquery BROWSER_PLUGIN "build browser plugin" y "--enable-browser-plugin" "--disable-browser-plugin"
-mquery THUMBNAILER "enable thumbnailer" y "--enable-thumbnailer" "--disable-thumbnailer"
+mquery BROWSER_PLUGIN "build browser plugin" n "-Dbrowser_plugin=true -Dbrowser_plugin_dir=/usr/lib/lunar/plugins" "-Dbrowser_plugin=false"
+mquery THUMBNAILER "enable thumbnailer" y "-Dthumbnailer=true" "-Dthumbnailer=false"
+mquery PREVIEWER "enable previewer" y "-Dpreviewer=true" "-Dpreviewer=false"
