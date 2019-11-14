@@ -1,3 +1,4 @@
+depends gsound
 depends libgtop
 depends grilo
 depends libwacom
@@ -20,5 +21,6 @@ optional_depends "ibus" \
                  "-Dibus=false" \
                  "Enable ibus support"
 
+optional_depends gnome-bluetooth "" "" "Enable Bluetooth Applet support" n
 optional_depends samba "" "" "Enable printer Applet support"
 optional_depends krb5 "" "" "Enable printer Applet support"
