@@ -9,9 +9,9 @@ optional_depends libcanberra \
                  "for canberra support"
 
 optional_depends gnome-spell \
-                 "-DENABLE_GTKSPELL=ON" \
-                 "-DENABLE_GTKSPELL=OFF" \
-                 "for spellcheck support"
+                 "-DENABLE_GSPELL=ON" \
+                 "-DENABLE_GSPELL=OFF" \
+                 "for gnome spellcheck support"
 
 optional_depends openldap  \
                  "-DWITH_OPENLDAP=ON"  \
@@ -22,6 +22,11 @@ optional_depends gtk-doc  \
                  "-DENABLE_GTK_DOC=ON"  \
                  "-DENABLE_GTK_DOC=OFF"  \
                  "for gtk-doc support"
+
+optional_depends gobject-introspection  \
+                 "-DENABLE_INTROSPECTION=ON"  \
+                 "-DENABLE_INTROSPECTION=OFF"  \
+                 "for introspection support"
 
 optional_depends libpst \
                  "-DENABLE_PST_IMPORT=ON"  \
