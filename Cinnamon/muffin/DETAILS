@@ -1,11 +1,11 @@
           MODULE=muffin
-         VERSION=4.2.2
+         VERSION=4.4.1
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/linuxmint/muffin/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:08c64a7a951fc526d96b4e3b6b53997328904ae2430aad4c2611a4f130a5bd16
+      SOURCE_VFY=sha256:86b59ca3dbb0ff1257a753971b8520c2b0939f9eb0eddd9260d67cf1c2b39d3d
         WEB_SITE=http://github.com/linuxmint/muffin/
          ENTERED=20130210
-         UPDATED=20190726
+         UPDATED=20191123
            SHORT="A window manager based on Mutter"
 
 cat <<EOF
