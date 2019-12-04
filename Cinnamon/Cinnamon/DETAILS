@@ -1,11 +1,11 @@
           MODULE=Cinnamon
-         VERSION=4.4.2
+         VERSION=4.4.3
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=http://github.com/linuxmint/Cinnamon/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:6abffccc4386a06c4bb59e5cb4ceda023342177dbb137d9548600ab96daa23c1
+      SOURCE_VFY=sha256:acff7f635cca26fb035511ffa836b463a75ee61919ee07b00db2ccdf395c1049
         WEB_SITE=http://cinnamon.linuxmint.com/
          ENTERED=20130210
-         UPDATED=20191129
+         UPDATED=20191204
            SHORT="A Linux desktop based on GTK"
 
 cat <<EOF
