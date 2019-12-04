@@ -2,6 +2,7 @@ depends boost
 depends db
 depends nss
 depends libical
+depends libsecret
 # depends gperf  #provided by systemd
 
 optional_depends libcanberra \
@@ -24,11 +25,6 @@ optional_depends gnome-online-accounts \
                  "-DENABLE_GOA=OFF" \
                  "for enabling vala bindings"
 
-optional_depends vala \
-                 "-DENABLE_VALA_BINDINGS=ON" \
-                 "-DENABLE_VALA_BINDINGS=OFF" \
-                 "for enabling vala bindings"
-
 optional_depends krb5 \
                  "-DWITH_KRB5=ON" \
                  "-DWITH_KRB5=OFF" \
@@ -48,3 +44,10 @@ optional_depends gobject-introspection \
                  "-DENABLE_INTROSPECTION=ON" \
                  "-DENABLE_INTROSPECTION=OFF" \
                  "for object introspection"
+
+if in_depends $MODULE gobject-introspection; then
+optional_depends vala \
+                 "-DENABLE_VALA_BINDINGS=ON" \
+                 "-DENABLE_VALA_BINDINGS=OFF" \
+                 "for enabling vala bindings"
+fi
