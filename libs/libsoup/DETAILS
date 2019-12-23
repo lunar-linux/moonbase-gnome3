@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:534bb08e35b0ff3702f3adfde87d3441e27c12f9f5ec351f056fe04cba02bafb
         WEB_SITE=http://www.gnome.org
          ENTERED=20030413
-         UPDATED=20191294
+         UPDATED=20191223
            SHORT="A SOAP implementation in C"
 
 #PSAFE=no
