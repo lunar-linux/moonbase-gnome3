@@ -1,11 +1,11 @@
           MODULE=eog
-         VERSION=3.34.1
+         VERSION=3.34.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:fdb0739f8420af2ffb8e91c766a154afefdf20f721ad34b56cab27fd1569f42c
+      SOURCE_VFY=sha256:6f2b0570541ced1cc31c4e8bbfe4b19e975d56d2a49052c5942a188cac35a9d3
         WEB_SITE=http://www.gnome.org
          ENTERED=20131020
-         UPDATED=20191008
+         UPDATED=20200105
            SHORT="An image viewing and cataloging program"
 
 cat << EOF
