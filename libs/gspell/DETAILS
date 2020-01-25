@@ -1,11 +1,11 @@
           MODULE=gspell
-         VERSION=1.8.2
+         VERSION=1.8.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:bb9195c3a95bacf556d0203e9691f7489e0d3bc5ae1e5a440c89b2f2435d3ed6
+      SOURCE_VFY=sha256:5ae514dd0216be069176accf6d0049d6a01cfa6a50df4bc06be85f7080b62de8
         WEB_SITE=http://www.gnome.org
          ENTERED=20160411
-         UPDATED=20190908
+         UPDATED=20200125
            SHORT="An API to implement the spell checking in a GTK+ application"
 
 cat << EOF
