@@ -1,0 +1,2 @@
+depends gjs
+depends telepathy-glib
