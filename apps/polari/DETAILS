@@ -1,0 +1,13 @@
+          MODULE=polari
+         VERSION=3.34.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:4}
+      SOURCE_VFY=sha256:bcf420c2a2a8c6ca39e95ffebb71c51fbf0f1866255e068ff6d78d63569c8e71
+        WEB_SITE=https://wiki.gnome.org/Apps/Polari
+         ENTERED=20200212
+         UPDATED=20200212
+           SHORT="An IRC Client for GNOME"
+            TYPE=meson
+
+cat << EOF
+EOF
