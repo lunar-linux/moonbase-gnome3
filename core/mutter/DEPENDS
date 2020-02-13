@@ -4,10 +4,7 @@ depends startup-notification
 depends libxkbcommon
 depends gnome-settings-daemon
 
-optional_depends wayland-protocols \
-                 "-Dwayland=true" \
-                 "-Dwayland=false -Dcore_tests=false" \
-                 "for Wayland support"
+optional_depends wayland-protocols "" "" "for Wayland support"
 
 optional_depends gobject-introspection \
                  "-Dintrospection=true" \
@@ -20,13 +17,8 @@ optional_depends libwacom \
                  "-Dlibwacom=false" \
                  "Enable wacom support"
 
-
-if in_depends $MODULE "wayland-protocols"; then
-depends mesa-lib
-else
 optional_depends mesa-lib \
                  "-Degl=true" \
                  "-Degl=false -Dglx=false" \
                  "Enable EGL support" \
                  y
-fi
