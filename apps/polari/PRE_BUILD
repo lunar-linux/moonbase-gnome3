@@ -1,0 +1,15 @@
+default_pre_build
+if module_installed telepathy-glib; then
+  if ! in_depends telepathy-glib gobject-introspection; then
+    error_message "Polari needs telepathy-glib with introspection enabled"
+    error_message "Relin telepathy-glib and select gobject-introspection support"
+    exit
+  fi
+fi
+if module_installed gspell; then
+  if ! in_depends gspell gobject-introspection; then
+    error_message "Polari needs gspell with introspection enabled"
+    error_message "Relin gspell and select gobject-introspection support"
+    exit
+  fi
+fi

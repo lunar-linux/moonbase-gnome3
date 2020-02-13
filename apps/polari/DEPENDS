@@ -1,2 +1,3 @@
 depends gjs
 depends telepathy-glib
+depends gspell
