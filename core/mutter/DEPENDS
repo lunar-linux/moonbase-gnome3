@@ -22,3 +22,9 @@ optional_depends mesa-lib \
                  "-Degl=false -Dglx=false" \
                  "Enable EGL support" \
                  y
+
+optional_depends pipewire \
+                 "-Dremote_desktop=true" \
+                 "-Dremote_desktop=false" \
+                 "Enable remote desktop support" \
+                 y
