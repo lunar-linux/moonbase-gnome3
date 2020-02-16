@@ -1,0 +1,6 @@
+depends tracker
+optional_depends "libgrss" \
+                 "-Dminer_rss=true" \
+                 "-Dminer_rss=false" \
+                 "Enable support for rss feeder" \
+                 n
