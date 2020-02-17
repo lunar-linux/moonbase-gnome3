@@ -1,0 +1,6 @@
+depends  gtk+-3
+
+optional_depends  "nautilus"                    \
+                  "-Dnautilus-actions=true"   \
+                  "-Dnautilus-actions=false"  \
+                  "for context menu support in Nautilus"
