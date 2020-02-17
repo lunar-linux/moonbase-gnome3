@@ -1,0 +1,17 @@
+          MODULE=tracker-miners
+         VERSION=2.3.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:3}/
+      SOURCE_VFY=sha256:7b1de06a7a79ea1c7813c8a21f8cd1c55f2b95f799cf9f47f0204f3be8a590e0
+        WEB_SITE=https://wiki.gnome.org/Projects/Tracker/
+         ENTERED=20200216
+         UPDATED=20200216
+           SHORT="Desktop-neutral user information store, search tool and indexer"
+            TYPE=meson
+
+cat << EOF
+Tracker is a search engine, search tool and metadata storage system.
+It allows you to find the proverbial needle in your computer's haystack as well
+as providing a one stop solution to the organisation, storage and categorisation
+of your data.
+EOF

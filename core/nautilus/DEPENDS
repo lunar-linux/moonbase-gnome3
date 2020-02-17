@@ -1,5 +1,5 @@
 depends dconf
 depends gnome-autoar
 depends gnome-desktop
-depends tracker
+depends tracker-miners
 depends gexiv2
