@@ -8,7 +8,8 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
          ENTERED=20110618
          UPDATED=20200216
            SHORT="Volume management for gnome."
-TYPE=meson
+            TYPE=meson
 cat <<EOF
-Volume management for gnome.
+GNOME Disks, gnome-disk-image-mounter and gsd-disk-utility-notify are libraries and
+applications for dealing with storage devices.
 EOF
