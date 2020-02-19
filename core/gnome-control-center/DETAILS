@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:17ea6db4b9cee75e99e77f0161a0e5209a3b86444ae775c2068ec192aba6272e
         WEB_SITE=https://gitlab.gnome.org/GNOME/gnome-control-center
          ENTERED=20070920
-         UPDATED=20300214
+         UPDATED=20200214
            SHORT="GNOME's main configure interface for the desktop"
 
 cat << EOF
