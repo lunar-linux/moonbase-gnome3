@@ -1,0 +1,6 @@
+depends libosinfo
+depends webkit2gtk3
+depends libvirt-glib
+depends spice-gtk
+
+optional_depends freerdp "-Drdp=true" "-Drdp=false" "for enabling remote desktop support"
