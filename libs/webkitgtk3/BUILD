@@ -14,12 +14,16 @@ if ! module_installed gtk-doc; then
   sedit '/gtkdoc --rebase/s:^:# :' GNUmakefile.in
 fi &&
 
+# support icu4c 65-1+ as described in /usr/include/unicode/umachine.h
+export CPPFLAGS="$CPPFLAGS -DUPRV_BLOCK_MACRO_BEGIN=\"\" -DUPRV_BLOCK_MACRO_END=\"\""
+
 OLD_OPTS="$OPTS" &&
 # First we build the gtk3 version
 mkdir build-3 &&
 cp -a Documentation build-3 &&
 cd build-3 &&
 OPTS+=" --with-gtk=3.0" &&
+
 ../configure --prefix=/usr $OPTS &&
 default_make &&
 install 'Programs/GtkLauncher' '/usr/bin/Gtk3Launcher' &&
