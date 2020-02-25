@@ -66,3 +66,8 @@ optional_depends gobject-introspection \
                  "-Dintrospection=true" \
                  "-Dintrospection=false" \
                  "for introspection support"
+
+optional_depends gspell \
+                 "-Dgspell=enabled" \
+                 "-Dgspell=disabled" \
+                 "for spell checking support"
