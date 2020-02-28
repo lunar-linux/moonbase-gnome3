@@ -36,6 +36,11 @@ optional_depends geoclue2 \
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
                  "--disable-gtk-doc" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"
 
-depends gobject-introspection
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection" \
+                 "y"

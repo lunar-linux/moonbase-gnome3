@@ -5,9 +5,11 @@ depends intltool
 optional_depends gtk-doc \
                  "-D gtk_doc=true" \
                  "-D gtk_doc=false" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"
 
 optional_depends gobject-introspection \
                  "-D introspection=true" \
                  "-D introspection=false" \
-                 "for object introspection" y
+                 "for object introspection" \
+                 "y"

@@ -1,8 +1,9 @@
-depends python2
+depends python
 depends libmbim
 depends libgudev
 
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
                  "--disable-gtk-doc" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"

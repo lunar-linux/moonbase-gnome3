@@ -8,4 +8,5 @@ optional_depends gnome-keyring "" "" "for key storage service"
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
-                 "for object introspection"
+                 "for object introspection" \
+                 "y"

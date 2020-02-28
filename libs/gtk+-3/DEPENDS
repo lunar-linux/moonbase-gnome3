@@ -30,17 +30,19 @@ optional_depends wayland-protocols \
                  "for the waylany backend"
 
 # Documentation and introspection
-optional_depends gtk-doc \
-                 "-Dgtk_doc=true" \
-                 "-Dgtk_doc=false" \
-                 "for building documentation"
-
 optional_depends man \
                  "-Dman=true" \
                  "-Dman=false" \
                  "for building manual pages"
 
+optional_depends gtk-doc \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
+                 "for building documentation" \
+                 "n"
+
 optional_depends gobject-introspection \
                  "-Dintrospection=true" \
                  "-Dintrospection=false" \
-                 "for introspection support"
+                 "for introspection support" \
+                 "y"

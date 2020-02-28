@@ -4,9 +4,11 @@ depends cogl
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
                  "--disable-gtk-doc" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
-                 "for introspection support Recommended"
+                 "for introspection support (Recommended)" \
+                 "y"

@@ -8,9 +8,11 @@ optional_depends gpgme "" "" "for GnuPG crypto support"
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
                  "--disable-gtk-doc" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
-                 "for object introspection"
+                 "for object introspection" \
+                 "y"

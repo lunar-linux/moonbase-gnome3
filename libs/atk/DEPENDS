@@ -4,9 +4,11 @@ depends meson
 optional_depends gtk-doc \
                  "-Denable-docs=true" \
                  "-Denable-docs=false" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"
 
 optional_depends gobject-introspection \
                  "-Ddisable_introspection=false" \
                  "-Ddisable_introspection=true" \
-                 "for gobject introspection support" y
+                 "for gobject introspection support" \
+                 "y"

@@ -50,10 +50,12 @@ optional_depends wayland \
 optional_depends gtk-doc \
                  "-DENABLE_GTKDOC=ON" \
                  "-DENABLE_GTKDOK=OFF" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"
 
 optional_depends gobject-introspection \
                  "-DENABLE_INTROINSPECTION=ON" \
                  "-DENABLE_INTROINSPECTION=OFF" \
-                 "for object introspection"
+                 "for object introspection" \
+                 "y"
 

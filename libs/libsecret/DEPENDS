@@ -6,11 +6,6 @@ depends vala
 
 optional_depends gnome-keyring "" "" "for key storage service"
 
-optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
-                 "for object introspection"
-
 optional_depends docbook-xsl \
                  "--enable-manpages" \
                  "--disable-manpages" \
@@ -19,4 +14,11 @@ optional_depends docbook-xsl \
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
                  "--disable-gtk-doc" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection" \
+                 "y"

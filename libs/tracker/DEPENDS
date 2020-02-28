@@ -13,4 +13,5 @@ depends gobject-introspection
 optional_depends gtk-doc \
                  "-Ddocs=true" \
                  "-Ddocs=false" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"

@@ -6,10 +6,12 @@ depends vala
 optional_depends gtk-doc \
                  "-Denable_gtk_doc=true" \
                  "-Denable_gtk_doc=false" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"
 
 optional_depends gobject-introspection \
                  "-Dintrospection=true" \
                  "-Dintrospection=false" \
-                 "for object introspection" y
+                 "for object introspection" \
+                 "y"
 

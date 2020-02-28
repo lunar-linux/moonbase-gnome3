@@ -1,11 +1,11 @@
           MODULE=libqmi
-         VERSION=1.24.4
+         VERSION=1.24.6
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://www.freedesktop.org/software/$MODULE/
-      SOURCE_VFY=sha256:0316badec92ff32f51fe6278e6046968d2272a26608995deedd8e4afb563918a
+      SOURCE_VFY=sha256:1325257bc16de7b2b443fa689826c993474bdbd6e78c7a1e60e527269b44d8c9
         WEB_SITE=https://www.freedesktop.org/wiki/Software/libqmi/
          ENTERED=20140413
-         UPDATED=20200115
+         UPDATED=20200228
            SHORT="QMI modem protocol helper library"
 
 cat << EOF

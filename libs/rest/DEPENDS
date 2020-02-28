@@ -4,4 +4,5 @@ depends libxml2
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
-                 "for object introspection"
+                 "for object introspection" \
+                 "y"
