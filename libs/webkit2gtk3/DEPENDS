@@ -45,7 +45,8 @@ optional_depends geoclue2 \
 optional_depends wayland \
                  "-DENABLE_WAYLAND_TARGET=ON" \
                  "-DENABLE_WAYLAND_TARGET=OFF" \
-                 "for Wayland support"
+                 "for Wayland support" \
+                 "y"
 
 optional_depends gtk-doc \
                  "-DENABLE_GTKDOC=ON" \

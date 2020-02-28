@@ -1,3 +1,2 @@
 depends hicolor-icon-theme
-depends git
 depends meson

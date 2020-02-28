@@ -7,6 +7,11 @@ optional_depends sqlite \
                  "--without-sqlite" \
                  "for sqlite backend support"
 
+optional_depends vala \
+                 "--enable-vala VALA_API_VERSION=0.40" \
+                 "--disable-vala" \
+                 "for vala support"
+
 optional_depends %JAVA_SDK  "--with-java"      "--without-java"      "for JNI support"
 optional_depends libsoup    "--with-libsoup"   "--without-libsoup"   "for SOAP support"
 optional_depends libsecret  "--with-libsecret" "--without-libsecret" "for password support"
@@ -15,11 +20,6 @@ optional_depends graphviz   "--with-graphviz"  "--without-graphviz"  "for graphv
 optional_depends %MYSQL     "--with-mysql"     "--without-mysql"     "for mysql backend support"
 optional_depends postgresql "--with-postgres"  "--without-postgres"  "for postgresql backend support"
 optional_depends openldap   "--with-ldap"      "--without-ldap"      "for LDAP backend support"
-
-optional_depends vala \
-                 "--enable-vala VALA_API_VERSION=0.40" \
-                 "--disable-vala" \
-                 "for vala support"
 
 optional_depends gtksourceview \
                  "--with-gtksourceview" \

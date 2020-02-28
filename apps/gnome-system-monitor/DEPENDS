@@ -4,6 +4,6 @@ depends librsvg
 
 optional_depends libwnck \
                  "-Dwnck=true" \
-                 "-Dwnck=false" 
+                 "-Dwnck=false" \
                  "enable wnck support, this will likely make system-monitor segfault" \
                  "n"

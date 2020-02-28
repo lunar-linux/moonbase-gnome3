@@ -2,12 +2,6 @@ depends dbus-glib
 depends libxml2
 depends intltool
 
-optional_depends ORBit2 \
-                 "--enable-orbit" \
-                 "--disable-orbit" \
-                 "use ORBit for IPC instead of DBus" \
-                 "n"
-
 optional_depends polkit \
                  "" "--disable-defaults-service" \
                  "for polkit support"
@@ -18,12 +12,19 @@ optional_depends gtk+-3 \
 
 optional_depends gtk+-2 \
                  "--with-gtk=2.0" "" \
-                 "for GTK+-2 Support"
+                 "for GTK+-2 Support" \
+                 "n"
 
 optional_depends openldap \
                  "--with-openldap" \
                  "--without-openldap" \
                  "for LDAP backend support"
+
+optional_depends ORBit2 \
+                 "--enable-orbit" \
+                 "--disable-orbit" \
+                 "use ORBit for IPC instead of DBus" \
+                 "n"
 
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \

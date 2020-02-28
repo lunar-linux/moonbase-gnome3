@@ -7,14 +7,16 @@ depends meson
 optional_depends GConf \
                  "-Dwith-gconf=true" \
                  "-Dwith-gconf=false" \
-                 "for GConf support"
+                 "for GConf support" \
+                 "n"
+
+optional_depends docbook-xsl \
+                 "-Dwith-docbook=true" \
+                 "-Dwith-docbook=false" \
+                 "for documentation install" \
+                 "n"
 
 optional_depends xtrans \
                  "-Dwith-xtrans=true" \
                  "-Dwith-xtrans=false" \
                  "for xtrans support"
-
-optional_depends docbook-xsl \
-                 "-Dwith-docbook=true" \
-                 "-Dwith-docbook=false" \
-                 "for documentation install"

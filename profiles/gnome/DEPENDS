@@ -7,6 +7,5 @@ depends nautilus
 depends gnome-power-manager
 depends gnome-system-monitor
 
-optional_depends epiphany "" "" "install Epiphany browser"
-optional_depends gdm "" "" "install Gnome's display manager?"
-                
+optional_depends epiphany "" "" "install Epiphany browser?"
+optional_depends gdm      "" "" "install Gnome's display manager?"

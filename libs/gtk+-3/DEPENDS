@@ -14,11 +14,6 @@ if module_installed cups; then
    depends colord
 fi
 
-#optional_depends json-glib \
-#                 "-Dprint_backends=cloudprint" \
-#                 "--disable-cloudprint" \
-#                 "required by cloudprint"
-
 optional_depends %X \
                  "-Dx11_backend=true" \
                  "-Dx11_backend=false" \
@@ -27,7 +22,14 @@ optional_depends %X \
 optional_depends wayland-protocols \
                  "-Dwayland_backend=true" \
                  "-Dwayland_backend=false" \
-                 "for the waylany backend"
+                 "for the waylany backend" \
+                 "y"
+
+#optional_depends json-glib \
+#                 "-Dprint_backends=cloudprint" \
+#                 "--disable-cloudprint" \
+#                 "required by cloudprint"
+
 
 # Documentation and introspection
 optional_depends man \

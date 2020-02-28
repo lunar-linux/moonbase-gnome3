@@ -9,7 +9,8 @@ depends pango
 optional_depends wayland \
                  "--enable-wayland-egl-platform=yes --enable-wayland-egl-server=yes" \
                  "--enable-wayland-egl-platform=no  --enable-wayland-egl-server=no" \
-                 "for Wayland support"
+                 "for Wayland support" \
+                 "y"
 
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \

@@ -9,7 +9,8 @@ optional_depends gnome-keyring "" "" "for key storage service"
 optional_depends docbook-xsl \
                  "--enable-manpages" \
                  "--disable-manpages" \
-                 "for man pages building"
+                 "for man pages building" \
+                 "n"
 
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
