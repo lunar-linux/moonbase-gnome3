@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:851a4c9d8e8cb0000c9e5e78259ab8b8e67c5334e4250ebcc8dfdaa33520068b
         WEB_SITE=http://www.gnome.org
          ENTERED=20130706
-         UPDATED=20150820
+         UPDATED=20200228
            SHORT="Symbolic icon theme for GNOME"
 ARCHIVE=off
 cat << EOF
