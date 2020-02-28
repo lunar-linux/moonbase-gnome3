@@ -2,6 +2,12 @@ depends gtk+-3
 depends gdk-pixbuf
 depends meson
 
+optional_depends docbook-xsl \
+                 "-Dman=true" \
+                 "-Dman=false" \
+                 "for generating the man pages" \
+                 "n"
+
 optional_depends xmlto \
                  "-Ddocbook_docs=enabled" \
                  "-Ddocbook_docs=disabled" \
