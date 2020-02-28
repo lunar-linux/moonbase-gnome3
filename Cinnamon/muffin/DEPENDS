@@ -13,4 +13,5 @@ optional_depends libcanberra \
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
-                 "for object introspection"
+                 "for object introspection" \
+                 "y"

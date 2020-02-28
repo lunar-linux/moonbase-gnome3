@@ -25,4 +25,5 @@ depends gnome-bluetooth \
 optional_depends gtk-doc \
                  "-Dwith-gtk-doc=true" \
                  "-Dwith-gtk-doc=false" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"

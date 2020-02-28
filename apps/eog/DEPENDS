@@ -14,9 +14,11 @@ depends meson
 optional_depends gtk-doc \
                  "-Denable-gtk-doc=true" \
                  "-Denable-gtk-doc=false" \
-                 "for GTK documentation"
+                 "for GTK documentation" \
+                 "n"
 
 optional_depends gobject-introspection \
                  "-Denable-introspection=true" \
                  "-Denable-introspection=false" \
-                 "for object introspection"
+                 "for object introspection" \
+                 "y"

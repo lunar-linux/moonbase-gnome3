@@ -22,4 +22,5 @@ optional_depends exempi \
 optional_depends gtk-doc \
                  "-Dgtk_doc=true" \
                  "-Dgtk_doc=false" \
-                 "for API reference documentation"
+                 "for API reference documentation" \
+                 "n"
