@@ -22,7 +22,8 @@ depends meson
 optional_depends wayland \
                  "-Dwayland=true" \
                  "-Dwayland=false" \
-                 "Enable support for Wayland"
+                 "Enable support for Wayland" \
+                 "y"
 
 optional_depends cups \
                  "-Dcups=true" \

@@ -8,9 +8,11 @@ depends nautilus
 depends yelp-tools
 
 #optional_depends gnome-applets "" "" "Extra applets for the panel"
-optional_depends alacarte      "" "" "Main menu editor"
+
+optional_depends alacarte "" "" "Main menu editor"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
-                 "for object introspection"
+                 "for object introspection" \
+                 "y"

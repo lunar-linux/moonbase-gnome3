@@ -4,27 +4,30 @@ depends startup-notification
 depends libxkbcommon
 depends gnome-settings-daemon
 
-optional_depends wayland-protocols "" "" "for Wayland support"
-
-optional_depends gobject-introspection \
-                 "-Dintrospection=true" \
-                 "-Dintrospection=false" \
-                 "Enable introspeciton support. Gnome shell requires mutter with introspection support enabled" \
-                 y
+optional_depends wayland-protocols "" "" "for Wayland support" "y"
 
 optional_depends libwacom \
                  "-Dlibwacom=true" \
                  "-Dlibwacom=false" \
-                 "Enable wacom support"
+                 "Enable wacom support" \
+                 "n"
 
 optional_depends mesa-lib \
                  "-Degl=true" \
                  "-Degl=false -Dglx=false" \
                  "Enable EGL support" \
-                 y
+                "y" 
 
 optional_depends pipewire \
                  "-Dremote_desktop=true" \
                  "-Dremote_desktop=false" \
                  "Enable remote desktop support" \
-                 y
+                "y" 
+
+optional_depends gobject-introspection \
+                 "-Dintrospection=true" \
+                 "-Dintrospection=false" \
+                 "Enable introspeciton support. Gnome shell requires mutter with introspection support enabled" \
+                 "y"
+
+

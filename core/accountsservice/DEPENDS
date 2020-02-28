@@ -3,21 +3,24 @@ depends vala
 depends meson
 
 optional_depends systemd \
-                 "-D systemd=true" \
-                 "-D systemd=false -D systemdsystemunitdir=no" \
+                 "-Dsystemd=true" \
+                 "-Dsystemd=false -D systemdsystemunitdir=no" \
                  "for systemd support"
 
 optional_depends elogind \
-                 "-D elogind=true" \
-                 "-D elogind=false" \
-                 "for elogind support"
+                 "-Delogind=true" \
+                 "-Delogind=false" \
+                 "for elogind support" \
+                 "n"
 
 optional_depends gtk-doc \
-                 "-D gtk_doc=true" \
-                 "-D gtk_doc=false" \
-                 "for building documentation"
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
+                 "for building documentation" \
+                 "n"
 
 optional_depends gobject-introspection \
-                "-D introspection=true" \
-                "-D introspection=false" \
-                "for introspection support"
+                "-Dintrospection=true" \
+                "-Dintrospection=false" \
+                "for introspection support" \
+                "y"

@@ -23,11 +23,12 @@ optional_depends dhcpcd   "--with-dhcpcd=yes"   "--with-dhcpcd=no"   "for altern
 optional_depends polkit   "--enable-polkit=yes" "--enable-polkit=no" "for polkit support"
 optional_depends valgrind "--with-valgrind=yes" "--with-valgrind=no" "for valgrind support"
 optional_depends jansson  "--enable-ovs"        "--disable-ovs"      "for open virtual switch support" n 
-optional_depends gtk-doc  "--enable-gtk-doc"    "--disable-gtk-doc"  "for documentation generation" n
 
-if in_depends gtk-doc; then
-  depends YAML
-fi
+optional_depends vala \
+                 "--enable-vala=yes" 
+                 "--enable-vala=no"  \
+                 "for vala support (needs introspection support)" \
+                 "y"
 
 optional_depends wpa_supplicant \
                  "--enable-wifi" \
@@ -50,15 +51,22 @@ optional_depends ppp \
                  "--disable-ppp" \
                  "for Point-to-Point Protocol with dial-up networking support"
 
+optional_depends gtk-doc\
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for documentation generation" \
+                 "n"
+
+if in_depends gtk-doc; then
+  depends YAML
+fi
+
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
-                 "for introspection support"
+                 "for introspection support" \
+                 "y"
 
 if in_depends "$MODULE" "gobject-introspection"; then
     depends python-pygobject
-
-    optional_depends vala "--enable-vala=yes" "--enable-vala=no" "for vala support (needs introspection support)" y
 fi
-
-

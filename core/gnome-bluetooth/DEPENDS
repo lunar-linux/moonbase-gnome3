@@ -8,4 +8,5 @@ depends meson
 optional_depends gobject-introspection \
                  "-Denable-introspection=true" \
                  "-Denable-introspection=false" \
-                 "for object introspection"
+                 "for object introspection" \
+                 "y"

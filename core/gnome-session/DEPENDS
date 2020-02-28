@@ -14,14 +14,17 @@ optional_depends systemd \
 optional_depends docbook-xsl \
                  "-Ddocbook=true" \
                  "-Ddocbook=false" \
-                "for documentation install"
+                "for documentation install" \
+                "n"
 
 optional_depends xmlto \
                  "-Dman=true" \
                  "-Dman=false" \
-                "for manpages install"
+                "for manpages install" \
+                "n"
 
 optional_depends gtk-doc \
                  "-Denable-gtk-doc=true" \
                  "-Denable-gtk-doc=false" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"

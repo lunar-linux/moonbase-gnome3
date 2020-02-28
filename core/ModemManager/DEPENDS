@@ -11,9 +11,11 @@ optional_depends usb-modeswitch "" "" "install if your modem shows up as a stora
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
                  "--disable-gtk-doc" \
-                 "for building documentation" n
+                 "for building documentation" \
+                 "n"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
-                 "for object introspection" y
+                 "for object introspection" \
+                 "y"

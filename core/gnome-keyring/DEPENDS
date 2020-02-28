@@ -12,4 +12,5 @@ optional_depends Linux-PAM \
 optional_depends gtk-doc \
                  "--enable-doc" \
                  "--disable-doc" \
-                 "for doc install"
+                 "for doc install" \
+                 "n"

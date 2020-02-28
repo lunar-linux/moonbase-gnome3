@@ -18,16 +18,6 @@ optional_depends openldap  \
                  "-DWITH_OPENLDAP=OFF"  \
                  "for LDAP support (needed for evolution-exchange too)"
 
-optional_depends gtk-doc  \
-                 "-DENABLE_GTK_DOC=ON"  \
-                 "-DENABLE_GTK_DOC=OFF"  \
-                 "for gtk-doc support"
-
-optional_depends gobject-introspection  \
-                 "-DENABLE_INTROSPECTION=ON"  \
-                 "-DENABLE_INTROSPECTION=OFF"  \
-                 "for introspection support"
-
 optional_depends libpst \
                  "-DENABLE_PST_IMPORT=ON"  \
                  "-DENABLE_PST_IMPORT=OFF"  \
@@ -42,3 +32,15 @@ optional_depends spamassassin \
                  "-DWITH_SPAMASSASIN=ON" \
                  "-DWITH_SPAMASSASIN=OFF" \
                  "for spam filtering"
+
+optional_depends gtk-doc  \
+                 "-DENABLE_GTK_DOC=ON"  \
+                 "-DENABLE_GTK_DOC=OFF"  \
+                 "for gtk-doc support" \
+                 "n"
+
+optional_depends gobject-introspection  \
+                 "-DENABLE_INTROSPECTION=ON"  \
+                 "-DENABLE_INTROSPECTION=OFF"  \
+                 "for introspection support" \
+                 "y"

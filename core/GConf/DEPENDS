@@ -5,7 +5,8 @@ depends intltool
 optional_depends ORBit2 \
                  "--enable-orbit" \
                  "--disable-orbit" \
-                 "use ORBit for IPC instead of DBus"
+                 "use ORBit for IPC instead of DBus" \
+                 "n"
 
 optional_depends polkit \
                  "" "--disable-defaults-service" \
@@ -27,9 +28,11 @@ optional_depends openldap \
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
                  "--disable-gtk-doc" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
-                 "for object introspection"
+                 "for object introspection" \
+                 "y"

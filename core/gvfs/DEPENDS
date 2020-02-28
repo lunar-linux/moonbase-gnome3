@@ -29,4 +29,5 @@ optional_depends avahi      "-Ddnssd=true"    "-Ddnssd=false"    "for Avahi supp
 optional_depends libimobile \
                  "-Dafc=true" \
                  "-Dafc=false" \
-                 "for afc backend and volume monitor support"
+                 "for afc backend and volume monitor support" \
+                 "n"

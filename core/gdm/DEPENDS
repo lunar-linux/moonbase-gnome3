@@ -10,9 +10,11 @@ depends systemd
 
 optional_depends Linux-PAM \
                  "--enable-authntication-scheme=pam" "" \
-                 "for PAM authentication"
+                 "for PAM authentication" \
+                 "y"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
-                 " for object introspection"
+                 " for object introspection" \
+                 "y"

@@ -35,19 +35,19 @@ optional_depends openldap \
                  "-DWITH_OPENLDAP=OFF" \
                  "for ldap support"
 
-optional_depends gtk-doc \
-                 "-DENABLE_GTK_DOC=ON" \
-                 "-DENABLE_GTK_DOC=OFF" \
-                 "for building documentation"
-
-optional_depends gobject-introspection \
-                 "-DENABLE_INTROSPECTION=ON" \
-                 "-DENABLE_INTROSPECTION=OFF" \
-                 "for object introspection"
-
-if in_depends $MODULE gobject-introspection; then
 optional_depends vala \
                  "-DENABLE_VALA_BINDINGS=ON" \
                  "-DENABLE_VALA_BINDINGS=OFF" \
                  "for enabling vala bindings"
-fi
+
+optional_depends gtk-doc \
+                 "-DENABLE_GTK_DOC=ON" \
+                 "-DENABLE_GTK_DOC=OFF" \
+                 "for building documentation" \
+                 "n"
+
+optional_depends gobject-introspection \
+                 "-DENABLE_INTROSPECTION=ON" \
+                 "-DENABLE_INTROSPECTION=OFF" \
+                 "for object introspection" \
+                 "y"

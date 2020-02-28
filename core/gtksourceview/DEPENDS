@@ -4,13 +4,14 @@ depends vala
 depends intltool
 depends meson
 
-optional_depends gobject-introspection \
-                 "-Dgir=true" \
-                 "-Dgir=false" \
-                 "for introspection support"
-
 optional_depends gtk-doc \
                  "-Dgtk_doc=true" \
                  "-Dgtk_doc=false" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"
 
+optional_depends gobject-introspection \
+                 "-Dgir=true" \
+                 "-Dgir=false" \
+                 "for introspection support" \
+                 "y"

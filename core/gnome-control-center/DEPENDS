@@ -9,7 +9,8 @@ depends udisks2
 optional_depends wayland \
                  "-Dwayland=true" \
                  "-Dwayland=false" \
-                 "Enable wayland support"
+                 "Enable wayland support" \
+                 "y"
 
 optional_depends cheese \
                  "-Dcheese=true" \

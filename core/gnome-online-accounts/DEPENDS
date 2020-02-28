@@ -9,9 +9,11 @@ depends webkit2gtk3
 optional_depends krb5 \
                  "--enable-kerberos" \
                  "--enable-kerberos=no" \
-                 "for Kerberos support"
+                 "for Kerberos support" \
+                 "n"
 
 optional_depends gobject-introspection \
                  "--enable-introspection" \
                  "--disable-introspection" \
-                 "for object introspection"
+                 "for object introspection" \
+                 "y"

@@ -7,12 +7,14 @@ depends libseccomp
 depends itstool
 depends meson
 
-optional_depends gobject-introspection \
-                 "-Dintrospection=true" \
-                 "-Dintrospection=false" \
-                 "for object introspection"
-
 optional_depends gtk-doc \
                  "-Dgtk-doc=true" \
                  "-Dgtk-doc=false" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"
+
+optional_depends gobject-introspection \
+                 "-Dintrospection=true" \
+                 "-Dintrospection=false" \
+                 "for object introspection" \
+                 "y"

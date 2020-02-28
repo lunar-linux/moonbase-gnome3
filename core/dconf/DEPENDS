@@ -6,9 +6,11 @@ depends vala
 optional_depends docbook-xsl \
                  "-Dman=true" \
                  "-Dman=false" \
-                 "for building man pages"
+                 "for building man pages" \
+                 "n"
 
 optional_depends gtk-doc \
                  "-Dgtk_doc=true" \
                  "-Dgtk_doc=false" \
-                 "for building documentation"
+                 "for building documentation" \
+                 "n"
