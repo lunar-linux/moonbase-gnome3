@@ -1,3 +1,7 @@
+depends libsoup
+depends vala
+depends meson
+
 optional_depends gcr \
                  "-Dgnome=enabled" \
                  "-Dgnome=disabled" \
@@ -8,12 +12,6 @@ optional_depends gnome-online-accounts \
                  "-Dgoa=enabled" \
                  "-Dgoa=disabled" \
                  "for enabling Gnome Online Accounts support" \
-                 "n"
-
-optional_depends gobject-introspection \
-                 "-Dintrospection=true" \
-                 "-Dintrospection=false" \
-                 "for introspection support" \
                  "n"
 
 optional_depends uhttpmock \
@@ -27,3 +25,9 @@ optional_depends gtk-doc \
                  "-Dgtk_doc=false" \
                  "for building man pages" \
                  "n"
+
+optional_depends gobject-introspection \
+                 "-Dintrospection=true" \
+                 "-Dintrospection=false" \
+                 "for introspection support" \
+                 "y"
