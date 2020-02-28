@@ -1,4 +1,4 @@
-epends intltool
+depends intltool
 depends libsoup
 depends json-glib
 depends intltool

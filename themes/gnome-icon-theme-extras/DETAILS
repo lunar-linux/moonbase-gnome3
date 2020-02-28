@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:4eec6cea8a7b09c4ed6ebab1a3b42539b9c61a53bec4b8872e774611cc619608
         WEB_SITE=http://www.gnome.org
          ENTERED=20030612
-         UPDATED=20190915
+         UPDATED=20200228
            SHORT="A collection GTK+ themes"
 ACHIVE=off
 cat << EOF
