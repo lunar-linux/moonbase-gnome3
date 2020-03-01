@@ -1,11 +1,11 @@
           MODULE=totem-pl-parser
-         VERSION=3.26.3
+         VERSION=3.26.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:0efd01b8a0a9770d52fe7354d298874ed845449b88f3f78f49290729fc2d448d
+      SOURCE_VFY=sha256:5370de46f2e848221779275479b96ac39115b1efd2b0293d4afa87e22c8c528c
         WEB_SITE=https://wiki.gnome.org/Projects/Grilo
          ENTERED=20080312
-         UPDATED=20190305
+         UPDATED=20200229
            SHORT="GObject-based library to parse and save playlists"
 
 cat << EOF
