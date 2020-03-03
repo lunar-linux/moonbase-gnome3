@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:a0fd6f8820e8bae019c1f6ffab5af7fcd6d7f147915bb968b56df3ad61b42318
         WEB_SITE=http://live.gnome.org/libgdata
          ENTERED=20091006
-         UPDATED=20299228
+         UPDATED=20200228
            SHORT="Gnome's GData protocol library"
             TYPE=meson
 
