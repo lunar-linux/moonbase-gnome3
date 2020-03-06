@@ -35,7 +35,8 @@ optional_depends wayland-protocols \
 optional_depends man \
                  "-Dman=true" \
                  "-Dman=false" \
-                 "for building manual pages"
+                 "for building manual pages" \
+		 "n"
 
 optional_depends gtk-doc \
                  "-Dgtk_doc=true" \
