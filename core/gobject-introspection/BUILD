@@ -1,4 +1,4 @@
-OPTS+=" -D gtk_doc=false -D doctool=false"
+OPTS+=" -Dgtk_doc=false -Ddoctool=disabled"
 
 default_meson_build
 
