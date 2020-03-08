@@ -19,17 +19,16 @@ optional_depends %X \
                  "-Dx11_backend=false" \
                  "for the X11 backend (recommended)"
 
-optional_depends wayland-protocols \
-                 "-Dwayland_backend=true" \
-                 "-Dwayland_backend=false" \
-                 "for the waylany backend" \
-                 "y"
-
 #optional_depends json-glib \
 #                 "-Dprint_backends=cloudprint" \
 #                 "--disable-cloudprint" \
 #                 "required by cloudprint"
 
+optional_depends wayland-protocols \
+                 "-Dwayland_backend=true" \
+                 "-Dwayland_backend=false" \
+                 "for the waylany backend" \
+                 "y"
 
 # Documentation and introspection
 optional_depends man \

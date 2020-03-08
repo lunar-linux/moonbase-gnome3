@@ -1,2 +1,2 @@
-depends  meson
-depends  webkit2gtk3
+depends meson
+depends webkit2gtk3

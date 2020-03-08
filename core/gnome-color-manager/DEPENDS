@@ -10,5 +10,4 @@ depends meson
 optional_depends exiv2 \
                  "-Dexiv=true" \
                  "-Dexiv=false" \
-                 "enable exiv2 support" \
-                 "y"
+                 "enable exiv2 support"

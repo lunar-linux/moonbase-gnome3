@@ -1,5 +1,5 @@
-depends gtk+-3
 depends librsvg
+depends gtk+-3
 depends xkeyboard-config
 depends dejavu-ttf
 depends intltool

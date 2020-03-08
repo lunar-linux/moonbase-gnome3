@@ -13,6 +13,7 @@ optional_depends NetworkManager \
 optional_depends ModemManager \
                  "--enable-3g-source --enable-cdma-source --enable-modem-gps-source" \
                  "--disable-3g-source --disable-cdma-source --disable-modem-gps-source" \
-                 "build modem backends support"
+                 "build modem backends support" \
+                 "n"
 
 optional_depends avahi "" "--disable-nmea-source" "avahi support"

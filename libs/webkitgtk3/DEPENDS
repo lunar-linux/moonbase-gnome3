@@ -15,7 +15,7 @@ depends harfbuzz
 depends enchant
 depends mesa-lib
 
-optional_depends gtk+-2 "" " " "also build gtk+-2 version of webkit"
+optional_depends gtk+-2 "" " " "also build gtk+-2 version of webkit" "n"
 
 # workaround for make_names.pl
 depends Switch

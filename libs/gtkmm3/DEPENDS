@@ -3,4 +3,4 @@ depends cairomm
 depends pangomm
 depends atkmm
 
-optional_depends doxygen "" "" "for documentations generation"
+optional_depends doxygen "" "" "for documentations generation" "n"

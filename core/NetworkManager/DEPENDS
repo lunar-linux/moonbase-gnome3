@@ -12,7 +12,10 @@ depends libgudev
 
 optional_depends gnome-bluetooth "" "" "for Bluetooth support"
 
-optional_depends ModemManager "--with-modem-manager-1" "" "for mobile broadband modem support"
+optional_depends ModemManager \
+                 "--with-modem-manager-1" "" \
+                 "for mobile broadband modem support" \
+                 "n"
 
 optional_depends nss     "--with-crypto=nss"    "" "for NSS crypto support"
 optional_depends gnutls  "--with-crypto=gnutls" "" "for TLS crypto support"
@@ -27,8 +30,7 @@ optional_depends jansson  "--enable-ovs"        "--disable-ovs"      "for open v
 optional_depends vala \
                  "--enable-vala=yes" \
                  "--enable-vala=no"  \
-                 "for vala support (needs introspection support)" \
-                 "y"
+                 "for vala support (needs introspection support)"
 
 optional_depends wpa_supplicant \
                  "--enable-wifi" \
