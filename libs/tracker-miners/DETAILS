@@ -1,11 +1,11 @@
           MODULE=tracker-miners
-         VERSION=2.3.1
+         VERSION=2.3.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:3}/
-      SOURCE_VFY=sha256:7b1de06a7a79ea1c7813c8a21f8cd1c55f2b95f799cf9f47f0204f3be8a590e0
+      SOURCE_VFY=sha256:7472aa28d7862620d3ca2bbec3b103df547d7319c12e95a7f7aa9f9f6dee4b19
         WEB_SITE=https://wiki.gnome.org/Projects/Tracker/
          ENTERED=20200216
-         UPDATED=20200216
+         UPDATED=20200310
            SHORT="Desktop-neutral user information store, search tool and indexer"
             TYPE=meson
 
