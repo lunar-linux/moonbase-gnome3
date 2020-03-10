@@ -1,11 +1,11 @@
           MODULE=cogl
-         VERSION=1.22.4
+         VERSION=1.22.6
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/${MODULE}/${VERSION%.*}
-      SOURCE_VFY=sha256:5217bf94cbca3df63268a3b79d017725382b9e592b891d1e7dc6212590ce0de0
+      SOURCE_VFY=sha256:6d134bd3e48c067507167c001200b275997fb9c68b08b48ff038211c8c251b75
         WEB_SITE=http://www.clutter-project.org
          ENTERED=20110617
-         UPDATED=20190423
+         UPDATED=20200310
            SHORT="3D graphics hardware rendering library"
 
 cat <<EOF
