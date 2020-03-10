@@ -1,11 +1,11 @@
           MODULE=clutter
-         VERSION=1.26.2
+         VERSION=1.26.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:e7233314983055e9018f94f56882e29e7fc34d8d35de030789fdcd9b2d0e2e56
+      SOURCE_VFY=sha256:8b48fac159843f556d0a6be3dbfc6b083fc6d9c58a20a49a6b4919ab4263c4e6
         WEB_SITE=http://www.clutter-project.org
          ENTERED=20080109
-         UPDATED=20170513
+         UPDATED=20200310
            SHORT="A library for creating OpenGL based GUIs"
 
 cat << EOF
