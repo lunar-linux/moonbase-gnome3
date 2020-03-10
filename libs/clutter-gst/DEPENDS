@@ -1,3 +1,11 @@
 depends clutter
 depends gst-plugins-base
 depends libXdamage
+
+optional_depends gst-plugins-good "" "" "for video camera capture"
+
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for building documentation" \
+                 "n"
