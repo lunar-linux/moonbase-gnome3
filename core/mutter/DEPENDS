@@ -3,6 +3,8 @@ depends gsettings-desktop-schemas
 depends startup-notification
 depends libxkbcommon
 depends gnome-settings-daemon
+depends graphene
+depends pipewire
 
 optional_depends wayland-protocols "" "" "for Wayland support" "y"
 
@@ -16,12 +18,6 @@ optional_depends mesa-lib \
                  "-Degl=true" \
                  "-Degl=false -Dglx=false" \
                  "Enable EGL support" \
-                "y"
-
-optional_depends pipewire \
-                 "-Dremote_desktop=true" \
-                 "-Dremote_desktop=false" \
-                 "Enable remote desktop support" \
                 "y"
 
 optional_depends gobject-introspection \
