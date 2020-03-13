@@ -1,12 +1,13 @@
           MODULE=gnome-screenshot
-         VERSION=3.32.0
+         VERSION=3.36.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:8b609f70083ebb95a754e9f11a18a67d2c2723080d672f2faebe54f9633b0a26
+      SOURCE_VFY=sha256:33495d892707179254b743f8f70c9a82cde5c5f2c7ea3db634a2ba7ea7331266
         WEB_SITE=http://www.gnome.org
          ENTERED=20160625
-         UPDATED=20190322
+         UPDATED=20200313
            SHORT="Take pictures of your screen"
+            TYPE=meson
 
 cat << EOF
 Take pictures of your screen.
