@@ -1,4 +1,3 @@
 depends dconf
 depends gtk+-3
 depends libcanberra
-depends intltool
