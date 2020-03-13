@@ -1,11 +1,11 @@
           MODULE=gnome-desktop
-         VERSION=3.34.0
+         VERSION=3.36.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:4}
-      SOURCE_VFY=sha256:8d331ee655c1d56b2b97562a07c7a7598ff6706a11ff1cdce97423ebc6b62426
+      SOURCE_VFY=sha256:4b04c359ccddeffb15f2e148a7871c474f6cfed1e0da21de060a93f6b9ae5c15
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20120706
-         UPDATED=20190914
+         UPDATED=20200313
            SHORT="Library with common API for various GNOME modules"
 
 cat << EOF
