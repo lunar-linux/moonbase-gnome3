@@ -1,0 +1,13 @@
+          MODULE=graphene
+         VERSION=1.10.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:406d97f51dd4ca61e91f84666a00c3e976d3e667cd248b76d92fdb35ce876499
+        WEB_SITE=https://ebassi.github.io/graphene
+         ENTERED=20200313
+         UPDATED=20200313
+           SHORT="A thin layer of graphic data types"
+            TYPE=meson
+
+cat << EOF
+EOF
