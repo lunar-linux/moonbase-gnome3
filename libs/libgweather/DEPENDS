@@ -1,12 +1,14 @@
 depends gtk+-3
-depends vala
 depends libsoup
 depends geocode-glib
-depends intltool
-depends meson
-depends gtk-doc
 
 optional_depends vala \
-                 "-Denable-vala=true" \
+                 "-Denable_vala=true" \
                  "-Denable_vala=false" \
-                 "for object introspection"
+                 "for enabling VALA bindings" n
+
+optional_depends gtk-doc \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
+                 "for generating the API reference" n
+
