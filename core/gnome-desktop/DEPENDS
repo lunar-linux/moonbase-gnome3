@@ -6,6 +6,7 @@ depends xkeyboard-config
 depends libseccomp
 depends itstool
 depends meson
+depends libxml2
 
 optional_depends gtk-doc \
                  "-Dgtk-doc=true" \
