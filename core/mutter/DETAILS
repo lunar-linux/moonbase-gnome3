@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:5d6c24cc433138439956581f9fbf2e39c0e9d14ec9d87dbb61fc198e4a909ba2
         WEB_SITE=http://www.gnome.org
          ENTERED=20131020
-         UPDATED=20200313
+         UPDATED=20200314
            SHORT="A window manager for GNOME"
 
 cat << EOF
