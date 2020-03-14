@@ -1,7 +1,8 @@
 #remote desktop needs pipewire that is not yet included as a package
 OPTS+=" -Dgles2=true \
         -Dprofiler=false \
-        -Dnative_backend=true"
+        -Dnative_backend=true \
+        -Dinstalled_tests=false"
 
 if in_depends $MODULE wayland-protocols; then
   if ! in_depends $MODULE mesa-lib; then
