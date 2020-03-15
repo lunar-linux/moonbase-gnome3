@@ -1,11 +1,11 @@
           MODULE=gnome-autoar
-         VERSION=0.2.3
+         VERSION=0.2.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:3}/
-      SOURCE_VFY=sha256:5de9db0db028cd6cab7c2fec46ba90965474ecf9cd68cfd681a6488cf1fb240a
+      SOURCE_VFY=sha256:0a34c377f8841abbf4c29bc848b301fbd8e4e20c03d7318c777c58432033657a
         WEB_SITE=http://www.gnome.org
          ENTERED=20180317
-         UPDATED=20180317
+         UPDATED=20200315
            SHORT="GNOME automatic archives creating and extracting library"
 
 cat << EOF
