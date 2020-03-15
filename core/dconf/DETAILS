@@ -1,11 +1,11 @@
           MODULE=dconf
-         VERSION=0.34.0
+         VERSION=0.36.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:943a94ab16121de5580ceaed2605b87444d1bca1c6cd8beefb778bcb0aa2da52
+      SOURCE_VFY=sha256:9fe6bb22191fc2a036ad86fd8e7d165e9983c687b9fedccf85d46c799301da2d
         WEB_SITE=http://live.gnome.org/dconf
          ENTERED=20101128
-         UPDATED=20190914
+         UPDATED=20200315
            SHORT="Simple low-level configuration system"
 
 cat << EOF
