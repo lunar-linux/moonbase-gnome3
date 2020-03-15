@@ -1,12 +1,13 @@
           MODULE=libdazzle
-         VERSION=3.34.1
-          SOURCE=$MODULE-$VERSION.tar.gz
-      SOURCE_URL=https://gitlab.gnome.org/GNOME/libdazzle/-/archive/$VERSION
-      SOURCE_VFY=sha256:fa03c018314e9f6dcacfe73eb251a24b25740dd89104db321b12085d631718f2
+         VERSION=3.36.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:82b31bbf550fc62970c78bf7f9d55e5fae5b8ea13b24fe2d13c8c6039409d958
         WEB_SITE=https://gitlab.gnome.org/GNOME/libdazzle/
          ENTERED=20191006
-         UPDATED=20191006
+         UPDATED=20200315
            SHORT="A companion library to GObject and Gtk+"
+            TYPE=meson
 
 cat <<EOF
 It provides various features that we wish were in the underlying library

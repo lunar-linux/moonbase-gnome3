@@ -1,7 +1,4 @@
 depends gtk+-3
-depends intltool
-depends meson
-depends vala
 
 optional_depends gtk-doc \
                  "-Denable_gtk_doc=true" \
@@ -10,8 +7,13 @@ optional_depends gtk-doc \
                  "n"
 
 optional_depends gobject-introspection \
-                 "-Dintrospection=true" \
-                 "-Dintrospection=false" \
+                 "-Dwith_introspection=true" \
+                 "-Dwith_introspection=false" \
                  "for object introspection" \
                  "y"
 
+optional_depends vala \
+                 "-Dwith_vapi=true" \
+                 "-Dwith_vapi=false" \
+                 "enable vala support" \
+                 "y"
