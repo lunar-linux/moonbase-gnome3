@@ -1,5 +1,5 @@
 OPTS+=" --disable-static"
 
-./autogen.sh &&
+NOCONFIGURE=1 ./autogen.sh --enable-gtk $OPTS &&
 
 default_build
