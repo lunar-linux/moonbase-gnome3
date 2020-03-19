@@ -1,0 +1,15 @@
+          MODULE=sysprof
+         VERSION=3.36.0
+          SOURCE=${MODULE}-${VERSION}.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:8670db4dacf7b219d30c575c465b17c8ed6724dbade347f2cde9548bff039108
+        WEB_SITE="http://www.daimi.au.dk/~sandmann/sysprof/"
+         ENTERED=20200319
+         UPDATED=20200319
+           SHORT="system profiler (sysprof) for gnome"
+            TYPE=meson
+
+cat << EOF
+Profiling tool that helps in finding the functions in which a program
+uses most of its time
+EOF
