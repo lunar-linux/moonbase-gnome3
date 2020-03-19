@@ -20,7 +20,7 @@ optional_depends mesa-lib \
                  "-Degl=true" \
                  "-Degl=false -Dglx=false" \
                  "Enable EGL support" \
-                "y"
+                 "y"
 
 optional_depends gobject-introspection \
                  "-Dintrospection=true" \
