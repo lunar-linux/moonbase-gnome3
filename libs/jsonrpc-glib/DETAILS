@@ -1,0 +1,13 @@
+          MODULE=jsonrpc-glib
+         VERSION=3.34.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:d1ceb24b503e49e7bfe6e44630c03abc65f2d047a68271eb62e332b13be90548
+        WEB_SITE=https://gitlab.gnome.org/GNOME/jsonrpc-glib
+         ENTERED=20200320
+         UPDATED=20200320
+           SHORT="A JSON-RPC library for GLib"
+            TYPE=meson
+
+cat << EOF
+EOF

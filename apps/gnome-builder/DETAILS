@@ -1,0 +1,14 @@
+          MODULE=gnome-builder
+         VERSION=3.36.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:1b49e5e835736f793a70dda0b8521efd736114d84a6daab97bcc33eb6540d10a
+        WEB_SITE=https://wiki.gnome.org/Apps/Builder
+         ENTERED=20200320
+         UPDATED=20200320
+           SHORT="A toolsmith for GNOME-based applications"
+            TYPE=meson
+
+cat << EOF
+A tool to help you write and contribute to great GNOME-based applications
+EOF

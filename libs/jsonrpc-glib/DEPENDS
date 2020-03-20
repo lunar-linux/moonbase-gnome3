@@ -1,0 +1,11 @@
+depends json-glib
+
+optional_depends "gobject-introspection" \
+                 "-Dwith_introspection=true" \
+                 "-Dwith_introspection=false" \
+                 "n"
+
+optional_depends "vala" \
+                 "-Dwith_vapi=true" \
+                 "-Dwith_vapi=false" \
+                 "n"

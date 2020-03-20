@@ -1,0 +1,17 @@
+depends jsonrpc-glib
+depends template-glib
+
+optional_depends "devhelp" \
+                 "-Dplugin_devhelp=true" \
+                 "-Dplugin_devhelp=false" \
+                 "y"
+
+optional_depends "libgit2" \
+                 "-Dplugin_git=true" \
+                 "-Dplugin_git=false" \
+                 "y"
+
+optional_depends "libglade" \
+                 "-Dplugin_glade=true" \
+                 "-Dplugin_glade=false" \
+                 "y"

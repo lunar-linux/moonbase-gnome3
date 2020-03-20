@@ -1,0 +1,13 @@
+          MODULE=template-glib
+         VERSION=3.34.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:216bef6ac3607666b8ca72b936467f7020ce6421c02755c301d079576c9c3dfd
+        WEB_SITE=https://wiki.gnome.org/Projects/TemplateGlib
+         ENTERED=20200320
+         UPDATED=20200320
+           SHORT="A templating library for GLib"
+            TYPE=meson
+
+cat << EOF
+EOF
