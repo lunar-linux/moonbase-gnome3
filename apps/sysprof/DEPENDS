@@ -1,0 +1,14 @@
+#pango is needed in case user select nogtk build
+depends pango
+
+optional_depends "libdazzle" \
+                 "-Denable_gtk=true" \
+                 "-Denable_gtk=false" \
+                 "enable gtk UI support" \
+                 "y"
+
+optional_depends "libunwind" \
+                 "-Dlibunwind=true" \
+                 "-Dlibunwind=false" \
+                 "enable support for libunwind" \
+                 "n"
