@@ -1,16 +1,25 @@
 depends glib-2
 depends ca-certificates
-depends gnutls
-depends intltool
-depends gsettings-desktop-schemas
-depends meson
 
 optional_depends libproxy \
-                 "-D libproxy_support=true" \
-                 "-D libproxy_support=false" \
+                 "-D libproxy=enabled" \
+                 "-D libproxy=disabled" \
                  "for proxy support"
 
-optional_depends p11-kit \
-                 "-D pkcs11_support=true" \
-                 "-D pkcs11_support=false" \
-                 "for pkcs11 support"
+optional_depends openssl \
+                 "-D openssl=enabled" \
+                 "-D openssl=disabled" \
+                 "for OpenSSL support" \
+                 "y"
+
+optional_depends gnutls \
+                 "-D gnutls=enabled" \
+                 "-D gnutls=disabled" \
+                 "for GnuTLS support" \
+                 "n"
+
+optional_depends gsettings-desktop-schemas \
+                 "-D gnome_proxy=enabled" \
+                 "-D gnome_proxy=disabled" \
+                 "for Gnome support" \
+                 "n"
