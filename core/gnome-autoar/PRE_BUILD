@@ -1,0 +1,7 @@
+default_pre_build
+
+if ! in_depends $MODULE gtk-doc; then
+  sedit "s/gtkdocize/\#gtkdocize/" autogen.sh
+fi &&
+
+NOCONFIGURE=1 ./autogen.sh --enable-gtk
