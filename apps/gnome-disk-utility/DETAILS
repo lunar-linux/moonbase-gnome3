@@ -1,13 +1,13 @@
           MODULE=gnome-disk-utility
-         VERSION=3.34.4
+         VERSION=3.36.1
           SOURCE=${MODULE}-${VERSION}.tar.xz
       SOURCE_URL=http://ftp.gnome.org/pub/GNOME/sources/gnome-disk-utility/${VERSION%.*}/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
-      SOURCE_VFY=sha256:1ec5a365292016572d336c31b252f726dd86655b0a93eab7be3b3c18ab8bf75c
+      SOURCE_VFY=sha256:791b18f231bcbc6d941af3837ca5be14f2157e5ce3d32bdc5b9eb8947e12b414
         WEB_SITE="http://ftp.gnome.org/pub/GNOME/sources/gnome-disk-utility/"
          ENTERED=20110618
-         UPDATED=20200216
-           SHORT="Volume management for gnome."
+         UPDATED=20200323
+           SHORT="Disk management for gnome."
             TYPE=meson
 cat <<EOF
 GNOME Disks, gnome-disk-image-mounter and gsd-disk-utility-notify are libraries and
