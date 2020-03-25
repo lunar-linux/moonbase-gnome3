@@ -1,11 +1,12 @@
 depends libXres
 depends wayland
 depends gtk+-3
-depends startup-notification
 depends intltool
+depends startup-notification
+depends meson
 
-optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
-                 "for object introspection" \
-                 "y"
+optional_depends gtk-doc \
+                 "-D gtk_doc=true" \
+                 "-D gtk_doc=false" \
+                 "for building documentation" \
+                 "n"
