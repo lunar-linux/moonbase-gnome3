@@ -5,8 +5,14 @@ depends libcanberra
 depends hicolor-icon-theme
 depends meson
 
+optional_depends gtk-doc \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
+                 "for building documentation" \
+                 "n"
+
 optional_depends gobject-introspection \
-                 "-Denable-introspection=true" \
-                 "-Denable-introspection=false" \
+                 "-Dintrospection=true" \
+                 "-Dintrospection=false" \
                  "for object introspection" \
                  "y"
