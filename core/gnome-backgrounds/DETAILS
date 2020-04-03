@@ -1,11 +1,11 @@
           MODULE=gnome-backgrounds
-         VERSION=3.34.0
+         VERSION=3.36.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:4}/
-      SOURCE_VFY=sha256:c2b7fb6db98c05e205053daaa7f58c7f06ff91b45c4006052af17c578ae7b47f
+      SOURCE_VFY=sha256:b8cb81e4cf9d085fbb23540635b492d5c124a1f8611c2aa9ac6384111d77bb0b
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20141024
-         UPDATED=20190915
+         UPDATED=20200403
            SHORT="Background images and data for GNOME"
 
 cat << EOF
