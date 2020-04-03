@@ -1,4 +1,4 @@
-depends  gtk+-3
+depends gtk+-3
 
 optional_depends "nautilus" \
                  "-Dnautilus-actions=true" \
