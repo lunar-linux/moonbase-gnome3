@@ -1,0 +1,20 @@
+depends libxml2
+depends intltool
+depends zlib
+
+optional_depends gdk-pixbuf \
+                 "--with-gdk-pixbuf" \
+                 "--without-gdk-pixbuf" \
+                  "use gdk thumbnails"
+
+optional_depends gtk-doc \
+                 "--enable-gtk-doc" \
+                 "--disable-gtk-doc" \
+                 "for building documentation" \
+                 "n"
+
+optional_depends gobject-introspection \
+                 "--enable-introspection" \
+                 "--disable-introspection" \
+                 "for object introspection" \
+                 "y"
