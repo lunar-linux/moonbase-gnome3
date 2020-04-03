@@ -1,9 +1,16 @@
 depends libsoup
 depends json-glib
 depends intltool
+depends meson
+
+optional_depends gtk-doc \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
+                 "for building documentation" \
+                 "n"
 
 optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
+                 "-Denable-introspection=true" \
+                 "-Denabe-introspection=false" \
                  "for object introspection" \
                  "y"

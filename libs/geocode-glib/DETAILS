@@ -1,11 +1,11 @@
           MODULE=geocode-glib
-         VERSION=3.20.1
+         VERSION=3.26.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:669fc832cabf8cc2f0fc4194a8fa464cdb9c03ebf9aca5353d7cf935ba8637a2
+      SOURCE_VFY=sha256:01fe84cfa0be50c6e401147a2bc5e2f1574326e2293b55c69879be3e82030fd1
         WEB_SITE=http://www.gnome.org
          ENTERED=20131027
-         UPDATED=20160414
+         UPDATED=20200403
            SHORT="Geocode Helper library"
 
 cat << EOF
