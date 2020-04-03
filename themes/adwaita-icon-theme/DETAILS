@@ -1,11 +1,11 @@
           MODULE=adwaita-icon-theme
-         VERSION=3.34.3
+         VERSION=3.36.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:4}
-      SOURCE_VFY=sha256:e7c2d8c259125d5f35ec09522b88c8fe7ecf625224ab0811213ef0a95d90b908
+      SOURCE_VFY=sha256:1a172112b6da482d3be3de6a0c1c1762886e61e12b4315ae1aae9b69da1ed518
         WEB_SITE=http://www.gnome.org
          ENTERED=20021202
-         UPDATED=20191108
+         UPDATED=20200403
            SHORT="Adwaita icon theme"
 ARCHIVE=off
 cat << EOF
