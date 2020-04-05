@@ -1,0 +1,26 @@
+depends gtk+-3
+depends NetworkManager
+
+optional_depends gcr \
+                 "-Dgcr=true" \
+                 "-Dgcr=false" \
+                 "enable advanced certificate chooser" \
+                 y
+
+optional_depends gtk-doc \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
+                 "use gtk-doc for building documentation" \
+                 n
+
+optional_depends gobject-introspection \
+                 "-Dintrospection=true" \
+                 "-Dintrospection=false" \
+                 "enable introspection support" \
+                 y
+
+optional_depends vala \
+                 "-Dvapi=true" \
+                 "-Dvapi=false" \
+                 "enable vala support" \
+                 n
