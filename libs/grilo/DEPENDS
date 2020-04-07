@@ -1,1 +1,25 @@
-depends totem-pl-parser
+depends libsoup
+
+optional_depends totem-pl-parser \
+                 "-Denable-grl-pls=true" \
+                 "-Denable-grl-pls=false" \
+                 "enable Grilo Pls library" \
+                 n
+
+optional_depends "gobject-introspection" \
+                 "-Denable-introspection=true"\
+                 "-Denable-introspection=false"\
+                 "enable introspection support" \
+                 y
+
+optional_depends "vala" \
+                 "-Denable-vala=true"\
+                 "-Denable-vala=false"\
+                 "enable vala support" \
+                 n
+
+optional_depends "gtk-doc" \
+                 "-Denable-gtk-doc=true" \
+                 "-Denable-gtk-doc=false" \
+                 "build documentation" \
+                 n
