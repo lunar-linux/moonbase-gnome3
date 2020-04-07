@@ -1,0 +1,8 @@
+depends libnotify
+depends libnma
+
+optional_depends jansson \
+                 "-Dteam=true" \
+                 "-Dteam=false" \
+                 "enable team configuration editor" \
+                 n
