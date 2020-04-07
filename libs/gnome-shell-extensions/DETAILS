@@ -1,0 +1,15 @@
+          MODULE=gnome-shell-extensions
+         VERSION=3.36.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:de18927a7d0f5652628d97f03e102c84e576b9c873a878b8e1a53c21183b5039
+        WEB_SITE=http://www.gnome.org/gnome-3
+         ENTERED=20200406
+         UPDATED=20200406
+           SHORT="GNOME shell extensions"
+            TYPE=meson
+
+cat << EOF
+GNOME Shell extensions are small pieces of code written
+by third party developers that modify the way GNOME works
+EOF
