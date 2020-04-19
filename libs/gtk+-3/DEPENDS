@@ -27,7 +27,7 @@ optional_depends %X \
 optional_depends wayland-protocols \
                  "-Dwayland_backend=true" \
                  "-Dwayland_backend=false" \
-                 "for the waylany backend" \
+                 "for the wayland backend" \
                  "y"
 
 # Documentation and introspection
