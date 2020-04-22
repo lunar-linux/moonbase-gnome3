@@ -1,1 +1,2 @@
-mquery MINIBROWSER "Build webkit's internal minibrowser?" y
+mquery MINIBROWSER "Build webkit's internal minibrowser?" n
+mquery WPEBACKEND  "Build wpe renderer (if yes enable wayland support too)?" y

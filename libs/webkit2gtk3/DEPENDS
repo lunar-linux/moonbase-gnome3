@@ -9,23 +9,21 @@ depends icu4c
 depends enchant
 depends libXt
 depends libxslt
-depends gobject-introspection
 depends harfbuzz
 depends freetype2
 depends openjpeg-2
 depends gtk+-3
-depends gst-plugins-bad
 depends gperf
 depends sqlite
 depends libsoup
 depends libsecret
-depends wpebackend-fdo
 depends bubblewrap
 depends xdg-dbus-proxy
-depends wayland-protocols
 depends zlib
 
-#depends upower
+if [ "`get_module_config WPEBACKEND`" = "y" ]; then
+depends wpebackend-fdo
+fi
 
 optional_depends hyphen \
                  "-DUSE_LIBHYPHEN=ON" \
@@ -42,7 +40,7 @@ optional_depends geoclue2 \
                  "-DENABLE_GEOLOCATION=OFF" \
                  "for geolocation support"
 
-optional_depends wayland \
+optional_depends wayland-protocols \
                  "-DENABLE_WAYLAND_TARGET=ON" \
                  "-DENABLE_WAYLAND_TARGET=OFF" \
                  "for Wayland support" \
@@ -55,8 +53,8 @@ optional_depends gtk-doc \
                  "n"
 
 optional_depends gobject-introspection \
-                 "-DENABLE_INTROINSPECTION=ON" \
-                 "-DENABLE_INTROINSPECTION=OFF" \
+                 "-DENABLE_INTROSPECTION=ON" \
+                 "-DENABLE_INTROSPECTION=OFF" \
                  "for object introspection" \
                  "y"
 

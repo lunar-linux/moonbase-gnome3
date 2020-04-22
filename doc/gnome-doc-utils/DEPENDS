@@ -1,3 +1,4 @@
+depends python2
 depends rarian
 depends intltool
 depends docbook-xml

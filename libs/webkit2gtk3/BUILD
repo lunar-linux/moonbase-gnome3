@@ -7,6 +7,12 @@ if [[ $MINIBROWSER == "y" ]]; then
   OPTS+=" -DENABLE_MINIBROWSER=ON"
 fi
 
+if [[ $WPEBACKEND == "y" ]]; then
+  OPTS+=" -DUSE_WPE_RENDERER=ON"
+else
+  OPTS+=" -DUSE_WPE_RENDERER=OFF"
+fi
+
 default_cmake_build &&
 
 # symlink plugin folder to a location webkit looks for it
