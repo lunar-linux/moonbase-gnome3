@@ -1,9 +1,11 @@
+depends accountsservice
 depends gsound
 depends libgtop
 depends grilo
 depends libwacom
 depends gnome-bluetooth
 depends gnome-color-manager
+depends gnome-settings-daemon
 depends udisks2
 
 optional_depends wayland \
