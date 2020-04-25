@@ -2,6 +2,7 @@ depends gnome-autoar
 depends evolution-data-server
 depends gjs
 depends mutter
+depends sassc
 
 optional_depends systemd \
                  "-Dsystemd=true" \
