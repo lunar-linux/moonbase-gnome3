@@ -23,7 +23,7 @@ optional_depends libgdata \
 optional_depends gnome-online-accounts \
                  "-DENABLE_GOA=ON" \
                  "-DENABLE_GOA=OFF" \
-                 "for enabling vala bindings"
+                 "support GOA account management"
 
 optional_depends krb5 \
                  "-DWITH_KRB5=ON" \
