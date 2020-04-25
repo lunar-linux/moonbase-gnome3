@@ -1,0 +1,25 @@
+commit a8f6cada883eda2a34e6478a53e2fb7c392d98b7
+Author:     Christian Rauch <Rauch.Christian@gmx.de>
+AuthorDate: Tue Mar 31 21:28:44 2020 +0100
+Commit:     Christian Rauch <Rauch.Christian@gmx.de>
+CommitDate: Wed Apr 1 15:23:43 2020 +0100
+
+    x11: fix compilation if 'libwacom=false'
+    
+    https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/1168
+
+diff --git a/src/backends/x11/meta-input-device-x11.c b/src/backends/x11/meta-input-device-x11.c
+index 480acd83e..2406c34d7 100644
+--- a/src/backends/x11/meta-input-device-x11.c
++++ b/src/backends/x11/meta-input-device-x11.c
+@@ -122,9 +122,9 @@ meta_input_device_x11_is_grouped (ClutterInputDevice *device,
+ static void
+ meta_input_device_x11_finalize (GObject *object)
+ {
+-#ifdef HAVE_LIBWACOM
+   MetaInputDeviceX11 *device_xi2 = META_INPUT_DEVICE_X11 (object);
+ 
++#ifdef HAVE_LIBWACOM
+   if (device_xi2->group_modes)
+     g_array_unref (device_xi2->group_modes);
+ #endif
