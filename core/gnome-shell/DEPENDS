@@ -3,6 +3,7 @@ depends evolution-data-server
 depends gjs
 depends mutter
 depends sassc
+depends gdm # runtime-only
 
 optional_depends systemd \
                  "-Dsystemd=true" \
