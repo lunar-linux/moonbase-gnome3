@@ -26,7 +26,7 @@ optional_depends gcr        "-Dgcr=true"      "-Dgcr=false"      "for gcr certif
 optional_depends libsecret  "-Dkeyring=true"  "-Dkeyring=false"  "for storing secrets support"
 optional_depends avahi      "-Ddnssd=true"    "-Ddnssd=false"    "for Avahi supporti with dndsd support"
 
-optional_depends libimobile \
+optional_depends libimobiledevice \
                  "-Dafc=true" \
                  "-Dafc=false" \
                  "for afc backend and volume monitor support" \
