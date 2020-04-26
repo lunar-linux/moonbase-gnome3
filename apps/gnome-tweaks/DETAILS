@@ -1,0 +1,13 @@
+          MODULE=gnome-tweaks
+         VERSION=3.34.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:003326fab46e6faad9485924bca503f0c583e3b4553d6f673406eda396205250
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20200426
+         UPDATED=20200426
+           SHORT="Tweak tool for GNOME"
+
+cat << EOF
+Graphical interface for advanced GNOME 3 settings
+EOF

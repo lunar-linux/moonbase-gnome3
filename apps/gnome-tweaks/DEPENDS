@@ -1,0 +1,15 @@
+depends python
+depends python-pygobject
+depends gnome-settings-daemon
+depends sound-theme-freedesktop
+
+depends gobject-introspection
+depends gtk+-3
+depends gnome-desktop
+depends libhandy
+depends libnotify
+depends pango
+
+depends gsettings-desktop-schemas
+depends gnome-shell
+depends mutter
