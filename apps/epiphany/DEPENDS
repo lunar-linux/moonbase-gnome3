@@ -1,2 +1,4 @@
 depends meson
 depends webkit2gtk3
+depends libdazzle
+depends libhandy
