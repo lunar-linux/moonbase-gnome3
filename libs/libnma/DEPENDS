@@ -1,5 +1,6 @@
 depends gtk+-3
 depends NetworkManager
+depends mobile-broadband-provider-info
 
 optional_depends gcr \
                  "-Dgcr=true" \

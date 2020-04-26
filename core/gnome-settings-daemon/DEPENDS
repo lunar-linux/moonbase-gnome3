@@ -19,6 +19,11 @@ depends colord
 depends NetworkManager
 depends meson
 
+optional_depends ModemManager \
+                 "-Dwwan=true" \
+                 "-Dwwan=false" \
+                 "Enable WWAN support"
+
 optional_depends wayland \
                  "-Dwayland=true" \
                  "-Dwayland=false" \
