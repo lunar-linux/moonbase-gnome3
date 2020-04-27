@@ -20,6 +20,7 @@ depends libsecret
 depends bubblewrap
 depends xdg-dbus-proxy
 depends zlib
+depends libseccomp
 
 if [ "`get_module_config WPEBACKEND`" = "y" ]; then
 depends wpebackend-fdo
