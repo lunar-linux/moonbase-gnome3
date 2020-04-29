@@ -1,7 +1,7 @@
 depends glib-2
 depends shared-mime-info
-depends tiff
 depends meson
+depends docbook2X
 
 optional_depends %JPEG \
                  "-Djpeg=true" \
@@ -21,6 +21,12 @@ optional_depends jasper \
                  "for JPEG 2000 image loader" \
                  "y"
 
+optional_depends tiff \
+                "-Dtiff=true" \
+                "-Dtiff=false" \
+                "for TIFF image loader" \
+                "y"
+
 optional_depends libX11 \
                  "-Dx11=true" \
                  "-Dx11=false" \
@@ -35,7 +41,7 @@ optional_depends libxml2 \
 
 optional_depends gtk-doc \
                  "-Ddocs=true" \
-                 "-Ddecs=false" \
+                 "-Ddocs=false" \
                  "for building documentation" \
                  "n"
 
