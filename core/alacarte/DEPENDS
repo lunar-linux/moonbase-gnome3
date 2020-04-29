@@ -1,3 +1,4 @@
+depends python-pygobject
 depends gnome-menus
 depends hicolor-icon-theme
 
