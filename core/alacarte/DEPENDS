@@ -1,5 +1,8 @@
-depends gnome-common
+depends python-pygobject
 depends gnome-menus
 depends hicolor-icon-theme
-depends libxslt
-depends docbook-xsl
+
+optional_depends docbook2X \
+    "--enable-documentation" \
+    "--disable-documentation" \
+    "to install documentation"
