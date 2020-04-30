@@ -6,6 +6,7 @@ depends libwacom
 depends gnome-bluetooth
 depends gnome-color-manager
 depends gnome-settings-daemon
+depends gnome-online-accounts
 depends udisks2
 depends libnma
 depends ModemManager
@@ -19,13 +20,13 @@ optional_depends wayland \
 optional_depends cheese \
                  "-Dcheese=true" \
                  "-Dcheese=false" \
-                 "Enable cheese(webcam) support"
+                 "Enable cheese(webcam) support" \
+                 "n"
 
 optional_depends "ibus" \
                  "-Dibus=true" \
                  "-Dibus=false" \
                  "Enable ibus support"
 
-optional_depends gnome-bluetooth "" "" "Enable Bluetooth Applet support" n
 optional_depends samba "" "" "Enable printer Applet support"
 optional_depends krb5 "" "" "Enable printer Applet support"
