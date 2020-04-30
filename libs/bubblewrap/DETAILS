@@ -1,11 +1,11 @@
           MODULE=bubblewrap
-         VERSION=0.3.3
+         VERSION=0.4.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://github.com/projectatomic/bubblewrap/releases/download/v$VERSION/
-      SOURCE_VFY=sha256:c6a45f51794a908b76833b132471397a7413f07620af08e76c273d9f7b364dff
+      SOURCE_VFY=b9c69b9b1c61a608f34325c8e1a495229bacf6e4a07cbb0c80cf7a814d7ccc03
         WEB_SITE=https://github.com/projectatomic/bubblewrap/
          ENTERED=20190910
-         UPDATED=20190910
+         UPDATED=20200427
            SHORT="Unprivileged sandboxing tool"
 
 cat << EOF
@@ -13,4 +13,3 @@ Bubblewrap could be viewed as setuid implementation of a subset of user
 namespaces. Emphasis on subset - specifically relevant to the above CVE,
 bubblewrap does not allow control over iptables.
 EOF
-
