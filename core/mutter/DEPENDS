@@ -4,9 +4,8 @@ depends gsettings-desktop-schemas
 depends startup-notification
 depends gnome-settings-daemon
 depends pipewire
-depends meson
-
-#depends graphene
+depends graphene
+depends libinput
 
 optional_depends wayland-protocols "" "" "for Wayland support" "y"
 
