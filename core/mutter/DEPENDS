@@ -1,12 +1,12 @@
+depends meson
 depends libSM
 depends libxkbcommon
 depends gsettings-desktop-schemas
 depends startup-notification
 depends gnome-settings-daemon
 depends pipewire
-depends meson
-
-#depends graphene
+depends libinput
+depends graphene
 
 optional_depends wayland-protocols "" "" "for Wayland support" "y"
 
