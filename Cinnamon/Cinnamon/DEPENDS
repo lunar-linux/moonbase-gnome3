@@ -16,3 +16,8 @@ optional_depends gnome-backgrounds    "" "" "for GNOME backgrounds image files"
 optional_depends cinnamon-bluetooth   "" "" "for Bluetooth support"
 optional_depends cinnamon-screensaver "" "" "to enable lock screen"
 optional_depends nemo                 "" "" "the official Cinnamon file manager"
+
+optional_depends NetworkManager \
+                 "--enable-networkmanager" \
+                 "--disable-networkmanager" \
+                 "for NetworkManager support"

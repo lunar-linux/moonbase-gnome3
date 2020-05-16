@@ -5,4 +5,9 @@ cd $SOURCE_DIRECTORY &&
 sedit 's:--warn-all --warn-error::' src/Makefile.am &&
 
 # Set default theme
-sedit 's:<default>""</default>:<default>"cinnamon"</default>:'data/org.cinnamon.gschema.xml.in
+sedit 's:<default>""</default>:<default>"cinnamon"</default>:' \
+       data/org.cinnamon.gschema.xml.in &&
+
+# Cinnamon has no upstream backgrounds, use GNOME backgrounds instead
+sedit 's|/usr/share/cinnamon-background-properties|/usr/share/gnome-background-properties|' \
+       files/usr/share/cinnamon/cinnamon-settings/modules/cs_backgrounds.py
