@@ -4,6 +4,7 @@ depends gdk-pixbuf
 depends gdbus-codegen
 depends libxkbcommon
 depends libepoxy
+depends mesa-lib
 
 optional_depends cups \
                  "-Dprint_backends=file,cups" \
@@ -35,7 +36,7 @@ optional_depends man \
                  "-Dman=true" \
                  "-Dman=false" \
                  "for building manual pages" \
-		        "n"
+		 "n"
 
 optional_depends gtk-doc \
                  "-Dgtk_doc=true" \
