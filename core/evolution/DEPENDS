@@ -3,6 +3,11 @@ depends hicolor-icon-theme
 
 optional_depends libnotify "" "" "for libnotify popups"
 
+optional_depends libytnef \
+                "-DENABLE_YTNEF=ON" \
+                "-DENABLE_YTNEF=OFF" \
+                "for winmail.dat support"
+
 optional_depends libcanberra \
                  "-DENABLE_CANBERRA=ON" \
                  "-DENABLE_CANBERRA=OFF" \
