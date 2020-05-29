@@ -3,3 +3,4 @@ depends gnome-autoar
 depends gnome-desktop
 depends tracker-miners
 depends gexiv2
+depends meson
