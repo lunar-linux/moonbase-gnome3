@@ -1,71 +1,100 @@
 depends dbus-glib
-depends newt
 depends iproute2
-depends iptables
 depends libnl3
 depends libndp
-depends libpsl
 depends libsecret
 depends util-linux
 depends %UDEV
 depends libgudev
+depends meson
 
-optional_depends gnome-bluetooth "" "" "for Bluetooth support"
+optional_depends iptables "" "" "for iptables support"
+optional_depends dnsmasq  "" "" "for DNS forwarder and DHCP server support"
 
-optional_depends ModemManager \
-                 "--with-modem-manager-1" "" \
-                 "for mobile broadband modem support" \
-                 "n"
+optional_depends bluez5 "-Dbluez5_dun=true" "" "for Bluetooth support"
 
-optional_depends nss     "--with-crypto=nss"    "" "for NSS crypto support"
-optional_depends gnutls  "--with-crypto=gnutls" "" "for TLS crypto support"
-optional_depends dnsmasq "--with-dnsmasq"       "" "for DNS forwarder and DHCP server with connection sharing support"
+optional_depends nss    "-Dcrypto=nss"    "" "for NSS crypto support"
+optional_depends gnutls "-Dcrypto=gnutls" "" "for TLS crypto support"
 
-optional_depends dhcp     "--with-dhclient=yes" "--with-dhclient=no" "for standard DHCP client"
-optional_depends dhcpcd   "--with-dhcpcd=yes"   "--with-dhcpcd=no"   "for alternative DHCP client"
-optional_depends polkit   "--enable-polkit=yes" "--enable-polkit=no" "for polkit support"
-optional_depends valgrind "--with-valgrind=yes" "--with-valgrind=no" "for valgrind support"
-optional_depends jansson  "--enable-ovs"        "--disable-ovs"      "for open virtual switch support" n
+optional_depends dhcpcd   "-Ddhcpcd=yes"   "-Ddhcpcd=no"   "for DHCP client"
+optional_depends dhcp     "-Ddhclient=yes" "-Ddhclient=no" "for standard DHCP client"
+optional_depends valgrind "-Dvalgrind=yes" "-Dvalgrind=no" "for valgrind support"
 
-optional_depends vala \
-                 "--enable-vala=yes" \
-                 "--enable-vala=no"  \
-                 "for vala support (needs introspection support)"
-
-optional_depends wpa_supplicant \
-                 "--enable-wifi" \
-                 "--disable-wifi" \
-                 "for Wifi networking support"
+optional_depends polkit \
+                 "-Dpolkit=true  -Dpolkit_agent=true" \
+                 "-Dpolkit=false -Dpolkit_agent=false" \
+                 "for polkit support"
 
 optional_depends iwd \
-                 "--with-iwd=yes" \
-                 "--with-iwd=no" \
-                 "for iwd support for Wi-Fi networking"
+                 "-Diwd=true" \
+                 "-Diwd=false" \
+                 "for iwd support for Wi-Fi networking (requires WI-FI support enabled)"
+
+optional_depends wpa_supplicant \
+                 "-Dwifi=true" \
+                 "-Dwifi=false" \
+                 "for Wifi networking support"
 
 # rp-pppoe depend implies ppp installed too
 optional_depends rp-pppoe  \
-                 "--enable-ppp" \
-                 "--disable-ppp" \
+                 "-Dppp=true" \
+                 "-Dppp=false" \
                  "for Roaring Penguin's Point-to-Point Protocol over Ethernet support"
 
-optional_depends ppp \
-                 "--enable-ppp" \
-                 "--disable-ppp" \
-                 "for Point-to-Point Protocol with dial-up networking support"
+optional_depends curl \
+                 "-Dconcheck=true" \
+                 "-Dconcheck=false" \
+                 "for connection check support" \
+                 "n"
+
+optional_depends ModemManager \
+                 "-Dmodem-manager=true" \
+                 "-Dmodem_manager=false" \
+                 "for mobile broadband modem support" \
+                 "n"
+
+optional_depends libpsl \
+                 "-Dlibpsl=true" \
+                 "-Dlibpsl=false" \
+                 "link against libpsl" \
+                 "n"
+
+optional_depends jansson \
+                 "-Djson_validation=true  -Dovs=true" \
+                 "-Djson_validation=false -Dovs=false" \
+                 "for JSON validation and Open vSwitch support" \
+                 "n"
+
+optional_depends newt \
+                 "-Dnmtui=true" \
+                 "-Dnmtui=false" \
+                 "for nmtui install" \
+                 "n"
+
+optional_depends readline \
+                 "-Dnmcli=true" \
+                 "-Dnmcli=false" \
+                 "for nmcli install" \
+                 "n"
+
+optional_depends vala \
+                 "-Dvapi=true" \
+                 "-Dvapi=false"  \
+                 "for vala support (needs introspection support)"
 
 optional_depends gtk-doc\
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "-Denable-gtk-doc=yes" \
+                 "-Denable-gtk-doc=no" \
                  "for documentation generation" \
                  "n"
 
-if in_depends gtk-doc; then
+if in_depends "$MODULE" "gtk-doc"; then
   depends YAML
 fi
 
 optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
+                 "-Dintrospection=true" \
+                 "-Dintrospection=false" \
                  "for introspection support" \
                  "y"
 
