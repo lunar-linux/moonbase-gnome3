@@ -1,11 +1,11 @@
           MODULE=sardi-icons
-         VERSION=20.5-2
+         VERSION=20.5-3
           SOURCE=$MODULE-$VERSION.tar.gz
       SOURCE_URL=http://downloads.sourceforge.net/project/sardi/
-      SOURCE_VFY=shas256:d89e80cff4a917e441edb86aa64d1c1d8ac19524fdcd245441780872d8c85e43
+      SOURCE_VFY=shas256:3240d48e44dcd2b0757933b9710a4ae5c5c9bd9fa28bcd86a4f4bd9d3ab814fa
         WEB_SITE=http://sourceforge.net/projects/sardi/
          ENTERED=20190326
-         UPDATED=20200529
+         UPDATED=20200530
            SHORT="An icon collection for any linux distro"
 ARCHIVE=off
 cat << EOF
