@@ -1,11 +1,11 @@
           MODULE=gnome-system-monitor
-         VERSION=3.32.1
+         VERSION=3.36.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:48c131335091bd927862f40ef56400f997981df2acfc82abea662bf91a1ea4f1
+      SOURCE_VFY=sha256:866b47ab0f4c75b0ec57d6300337a7373463aaad5df95eddfe5354c22be7bca1
         WEB_SITE=http://www.gnome.org
          ENTERED=20050316
-         UPDATED=20190511
+         UPDATED=20200530
            SHORT="process viewer and system resource monitor for GNOME"
             TYPE=meson
 
