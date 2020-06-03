@@ -1,11 +1,11 @@
           MODULE=gnome-shell-extensions
-         VERSION=3.36.1
+         VERSION=3.36.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:de18927a7d0f5652628d97f03e102c84e576b9c873a878b8e1a53c21183b5039
+      SOURCE_VFY=sha256:978202de515cdb03a5885859c538366bca8fd78762ce98b172ac2c0126f8003f
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20200406
-         UPDATED=20200406
+         UPDATED=20200603
            SHORT="GNOME shell extensions"
             TYPE=meson
 
