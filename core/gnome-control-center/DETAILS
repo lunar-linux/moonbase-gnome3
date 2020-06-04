@@ -1,11 +1,11 @@
           MODULE=gnome-control-center
-         VERSION=3.36.2
+         VERSION=3.36.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:e0a5eff0c6d6c22db0c54fd070460de874d367ef3f9072e1559b70f28b847817
+      SOURCE_VFY=sha256:bc174d970dbeca3ee19c26019de31e9edf78dc9c4abde16e763566ee38c3691c
         WEB_SITE=https://gitlab.gnome.org/GNOME/gnome-control-center
          ENTERED=20070920
-         UPDATED=20200502
+         UPDATED=20200604
            SHORT="GNOME's main configure interface for the desktop"
 
 cat << EOF
