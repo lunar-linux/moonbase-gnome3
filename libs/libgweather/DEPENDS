@@ -1,14 +1,17 @@
 depends gtk+-3
 depends libsoup
 depends geocode-glib
+depends meson
 
 optional_depends vala \
                  "-Denable_vala=true" \
                  "-Denable_vala=false" \
-                 "for enabling VALA bindings" n
+                 "for enabling VALA bindings" \
+                 "n"
 
 optional_depends gtk-doc \
                  "-Dgtk_doc=true" \
                  "-Dgtk_doc=false" \
-                 "for generating the API reference" n
+                 "for generating the API reference" \
+                 "n"
 
