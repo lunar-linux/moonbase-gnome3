@@ -4,7 +4,7 @@ depends gdk-pixbuf
 depends gdbus-codegen
 depends libxkbcommon
 depends libepoxy
-depends mesa-lib  # compiled with libepoxy depend
+depends mesa-lib
 
 optional_depends cups \
                  "-Dprint_backends=file,cups" \
