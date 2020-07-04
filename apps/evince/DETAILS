@@ -1,11 +1,11 @@
           MODULE=evince
-         VERSION=3.36.6
+         VERSION=3.36.7
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:95ce9b21c6fc7c837e12eb6e88777ea80dcc2ce6d84d000166a24a113a6d8db0
+      SOURCE_VFY=sha256:65d61a423e3fbbe07001f65e87422dfb7d2e42b9edf0ca6a1d427af9a04b8f32
         WEB_SITE=http://projects.gnome.org/evince
          ENTERED=20050918
-         UPDATED=20200619
+         UPDATED=20200704
            SHORT="A document viewer for multiple formats (PDF, Postscript)"
             TYPE=meson
 
