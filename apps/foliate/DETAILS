@@ -1,0 +1,14 @@
+          MODULE=foliate
+         VERSION=2.4.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/johnfactotum/foliate/archive/${VERSION}.tar.gz
+      SOURCE_VFY=sha256:71ec508c30747afcc3c51c2147dbf2738ccc38cb2e38dd20de6c1189042f0e53
+        WEB_SITE=https://johnfactotum.github.io/foliate/
+         ENTERED=20200705
+         UPDATED=20200705
+           SHORT="A simple and modern GTK eBook reader"
+            TYPE=meson
+
+cat << EOF
+A simple and modern eBook viewer for Linux desktops.
+EOF

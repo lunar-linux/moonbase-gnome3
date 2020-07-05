@@ -1,0 +1,9 @@
+depends gettext
+depends gjs
+depends iso-codes
+depends webkit2gtk
+depends meson
+
+ioptional_depends hyphen "" "" "for auto-hyphenation support"
+optional_depends gspell  "" "" "for spell-checking support"
+optional_depends tracker "" "" "for tracking files support"
