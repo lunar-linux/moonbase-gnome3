@@ -11,7 +11,7 @@ depends meson
 optional_depends iptables "" "" "for iptables support"
 optional_depends dnsmasq  "" "" "for DNS forwarder and DHCP server support"
 
-optional_depends bluez5 "-Dbluez5_dun=true" "" "for Bluetooth support"
+optional_depends bluez-5 "-Dbluez5_dun=true" "" "for Bluetooth support"
 
 optional_depends nss    "-Dcrypto=nss"    "" "for NSS crypto support"
 optional_depends gnutls "-Dcrypto=gnutls" "" "for TLS crypto support"
