@@ -1,4 +1,4 @@
 OPTS+=" --disable-static \
-        --enable-compile-warnings=minimum"
+        --enable-compile-warnings=yes"
 
 default_build
