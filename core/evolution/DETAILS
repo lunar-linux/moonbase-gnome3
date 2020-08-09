@@ -1,11 +1,11 @@
           MODULE=evolution
-         VERSION=3.36.4
+         VERSION=3.36.5
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:2f72231cd1171e01a4732bddfde0a441ac312a2100270400499e8fc4b1ced6d
+      SOURCE_VFY=sha256:3dd40ebd097da547dda5d95b9d68355e747b3dfae5c1c098645d943f5a69f2c2
         WEB_SITE=http://gnome.org/projects/evolution
          ENTERED=20011109
-         UPDATED=20200703
+         UPDATED=20200809
            SHORT="email, calendar and notes information management solution"
 
 cat << EOF
