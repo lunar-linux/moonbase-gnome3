@@ -1,11 +1,11 @@
           MODULE=epiphany
-         VERSION=3.36.3
+         VERSION=3.36.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:621b5626374891769afec9c35946ab6c3910ea9cf9a2498bab166c99bd91e16f
+      SOURCE_VFY=sha256:588a75b1588f5a509c33cf0be6a38a0f4fc1748eeb499a51d991ddef485242bf
         WEB_SITE=http://www.gnome.org
          ENTERED=20030413
-         UPDATED=20200703
+         UPDATED=20200809
            SHORT="GNOME Web browser based on Gecko (Mozilla)"
 
 cat << EOF
