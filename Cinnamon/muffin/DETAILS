@@ -1,7 +1,7 @@
           MODULE=muffin
          VERSION=4.6.2
           SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=http://github.com/linuxmint/muffin/archive/$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/linuxmint/muffin/archive/$VERSION.tar.gz
       SOURCE_VFY=sha256:7a62a09fffe2015044d4fa6eebf2883dffe17aa0386e48c42fb3377d2a778081
         WEB_SITE=http://github.com/linuxmint/muffin/
          ENTERED=20130210

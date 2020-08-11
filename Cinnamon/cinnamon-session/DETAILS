@@ -1,7 +1,7 @@
           MODULE=cinnamon-session
          VERSION=4.6.1
           SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=http://github.com/linuxmint/cinnamon-session/archive/$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/linuxmint/cinnamon-session/archive/$VERSION.tar.gz
       SOURCE_VFY=sha256:ba5975b18df1fbed16643a3f9e47d8a0027422fbb43077e7e4248bb8e6199c77
         WEB_SITE=http://github.com/linuxmint/$MODULE/
          ENTERED=20131019

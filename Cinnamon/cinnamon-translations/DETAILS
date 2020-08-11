@@ -1,7 +1,7 @@
           MODULE=cinnamon-translations
          VERSION=4.6.2
           SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=http://github.com/linuxmint/cinnamon-translations/archive/$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/linuxmint/cinnamon-translations/archive/$VERSION.tar.gz
       SOURCE_VFY=sha256:f79b818c3339dec395a8739ebfdb9079e236eeb9608768d76fecfe77dc231cb4
          ENTERED=20131019
          UPDATED=20200625

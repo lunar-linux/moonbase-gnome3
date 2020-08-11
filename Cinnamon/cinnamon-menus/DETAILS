@@ -1,7 +1,7 @@
           MODULE=cinnamon-menus
          VERSION=4.6.1
           SOURCE=$MODULE-$VERSION.tar.gz
- SOURCE_URL_FULL=http://github.com/linuxmint/cinnamon-menus/archive/$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/linuxmint/cinnamon-menus/archive/$VERSION.tar.gz
       SOURCE_VFY=sha256:534cf3e15fed812e1affb544811e10823edbc56360b52a80ffbabc006c467dc6
         WEB_SITE=http://github.com/linuxmint/$MODULE/
          ENTERED=20140512
