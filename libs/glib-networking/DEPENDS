@@ -6,7 +6,7 @@ optional_depends libproxy \
                  "-D libproxy=disabled" \
                  "for proxy support"
 
-optional_depends openssl \
+optional_depends %OSSL \
                  "-D openssl=enabled" \
                  "-D openssl=disabled" \
                  "for OpenSSL support" \
