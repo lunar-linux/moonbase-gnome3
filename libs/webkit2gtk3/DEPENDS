@@ -19,11 +19,11 @@ depends libsoup
 depends libsecret
 depends bubblewrap
 depends xdg-dbus-proxy
-depends zlib
 depends libseccomp
+depends zlib
 
 if [ "`get_module_config WPEBACKEND`" = "y" ]; then
-depends wpebackend-fdo
+   depends wpebackend-fdo
 fi
 
 optional_depends hyphen \
@@ -58,4 +58,3 @@ optional_depends gobject-introspection \
                  "-DENABLE_INTROSPECTION=OFF" \
                  "for object introspection" \
                  "y"
-
