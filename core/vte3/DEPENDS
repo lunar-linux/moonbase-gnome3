@@ -25,4 +25,3 @@ optional_depends gobject-introspection \
                  "-Dgir=false" \
                  "for object introspection" \
                  "y"
-
