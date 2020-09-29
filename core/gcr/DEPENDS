@@ -1,6 +1,7 @@
+depends gtk+-3
 depends libgcrypt
 depends p11-kit
-depends dconf
 depends hicolor-icon-theme
 depends desktop-file-utils
 depends gnupg
+depends meson
