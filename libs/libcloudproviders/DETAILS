@@ -1,8 +1,7 @@
           MODULE=libcloudproviders
          VERSION=0.3.1
-          COMMIT=4672d39320f4ef6091a4977b8e6a4ac079296c26  # tags/0.3.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=git+https://gitlab.gnome.org/World/libcloudproviders:$COMMIT
+  SOURCE_URL_FULL=git+https://gitlab.gnome.org/World/libcloudproviders:$COMMIT
 #      SOURCE_VFY=sha256:
         WEB_SITE=https://gitlab.gnome.org/World/libcloudproviders/
          ENTERED=20201003
