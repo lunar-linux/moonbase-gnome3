@@ -3,8 +3,8 @@ depends python-pygobject
 depends intltool
 
 optional_depends gtk-doc \
-                 "-Dgtk_doc=true" \
-                 "-Dgtk_doc=false" \
+                 "-D gtk_doc=true" \
+                 "-D gtk_doc=false" \
                  "for building documentation" \
                  "n"
 
