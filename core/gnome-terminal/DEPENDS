@@ -1,5 +1,5 @@
 depends libSM
-depends GConf
+#depends GConf
 depends vte3
 depends itstool
 depends gsettings-desktop-schemas
