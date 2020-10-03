@@ -7,45 +7,46 @@ depends libepoxy
 depends mesa-lib
 
 optional_depends cups \
-                 "-Dprint_backends=file,cups" \
-                 "-Dprint_backends=file" \
+                 "-D print_backends=file,cups" \
+                 "-D print_backends=file" \
                  "enable CUPS as print backend"
 
-if module_installed cups; then
+if in_depends $MODULE cups; then
    depends colord
 fi
 
 optional_depends %X \
-                 "-Dx11_backend=true" \
-                 "-Dx11_backend=false" \
-                 "for the X11 backend (recommended)"
-
-#optional_depends json-glib \
-#                 "-Dprint_backends=cloudprint" \
-#                 "--disable-cloudprint" \
-#                 "required by cloudprint"
+                 "-D x11_backend=true" \
+                 "-D x11_backend=false" \
+                 "for the X11 backend (recommended)" \
+                 "y"
 
 optional_depends wayland-protocols \
-                 "-Dwayland_backend=true" \
-                 "-Dwayland_backend=false" \
+                 "-D wayland_backend=true" \
+                 "-D wayland_backend=false" \
                  "for the wayland backend" \
                  "y"
 
+#optional_depends json-glib \
+#                 "-D print_backends=cloudprint" \
+#                 "--disable-cloudprint" \
+#                 "required by cloudprint"
+
 # Documentation and introspection
 optional_depends man \
-                 "-Dman=true" \
-                 "-Dman=false" \
+                 "-D man=true" \
+                 "-D man=false" \
                  "for building manual pages" \
-		 "n"
+		         "n"
 
 optional_depends gtk-doc \
-                 "-Dgtk_doc=true" \
-                 "-Dgtk_doc=false" \
+                 "-D gtk_doc=true" \
+                 "-D gtk_doc=false" \
                  "for building documentation" \
                  "n"
 
 optional_depends gobject-introspection \
-                 "-Dintrospection=true" \
-                 "-Dintrospection=false" \
+                 "-D introspection=true" \
+                 "-D introspection=false" \
                  "for introspection support" \
                  "y"
