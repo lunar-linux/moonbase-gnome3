@@ -1,3 +1,3 @@
 mquery BROADWAY "Enable broadway HTML5 backend? (Run GTK+ apps in a browser)" n \
-                "-Dbroadway_backend=true" \
-                "-Dbroadway_backend=false"
+                "-D broadway_backend=true" \
+                "-D broadway_backend=false"

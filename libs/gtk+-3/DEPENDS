@@ -11,9 +11,10 @@ optional_depends cups \
                  "-D print_backends=file" \
                  "enable CUPS as print backend"
 
-if in_depends $MODULE cups; then
-   depends colord
-fi
+optional_depends colord \
+                 "-D colord=yes" \
+                 "-D colord=no" \
+                 "enable colord support for CUPS"
 
 optional_depends %X \
                  "-D x11_backend=true" \
@@ -27,10 +28,11 @@ optional_depends wayland-protocols \
                  "for the wayland backend" \
                  "y"
 
-#optional_depends json-glib \
-#                 "-D print_backends=cloudprint" \
-#                 "--disable-cloudprint" \
-#                 "required by cloudprint"
+optional_depends libcloudproviders \
+                 "-D cloudproviders=true" \
+                 "-D cloudproviders=false" \
+                 "for cloud storage support" \
+		         "n"
 
 # Documentation and introspection
 optional_depends man \
