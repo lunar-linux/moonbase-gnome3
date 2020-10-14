@@ -1,28 +1,28 @@
-OPTS+=" -Dtests=no \
-        -Dqt=false \
-        -Debpf=false \
-        -Ddocs=false \
-        -Dlibaudit=no \
-        -Dselinux=false \
-        -Dmore_asserts=no \
-        -Dmodify_system=true \
-        -Dmore-logging=false \
-        -Dfirewalld_zone=false \
-        -Dsession_tracking_consolekit=false \
-        -Ddbus_conf_dir=/usr/share/dbus-1/system.d"
+OPTS+=" -D tests=no \
+        -D qt=false \
+        -D ebpf=false \
+        -D docs=false \
+        -D libaudit=no \
+        -D selinux=false \
+        -D more_asserts=no \
+        -D modify_system=true \
+        -D more-logging=false \
+        -D firewalld_zone=false \
+        -D session_tracking_consolekit=false \
+        -D dbus_conf_dir=/usr/share/dbus-1/system.d"
 
 if module_installed systemd; then
-    OPTS+=" -Dsession_tracking=systemd \
-            -Dsystemd_journal=true \
-            -Dsuspend_resume=systemd \
-            -Dconfig_loggin_backend_default=journal \
-            -Dsystemdsystemunitdir=/usr/lib/systemd/system"
+    OPTS+=" -D session_tracking=systemd \
+            -D systemd_journal=true \
+            -D suspend_resume=systemd \
+            -D config_loggin_backend_default=journal \
+            -D systemdsystemunitdir=/usr/lib/systemd/system"
 else
     if module_installed elogind; then
-        OPTS+=" -Dsession_tracking=elogind"
+        OPTS+=" -D session_tracking=elogind"
     fi
     if module_installed syslog-ng; then
-        OPTS+="-Dconfig_loggin_backend_default=syslog"
+        OPTS+="-D config_loggin_backend_default=syslog"
     fi
 fi
 
