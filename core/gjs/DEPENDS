@@ -1,3 +1,3 @@
 depends gtk+-3
-depends mozjs
+depends mozjs78
 depends gobject-introspection
