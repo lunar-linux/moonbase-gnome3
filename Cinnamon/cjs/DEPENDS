@@ -1,10 +1,5 @@
 depends cairo
-depends mozjs
+depends mozjs78
 depends dbus-glib
-depends autoconf-archive
-
-optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
-                 "for object introspection" \
-                 "y"
+depends gobject-introspection
+depends libffi
