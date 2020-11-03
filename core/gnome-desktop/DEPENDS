@@ -2,10 +2,12 @@ depends gtk+-3
 depends iso-codes
 depends gsettings-desktop-schemas
 depends libxkbfile
-depends xkeyboard-config
+depends bubblewrap
+depends iso-codes
 depends libseccomp
 depends itstool
 depends libxml2
+depends xkeyboard-config
 depends meson
 
 optional_depends gtk-doc \
