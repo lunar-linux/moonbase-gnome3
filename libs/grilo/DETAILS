@@ -1,11 +1,11 @@
           MODULE=grilo
-         VERSION=0.3.12
+         VERSION=0.3.13
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:dbfbd6082103288592af97568180b9cc81a336a274ed5160412f87675ec11a71
+      SOURCE_VFY=sha256:d14837f22341943ed8a189d9f0827a17016b802d18d0ed080e1413de0fdc927b
         WEB_SITE=https://wiki.gnome.org/Projects/Grilo
          ENTERED=20190102
-         UPDATED=20200406
+         UPDATED=20201104
            SHORT="Framework that provides access to various sources of multimedia content"
 
 cat << EOF
