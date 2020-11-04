@@ -1,11 +1,11 @@
           MODULE=gnome-color-manager
-         VERSION=3.32.0
+         VERSION=3.36.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:7c3c178faacfcbf11d56de22cd265946a7d58aa10e3cd968c2938e2fbf50fdee
+      SOURCE_VFY=sha256:9ddb9e6b6472e119801381f90905332ec1d4258981721bba831ca246ceb3ad3b
         WEB_SITE=http://www.gnome.org
          ENTERED=20130415
-         UPDATED=20190322
+         UPDATED=20201104
            SHORT="Color profile manager for the GNOME desktop"
 PSAFE=no
 cat << EOF
