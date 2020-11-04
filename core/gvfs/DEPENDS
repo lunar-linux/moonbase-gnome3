@@ -5,11 +5,12 @@ depends gsettings-desktop-schemas
 depends openssh
 depends libgudev
 depends psmisc
-depends polkit
-depends gtk-doc
 depends intltool
 depends meson
 
+#depends gtk-doc
+
+optional_depends polkit     "-D admin=true"    "-D admin=false"    "for admin backend support"
 optional_depends libarchive "-D archive=true"  "-D archive=false"  "for archive support"
 optional_depends libgcrypt  "-D gcrypt=true"   "-D gcrypt=false"   "for encryption support"
 optional_depends gcr        "-D gcr=true"      "-D gcr=false"      "for gcr certificate support"

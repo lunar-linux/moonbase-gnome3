@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:621ea6c1b9a60b7ed2893938620d3190725a3d9dc65ce5af0fb6c186ee342503
         WEB_SITE=http://www.gnome.org
          ENTERED=20080312
-         UPDATED=20201003
+         UPDATED=20201104
            SHORT="Replacement for Gnome-VFS"
 
 cat << EOF
