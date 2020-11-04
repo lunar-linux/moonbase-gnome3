@@ -10,9 +10,8 @@
             TYPE=meson
 
 cat << EOF
-GCR is a library for displaying certificates, and crypto UI, accessing
-key stores. It also provides the viewer for crypto files on the GNOME
-desktop.
-GCK is a library for accessing PKCS#11 modules like smart cards, in a
-(G)object oriented way.
+GCR is a library for displaying certificates, and crypto UI, accessing key
+stores. It also provides the viewer for crypto files on the GNOME desktop.
+GCK is a library for accessing PKCS#11 modules like smart cards, in a (G)object
+oriented way.
 EOF
