@@ -30,3 +30,4 @@ optional_depends "ibus" \
 
 optional_depends samba "" "" "Enable printer Applet support"
 optional_depends krb5 "" "" "Enable printer Applet support"
+optional_depends libhandy "" "" "Enable libhandy support" n
