@@ -1,11 +1,11 @@
           MODULE=nautilus
-         VERSION=3.36.3
+         VERSION=3.38.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:4}
-      SOURCE_VFY=sha256:b6cafc7ab1e70a64383de391b6097fcccbf36b208f8502d8c46423224fd30ef8
+      SOURCE_VFY=sha256:d09ceb54c274e50084c8757a73cd247fee5bde02a0b0d13733b0006d1a4196a6
         WEB_SITE=http://www.gnome.org
          ENTERED=20131020
-         UPDATED=20200529
+         UPDATED=20201121
            SHORT="GNOME file manager"
 
 cat << EOF
