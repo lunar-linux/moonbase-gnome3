@@ -1,10 +1,7 @@
-depends dbus-glib
 depends libxml2
+depends dbus-glib
+depends polkit
 depends intltool
-
-optional_depends polkit \
-                 "" "--disable-defaults-service" \
-                 "for polkit support"
 
 optional_depends gtk+-3 \
                  "--with-gtk=3.0" "" \
@@ -18,7 +15,8 @@ optional_depends gtk+-2 \
 optional_depends openldap \
                  "--with-openldap" \
                  "--without-openldap" \
-                 "for LDAP backend support"
+                 "for LDAP backend support" \
+                 "n"
 
 optional_depends ORBit2 \
                  "--enable-orbit" \
