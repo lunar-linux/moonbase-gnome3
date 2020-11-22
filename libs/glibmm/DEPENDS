@@ -2,3 +2,4 @@ depends glib-networking
 depends libsigc++2
 depends XML-Parser
 depends llvm
+depends meson
