@@ -1,7 +1,2 @@
-./autogen.sh --prefix=/usr \
-             --sysconfdir=/etc \
-             --localstatedir=/var\
-             --disable-static \
-             $OPTS &&
-
-default_make
+OPTS+=" -Ddeprecated_warnings=false " 
+default_meson_build
