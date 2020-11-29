@@ -1,0 +1,23 @@
+          MODULE=devhelp
+         VERSION=3.38.1
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:4da8f5951b3a5920df73d057beab3ebe1855a75eae41208a9d89305a6b114a8f
+        WEB_SITE=https://wiki.gnome.org/Apps/Devhelp
+         ENTERED=20030720
+         UPDATED=20201129
+           SHORT="An API documentation browser for GNOME"
+            TYPE=meson
+
+cat << EOF
+Devhelp is a developer tool for browsing and searching
+API documentation. It provides an easy way to navigate
+through libraries and to search by function, struct, or
+macro. The documentation must be installed locally, so
+an internet connection is not needed to use Devhelp.
+Devhelp works natively with GTK-Doc, so the GTK+ and
+GNOME libraries are well supported. But other development
+platforms can be supported as well, as long as the API
+documentation is available in HTML and a *.devhelp2 index
+file is generated
+EOF
