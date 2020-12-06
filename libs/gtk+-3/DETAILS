@@ -1,12 +1,12 @@
           MODULE=gtk+-3
-         VERSION=24.23
+         VERSION=24.24
           SOURCE=$MODULE.$VERSION.tar.xz
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE.$VERSION
       SOURCE_URL=$GNOME_URL/sources/gtk+/3.${VERSION%%.*}
-      SOURCE_VFY=sha256:5d864d248357a2251545b3387b35942de5f66e4c66013f0962eb5cb6f8dae2b1
+      SOURCE_VFY=sha256:cc9d4367c55b724832f6b09ab85481738ea456871f0381768a6a99335a98378a
         WEB_SITE=http://www.gtk.org
          ENTERED=20120706
-         UPDATED=20201007
+         UPDATED=20201206
            SHORT="GTK+ is a multi-platform toolkit for creating GUIs"
             TYPE=meson
 
