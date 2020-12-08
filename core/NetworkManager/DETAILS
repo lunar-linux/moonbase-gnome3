@@ -1,8 +1,8 @@
           MODULE=NetworkManager
-         VERSION=1.26.4
+         VERSION=1.26.6
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION::4}
-      SOURCE_VFY=sha256:7995802c67e54fc58be4c0e3d2095d943f53f4300a93bde7ff48822a0b1f62ea
+      SOURCE_VFY=sha256:1637d28d8ee74f3d4b7473febc2806ca66a21069680b6645bb11a192653e9603
         WEB_SITE=http://gnome.org/projects/$MODULE
          ENTERED=20130216
          UPDATED=20201014
