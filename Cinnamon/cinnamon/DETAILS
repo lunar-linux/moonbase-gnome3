@@ -1,8 +1,8 @@
           MODULE=cinnamon
-         VERSION=4.8.1
+         VERSION=4.8.2
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/linuxmint/cinnamon/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:cb9aeff385764ba33cf4f7ee2bb5cb7308960670e8fa9f3be38a1d431b20436d
+      SOURCE_VFY=sha256:2891a13446db9992e48e1923bce7c9ed6a1012515a9c02aacc5762c471b465eb
         WEB_SITE=http://cinnamon.linuxmint.com/
          ENTERED=20130210
          UPDATED=20201208
