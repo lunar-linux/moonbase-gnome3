@@ -18,7 +18,7 @@ optional_depends dnsmasq  "" "" "for DNS forwarder and DHCP server support"
 
 optional_depends bluez-5 "-D bluez5_dun=true" "" "for Bluetooth support"
 
-optional_depends nss    "-D crypto=nss"    "" "for NSS crypto support"
+optional_depends nss    "-D crypto=nss"    "" "for NSS crypto support (if no then you should enable support for GnuTLS in next question)"
 optional_depends gnutls "-D crypto=gnutls" "" "for TLS crypto support"
 
 optional_depends dhcpcd   "-D dhcpcd=yes"   "-D dhcpcd=no"   "for DHCP client"
@@ -80,16 +80,6 @@ optional_depends vala \
                  "-D vapi=true" \
                  "-D vapi=false"  \
                  "for vala support (needs introspection support)"
-
-optional_depends gtk-doc\
-                 "-D enable-gtk-doc=yes" \
-                 "-D enable-gtk-doc=no" \
-                 "for documentation generation" \
-                 "n"
-
-if in_depends "$MODULE" "gtk-doc"; then
-  depends YAML
-fi
 
 optional_depends gobject-introspection \
                  "-D introspection=true" \

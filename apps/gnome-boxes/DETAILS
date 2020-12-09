@@ -1,11 +1,11 @@
           MODULE=gnome-boxes
-         VERSION=3.36.1
+         VERSION=3.38.2
          SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:dfecba7e0be217266bc98f75d27c6fe9ee1b90ce920244a09916acf75c225225
+      SOURCE_VFY=sha256:54aafd994920ee8fab45eb460c2d3f75c9ae791b14a56440199aaf1fc1b35bfe
         WEB_SITE=http://www.gnome.org/
          ENTERED=20200221
-         UPDATED=20200313
+         UPDATED=20201203
            SHORT="Simple GNOME application to access remote or virtual systems"
 
 cat << EOF
