@@ -1,8 +1,8 @@
           MODULE=nemo
-         VERSION=4.8.1
+         VERSION=4.8.2
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/linuxmint/nemo/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:a5d8b450ff125b90f419d34e1e319df93e8171ba91bed07d7c4552907ca126a2
+      SOURCE_VFY=sha256:e4225b7c4736abe49e106595c770f2c2ea137b15f0b09c9f9ae05c1556fb42a4
         WEB_SITE=http://github.com/linuxmint/nemo/
          ENTERED=20130302
          UPDATED=20201209
