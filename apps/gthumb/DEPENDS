@@ -1,0 +1,71 @@
+depends gtk+-3
+depends gsettings-desktop-schemas
+depends libpng
+depends %JPEG
+
+optional_depends  "exiv2" \
+    "-Dexiv2=true" \
+    "-Dexiv2=false" \
+    "Use exiv2 to read and write metadata" \
+    "y"
+
+optional_depends  "clutter" \
+    "-Dclutter=true" \
+    "-Dclutter=false" \
+    "Use clutter to make animated slideshows"
+
+optional_depends  "gstreamer" \
+    "-Dgstreamer=true"  \
+    "-Dgstreamer=false" \
+    "Use gstreamer to play multimedia files" \
+    "y"
+
+optional_depends  "lcms2" \
+    "-Dlcms2=true" \
+    "-Dlcms2=false" \
+    "Use lcms2 to get color management support" \
+    "y"
+
+optional_depends  "colord-gtk" \
+    "-Dcolord=true" \
+    "-Dcolord=false" \
+    "Use colord to read the monitor color profile"
+
+optional_depends  "tiff" \
+    "-Dlibtiff=true" \
+    "-Dlibtiff=false" \
+    "Use libtiff to load Tiff images" \
+    "y"
+
+optional_depends  "libwebp" \
+    "-Dlibwebp=true" \
+    "-Dlibwebp=false" \
+    "Use libwebp to load WebP images" \
+    "y"
+
+optional_depends  "libopenraw" \
+    "-Dlibraw=true" \
+    "-Dlibraw=false" \
+    "Use libopenraw to load RAW images" \
+    "y"
+
+optional_depends  "librsvg" \
+    "-Dlibrsvg=true" \
+    "-Dlibrsvg=false" \
+    "Use librsvg to load SVG images" \
+    "y"
+
+optional_depends  "libsecret" \
+    "-Dlibsecret=true" \
+    "-Dlibsecret=false" \
+    "Use libsecret to save web service account data"
+
+optional_depends  "webkit2gtk3" \
+    "-Dwebservices=true" \
+    "-Dwebservices=false" \
+    "Compile extensions that import/export images from web services"
+
+optional_depends  "brasero" \
+    "-Dlibbrasero=true" \
+    "-Dlibbrasero=false" \
+    "Use libbrasero to save images and metadata to discs"
