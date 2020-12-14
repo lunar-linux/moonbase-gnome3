@@ -1,12 +1,12 @@
           MODULE=gnome-disk-utility
-         VERSION=3.36.1
+         VERSION=3.38.1
           SOURCE=${MODULE}-${VERSION}.tar.xz
       SOURCE_URL=http://ftp.gnome.org/pub/GNOME/sources/gnome-disk-utility/${VERSION%.*}/
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
-      SOURCE_VFY=sha256:791b18f231bcbc6d941af3837ca5be14f2157e5ce3d32bdc5b9eb8947e12b414
+      SOURCE_VFY=sha256:d53b85dc1303a1b5ce1e421c1f5c6ac0b318e07cd9a95939d2e1f0959a5ed7d9
         WEB_SITE="http://ftp.gnome.org/pub/GNOME/sources/gnome-disk-utility/"
          ENTERED=20110618
-         UPDATED=20200323
+         UPDATED=20201213
            SHORT="Disk management for gnome."
             TYPE=meson
 cat <<EOF
