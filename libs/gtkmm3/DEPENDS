@@ -2,5 +2,6 @@ depends gtk+-3
 depends cairomm
 depends pangomm
 depends atkmm
+depends meson
 
 optional_depends doxygen "" "" "for documentations generation" "n"

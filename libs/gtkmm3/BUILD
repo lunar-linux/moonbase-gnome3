@@ -1,8 +1,1 @@
-OPTS+=" --prefix=${GNOME210_PREFIX:-/usr} \
-        --build=$BUILD  \
-        --sysconfdir=/etc \
-        --localstatedir=/var \
-        --infodir=${GNOME210_PREFIX:-/usr}/share/info \
-        --mandir=${GNOME210_PREFIX:-/usr}/share/man"
-
-default_build
+default_meson_build
