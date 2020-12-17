@@ -26,11 +26,6 @@ if [ "`get_module_config WPEBACKEND`" = "y" ]; then
    depends wpebackend-fdo
 fi
 
-optional_depends hyphen \
-                 "-DUSE_LIBHYPHEN=ON" \
-                 "-DUSE_LIBHYPHEN=OFF" \
-                 "for hyphenation and justification support"
-
 optional_depends libnotify \
                  "-DUSE_LIBNOTIFY=ON" \
                  "-DUSE_LIBNOTIFY=OFF" \
@@ -40,6 +35,11 @@ optional_depends geoclue2 \
                  "-DENABLE_GEOLOCATION=ON" \
                  "-DENABLE_GEOLOCATION=OFF" \
                  "for geolocation support"
+
+optional_depends hyphen \
+                 "-DUSE_LIBHYPHEN=ON" \
+                 "-DUSE_LIBHYPHEN=OFF" \
+                 "for hyphenation and justification support"
 
 optional_depends wayland-protocols \
                  "-DENABLE_WAYLAND_TARGET=ON" \
