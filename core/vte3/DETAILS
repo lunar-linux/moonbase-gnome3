@@ -6,7 +6,7 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/vte-$VERSION
       SOURCE_VFY=sha256:c369e87c0c8284e09109d0a9aac821f543558f51c0cb9c7acfff3df64153308d
         WEB_SITE=http://www.gnome.org
          ENTERED=20021013
-         UPDATED=20201104
+         UPDATED=20201221
            SHORT="A Virtual Terminal Emulator widget"
 
 cat << EOF
