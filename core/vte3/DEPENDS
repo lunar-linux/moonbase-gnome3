@@ -4,24 +4,29 @@ depends vala
 depends intltool
 depends meson
 
+optional_depends icu4c \
+                 "-D icu=true" \
+                 "-D icu=false" \
+                 "for ICU support"
+
 optional_depends gnutls \
-                 "-Dgnutls=true" \
-                 "-Dgnutls=false" \
+                 "-D gnutls=true" \
+                 "-D gnutls=false" \
                  "for GNUTLS support"
 
 optional_depends fribidi \
-                 "-Dfribidi=true" \
-                 "-Dfribidi=false" \
+                 "-D fribidi=true" \
+                 "-D fribidi=false" \
                  "for bidirectional text support"
 
 optional_depends gtk-doc \
-                 "-Ddoc=true" \
-                 "-Ddoc=false" \
+                 "-D doc=true" \
+                 "-D doc=false" \
                  "for building documentation" \
                  "n"
 
 optional_depends gobject-introspection \
-                 "-Dgir=true" \
-                 "-Dgir=false" \
+                 "-D gir=true" \
+                 "-D gir=false" \
                  "for object introspection" \
                  "y"

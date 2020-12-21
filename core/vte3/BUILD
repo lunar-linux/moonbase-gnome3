@@ -1,4 +1,4 @@
-OPTS+=" -Db_lto=false"
+OPTS+=" -D b_lto=false"
 
 default_meson_build &&
 
