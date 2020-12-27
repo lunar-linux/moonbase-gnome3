@@ -1,0 +1,13 @@
+          MODULE=baobab
+         VERSION=3.38.0
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=048468147860816b97f15d50b3c84e9acf0539c1441cfeb63703d112e8728329
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20200424
+         UPDATED=20200918
+           SHORT="Disk Usage Analyzer"
+
+cat << EOF
+Baobab is a simple application which can scan either specific folders (local or remote) or volumes and give a graphical representation including each directory size or percentage in the branch. It also auto-detects any mounted/unmounted device.
+EOF
