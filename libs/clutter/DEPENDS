@@ -1,6 +1,6 @@
 depends gtk+-3
 depends cogl
-
+depends json-glib
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
                  "--disable-gtk-doc" \
