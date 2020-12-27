@@ -1,0 +1,9 @@
+depends dbus-glib
+depends gnome-common
+depends gobject-introspection
+depends gtk+-3
+
+optional_depends vala \
+"" \
+"--disable-vala" \
+"enable vala support?" 
