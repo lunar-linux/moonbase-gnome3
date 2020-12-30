@@ -1,0 +1,8 @@
+depends gtk+-3
+depends vala
+
+optional_depends gobject-introspection \
+                 "" \
+                 "" \
+                 "for object introspection" \
+                 "y"
