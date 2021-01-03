@@ -49,7 +49,7 @@ optional_depends wayland-protocols \
 
 optional_depends gtk-doc \
                  "-DENABLE_GTKDOC=ON" \
-                 "-DENABLE_GTKDOK=OFF" \
+                 "-DENABLE_GTKDOC=OFF" \
                  "for building documentation" \
                  "n"
 
