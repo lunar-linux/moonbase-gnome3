@@ -1,0 +1,7 @@
+OPTS+=" -Dipv6=true \
+        -Dgdm-xsession=true \
+        -Dplymouth=disabled" &&
+
+if module_installed systemd; then
+   OPTS+=" -Dsystemd-journal=true"
+fi
