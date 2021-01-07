@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:53600f00d8c8b8ae3c785de69c48eeb376e2b8508e9b12d6a242f3edfb3cd515
         WEB_SITE=http://www.gnome.org/gnome-3
          ENTERED=20180913
-         /* UPDATED=20201104 */
+         UPDATED=20201104
            SHORT="GNOME system power information and statistics"
 
 cat << EOF
