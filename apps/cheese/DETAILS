@@ -5,8 +5,9 @@
      SOURCE_VFY=sha256:d1865600ac88012e136b1ec3db72a4634f57bc2035895277be792bb078627e73
         WEB_SITE=http://www.gnome.org/projects/cheese
          ENTERED=20080817
-         UPDATED=20190914
+         UPDATED=20200525
            SHORT="A webcam picture taker"
+            TYPE=meson
 
 cat << EOF
 Cheese uses your webcam to take photos and videos, applies fancy special
