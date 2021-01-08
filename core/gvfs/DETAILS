@@ -1,11 +1,11 @@
           MODULE=gvfs
-         VERSION=1.46.1
+         VERSION=1.46.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION:0:4}/
-      SOURCE_VFY=sha256:621ea6c1b9a60b7ed2893938620d3190725a3d9dc65ce5af0fb6c186ee342503
+      SOURCE_VFY=sha256:d83fa160286670c03eb890240606d8afa7ea6a3a818e8ad17eeed8d976487bd7
         WEB_SITE=http://www.gnome.org
          ENTERED=20080312
-         UPDATED=20201104
+         UPDATED=20210108
            SHORT="Replacement for Gnome-VFS"
 
 cat << EOF
