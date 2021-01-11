@@ -1,11 +1,11 @@
           MODULE=gtk
-         VERSION=4.0.0
+         VERSION=4.0.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/gtk/${VERSION%.*}
-      SOURCE_VFY=sha256:d46cf5b127ea27dd9e5d2ff6ed500cb4067eeb2cb1cd2c313ccde8013b0b9bf9
+      SOURCE_VFY=sha256:5e778f75e3808529d8300aae47b873675891de7d474c43bea32cc32e10d6df9c
         WEB_SITE=http://www.gtk.org
          ENTERED=20200412
-         UPDATED=20201221
+         UPDATED=20210111
            SHORT="GTK is a multi-platform toolkit for creating GUIs"
             TYPE=meson
 
