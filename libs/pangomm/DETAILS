@@ -1,11 +1,11 @@
           MODULE=pangomm
-         VERSION=2.42.1
+         VERSION=2.46.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:14bf04939930870d5cfa96860ed953ad2ce07c3fd8713add4a1bfe585589f40f
+      SOURCE_VFY=sha256:d3787d04d6198b606f3efa357b3b452a7140e2a7dee56f9f9ce516d7d5fcec1b
         WEB_SITE=http://www.gtk.org
          ENTERED=20080924
-         UPDATED=20200403
+         UPDATED=20210128
            SHORT="C++ wrapper for Pango"
 
 cat << EOF
