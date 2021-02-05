@@ -6,6 +6,7 @@ depends libsecret
 depends util-linux
 depends %UDEV
 depends libgudev
+depends mobile-broadband-provider-info
 depends meson
 
 optional_depends readline \
