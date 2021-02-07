@@ -1,6 +1,7 @@
 depends dbus-glib
 depends libgnomekbd
 depends webkit2gtk3
+depends python-pycairo
 depends cinnamon-desktop
 depends cinnamon-translations
 

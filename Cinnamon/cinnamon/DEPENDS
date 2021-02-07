@@ -1,6 +1,7 @@
 depends gstreamer
 depends clutter-gtk
 depends librsvg
+depends python-pycairo
 depends python-lxml
 depends accountsservice
 depends cjs
