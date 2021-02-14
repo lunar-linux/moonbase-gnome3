@@ -1,8 +1,8 @@
           MODULE=gnome-terminal
-         VERSION=3.38.1
+         VERSION=3.38.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION::4}
-      SOURCE_VFY=sha256:d998d4824f38847fdd74bad6b5f09cc8e11b9de8e2a284a439af290714ddf3d1
+      SOURCE_VFY=sha256:11a5b0d635f15fdce7508351a510fbf4e92aa533152a50ff0c7845e3102e4764
         WEB_SITE=http://www.gnome.org
          ENTERED=20020714
          UPDATED=20201004
