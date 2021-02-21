@@ -2,6 +2,7 @@ depends evolution-data-server
 depends hicolor-icon-theme
 
 optional_depends libnotify "" "" "for libnotify popups"
+optional_depends highlight "" "" "for text hilight plugin"
 
 optional_depends libytnef \
                 "-DENABLE_YTNEF=ON" \

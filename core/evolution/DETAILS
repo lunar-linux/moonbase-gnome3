@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:341f92d24e2b44c2789b0037f1a894ff165487daa4b00b80fae3138a2e05afd4
         WEB_SITE=http://gnome.org/projects/evolution
          ENTERED=20011109
-         UPDATED=20210212
+         UPDATED=20210221
            SHORT="email, calendar and notes information management solution"
 
 cat << EOF
