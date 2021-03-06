@@ -1,11 +1,11 @@
           MODULE=libgdata
-         VERSION=0.18.0
+         VERSION=0.18.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}/
-      SOURCE_VFY=sha256:f0c20112fa5372b62c01256f268aef5131a161dfc23868f393ecf7b8b3752580
+      SOURCE_VFY=sha256:dd8592eeb6512ad0a8cf5c8be8c72e76f74bfe6b23e4dd93f0756ee0716804c7
         WEB_SITE=http://live.gnome.org/libgdata
          ENTERED=20091006
-         UPDATED=20210211
+         UPDATED=20210306
            SHORT="Gnome's GData protocol library"
             TYPE=meson
 
