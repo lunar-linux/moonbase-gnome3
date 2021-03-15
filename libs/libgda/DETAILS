@@ -1,11 +1,11 @@
           MODULE=libgda
-         VERSION=5.2.9
+         VERSION=5.2.10
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:59caed8ca72b1ac6437c9844f0677f8a296d52cfd1c0049116026abfb1d87d9b
+      SOURCE_VFY=sha256:6f6cdf7b8053f553b907e0c88a6064eb48cf2751852eb24323dcf027792334c8
         WEB_SITE=http://www.gnome-db.org
          ENTERED=20020714
-         UPDATED=20190509
+         UPDATED=20210315
            SHORT="A framework for developing database-oriented applications"
 
 cat << EOF
