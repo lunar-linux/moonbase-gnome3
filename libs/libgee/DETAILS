@@ -1,11 +1,11 @@
           MODULE=libgee
-         VERSION=0.20.3
+         VERSION=0.20.4
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:d0b5edefc88cbca5f1709d19fa62aef490922c6577a14ac4e7b085507911a5de
+      SOURCE_VFY=sha256:524c1bf390f9cdda4fbd9a47b269980dc64ab5280f0801b53bc69d782c72de0e
         WEB_SITE=http://live.gnome.org/Libgee
          ENTERED=20100501
-         UPDATED=20200210
+         UPDATED=20210318
            SHORT="Collection library for vala"
 
 cat << EOF
