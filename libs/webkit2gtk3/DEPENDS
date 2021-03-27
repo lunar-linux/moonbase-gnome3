@@ -4,6 +4,7 @@ depends which
 depends %JPEG
 depends libpng
 depends libwebp
+depends libmanette
 depends mesa-lib
 depends icu4c
 depends enchant
