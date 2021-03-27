@@ -1,0 +1,18 @@
+          MODULE=libmanette
+         VERSION=0.2.6
+          SOURCE=$MODULE-$VERSION.tar.xz
+      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+      SOURCE_VFY=sha256:63653259a821ec7d90d681e52e757e2219d462828c9d74b056a5f53267636bac
+        WEB_SITE=https://gnome.pages.gitlab.gnome.org/libmanette/
+         ENTERED=20210327
+         UPDATED=20210327
+           SHORT="Simple GObject game controller library"
+
+cat << EOF
+libmanette offers painless access to game controllers, from any programming
+language and with little dependencies.
+It supports the de-facto standard gamepad, as defined by the W3C standard
+gamepad specification or as implemented by the SDL GameController. Convertion
+of raw gamepad events into usable ones is handled transparently using an
+embedded library of mappings in the popular SDL mapping string format.
+EOF
