@@ -1,11 +1,11 @@
           MODULE=papirus-icon-theme
-         VERSION=20201201
+         VERSION=20210401
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:e100f12ffe22fe46e4b12837c2458b29d1227692d90633c7c9498092707d6dde
+      SOURCE_VFY=sha256:6cd3874ce3781a4ace210076e8bf64f32cd54f1972c44dbb44100f19e99b2c26
         WEB_SITE=https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/
          ENTERED=20191102
-         UPDATED=20201202
+         UPDATED=20210403
            SHORT="Papirus Icon Theme"
 ARCHIVE=off
 cat << EOF
