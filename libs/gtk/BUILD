@@ -16,4 +16,8 @@ fi
 
 OPTS+=" -Dmedia=$MEDIA_BACKENDS"
 
+if in_depends $MODULE colord; then
+   OPTS+=" -D colord=enabled"
+fi
+
 default_meson_build
