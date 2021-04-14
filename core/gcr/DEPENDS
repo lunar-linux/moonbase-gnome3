@@ -7,6 +7,6 @@ depends gnupg
 depends meson
 
 optional_depends gtk-doc \
-   " " \
+   "" \
    "-Dgtk_doc=false" \
    "for documentation"
