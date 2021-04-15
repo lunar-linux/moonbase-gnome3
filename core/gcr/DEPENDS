@@ -5,3 +5,8 @@ depends hicolor-icon-theme
 depends desktop-file-utils
 depends gnupg
 depends meson
+
+optional_depends gtk-doc \
+   "" \
+   "-Dgtk_doc=false" \
+   "for documentation"
