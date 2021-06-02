@@ -1,11 +1,11 @@
           MODULE=cinnamon-control-center
-         VERSION=4.8.2
+         VERSION=5.0.0
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/linuxmint/cinnamon-control-center/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:407e88fe458af7b25c0dd91d54aad93a72a1464ced285a741ed1ce6249ed61af
-        WEB_SITE=http://github.com/linuxmint/$MODULE/
+      SOURCE_VFY=sha256:
+        WEB_SITE=http://github.com/linuxmint/$MODULE/26b6984fd66f4fe8445e10b4f975e4162bc06197a0d438708daf4dce57d06a64
          ENTERED=20130415
-         UPDATED=20210103
+         UPDATED=20210602
            SHORT="The Control Center for Cinnamon"
 
 cat << EOF
