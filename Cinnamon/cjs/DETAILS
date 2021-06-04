@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:4e7f1d541188fe87db00e96790e0a157d99b5f07676240da97a2ec9b6b21d1da
         WEB_SITE=http://github.com/linuxmint/$MODULE/
          ENTERED=20131019
-         UPDATED=20210602
+         UPDATED=20210604
            SHORT="Javascript Bindings for Cinnamon"
 
 cat <<EOF
