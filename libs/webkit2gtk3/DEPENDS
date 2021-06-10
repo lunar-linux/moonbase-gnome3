@@ -5,27 +5,18 @@ depends %JPEG
 depends libpng
 depends libwebp
 depends libmanette
-depends mesa-lib
 depends icu4c
 depends enchant
 depends libXt
-depends libxslt
-depends harfbuzz
-depends freetype2
 depends openjpeg-2
 depends gtk+-3
 depends gperf
-depends sqlite
 depends libsoup
 depends libsecret
 depends bubblewrap
 depends xdg-dbus-proxy
 depends libseccomp
-depends zlib
 
-if [ "`get_module_config WPEBACKEND`" = "y" ]; then
-   depends wpebackend-fdo
-fi
 
 optional_depends libnotify \
                  "-DUSE_LIBNOTIFY=ON" \
@@ -42,6 +33,11 @@ optional_depends hyphen \
                  "-DUSE_LIBHYPHEN=OFF" \
                  "for hyphenation and justification support"
 
+optional_depends wpebackend-fdo \
+                 "-DUSE_WPE_RENDERER=ON" \
+                 "-DUSE_WPE_RENDERER=OFF" \
+                 "for wpe renderer - if yes enable wayland support (next)" y
+   
 optional_depends wayland-protocols \
                  "-DENABLE_WAYLAND_TARGET=ON" \
                  "-DENABLE_WAYLAND_TARGET=OFF" \
