@@ -1,11 +1,11 @@
           MODULE=nemo
-         VERSION=5.0.2
+         VERSION=5.0.3
           SOURCE=$MODULE-$VERSION.tar.gz
  SOURCE_URL_FULL=https://github.com/linuxmint/nemo/archive/$VERSION.tar.gz
-      SOURCE_VFY=sha256:b95b318bd2a81a42eec82bbf1a010d38efcaf0e6b12bd3e2f1149538f3e0d2bc
+      SOURCE_VFY=sha256:b73c3c94c4513b58b3b4ad24c33187f1343ebaffb3d7c3e812de2cf1e9a1f1bb
         WEB_SITE=http://github.com/linuxmint/nemo/
          ENTERED=20130302
-         UPDATED=20210626
+         UPDATED=20210703
            SHORT="Cinnamon file manager (a Nautilus fork)"
 
 cat <<EOF
