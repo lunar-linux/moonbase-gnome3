@@ -5,8 +5,8 @@ SOURCE_DIRECTORY=$BUILD_DIRECTORY/gtkmm-$VERSION
       SOURCE_URL=$GNOME_URL/sources/gtkmm/${VERSION%.*}
       SOURCE_VFY=sha256:9beb71c3e90cfcfb790396b51e3f5e7169966751efd4f3ef9697114be3be6743
         WEB_SITE=http://gtkmm.org
-         ENTERED=2002125
-         UPDATED=2021223
+         ENTERED=20140820
+         UPDATED=20210223
            SHORT="C++ bindings for GTK+3"
 
 cat << EOF
