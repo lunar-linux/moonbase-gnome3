@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:0bf5562e9bfc0382a9dcb81f64340787542568762a3a367d9d90f6185898b9a3  libpeas-1.30.0.tar.xz
         WEB_SITE=http://www.gnome.org
          ENTERED=20121020
-         UPDATED=2021-326
+         UPDATED=20210326
            SHORT="A GObject-based plugins engine"
 
 cat << EOF
