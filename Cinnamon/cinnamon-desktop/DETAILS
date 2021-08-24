@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:3fa2bcfe24f370b6a4ac5fc9aa6b08d8a191f23264eaacfd8264ff5bb6a67f24
         WEB_SITE=http://github.com/linuxmint/$MODULE/
          ENTERED=20131019
-         UPDATED=2021-6-2
+         UPDATED=20210602
            SHORT="A library with common API for various Cinnamon modules"
 
 cat <<EOF
