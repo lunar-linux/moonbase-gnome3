@@ -1,11 +1,11 @@
           MODULE=json-glib
-         VERSION=1.6.4
+         VERSION=1.6.6
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://ftp.gnome.org/pub/GNOME/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:b1f6a7930808f77a827f3b397a04bb89d4c0c0b2550885d4a5e4c411dfa13f5f
+      SOURCE_VFY=sha256:96ec98be7a91f6dde33636720e3da2ff6ecbb90e76ccaa49497f31a6855a490e
         WEB_SITE=http://live.gnome.org/JsonGlib
          ENTERED=20100825
-         UPDATED=20210818
+         UPDATED=20210828
            SHORT="Glib JavaScript Object Notation"
 
 cat << EOF
