@@ -9,6 +9,7 @@ depends cinnamon-control-center
 depends cinnamon-session
 depends gnome-backgrounds
 depends muffin
+depends wget
 
 # fails to start without working themes
 depends cinnamon-themes

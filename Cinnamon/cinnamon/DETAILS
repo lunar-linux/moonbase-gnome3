@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:332409bd9fbc66e98f23c87c8ec22da9211b3425cb6f8a736f15e83a95041d2f
         WEB_SITE=http://cinnamon.linuxmint.com/
          ENTERED=20130210
-         UPDATED=20211105
+         UPDATED=20211114
            SHORT="A Linux desktop based on GTK"
 
 cat <<EOF
