@@ -20,8 +20,8 @@ optional_depends fribidi \
                  "for bidirectional text support"
 
 optional_depends gtk-doc \
-                 "-D doc=true" \
-                 "-D doc=false" \
+                 "-D docs=true" \
+                 "-D docs=false" \
                  "for building documentation" \
                  "n"
 
