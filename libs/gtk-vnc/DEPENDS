@@ -2,11 +2,8 @@ depends libgcrypt
 depends cyrus-sasl
 depends gnutls
 depends gtk+-3
-depends pulseaudio
 depends intltool
 depends meson
 
-optional_depends vala \
-                 "-Dwith-vala=true" \
-                 "-Dwith-vala=false" \
-                 "for vala bindings"
+optional_depends pulseaudio "-D pulseaudio=enabled" "-D pulseaudio=disabled" "for pulseaudio bridge support"
+optional_depends vala       "-D with-vala=enabled"  "-D with-vala=disabled"  "for vala bindings"
