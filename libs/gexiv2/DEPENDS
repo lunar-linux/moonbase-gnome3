@@ -3,18 +3,18 @@ depends python-pygobject
 depends meson
 
 optional_depends vala \
-                 "-Ddisable-vala=false" \
-                 "-Ddisable-vala=true" \
-                 "for vala support"
+                 "-D vapi=false" \
+                 "-D vapi=true" \
+                 "for vala vapi support"
 
 optional_depends gtk-doc \
-                 "-Denable-gtk-doc=true" \
-                 "-Denable-gtk-doc=false" \
+                 "-D gtk_doc=true" \
+                 "-D gtk_doc=false" \
                  "for building documentation" \
                  "n"
 
 optional_depends gobject-introspection \
-                 "-Ddisable-introspection=false" \
-                 "-Ddisable-introspection=true" \
+                 "-D introspection=false" \
+                 "-D introspection=true" \
                  "for object introspection" \
                  "y"
