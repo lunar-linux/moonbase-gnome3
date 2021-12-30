@@ -1,5 +1,3 @@
-mkdir -p build &&
-
-OPTS+=" --prefix /usr -Denable_docs=false"
+OPTS+=" --prefix /usr"
 
 default_meson_build

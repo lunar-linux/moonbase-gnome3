@@ -4,8 +4,5 @@ depends intltool
 depends XML-Parser
 depends meson
 
-optional_depends gobject-introspection \
-                 "-Denable-introspection=yes" \
-                 "-Denable-introspection=no" \
-                 "introspection support" \
-                 "y"
+optional_depends gobject-introspection "-D introspection=yes" "-D introspection=no" "for introspection support" y
+optional_depends gtk-doc               "-D docs=true"         "-D docs=false"       "for API doc generation" n
