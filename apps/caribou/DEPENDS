@@ -12,3 +12,8 @@ optional_depends gobject-introspection \
                  "--disable-introspection" \
                  "for object introspection" \
                  "y"
+optional_depends gtk+-2 \
+  "" \
+  "--disable-gtk2-module" \
+  "for GTK+-2 support" \
+  "n"
