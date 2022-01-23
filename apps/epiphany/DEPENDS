@@ -2,4 +2,3 @@ depends webkit2gtk3
 depends libdazzle
 depends libhandy
 depends meson
-depends libportal

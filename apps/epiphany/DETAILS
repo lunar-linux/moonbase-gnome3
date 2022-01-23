@@ -1,12 +1,13 @@
           MODULE=epiphany
-         VERSION=3.38.2
+         VERSION=40.6
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:8b05f2bcc1e80ecf4a10f6f01b3285087eb4cbdf5741dffb8c0355715ef5116d
+      SOURCE_VFY=sha256:a2abf71b165b4302643147d637808847d64df6a97ce460703542dec75e81b5f7
         WEB_SITE=http://www.gnome.org
          ENTERED=20030413
-         UPDATED=20201202
+         UPDATED=20220123
            SHORT="GNOME Web browser based on Gecko (Mozilla)"
+            TYPE=meson
 
 cat << EOF
 Epiphany is a GNOME Web browser based on Gecko (the Mozilla rendering engine).
