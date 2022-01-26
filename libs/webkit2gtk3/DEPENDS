@@ -9,6 +9,7 @@ depends icu4c
 depends enchant
 depends libXt
 depends openjpeg-2
+depends gtk+-3
 depends gperf
 depends libsoup
 depends libsecret
