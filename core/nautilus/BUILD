@@ -1,5 +1,5 @@
 OPTS+=" -Ddocs=false \
         -Dselinux=false \
-        -Denable-extensions=false"
+        -Dextensions=true" &&
 
 default_meson_build
