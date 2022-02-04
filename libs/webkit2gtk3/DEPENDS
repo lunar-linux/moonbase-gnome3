@@ -17,6 +17,12 @@ depends bubblewrap
 depends xdg-dbus-proxy
 depends libseccomp
 
+## requires libsoup3, which requires glibc 2.69
+#optional_depends gtk \
+#                "-DUSE_GTK4=ON" \
+#                "-DUSE_GTK4=OFF" \
+#                 "build with gtk4 (if not, uses gtk3)"
+
 optional_depends libnotify \
                  "-DUSE_LIBNOTIFY=ON" \
                  "-DUSE_LIBNOTIFY=OFF" \
@@ -32,6 +38,16 @@ optional_depends hyphen \
                  "-DUSE_LIBHYPHEN=OFF" \
                  "for hyphenation and justification support"
 
+optional_depends libavif \
+                 "-DUSE_AVIF=ON" \
+                 "-DUSE_AVIF=OFF" \
+                 "for AVIF image support"
+                 
+optional_depends woff2\
+                 "-DUSE_WOFF2=ON" \
+                "-DUSE_WOFF2=OFF" \
+                "for WOFF font support"
+
 optional_depends wpebackend-fdo \
                  "-DUSE_WPE_RENDERER=ON" \
                  "-DUSE_WPE_RENDERER=OFF" \
@@ -42,7 +58,6 @@ optional_depends wayland-protocols \
                  "-DENABLE_WAYLAND_TARGET=OFF" \
                  "for Wayland support" \
                  "y"
-
 
 optional_depends gtk-doc \
                  "-DENABLE_GTKDOC=ON" \
