@@ -3,21 +3,14 @@ depends iso-codes
 depends gsettings-desktop-schemas
 depends libxkbfile
 depends bubblewrap
-depends iso-codes
 depends libseccomp
 depends itstool
 depends libxml2
 depends xkeyboard-config
-depends meson
+depends gobject-introspection
 
 optional_depends gtk-doc \
-                 "-Dgtk-doc=true" \
-                 "-Dgtk-doc=false" \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
                  "for building documentation" \
                  "n"
-
-optional_depends gobject-introspection \
-                 "-Dintrospection=true" \
-                 "-Dintrospection=false" \
-                 "for object introspection" \
-                 "y"
