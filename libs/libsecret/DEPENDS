@@ -3,23 +3,24 @@ depends gdbus-codegen
 depends libgcrypt
 depends intltool
 depends vala
+depends meson
 
 optional_depends gnome-keyring "" "" "for key storage service"
 
 optional_depends docbook-xsl \
-                 "--enable-manpages" \
-                 "--disable-manpages" \
+                 "-D manpage-true" \
+                 "-D manpage=false" \
                  "for man pages building" \
                  "n"
 
 optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "-D gtk_doc=true" \
+                 "-D gtk_doc=false" \
                  "for building documentation" \
                  "n"
 
 optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
+                 "-D introspection=true" \
+                 "-D introspection=false" \
                  "for object introspection" \
                  "y"
