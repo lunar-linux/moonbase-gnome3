@@ -2,11 +2,6 @@ depends polkit
 depends vala
 depends meson
 
-optional_depends systemd \
-                 "-Dsystemd=true" \
-                 "-Dsystemd=false -D systemdsystemunitdir=no" \
-                 "for systemd support"
-
 optional_depends elogind \
                  "-Delogind=true" \
                  "-Delogind=false" \
