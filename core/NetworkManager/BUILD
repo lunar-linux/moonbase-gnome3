@@ -15,7 +15,7 @@ if module_installed systemd; then
     OPTS+=" -D session_tracking=systemd \
             -D systemd_journal=true \
             -D suspend_resume=systemd \
-            -D config_loggign_backend_default=journal \
+            -D config_logging_backend_default=journal \
             -D systemdsystemunitdir=/usr/lib/systemd/system"
 else
     if module_installed elogind; then
