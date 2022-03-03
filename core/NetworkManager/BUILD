@@ -6,7 +6,7 @@ OPTS+=" -D tests=no \
         -D selinux=false \
         -D more_asserts=no \
         -D modify_system=true \
-        -D more-logging=false \
+        -D more_logging=false \
         -D firewalld_zone=false \
         -D session_tracking_consolekit=false \
         -D dbus_conf_dir=/usr/share/dbus-1/system.d"
@@ -15,14 +15,14 @@ if module_installed systemd; then
     OPTS+=" -D session_tracking=systemd \
             -D systemd_journal=true \
             -D suspend_resume=systemd \
-            -D config_loggin_backend_default=journal \
+            -D config_logging_backend_default=journal \
             -D systemdsystemunitdir=/usr/lib/systemd/system"
 else
     if module_installed elogind; then
         OPTS+=" -D session_tracking=elogind"
     fi
     if module_installed syslog-ng; then
-        OPTS+="-D config_loggin_backend_default=syslog"
+        OPTS+="-D config_logging_backend_default=syslog"
     fi
 fi
 
