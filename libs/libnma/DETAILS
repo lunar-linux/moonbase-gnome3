@@ -1,11 +1,11 @@
           MODULE=libnma
-         VERSION=1.8.28
+         VERSION=1.8.34
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:4af69552d131a3b2b8b6a2df584044258bf588448dcdb4bddfa12a07c134b726
+      SOURCE_VFY=sha256:f5e2e738e0fca7f2a549079290b2d8017511d485a83220c36df380a3b4753304
         WEB_SITE=https://gitlab.gnome.org/GNOME/$MODULE
          ENTERED=20200406
-         UPDATED=20200406
+         UPDATED=20220301
            SHORT="NetworkManager GUI library"
             TYPE=meson
 cat << EOF
