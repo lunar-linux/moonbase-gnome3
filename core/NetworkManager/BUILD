@@ -1,3 +1,5 @@
+unset LDFLAGS &&
+
 OPTS+=" -D tests=no \
         -D qt=false \
         -D ebpf=false \

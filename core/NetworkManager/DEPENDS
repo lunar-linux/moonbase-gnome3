@@ -8,6 +8,7 @@ depends %UDEV
 depends libgudev
 depends mobile-broadband-provider-info
 depends meson
+depends polkit
 
 optional_depends readline \
                  "-D nmcli=true" \
@@ -25,11 +26,6 @@ optional_depends gnutls "-D crypto=gnutls" "" "for TLS crypto support"
 optional_depends dhcpcd   "-D dhcpcd=yes"   "-D dhcpcd=no"   "for DHCP client"
 optional_depends dhcp     "-D dhclient=yes" "-D dhclient=no" "for standard DHCP client"
 optional_depends valgrind "-D valgrind=yes" "-D valgrind=no" "for valgrind support"
-
-optional_depends polkit \
-                 "-D polkit=true  -D polkit_agent=true" \
-                 "-D polkit=false -D polkit_agent=false" \
-                 "for polkit support"
 
 optional_depends iwd \
                  "-D iwd=true" \
@@ -54,7 +50,7 @@ optional_depends curl \
                  "n"
 
 optional_depends ModemManager \
-                 "-D modem-manager=true" \
+                 "-D modem_manager=true" \
                  "-D modem_manager=false" \
                  "for mobile broadband modem support" \
                  "n"
@@ -63,12 +59,6 @@ optional_depends libpsl \
                  "-D libpsl=true" \
                  "-D libpsl=false" \
                  "link against libpsl" \
-                 "n"
-
-optional_depends jansson \
-                 "-D json_validation=true  -D ovs=true" \
-                 "-D json_validation=false -D ovs=false" \
-                 "for JSON validation and Open vSwitch support" \
                  "n"
 
 optional_depends newt \
