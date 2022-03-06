@@ -14,7 +14,7 @@ optional_depends gtk-doc \
                  "n"
 
 optional_depends gobject-introspection \
-                 "-D introspection=false" \
                  "-D introspection=true" \
+                 "-D introspection=false" \
                  "for object introspection" \
                  "y"
