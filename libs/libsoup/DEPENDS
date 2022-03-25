@@ -23,3 +23,8 @@ optional_depends gobject-introspection \
                  "-Dintrospection=disabled" \
                  "for gobject introspection" \
                  "y"
+
+optional_depends cyrus-sasl \
+                 "-Dgssapi=enabled" \
+                 "-Dgssapi=disabled" \
+                 "for SASL support" \
