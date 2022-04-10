@@ -4,6 +4,7 @@
       SOURCE_URL=$GNOME_URL/sources/$MODULE/`echo $VERSION | cut -d. -f1-2`
       SOURCE_VFY=sha256:f0a427656e5fe19e1df71c107e88dfa1b2e673c25c547b7823b6018b40d01159
         WEB_SITE=https://wiki.gnome.org/Projects/libsoup
+            TYPE=meson
          ENTERED=20030413
          UPDATED=20211205
            SHORT="A SOAP implementation in C"

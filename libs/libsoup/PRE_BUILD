@@ -1,0 +1,3 @@
+default_pre_build
+
+OPTS+=" -Dtls_check=false -Dgssapi=disabled"
