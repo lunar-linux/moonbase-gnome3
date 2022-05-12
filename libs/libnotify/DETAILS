@@ -1,11 +1,11 @@
           MODULE=libnotify
-         VERSION=0.7.11
+         VERSION=0.7.12
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=http://ftp.gnome.org/pub/GNOME/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:dd5682ec68220339e11c5159b7e012204a318dd1b3683a09c482ca421ab07375
+      SOURCE_VFY=sha256:744b2b37508135f8261b755a9debe6e09add421adc75bde930f6e198b70ab46e
         WEB_SITE=http://www.galago-project.org/
          ENTERED=20060526
-         UPDATED=20220505
+         UPDATED=20220512
            SHORT="Desktop notification framework library"
 
 cat << EOF
