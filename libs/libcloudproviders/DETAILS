@@ -4,10 +4,10 @@
       SOURCE_URL=https://gitlab.gnome.org/World/libcloudproviders/-/archive/$VERSION/
       SOURCE_VFY=sha256:de4aa746c1695f30fcd3b52a4a6ee149ce567a2f7e185499bf2963f77dd1bad0
         WEB_SITE=https://gitlab.gnome.org/World/libcloudproviders/
+            TYPE=meson
          ENTERED=20201003
          UPDATED=20201003
            SHORT="DBus API that allows cloud storage sync clients to expose their services"
-            TYPE=meson
 
 cat << EOF
 libcloudproviders is a DBus API that allows cloud storage sync clients to expose
