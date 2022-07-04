@@ -8,7 +8,7 @@ depends meson
 optional_depends gnome-keyring "" "" "for key storage service"
 
 optional_depends docbook-xsl \
-                 "-D manpage-true" \
+                 "-D manpage=true" \
                  "-D manpage=false" \
                  "for man pages building" \
                  "n"
