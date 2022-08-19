@@ -1,4 +1,4 @@
-depends %UDEV
+depends systemd
 depends hicolor-icon-theme
 depends polkit
 depends ppp

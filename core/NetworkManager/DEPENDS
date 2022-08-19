@@ -4,7 +4,7 @@ depends libnl3
 depends libndp
 depends libsecret
 depends util-linux
-depends %UDEV
+depends systemd
 depends libgudev
 depends mobile-broadband-provider-info
 depends meson
