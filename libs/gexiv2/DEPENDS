@@ -1,12 +1,7 @@
 depends exiv2
 depends python-pygobject
 depends meson
-
-optional_depends vala \
-                 "-D vapi=false" \
-                 "-D vapi=true" \
-                 "for vala vapi support"
-
+depends vala
 optional_depends gtk-doc \
                  "-D gtk_doc=true" \
                  "-D gtk_doc=false" \
