@@ -1,22 +1,23 @@
 depends glib-2
 depends meson
 depends docbook2X
+depends gobject-introspection
 
 optional_depends %JPEG \
-                 "-Djpeg=true" \
-                 "-Djpeg=false" \
+                 "-Djpeg=enabled" \
+                 "-Djpeg=disabled" \
                  "for JPEG image loader" \
                  "y"
 
 optional_depends libpng \
-                 "-Dpng=true" \
-                 "-Dpng=false" \
+                 "-Dpng=enabled" \
+                 "-Dpng=disabled" \
                  "for PNG image loader" \
                  "y"
 
 optional_depends tiff \
-                "-Dtiff=true" \
-                "-Dtiff=false" \
+                "-Dtiff=enabled" \
+                "-Dtiff=disabled" \
                 "for TIFF image loader" \
                 "y"
 
@@ -25,18 +26,6 @@ optional_depends libxml2 \
                  "-Dman=false" \
                  "for installing man pages" \
                  "n"
-
-optional_depends gtk-doc \
-                 "-Ddocs=true" \
-                 "-Ddocs=false" \
-                 "for building documentation" \
-                 "n"
-
-optional_depends gobject-introspection \
-                 "-Dintrospection=enabled"  \
-                 "-Dinstrospection=disabled" \
-                 "for gobject introspection support" \
-                 "y"
 
 optional_depends shared-mime-info \
                  "-Dgio_sniffing=true" \
