@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:c30a40ea4cbcc811d11cd5be84bd0982948f1e9aa8ceee0a89dd09aef2003eb6
         WEB_SITE=https://github.com/daniruiz/Flat-Remix-GTK/
          ENTERED=20190406
-         UPDATED=202200605
+         UPDATED=20220605
            SHORT="A pretty simple GTK window theme inspired on material design"
 ARCHIVE=off
 cat << EOF
