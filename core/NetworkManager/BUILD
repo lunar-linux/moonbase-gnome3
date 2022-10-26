@@ -11,6 +11,7 @@ OPTS+=" -D tests=no \
         -D more_logging=false \
         -D firewalld_zone=false \
         -D session_tracking_consolekit=false \
+        -Dovs=false \
         -D dbus_conf_dir=/usr/share/dbus-1/system.d"
 
 if module_installed systemd; then
