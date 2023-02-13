@@ -23,6 +23,11 @@ depends libseccomp
 #                "-DUSE_GTK4=OFF" \
 #                 "build with gtk4 (if not, uses gtk3)"
 
+optional_depends libjxl \
+                 "-DUSE_JPEGXL=ON" \
+                 "-DUSE_JPEGXL=OFF" \
+                 "for JPEG XL encoder and decoder support"
+
 optional_depends libnotify \
                  "-DUSE_LIBNOTIFY=ON" \
                  "-DUSE_LIBNOTIFY=OFF" \
@@ -44,7 +49,7 @@ optional_depends libavif \
                  "for AVIF image support"
                  
 optional_depends woff2\
-                 "-DUSE_WOFF2=ON" \
+                "-DUSE_WOFF2=ON" \
                 "-DUSE_WOFF2=OFF" \
                 "for WOFF font support"
 
