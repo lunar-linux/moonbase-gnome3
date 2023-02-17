@@ -1,11 +1,12 @@
           MODULE=wpebackend-fdo
-         VERSION=1.8.4
+         VERSION=1.14.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://wpewebkit.org/releases/
-      SOURCE_VFY=sha256:def59bed5e8cdabb65ffa76ee2eef349fba7b42a75dac80f3da5954b17f4074a
+      SOURCE_VFY=sha256:e75b0cb2c7145448416e8696013d8883f675c66c11ed750e06865efec5809155
         WEB_SITE=https://wpewebkit.org/
+            TYPE=meson
          ENTERED=20190910
-         UPDATED=20210606
+         UPDATED=20230213
            SHORT="A backend for WPE WebKit"
 
 cat << EOF
