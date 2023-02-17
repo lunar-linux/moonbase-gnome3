@@ -1,5 +1,6 @@
 OPTS+=" -D demos=false \
         -D tests=false \
+        -D man=false \
         -D tracker3=false \
         -D examples=false"
 
