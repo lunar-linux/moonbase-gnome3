@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:96ec98be7a91f6dde33636720e3da2ff6ecbb90e76ccaa49497f31a6855a490e
         WEB_SITE=http://live.gnome.org/JsonGlib
          ENTERED=20100825
-         UPDATED=20210828
+         UPDATED=20230217
            SHORT="Glib JavaScript Object Notation"
 
 cat << EOF
