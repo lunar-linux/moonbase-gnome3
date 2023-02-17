@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:1ec0eab53d1e49966d722352bcfd51ac402dce5190baedc749a8541e761670ab
         WEB_SITE=https://github.com/flatpak/xdg-dbus-proxy/
          ENTERED=20190910
-         UPDATED=20220912
+         UPDATED=20230217
            SHORT="A D-Bus proxy"
 
 cat << EOF
