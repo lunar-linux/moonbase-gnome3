@@ -1,8 +1,8 @@
           MODULE=webkit2gtk3
-         VERSION=2.38.4
+         VERSION=2.38.5
           SOURCE=webkitgtk-$VERSION.tar.xz
       SOURCE_URL=https://www.webkitgtk.org/releases
-      SOURCE_VFY=sha256:4f47ea29a2d4d5f15eef3dc9e2d6c6f067e8de863a3f64455e1ccf9693cc1d36
+      SOURCE_VFY=sha256:40c20c43022274df5893f22b1054fa894c3eea057389bb08aee08c5b0bb0c1a7
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/webkitgtk-$VERSION
          ENTERED=20070919
          UPDATED=20230213

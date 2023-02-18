@@ -1,18 +1,16 @@
-OPTS+="-DPORT=GTK \
-      -DCMAKE_BUILD_TYPE:STRING=Release \	
+OPTS+=" -DPORT=GTK \
+      -DCMAKE_BUILD_TYPE=Release \	
       -DCMAKE_SKIP_RPATH=ON \
-      -DENABLE_WEBKIT_LEGACY=OFF \
       -DCMAKE_INSTALL_PREFIX=/usr \
-      -DUSE_SYSTEM_MALLOC=ON \
       -DLIB_INSTALL_DIR=/usr/lib \
+      -DENABLE_DOCUMENTATION=OFF \
       -DUSE_SOUP2=ON"
 ## note: soup2 needs to be used, because soup3 requires glibc 2.69
 ## which we don't have yet
 
-
 if [[ $MINIBROWSER == "y" ]]; then
   OPTS+=" -DENABLE_MINIBROWSER=ON"
-fi
+fi &&
 
 default_cmake_build &&
 
