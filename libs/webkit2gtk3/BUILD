@@ -1,5 +1,5 @@
 OPTS+=" -DPORT=GTK \
-      -DCMAKE_BUILD_TYPE=Release \	
+      -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_SKIP_RPATH=ON \
       -DCMAKE_INSTALL_PREFIX=/usr \
       -DLIB_INSTALL_DIR=/usr/lib \
@@ -12,7 +12,10 @@ if [[ $MINIBROWSER == "y" ]]; then
   OPTS+=" -DENABLE_MINIBROWSER=ON"
 fi &&
 
-default_cmake_build &&
+cmake -B $MODULE -G Ninja $OPTS &&
+cmake --build $MODULE &&
+prepare_install &&
+cmake --install $MODULE &&
 
 # symlink plugin folder to a location webkit looks for it
 if [ ! -e "/usr/lib/browser-plugins" ]; then
