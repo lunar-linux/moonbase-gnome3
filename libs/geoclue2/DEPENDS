@@ -2,18 +2,13 @@ depends intltool
 depends libsoup
 depends json-glib
 depends intltool
-
-optional_depends geoip "" "" "for IP-to-country conversion support"
-
-optional_depends NetworkManager \
-                 "--enable-network-manager" \
-                 "--disable-network-manager" \
-                 "NetworkManager support"
+depends meson
+depends gobject-introspection
 
 optional_depends ModemManager \
-                 "--enable-3g-source --enable-cdma-source --enable-modem-gps-source" \
-                 "--disable-3g-source --disable-cdma-source --disable-modem-gps-source" \
+                 "-D3g-source=true -Dcdma-source=true -Dmodem-gps-source=true" \
+                 "-D3g-source=false -Dcdma-source=false -Dmodem-gps-source=false" \
                  "build modem backends support" \
                  "n"
 
-optional_depends avahi "" "--disable-nmea-source" "avahi support"
+optional_depends avahi "-Dnmea-source=true" "-Dnmea-source=false" "avahi support"
