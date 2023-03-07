@@ -10,19 +10,17 @@ depends icu4c
 depends enchant
 depends libXt
 depends openjpeg-2
-depends gtk+-3
 depends gperf
-depends libsoup
+depends libsoup-3
 depends libsecret
 depends bubblewrap
 depends xdg-dbus-proxy
 depends libseccomp
+depends gobject-introspection
 
-## requires libsoup3, which requires glibc 2.69
-#optional_depends gtk \
-#                "-DUSE_GTK4=ON" \
-#                "-DUSE_GTK4=OFF" \
-#                 "build with gtk4 (if not, uses gtk3)"
+optional_depends gtk4    "-DUSE_GTK4=ON -DUSE_SOUP2=OFF" "-DUSE_GTK4=OFF"  "build with gtk4 (if not, uses gtk3)" y
+optional_depends libsoup "-DUSE_SOUP2=ON"                "-DUSE_SOUP2=OFF" "use libsoup2, if using gtk+-3 then yes here" n
+optional_depends gtk+-3  "-DUSE_GTK4=OFF -DUSE_SOUP2=ON" ""                "build with gtk3" h
 
 optional_depends libjxl \
                  "-DUSE_JPEGXL=ON" \
@@ -58,10 +56,4 @@ optional_depends wayland-protocols \
                  "-DENABLE_WAYLAND_TARGET=ON" \
                  "-DENABLE_WAYLAND_TARGET=OFF" \
                  "for Wayland support" \
-                 "y"
-
-optional_depends gobject-introspection \
-                 "-DENABLE_INTROSPECTION=ON" \
-                 "-DENABLE_INTROSPECTION=OFF" \
-                 "for object introspection" \
                  "y"
