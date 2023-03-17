@@ -1,3 +1,4 @@
+depends readline
 depends gtk+-3
-depends mozjs78
+depends mozjs-102
 depends gobject-introspection

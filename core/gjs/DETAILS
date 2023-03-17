@@ -1,15 +1,14 @@
           MODULE=gjs
-         VERSION=1.66.2
+         VERSION=1.74.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:bd7f5f8b171277cc0bb9ee1754b0240b62f06a76b8b18c968cf471b34ab34e59
+      SOURCE_VFY=sha256:a406fd6a1652cf66dcab228062bd16a75f5b3378248dfbbbe016b212744a30b6
         WEB_SITE=http://live.gnome.org/Gjs
          ENTERED=20130210
-         UPDATED=20210111
+         UPDATED=20230317
            SHORT="Javascript bindings for GNOME"
-            TYPE=meson
 
-cat <<EOF
+cat << EOF
 Gjs is a Javascript bindings for GNOME.
 It's mainly based on Spidermonkey javascript engine and the GObject
 introspection framework.
