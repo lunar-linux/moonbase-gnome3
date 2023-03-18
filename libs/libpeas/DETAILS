@@ -1,11 +1,12 @@
           MODULE=libpeas
-         VERSION=1.30.0
+         VERSION=1.36.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:0bf5562e9bfc0382a9dcb81f64340787542568762a3a367d9d90f6185898b9a3  libpeas-1.30.0.tar.xz
+      SOURCE_VFY=sha256:297cb9c2cccd8e8617623d1a3e8415b4530b8e5a893e3527bbfd1edd13237b4c
         WEB_SITE=http://www.gnome.org
+            TYPE=meson
          ENTERED=20121020
-         UPDATED=20210326
+         UPDATED=20230318
            SHORT="A GObject-based plugins engine"
 
 cat << EOF
