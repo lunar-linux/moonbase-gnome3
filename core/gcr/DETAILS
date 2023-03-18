@@ -1,13 +1,13 @@
           MODULE=gcr
-         VERSION=3.38.1
+         VERSION=3.41.1
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:17fcaf9c4a93a65fb1c72b82643bb102c13344084687d5886ea66313868d9ec9
+      SOURCE_VFY=sha256:bb7128a3c2febbfee9c03b90d77d498d0ceb237b0789802d60185c71c4bea24f
         WEB_SITE=http://www.gnome.org
-         ENTERED=20130218
-         UPDATED=20210113
-           SHORT="A library for bits of crypto UI and parsing"
             TYPE=meson
+         ENTERED=20130218
+         UPDATED=20230318
+           SHORT="A library for bits of crypto UI and parsing"
 
 cat << EOF
 GCR is a library for displaying certificates, and crypto UI, accessing key
