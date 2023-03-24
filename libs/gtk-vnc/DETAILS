@@ -1,13 +1,14 @@
           MODULE=gtk-vnc
-         VERSION=1.2.0
+         VERSION=1.3.1
           SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://ftp.gnome.org/pub/gnome/sources/gtk-vnc/${VERSION%.*}/
-      SOURCE_VFY=sha256:7aaf80040d47134a963742fb6c94e970fcb6bf52dc975d7ae542b2ef5f34b94a
-        WEB_SITE=http://live.gnome.org/gtk-vnc
+      SOURCE_URL=https://download.gnome.org/sources/gtk-vnc/$VERSION/
+      SOURCE_VFY=sha256:512763ac4e0559d0158b6682ca5dd1a3bd633f082f5e4349d7158e6b5f80f1ce
+        WEB_SITE=https://gitlab.gnome.org/GNOME/gtk-vnc
+            TYPE=meson
          ENTERED=20130203
-         UPDATED=20210415
+         UPDATED=20230324
            SHORT="A VNC viewer widget for GTK"
 
-cat <<EOF
+cat << EOF
 A VNC viewer widget for GTK.
 EOF
