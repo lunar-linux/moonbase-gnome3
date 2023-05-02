@@ -3,5 +3,6 @@ depends cairomm
 depends pangomm
 depends atkmm
 depends meson
+depends mm-common
 
 optional_depends doxygen "" "" "for documentations generation" "n"
