@@ -1,5 +1,6 @@
 depends intltool
 depends meson
+depends dconf 
 
 optional_depends gobject-introspection \
                  "-Dintrospection=true" \
