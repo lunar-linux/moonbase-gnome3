@@ -1,11 +1,12 @@
           MODULE=amtk
-         VERSION=5.2.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:820545bb4cf87ecebc2c3638d6b6e58b8dbd60a419a9b43cf020124e5dad7078
-        WEB_SITE=https://wiki.gnome.org/Projects/Amtk
+         VERSION=5.6.1
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.gnome.org/Archive/amtk/-/archive/$VERSION/
+      SOURCE_VFY=sha256:216e9ff1c91d13a50acb6c9e67e8e6e1e61d15b4647613c88dc9234ea9a63cc7
+        WEB_SITE=https://gitlab.gnome.org/World/amtk
+            TYPE=meson
          ENTERED=20201129
-         UPDATED=20201129
+         UPDATED=20230504
            SHORT="Actions, Menus and Toolbars Kit for GTK applications"
 
 cat << EOF
