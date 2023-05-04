@@ -1,12 +1,12 @@
           MODULE=atkmm
-         VERSION=2.36.2
+         VERSION=2.28.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:6f62dd99f746985e573605937577ccfc944368f606a71ca46342d70e1cdae079
+      SOURCE_VFY=sha256:7c2088b486a909be8da2b18304e56c5f90884d1343c8da7367ea5cd3258b9969
         WEB_SITE=http://www.gtkmm.org
             TYPE=meson
          ENTERED=20110110
-         UPDATED=20230502
+         UPDATED=20230504
            SHORT="C++ wrapper for atk"
 
 cat << EOF
