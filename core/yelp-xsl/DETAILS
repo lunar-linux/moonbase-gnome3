@@ -1,11 +1,11 @@
           MODULE=yelp-xsl
-         VERSION=3.38.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:193b6abd4697b7b421e98c36d4d3135da0b0fdb51aa53e602ed368dd84d1fd03
-        WEB_SITE=http://www.gnome.org
+         VERSION=42.1
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.gnome.org/GNOME/yelp-xsl/-/archive/$VERSION/
+      SOURCE_VFY=sha256:81b8d626a1481d542fb8c9cb890fa970ddc42b27f7779d52df31c4de0caac776
+        WEB_SITE=https://gitlab.gnome.org/GNOME/yelp-xsl
          ENTERED=20140413
-         UPDATED=20210214
+         UPDATED=20230504
            SHORT="Stylesheets for Yelp"
 
 cat << EOF
