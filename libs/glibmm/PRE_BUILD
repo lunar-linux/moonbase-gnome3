@@ -1,5 +1,3 @@
 default_pre_build &&
 
-sed -i -e '/giomm_tls_client/d' tests/meson.build
-
 OPTS+=" -Dmaintainer-mode=true -Dbuild-documentation=false"
