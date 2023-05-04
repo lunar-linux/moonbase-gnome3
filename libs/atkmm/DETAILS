@@ -4,6 +4,7 @@
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
       SOURCE_VFY=sha256:6f62dd99f746985e573605937577ccfc944368f606a71ca46342d70e1cdae079
         WEB_SITE=http://www.gtkmm.org
+            TYPE=meson
          ENTERED=20110110
          UPDATED=20230502
            SHORT="C++ wrapper for atk"

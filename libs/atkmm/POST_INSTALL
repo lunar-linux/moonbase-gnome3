@@ -1,3 +1,7 @@
+if module_installed gtkmm; then
+  lunar fix gtkmm
+fi
+
 if module_installed transmission; then
   lunar fix transmission
 fi
