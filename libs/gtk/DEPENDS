@@ -1,4 +1,4 @@
-depends at-spi2-atk
+depends at-spi2-core
 depends pango
 depends gdk-pixbuf
 depends gdbus-codegen
