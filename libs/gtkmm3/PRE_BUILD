@@ -1,3 +1,3 @@
-default_pre_build
+default_pre_build &&
 
-OPTS+=" -Dmaintainer-mode=true -Dbuild-documentation=false -Dbuild-tests=false -Dbuild-demos=false"
+OPTS+=" -D maintainer-mode=true -D build-documentation=false -D build-tests=false -D build-demos=false"
