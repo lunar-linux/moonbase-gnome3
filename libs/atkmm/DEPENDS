@@ -1,5 +1,5 @@
-depends atk
 depends mm-common
+depends at-spi2-core
 depends glibmm
 depends libsigc++2
 depends meson
