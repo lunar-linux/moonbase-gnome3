@@ -1,13 +1,13 @@
           MODULE=evince
-         VERSION=3.38.2
+         VERSION=44.2
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:27d419d5fed6305e074628edcfde0cb734fffda205d63cac323391c04903bd94
+      SOURCE_VFY=sha256:9a75c7ff8f599218d070e09fb4082cb26f9b86370a9bfae98e1aacb564d675dd
         WEB_SITE=http://projects.gnome.org/evince
-         ENTERED=20050918
-         UPDATED=20210216
-           SHORT="A document viewer for multiple formats (PDF, Postscript)"
             TYPE=meson
+         ENTERED=20050918
+         UPDATED=20230618
+           SHORT="A document viewer for multiple formats (PDF, Postscript)"
 
 cat << EOF
 Evince is a document viewer for multiple document formats. It currently

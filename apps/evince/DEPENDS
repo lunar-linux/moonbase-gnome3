@@ -1,5 +1,4 @@
 depends gnome-desktop
-
 depends adwaita-icon-theme
 
 optional_depends nautilus \
@@ -41,11 +40,6 @@ optional_depends libspectre \
                  "-Dps=enabled" \
                  "-Dps=disabled" \
                  "for with PostScript support"
-
-optional_depends t1lib \
-                 "-Dt1lib=enabled" \
-                 "-Dt1lib=disabled" \
-                 "for Type 1 fonts in DVI"
 
 optional_depends gnome-keyring \
                  "-Dkeyring=enabled"  \
