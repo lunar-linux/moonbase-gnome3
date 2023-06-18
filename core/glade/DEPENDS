@@ -6,15 +6,10 @@ depends docbook-xsl
 depends python-pygobject
 depends intltool
 depends itstool
+depends gobject-introspection
 
 optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
                  "for documentation install" \
                  "n"
-
-optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
-                 "for object introspection" \
-                 "y"
