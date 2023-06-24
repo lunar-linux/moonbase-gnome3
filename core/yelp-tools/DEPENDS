@@ -1,2 +1,5 @@
+depends docbook-xsl
+depends itstool
 depends libxml2
+depends python-lxml
 depends yelp-xsl
