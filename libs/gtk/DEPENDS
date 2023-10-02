@@ -21,10 +21,10 @@ optional_depends %X \
                  "-Dx11-backend=false" \
                  "for the X11 backend (recommended)"
 
-#optional_depends json-glib \
-#                 "-Dprint_backends=cloudprint" \
-#                 "--disable-cloudprint" \
-#                 "required by cloudprint"
+optional_depends json-glib \
+                 "-Dprint_backends=cloudprint" \
+                 "--disable-cloudprint" \
+                 "required by cloudprint"
 
 optional_depends wayland-protocols \
                  "-Dwayland-backend=true" \
@@ -50,13 +50,6 @@ optional_depends gobject-introspection \
                  "-Dintrospection=disabled" \
                  "for introspection support" \
                  "y"
-
-# not yet supported
-#optional_depends vulkan-validation-layers \
-#                 "-Dvulkan=enabled" \
-#                 "-Dvulkan=disabled" \
-#                 "for Vulkan support" \
-#                 "y"
 
 if [ "`get_module_config GSTREAMER`" = "y" ]; then
 depends gstreamer

@@ -1,20 +1,18 @@
 OPTS+=" -Dwin32-backend=false" \
-OPTS+=" -Dvulkan=disabled -Ddemos=true -Dbuild-examples=false -Dbuild-tests=false -Dinstall-tests=false"
+OPTS+=" -Dbuild-demos=true -Dbuild-examples=false -Dbuild-tests=false -Dbuild-demos=false"
 
 if [[ "$FFMPEG" == "y" ]]; then
   if [[ "$GSTREAMER" == "y" ]]; then
     MEDIA_BACKENDS="gstreamer,ffmpeg"
   fi
-  MEDIA_BACKENDS="ffmpeg"
+  MEDIA_BACKENDS="-Dmedia-ffmpeg=enabled -Dmedia-gstreamer=enabled"
 else
   if [[ "$GSTREAMER" == "y" ]]; then
-    MEDIA_BACKENDS="gstreamer"
+    MEDIA_BACKENDS="-Dmedia-gstreamer=enabled -Dmedia-ffmpeg=disabled"
   else
-    MEDIA_BACKENDS="none"
+    MEDIA_BACKENDS="-Dmedia-ffmpeg=disabled -Dmedia-gstreamer=disabled"
   fi
 fi
-
-OPTS+=" -Dmedia=$MEDIA_BACKENDS"
 
 if in_depends $MODULE colord; then
    OPTS+=" -D colord=enabled"
