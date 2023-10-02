@@ -13,7 +13,7 @@ depends openjpeg-2
 depends gperf
 depends libsoup-3
 depends libsecret
-depends gtk4
+depends gtk
 depends bubblewrap
 depends xdg-dbus-proxy
 depends libseccomp
