@@ -1,5 +1,5 @@
 depends dbus-glib
-depends gdbus-codegen
+depends glib-2
 depends libgcrypt
 depends intltool
 depends vala
