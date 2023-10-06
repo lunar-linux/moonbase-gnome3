@@ -21,7 +21,7 @@ optional_depends libgphoto2 "-D gphoto2=true"  "-D gphoto2=false"  "for Gphoto2 
 optional_depends libmtp     "-D mtp=true"      "-D mtp=false"      "for mtp support"
 optional_depends libnfs     "-D nfs=true"      "-D nfs=false"      "for NFS support"
 optional_depends libusb     "-D libusb=true"   "-D libusb=false"   "for USB support"
-optional_depends fuse       "-D fuse=true"     "-D fuse=false"     "for FUSE support"
+optional_depends fuse-3     "-D fuse=true"     "-D fuse=false"     "for FUSE support"
 optional_depends samba      "-D smb=true"      "-D smb=false"      "for Samba support"
 optional_depends udisks2    "-D udisks2=true"  "-D udisks2=false"  "for udisk support"
 optional_depends libbluray  "-D bluray=true"   "-D bluray=false"   "for Bluray DVD support"
