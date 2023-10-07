@@ -1,8 +1,9 @@
           MODULE=gexiv2
          VERSION=0.14.2
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/pub/gnome/sources/$MODULE/${VERSION%.*}/
-      SOURCE_VFY=sha256:2a0c9cf48fbe8b3435008866ffd40b8eddb0667d2212b42396fdf688e93ce0be
+          SOURCE=$MODULE-$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.gnome.org/GNOME/gexiv2/-/archive/gexiv2-$VERSION/
+      SOURCE_VFY=sha256:04570400963dfe59d0c9fd683b993be818944b14b4eee5b94490dfc1e509a4eb
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-$VERSION
         WEB_SITE=https://wiki.gnome.org/Projects/gexiv2/
          ENTERED=20100909
          UPDATED=20230918
