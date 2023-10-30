@@ -1,3 +1,4 @@
+depends gobject-introspection
 depends at-spi2-core
 depends pango
 depends gdk-pixbuf
@@ -32,23 +33,4 @@ optional_depends libcloudproviders \
                  "-D cloudproviders=true" \
                  "-D cloudproviders=false" \
                  "for cloud storage support" \
-		         "n"
-
-# Documentation and introspection
-optional_depends man \
-                 "-D man=true" \
-                 "-D man=false" \
-                 "for building manual pages" \
-		         "n"
-
-optional_depends gtk-doc \
-                 "-D gtk_doc=true" \
-                 "-D gtk_doc=false" \
-                 "for building documentation" \
                  "n"
-
-optional_depends gobject-introspection \
-                 "-D introspection=true" \
-                 "-D introspection=false" \
-                 "for introspection support" \
-                 "y"
