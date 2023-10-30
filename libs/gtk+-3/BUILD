@@ -1,7 +1,7 @@
 OPTS+=" -D demos=false \
         -D tests=false \
         -D man=false \
-        -D introspection=false \
+        -D introspection=true \
         -D tracker3=false \
         -D examples=false"
 
