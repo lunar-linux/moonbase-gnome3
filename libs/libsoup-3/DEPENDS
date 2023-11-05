@@ -6,6 +6,7 @@ depends libpsl
 depends sqlite
 depends XML-Parser
 depends curl
+depends nghttp2
 depends meson
 
 optional_depends vala \
