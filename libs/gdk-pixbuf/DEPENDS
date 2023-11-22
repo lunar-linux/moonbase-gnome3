@@ -2,6 +2,7 @@ depends glib-2
 depends meson
 depends docbook2X
 depends gobject-introspection
+depends docutils
 
 optional_depends %JPEG \
                  "-Djpeg=enabled" \
