@@ -2,6 +2,7 @@ depends dbus-glib
 depends gnome-common
 depends gobject-introspection
 depends gtk+-3
+depends gtk-doc
 
 optional_depends vala \
 "" \
