@@ -1,3 +1,5 @@
 export XML_CATALOG_FILES=/etc/xml/catalog &&
 
-default_build
+OPTS+="-D selinux=disabled"
+
+default_meson_build
