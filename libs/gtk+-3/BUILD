@@ -1,3 +1,5 @@
+export LANG='en_US.UTF-8'
+
 OPTS+=" -D demos=false \
         -D tests=false \
         -D man=false \
