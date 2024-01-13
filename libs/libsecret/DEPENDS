@@ -2,25 +2,9 @@ depends dbus-glib
 depends glib-2
 depends libgcrypt
 depends intltool
-depends vala
+depends gobject-introspection
 depends meson
 
-optional_depends gnome-keyring "" "" "for key storage service"
-
-optional_depends docbook-xsl \
-                 "-D manpage=true" \
-                 "-D manpage=false" \
-                 "for man pages building" \
-                 "n"
-
-optional_depends gtk-doc \
-                 "-D gtk_doc=true" \
-                 "-D gtk_doc=false" \
-                 "for building documentation" \
-                 "n"
-
-optional_depends gobject-introspection \
-                 "-D introspection=true" \
-                 "-D introspection=false" \
-                 "for object introspection" \
-                 "y"
+optional_depends vala        "-Dvapi=true"    "-Dvapi=false" "for vapi support,${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}"
+optional_depends docbook-xsl "-Dmanpage=true" "-Dmanpage=false" "for man pages building, ${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}" "n"
+optional_depends gtk-doc     "-Dgtk_doc=true" "-Dgtk_doc=false" "for building documentation, ${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}" "n"
