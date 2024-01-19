@@ -4,6 +4,7 @@
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}/
       SOURCE_VFY=sha256:e4a341496a0815e64c8d3b8fabab33d7bae7efdeab77b843669731d5b181dcee
         WEB_SITE=http://www.gnome.org
+            TYPE=meson
          ENTERED=20130316
          UPDATED=20231217
            SHORT="A library for storing and retrieving passwords and other secrets"
