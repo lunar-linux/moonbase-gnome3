@@ -1,3 +1,0 @@
-default_pre_build &&
-
-find -name '*.py' -exec sed -i '1s/python$/&2/' {} +
