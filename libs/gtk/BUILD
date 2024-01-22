@@ -1,5 +1,11 @@
-OPTS+=" -Dwin32-backend=false" \
-OPTS+=" -Dbuild-demos=true -Dbuild-examples=false -Dbuild-tests=false -Dbuild-demos=false"
+OPTS+=" -Dbuild-demos=true  \
+        -Dman-pages=false \
+        -Dbuild-examples=false \
+        -Dbuild-tests=false \
+        -Dbuild-demos=false \
+        -Dvulkan=disabled \
+        -Ddocumentation=false \
+        -Dwin32-backend=false"
 
 if [[ "$FFMPEG" == "y" ]]; then
   if [[ "$GSTREAMER" == "y" ]]; then
