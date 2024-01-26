@@ -17,6 +17,7 @@ depends bubblewrap
 depends xdg-dbus-proxy
 depends libseccomp
 depends gobject-introspection
+depends unifdef
 
 optional_depends libsoup  "-DUSE_SOUP2=ON"          "-DUSE_SOUP2=OFF"          "use libsoup2, if using gtk+-3 then yes here" n
 optional_depends libjxl   "-DUSE_JPEGXL=ON"         "-DUSE_JPEGXL=OFF"         "for JPEG XL encoder and decoder support"
