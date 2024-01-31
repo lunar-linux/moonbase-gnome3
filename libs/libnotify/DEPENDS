@@ -1,3 +1,4 @@
+depends gobject-introspection
 depends gtk+-3
 depends gdk-pixbuf
 depends meson
@@ -19,9 +20,3 @@ optional_depends gtk-doc \
                  "-Dgtk_doc=false" \
                  "for building documentation"\
                  "n"
-
-optional_depends gobject-introspection \
-                 "-Dintrospection=enabled" \
-                 "-Dintrospection=disabled" \
-                 "for object introspection" \
-                 "y"
