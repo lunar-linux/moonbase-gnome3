@@ -8,10 +8,14 @@ optional_depends python-pygobject \
                  "--without-python" \
                  "compile the Python plugin loader"
 
-optional_depends perl \
+optional_depends XML-Parser \
                  "--with-perl" \
                  "--without-perl" \
                  "compile the Perl plugin loader"
+
+if in_depends $MODULE "XML-Parser"; then
+  depends Devel-CheckLib
+fi
 
 optional_depends libgda \
                  "--with-gda" \
