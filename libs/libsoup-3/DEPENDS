@@ -14,12 +14,6 @@ optional_depends vala \
                  "-Dvapi=disabled" \
                  "for Vala bindings support"
 
-optional_depends gtk-doc \
-                 "-Dgtk_doc=true" \
-                 "-Dgtk_doc=false" \
-                 "for building documentation" \
-                 "n"
-
 optional_depends gobject-introspection \
                  "-Dintrospection=enabled" \
                  "-Dintrospection=disabled" \
