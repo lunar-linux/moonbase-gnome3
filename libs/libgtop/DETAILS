@@ -1,11 +1,11 @@
           MODULE=libgtop
-         VERSION=2.40.0
+         VERSION=2.41.3
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:78f3274c0c79c434c03655c1b35edf7b95ec0421430897fb1345a98a265ed2d4
+      SOURCE_VFY=sha256:775676df958e2ea2452f7568f28b2ea581063d312773dd5c0b7624c1b9b2da8c
         WEB_SITE=http://www.gnome.org
          ENTERED=20020714
-         UPDATED=20190318
+         UPDATED=20240217
            SHORT="A library to provide top functionality to applications"
 
 cat << EOF
