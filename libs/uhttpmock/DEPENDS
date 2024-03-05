@@ -1,1 +1,5 @@
-depends libsoup
+depends meson
+depends vala
+depends libsoup-3
+depends gobject-introspection
+

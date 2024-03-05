@@ -1,11 +1,12 @@
           MODULE=uhttpmock
-         VERSION=0.5.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://tecnocode.co.uk/downloads/$MODULE/
-      SOURCE_VFY=sha256:90843223c3a30bdb7f1eb3442373a03fee425af85a9df289cd687698ccff112f
-        WEB_SITE=https://gitorious.org/uhttpmock/pages/Home/
+         VERSION=0.10.0
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.freedesktop.org/pwithnall/uhttpmock/-/archive/$VERSION/
+      SOURCE_VFY=sha256:dc3595e15a51b0178e9fa2d7fc800c073197c6f72a0aa0bfacea49d48be8604f
+        WEB_SITE=https://gitlab.freedesktop.org/pwithnall/uhttpmock
+            TYPE=meson
          ENTERED=20141019
-         UPDATED=20201104
+         UPDATED=20240305
            SHORT="HTTP web service mocking project for libsoup"
 
 cat << EOF
