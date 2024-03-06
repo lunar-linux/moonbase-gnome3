@@ -1,11 +1,11 @@
           MODULE=vala
-         VERSION=0.56.14
+         VERSION=0.56.15
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:9382c268ca9bdc02aaedc8152a9818bf3935273041f629c56de410e360a3f557
+      SOURCE_VFY=sha256:535b6452ed310fd5fb5c7dd6794b6213dac3b48e645e5bff3173741ec2cb3f2b
         WEB_SITE=http://live.gnome.org/Vala
          ENTERED=20020714
-         UPDATED=20231217
+         UPDATED=20240306
            SHORT="A compiler for the GObject type system"
 
 cat << EOF
