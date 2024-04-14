@@ -1,4 +1,5 @@
 NOCONFIGURE=1 ./autogen.sh &&
+export LANG='en_US.UTF-8'
 
 if in_depends $MODULE systemd ; then
   OPTS+=" --with-dbus-sys-dir=/usr/share/dbus-1/system.d \
