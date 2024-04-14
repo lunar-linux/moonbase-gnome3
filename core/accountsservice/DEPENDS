@@ -1,3 +1,5 @@
+depends libxcrypt
+depends gobject-introspection
 depends polkit
 depends vala
 depends meson
@@ -7,15 +9,3 @@ optional_depends elogind \
                  "-Delogind=false" \
                  "for elogind support" \
                  "n"
-
-optional_depends gtk-doc \
-                 "-Dgtk_doc=true" \
-                 "-Dgtk_doc=false" \
-                 "for building documentation" \
-                 "n"
-
-optional_depends gobject-introspection \
-                "-Dintrospection=true" \
-                "-Dintrospection=false" \
-                "for introspection support" \
-                "y"
