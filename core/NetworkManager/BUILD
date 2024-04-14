@@ -1,4 +1,5 @@
 unset LDFLAGS &&
+export LANG='en_US.UTF-8'
 
 OPTS+=" -D tests=no \
         -D qt=false \
