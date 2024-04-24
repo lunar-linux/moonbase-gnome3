@@ -8,6 +8,7 @@ depends XML-Parser
 depends curl
 depends nghttp2
 depends meson
+depends %KERBEROS
 
 optional_depends vala \
                  "-Dvapi=enabled" \
