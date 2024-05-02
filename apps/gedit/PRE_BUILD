@@ -1,0 +1,3 @@
+default_pre_build &&
+
+sedit "/  appdata,/d;/  desktop_file,/d" data/meson.build
