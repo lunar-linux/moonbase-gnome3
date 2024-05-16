@@ -1,8 +1,8 @@
           MODULE=gtk+-3
-         VERSION=3.24.41
+         VERSION=3.24.42
           SOURCE=${MODULE%-*}-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/gtk+/${VERSION%.*}
-      SOURCE_VFY=sha256:47da61487af3087a94bc49296fd025ca0bc02f96ef06c556e7c8988bd651b6fa
+      SOURCE_VFY=sha256:50f89f615092d4dd01bbd759719f8bd380e5f149f6fd78a94725e2de112377e2
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE%-*}-$VERSION
         WEB_SITE=http://www.gtk.org
             TYPE=meson
