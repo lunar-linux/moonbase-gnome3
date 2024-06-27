@@ -1,3 +1,7 @@
+sed -e '/accounts_service\.py/s/dbusmock/dbusmock-tests/' \
+    -e 's/assertEquals/assertEqual/'                      \
+    -i tests/test-libaccountsservice.py &&
+
 export LANG='en_US.UTF-8'
 
 mv tests/dbusmock{,-tests} &&
