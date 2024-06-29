@@ -1,3 +1,4 @@
+depends unifdef
 depends cmake
 depends ruby
 depends which
