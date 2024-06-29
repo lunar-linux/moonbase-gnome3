@@ -3,8 +3,8 @@ depends python-pygobject
 depends meson
 
 optional_depends vala \
-                 "-D vapi=false" \
                  "-D vapi=true" \
+                 "-D vapi=false" \
                  "for vala vapi support"
 
 optional_depends gtk-doc \
