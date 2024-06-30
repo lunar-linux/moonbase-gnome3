@@ -1,8 +1,13 @@
 depends bc
 depends pkgconf
 depends itstool
+depends docbook-xml
 depends docbook-xsl
+depends python-lxml
+depends python-pygments
+depends yelp-tools
 
 optional_depends dblatex  "" "" "for PDF support"
 optional_depends jadetex  "" "" "for SGML support (use this or openjade not both)"
 optional_depends openjade "" "" "for SGML support"
+

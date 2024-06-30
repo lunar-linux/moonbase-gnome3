@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:b20b72b32a80bc18c7f975c9d4c16460c2276566a0b50f87d6852dff3aa7861c
         WEB_SITE=http://www.gtk.org/gtk-doc
          ENTERED=20020716
-         UPDATED=20240306
+         UPDATED=20240630
            SHORT="Tools for authors of the GTK+ reference documentation"
 
 cat << EOF
