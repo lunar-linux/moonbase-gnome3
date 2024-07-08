@@ -1,12 +1,12 @@
           MODULE=gsettings-desktop-schemas
-         VERSION=44.0
+         VERSION=46.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:eb2de45cad905994849e642a623adeb75d41b21b0626d40d2a07b8ea281fec0e
+      SOURCE_VFY=sha256:493a46a1161b6388d57aa72f632a79ce96c42d5ffbd1d0b00f496ec5876f8575
         WEB_SITE=https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas
             TYPE=meson
          ENTERED=20130210
-         UPDATED=20230502
+         UPDATED=20240708
            SHORT="Shared GSettings schemas for the desktop"
 
 cat << EOF
