@@ -5,7 +5,6 @@
       SOURCE_VFY=sha256:8c456d808a2d97f06d72833327b47e51a3eb3daf71959599cfe80299468037ee
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-$VERSION
         WEB_SITE=https://wiki.gnome.org/Projects/gexiv2/
-            TYPE=meson
          ENTERED=20100909
          UPDATED=20240629
            SHORT="GObject-based wrapper around exiv2"
