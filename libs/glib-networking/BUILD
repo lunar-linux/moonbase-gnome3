@@ -1,4 +1,3 @@
-OPTS+=" -D installed_tests=false \
-        -D static_modules=false"
+OPTS+=" -D installed_tests=false"
 
 default_meson_build
