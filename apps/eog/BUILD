@@ -1,6 +1,6 @@
 mkdir -p build &&
 
-meson build --prefix /usr &&
+meson build -Dlibportal=false --prefix /usr &&
 ninja -C build &&
 
 prepare_install &&
