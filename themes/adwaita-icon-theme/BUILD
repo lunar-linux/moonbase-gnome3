@@ -1,4 +1,4 @@
-default_build &&
+default_meson_build &&
 
 if [ ! -e /etc/gtk-3.0/settings.ini ]; then
   cat > settings.ini <<EOF &&
