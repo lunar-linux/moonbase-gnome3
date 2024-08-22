@@ -1,11 +1,11 @@
           MODULE=xdg-dbus-proxy
-         VERSION=0.1.4
+         VERSION=0.1.6
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://github.com/flatpak/xdg-dbus-proxy/releases/download/$VERSION/
-      SOURCE_VFY=sha256:1ec0eab53d1e49966d722352bcfd51ac402dce5190baedc749a8541e761670ab
+      SOURCE_VFY=sha256:131bf59fce7c7ee7ecbc5d9106d6750f4f597bfe609966573240f7e4952973a1
         WEB_SITE=https://github.com/flatpak/xdg-dbus-proxy/
          ENTERED=20190910
-         UPDATED=20230217
+         UPDATED=20240822
            SHORT="A D-Bus proxy"
 
 cat << EOF
