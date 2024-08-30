@@ -1,12 +1,12 @@
           MODULE=libcloudproviders
-         VERSION=0.3.1
+         VERSION=0.3.6
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=https://gitlab.gnome.org/World/libcloudproviders/-/archive/$VERSION/
-      SOURCE_VFY=sha256:de4aa746c1695f30fcd3b52a4a6ee149ce567a2f7e185499bf2963f77dd1bad0
+      SOURCE_VFY=sha256:316975e2e04588e44808cc7e4ff2800444103843e9533bd17ac0f4964c094f83
         WEB_SITE=https://gitlab.gnome.org/World/libcloudproviders/
             TYPE=meson
          ENTERED=20201003
-         UPDATED=20201003
+         UPDATED=20240830
            SHORT="DBus API that allows cloud storage sync clients to expose their services"
 
 cat << EOF
