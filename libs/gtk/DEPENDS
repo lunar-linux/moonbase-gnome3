@@ -6,6 +6,8 @@ depends libxkbcommon
 depends libepoxy
 depends graphene
 depends sassc
+depends libcloudproviders
+depends json-glib
 depends Vulkan-Loader
 depends gobject-introspection
 
@@ -22,11 +24,6 @@ optional_depends %X \
                  "-Dx11-backend=true" \
                  "-Dx11-backend=false" \
                  "for the X11 backend (recommended)"
-
-optional_depends json-glib \
-                 "-Dcloudproviders=enabled" \
-                 "-Dcloudproviders=disabled" \
-                 "required by cloudprint"
 
 optional_depends wayland-protocols \
                  "-Dwayland-backend=true" \

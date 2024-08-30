@@ -5,6 +5,7 @@ OPTS+=" -Dbuild-demos=true  \
         -Dbuild-demos=false \
         -Dvulkan=disabled \
         -Ddocumentation=false \
+        -Dcloudproviders=enabled\
         -Dwin32-backend=false"
 
 if [[ "$FFMPEG" == "y" ]]; then
