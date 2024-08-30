@@ -1,11 +1,11 @@
           MODULE=json-glib
-         VERSION=1.8.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://ftp.gnome.org/pub/GNOME/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:97ef5eb92ca811039ad50a65f06633f1aae64792789307be7170795d8b319454
-        WEB_SITE=http://live.gnome.org/JsonGlib
+         VERSION=1.10.0
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.gnome.org/GNOME/json-glib/-/archive/$VERSION/
+      SOURCE_VFY=sha256:9525b85efec2fec22112a9ade2f48595e9711563617e0c80da4b1bfa0313b9e9
+        WEB_SITE=https://gnome.pages.gitlab.gnome.org/json-glib/
          ENTERED=20100825
-         UPDATED=20231101
+         UPDATED=20240830
            SHORT="Glib JavaScript Object Notation"
 
 cat << EOF
