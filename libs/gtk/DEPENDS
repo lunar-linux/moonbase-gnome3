@@ -10,6 +10,7 @@ depends libcloudproviders
 depends json-glib
 depends Vulkan-Loader
 depends gobject-introspection
+depends gst-plugins-bad
 
 optional_depends cups \
                  "-Dprint-cups=enabled" \
@@ -30,10 +31,6 @@ optional_depends wayland-protocols \
                  "-Dwayland-backend=false" \
                  "for the waylany backend" \
                  "y"
-
-if [ "`get_module_config GSTREAMER`" = "y" ]; then
-depends gstreamer
-fi
 
 if [ "`get_module_config FFMPEG`" = "y" ]; then
 depends ffmpeg
