@@ -1,5 +1,6 @@
 depends brotli
 depends glib-2
+depends gobject-introspection
 depends libxml2
 depends glib-networking
 depends libpsl
@@ -14,12 +15,6 @@ optional_depends vala \
                  "-Dvapi=enabled" \
                  "-Dvapi=disabled" \
                  "for Vala bindings support"
-
-optional_depends gobject-introspection \
-                 "-Dintrospection=enabled" \
-                 "-Dintrospection=disabled" \
-                 "for gobject introspection" \
-                 "y"
 
 optional_depends cyrus-sasl \
                  "-Dgssapi=enabled" \
