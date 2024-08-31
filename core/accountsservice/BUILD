@@ -14,6 +14,7 @@ sed -i '/^SIMULATED_SYSTEM_LOCALE/s/en_IE.UTF-8/en_HK.iso88591/' tests/test-daem
 
 OPTS+=" -D docbook=false \
         -D gtk_doc=false \
-        -D admin_group=wheel"
+        -D admin_group=wheel \
+        -D introspection=true"
 
 default_meson_build
