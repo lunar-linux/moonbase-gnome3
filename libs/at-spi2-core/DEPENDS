@@ -1,7 +1,6 @@
 depends dbus
 depends libXtst
 depends intltool
+depends gobject-introspection
 depends XML-Parser
 depends meson
-
-optional_depends gobject-introspection "-Dintrospection=enabled" "-Dintrospection=disabled" "for introspection support" y

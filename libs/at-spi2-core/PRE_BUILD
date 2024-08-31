@@ -1,3 +1,3 @@
 default_pre_build
 
-OPTS+=" -Ddocs=false -Ddefault_bus=dbus-broker"
+OPTS+=" -Ddocs=false -Ddefault_bus=dbus-broker -Dintrospection=enabled"
