@@ -1,3 +1,5 @@
+depends gobject-introspection
+depends libhandy
 depends gnome-desktop
 depends adwaita-icon-theme
 
@@ -62,9 +64,3 @@ optional_depends gtk-doc \
                  "-Dgtk_doc=false" \
                  "for documentation building" \
                  "n"
-
-optional_depends gobject-introspection \
-                 "-Dintrospection=true" \
-                 "-Dintrospection=false" \
-                 "for introspection support" \
-                 "y"
