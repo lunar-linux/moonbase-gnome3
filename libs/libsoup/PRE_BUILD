@@ -7,7 +7,14 @@ sed -e '/hsts/d' -i tests/meson.build &&
 sedit '14i #include <libxml/parser.h>' libsoup/soup-xmlrpc-old.c &&
 sedit '20i #include <libxml/parser.h>' libsoup/soup-xmlrpc.c &&
 
-OPTS+=" -Dtls_check=false -Dgssapi=disabled -Dtests=false -Dgtk_doc=false -Dgnome=false -Dwerror=false --wrap-mode=nofallback"
+OPTS+=" -Dtls_check=false  \
+        -Dgssapi=disabled  \
+        -Dtests=false      \
+        -Dgtk_doc=false    \
+        -Dgnome=false      \
+        -Dwerror=false     \
+        -Dintrospection=enabled \
+        --wrap-mode=nofallback"
 
 sed 's/apiversion/soup_version/' -i docs/reference/meson.build
 

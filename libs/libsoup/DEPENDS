@@ -1,5 +1,6 @@
 depends glib-2
 depends libxml2
+depends gobject-introspection
 depends glib-networking
 depends libpsl
 depends sqlite
@@ -17,12 +18,6 @@ optional_depends gtk-doc \
                  "-Dgtk_doc=false" \
                  "for building documentation" \
                  "n"
-
-optional_depends gobject-introspection \
-                 "-Dintrospection=enabled" \
-                 "-Dintrospection=disabled" \
-                 "for gobject introspection" \
-                 "y"
 
 optional_depends cyrus-sasl \
                  "-Dgssapi=enabled" \
