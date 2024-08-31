@@ -1,4 +1,5 @@
 depends exiv2
+depends gobject-introspection
 depends python-pygobject
 depends meson
 
@@ -10,11 +11,5 @@ optional_depends vala \
 optional_depends gtk-doc \
                  "-D gtk_doc=true" \
                  "-D gtk_doc=false" \
-                 "for building documentation" \
+                 "for building documentation, ${PROBLEM_COLOR}Say NO for now${DEFAULT_COLOR}" \
                  "n"
-
-optional_depends gobject-introspection \
-                 "-D introspection=true" \
-                 "-D introspection=false" \
-                 "for object introspection" \
-                 "y"

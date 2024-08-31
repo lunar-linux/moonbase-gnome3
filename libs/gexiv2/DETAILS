@@ -4,7 +4,7 @@
       SOURCE_URL=https://gitlab.gnome.org/GNOME/gexiv2/-/archive/$MODULE-$VERSION/
       SOURCE_VFY=sha256:8c456d808a2d97f06d72833327b47e51a3eb3daf71959599cfe80299468037ee
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$MODULE-$VERSION
-        WEB_SITE=https://wiki.gnome.org/Projects/gexiv2/
+        WEB_SITE=https://gitlab.gnome.org/GNOME/gexiv2/-/blob/master/README.md
          ENTERED=20100909
          UPDATED=20240629
            SHORT="GObject-based wrapper around exiv2"
