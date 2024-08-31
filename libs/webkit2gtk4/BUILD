@@ -4,8 +4,8 @@ CFLAGS+=' -fcf-protection=none'
 CXXFLAGS+=' -fcf-protection=none'
 
 OPTS+=" -DPORT=GTK \
-        -DUSE_GTK4=OFF \
-        -DUSE_SOUP2=ON \
+        -DUSE_GTK4=ON \
+        -DUSE_SOUP2=OFF \
         -DCMAKE_VERBOSE_MAKEFILE=ON \
         -DENABLE_INTROSPECTION=ON \
         -DCMAKE_BUILD_TYPE=Release \
