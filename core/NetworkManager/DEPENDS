@@ -1,4 +1,5 @@
 depends dbus-glib
+depends gobject-introspection
 depends iproute2
 depends libnl3
 depends libndp
@@ -15,7 +16,6 @@ optional_depends readline \
                  "-D nmcli=false" \
                  "for nmcli install" \
 
-optional_depends iptables "" "" "for iptables support"
 optional_depends dnsmasq  "" "" "for DNS forwarder and DHCP server support"
 
 optional_depends bluez-5 "-D bluez5_dun=true" "" "for Bluetooth support"
@@ -71,12 +71,6 @@ optional_depends vala \
                  "-D vapi=true" \
                  "-D vapi=false"  \
                  "for vala support (needs introspection support)"
-
-optional_depends gobject-introspection \
-                 "-D introspection=true" \
-                 "-D introspection=false" \
-                 "for introspection support" \
-                 "y"
 
 if in_depends "$MODULE" "gobject-introspection"; then
     depends python-pygobject
