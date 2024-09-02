@@ -1,11 +1,12 @@
           MODULE=libwpe
-         VERSION=1.14.1
+         VERSION=1.16.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://wpewebkit.org/releases/
-      SOURCE_VFY=sha256:b1d0cdcf0f8dbb494e65b0f7913e357106da9a0d57f4fbb7b9d1238a6dbe9ade
+      SOURCE_VFY=sha256:c7f3a3c6b3d006790d486dc7cceda2b6d2e329de07f33bc47dfc53f00f334b2a
         WEB_SITE=https://wpewebkit.org/
+            TYPE=meson
          ENTERED=20190910
-         UPDATED=20230213
+         UPDATED=20240902
            SHORT="General-purpose library for WPE WebKit"
 
 cat << EOF
