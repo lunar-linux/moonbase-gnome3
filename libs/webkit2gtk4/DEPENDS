@@ -46,11 +46,6 @@ optional_depends woff2\
                 "-DUSE_WOFF2=OFF" \
                 "for WOFF font support"
 
-optional_depends wpebackend-fdo \
-                 "-DUSE_WPE_RENDERER=ON" \
-                 "-DUSE_WPE_RENDERER=OFF" \
-                 "for wpe renderer - if yes enable wayland support (next)" y
-   
 optional_depends wayland-protocols \
                  "-DENABLE_WAYLAND_TARGET=ON" \
                  "-DENABLE_WAYLAND_TARGET=OFF" \
