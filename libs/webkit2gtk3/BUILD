@@ -1,16 +1,26 @@
-OPTS+=" -DPORT=GTK \
-        -DUSE_GTK4=OFF \
-        -DCMAKE_VERBOSE_MAKEFILE=ON \
-        -DENABLE_INTROSPECTION=ON \
-        -DCMAKE_BUILD_TYPE=Release \
-        -DCMAKE_SKIP_RPATH=ON \
-        -DCMAKE_INSTALL_PREFIX=/usr \
-        -DCMAKE_INSTALL_LIBDIR=lib  \
-        -DCMAKE_INSTALL_LIBEXECDIR=lib \
-        -DENABLE_DOCUMENTATION=OFF"
+sed '/returnLocation.isStackArgument/,/returnLocation = canonicalLocation/d'\
+    -i Source/JavaScriptCore/wasm/WasmBBQJIT.cpp &&
 
-if [[ $MINIBROWSER == "y" ]]; then
-  OPTS+=" -DENABLE_MINIBROWSER=ON"
+OPTS+=" -D CMAKE_BUILD_TYPE=Release     \
+        -D CMAKE_INSTALL_PREFIX=/usr    \
+        -D CMAKE_SKIP_INSTALL_RPATH=ON  \
+        -D PORT=GTK                     \
+        -D LIB_INSTALL_DIR=/usr/lib     \
+        -D USE_LIBBACKTRACE=OFF         \
+        -D ENABLE_GAMEPAD=OFF           \
+        -D ENABLE_MINIBROWSER=ON        \
+        -D ENABLE_DOCUMENTATION=OFF     \
+        -D USE_GTK4=OFF                 \
+        -D USE_SOUP2=OFF                \
+        -D USE_SYSTEM_MALLOC=ON         \
+        -D ENABLE_BUBBLEWRAP_SANDBOX=ON \
+        -D ENABLE_UNIFIED_BUILDS=OFF    \
+        -W no-dev                       "
+
+if module_installed systemd; then
+  OPTS+=" -D ENABLE_JOURNALD_LOG=ON"
+ else 
+  OPTS+=" -D ENABLE_JOURNALD_LOG=OFF"
 fi &&
 
 cmake -B $MODULE-$VERSION -G Ninja $OPTS &&

@@ -1,13 +1,13 @@
           MODULE=webkit2gtk3
-         VERSION=2.42.4
+         VERSION=2.44.3
           SOURCE=webkitgtk-$VERSION.tar.xz
       SOURCE_URL=https://www.webkitgtk.org/releases
-      SOURCE_VFY=sha256:52288b30bda22373442cecb86f9c9a569ad8d4769a1f97b352290ed92a67ed86
+      SOURCE_VFY=sha256:dc82d042ecaca981a4852357c06e5235743319cf10a94cd36ad41b97883a0b54
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/webkitgtk-$VERSION
          ENTERED=20070919
-         UPDATED=20240126
+         UPDATED=20240908
            SHORT="A Gtk+ web rendering engine"
-
+PSAFE=no
 cat << EOF
 WebKitGTK+ is a web content engine, derived from KHTML and KJS from KDE, and
 used primarily in Apple's Safari browser. It is made to be embedded in other
