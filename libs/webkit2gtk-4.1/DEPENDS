@@ -1,0 +1,53 @@
+depends libtasn1
+depends unifdef
+depends cmake
+depends ruby
+depends which
+depends %JPEG
+depends libpng
+depends libwebp
+depends libmanette
+depends libnotify
+depends icu4c
+depends enchant
+depends libXt
+depends openjpeg-2
+depends gperf
+depends libsoup-3
+depends libsecret
+depends gtk+-3
+depends bubblewrap
+depends xdg-dbus-proxy
+depends libseccomp
+depends gobject-introspection
+
+optional_depends libjxl \
+                 "-DUSE_JPEGXL=ON" \
+                 "-DUSE_JPEGXL=OFF" \
+                 "for JPEG XL encoder and decoder support"
+
+optional_depends geoclue2 \
+                 "-DENABLE_GEOLOCATION=ON" \
+                 "-DENABLE_GEOLOCATION=OFF" \
+                 "for geolocation support"
+                 
+optional_depends hyphen \
+                 "-DUSE_LIBHYPHEN=ON" \
+                 "-DUSE_LIBHYPHEN=OFF" \
+                 "for hyphenation and justification support"
+
+optional_depends libavif \
+                 "-DUSE_AVIF=ON" \
+                 "-DUSE_AVIF=OFF" \
+                 "for AVIF image support"
+                 
+optional_depends woff2\
+                "-DUSE_WOFF2=ON" \
+                "-DUSE_WOFF2=OFF" \
+                "for WOFF font support"
+
+optional_depends wayland-protocols \
+                 "-DENABLE_WAYLAND_TARGET=ON" \
+                 "-DENABLE_WAYLAND_TARGET=OFF" \
+                 "for Wayland support" \
+                 "y"
