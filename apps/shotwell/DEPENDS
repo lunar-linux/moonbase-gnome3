@@ -7,7 +7,6 @@ depends libunique-3
 depends librsvg
 depends json-glib
 depends gtk+-3
-depends webkit2gtk3
 depends LibRaw
 depends rest
 depends gstreamer
