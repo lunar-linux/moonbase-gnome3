@@ -4,7 +4,7 @@ depends libnotify
 depends libsecret
 depends rest
 depends docbook-xsl
-depends webkit2gtk3
+depends webkit2gtk-4.1
 
 optional_depends krb5 \
                  "--enable-kerberos" \
