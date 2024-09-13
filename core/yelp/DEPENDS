@@ -6,7 +6,7 @@ depends hicolor-icon-theme
 depends yelp-xsl
 depends intltool
 depends itstool
-depends webkit2gtk3
+depends webkit2gtk-4.1
 
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
