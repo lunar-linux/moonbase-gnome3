@@ -1,0 +1,5 @@
+default_pre_build
+
+if module_installed docbook-xsl; then
+ export XML_CATALOG_FILES=/etc/xml/catalog
+fi
