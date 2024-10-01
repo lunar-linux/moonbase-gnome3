@@ -1,5 +1,3 @@
-sedit '22i #include <libxml/parser.h>' gsf/gsf-libxml.c &&
-
-OPTS+=" --disable-static --without-bz2"
+OPTS+=" --disable-static"
 
 default_build
