@@ -1,8 +1,8 @@
           MODULE=libsoup
          VERSION=2.74.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/`echo $VERSION | cut -d. -f1-2`
-      SOURCE_VFY=sha256:e4b77c41cfc4c8c5a035fcdc320c7bc6cfb75ef7c5a034153df1413fa1d92f13
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.gnome.org/GNOME/libsoup/-/archive/2.74.3/
+      SOURCE_VFY=sha256:eccb481b8e3586f917fa00251c23a3c25019f18bfe1b5e35bce9de257733545b
         WEB_SITE=https://wiki.gnome.org/Projects/libsoup
             TYPE=meson
          ENTERED=20030413
