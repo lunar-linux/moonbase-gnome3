@@ -1,8 +1,8 @@
           MODULE=atkmm
          VERSION=2.28.4
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:0a142a8128f83c001efb8014ee463e9a766054ef84686af953135e04d28fdab3
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.gnome.org/GNOME/atkmm/-/archive/$VERSION/
+      SOURCE_VFY=sha256:1cf934c82e5297d64b98fd70cea7764d4e97b7049979771f6e92be084e7702b7
         WEB_SITE=http://www.gtkmm.org
             TYPE=meson
          ENTERED=20110110
