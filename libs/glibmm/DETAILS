@@ -1,9 +1,9 @@
           MODULE=glibmm
-         VERSION=2.66.7
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:fe02c1e5f5825940d82b56b6ec31a12c06c05c1583cfe62f934d0763e1e542b3
-        WEB_SITE=http://www.gtkmm.org
+         VERSION=2.82.0
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.gnome.org/GNOME/glibmm/-/archive/$VERSION/
+      SOURCE_VFY=sha256:19bd10aedabada384bda06cfd859a659aeeb6abff3f5784e33f6d2f03ffdfe11
+        WEB_SITE=https://gitlab.gnome.org/GNOME/glibmm
             TYPE=meson
          ENTERED=20040409
          UPDATED=20240322
