@@ -1,8 +1,9 @@
           MODULE=libgsf
          VERSION=1.14.53
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:0eb59a86e0c50f97ac9cfe4d8cc1969f623f2ae8c5296f2414571ff0a9e8bcba
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL_FULL=https://gitlab.gnome.org/GNOME/libgsf/-/archive/LIBGSF_1_14_53/libgsf-LIBGSF_1_14_53.tar.bz2
+      SOURCE_VFY=sha256:83847df1964d9a75906d88ccbcf2ccc7cc7f455141b126f406b82a4d87141512
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-LIBGSF_1_14_53
         WEB_SITE=http://www.gnome.org
          ENTERED=20021118
          UPDATED=20241014

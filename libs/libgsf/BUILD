@@ -1,3 +1,5 @@
+./autogen.sh &&
+
 export PYTHONDONTWRITEBYTECODE=1 &&
 
 OPTS+=" --disable-static"
