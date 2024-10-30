@@ -1,9 +1,9 @@
           MODULE=gtkmm3
          VERSION=3.24.9
-          SOURCE=gtkmm-$VERSION.tar.xz
+          SOURCE=gtkmm-$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.gnome.org/GNOME/gtkmm/-/archive/$VERSION/
+      SOURCE_VFY=sha256:0bc6e7073ad2f29c499c33018d32b56e6f343980e97cbcdf261468404ee73b6c
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/gtkmm-$VERSION
-      SOURCE_URL=$GNOME_URL/sources/gtkmm/${VERSION%.*}
-      SOURCE_VFY=sha256:30d5bfe404571ce566a8e938c8bac17576420eb508f1e257837da63f14ad44ce
         WEB_SITE=http://gtkmm.org
             TYPE=meson
          ENTERED=20140820
