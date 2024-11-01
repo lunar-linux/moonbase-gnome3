@@ -1,8 +1,8 @@
           MODULE=gtk
-         VERSION=4.16.4
+         VERSION=4.16.5
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=https://gitlab.gnome.org/GNOME/gtk/-/archive/$VERSION/
-      SOURCE_VFY=sha256:3e3f802f70036fe7e8e81a23c7f77a702acaf24c1a437b12bcadb8a34e7f6b49
+      SOURCE_VFY=sha256:3c7f55b8ebec48919ab7c4cf347d093e91daf4b903af3fffc994f02e0613518e
         WEB_SITE=http://www.gtk.org
             TYPE=meson
          ENTERED=20200412
