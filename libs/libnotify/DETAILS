@@ -1,8 +1,8 @@
           MODULE=libnotify
          VERSION=0.8.3
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=http://ftp.gnome.org/pub/GNOME/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:ee8f3ef946156ad3406fdf45feedbdcd932dbd211ab4f16f75eba4f36fb2f6c0
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.gnome.org/GNOME/libnotify/-/archive/$VERSION/
+      SOURCE_VFY=sha256:2490df996f3b42bd1791819e0a5fdae568db01ed0ba17a87e94f57e12c2bf562
         WEB_SITE=https://gitlab.gnome.org/GNOME/libnotify
             TYPE=meson
          ENTERED=20060526
