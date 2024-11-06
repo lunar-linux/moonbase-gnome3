@@ -1,9 +1,9 @@
           MODULE=libgnome-keyring
          VERSION=3.12.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:c4c178fbb05f72acc484d22ddb0568f7532c409b0a13e06513ff54b91e947783
-        WEB_SITE=http://www.gnome.org
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.gnome.org/Archive/libgnome-keyring/-/archive/$VERSION/
+      SOURCE_VFY=sha256:9be7c408a6d82ac21dbf6cbf0477800fb817008b6d293271ced0b556d2291700
+        WEB_SITE=https://gitlab.gnome.org/Archive/libgnome-keyring
          ENTERED=20100403
          UPDATED=20150821
            SHORT="A interface library to gnome-keyring"
