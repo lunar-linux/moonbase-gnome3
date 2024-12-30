@@ -7,5 +7,5 @@ depends meson
 optional_depends cairo \
                  "-D cairo=enabled" \
                  "-D cairo=disabled" \
-                 "for cairo graphics support${PROBLEM_COLOR} While this defaults to yes, you should say no on a clean install, else you will have troubles${DEFAULT_COLOR}" \
+                 "for cairo graphics support (recommended)" \
                  "y"
