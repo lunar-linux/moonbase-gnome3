@@ -1,6 +1,7 @@
 depends libtasn1
 depends unifdef
 depends cmake
+depends lld
 depends ruby
 depends which
 depends %JPEG
@@ -13,7 +14,7 @@ depends enchant
 depends libXt
 depends openjpeg-2
 depends gperf
-depends libsoup-3
+depends libsoup
 depends libsecret
 depends gtk+-3
 depends bubblewrap

@@ -14,11 +14,23 @@ OPTS+=" -D CMAKE_INSTALL_PREFIX=/usr    \
         -D ENABLE_MINIBROWSER=ON        \
         -D ENABLE_DOCUMENTATION=OFF     \
         -D USE_GTK4=OFF                 \
-        -D USE_SOUP2=OFF                \
-        -D USE_SYSTEM_MALLOC=ON         \
-        -D ENABLE_BUBBLEWRAP_SANDBOX=ON \
-        -D ENABLE_UNIFIED_BUILDS=OFF    \
+        -D USE_SOUP2=ON                 \
+        -D USE_SYSTEM_SYSPROF_CAPTURE=NO \
         -W no-dev"
+
+#https://blogs.igalia.com/carlosgc/2024/09/27/graphics-improvements-in-webkitgtk-and-wpewebkit-2-46/
+#Skia has received several GCC specific optimizations lately, but itâalways always more optimized #when
+# built with clang. The optimizations are more noticeable in performance when using the CPU for rendering. 
+export CC=clang CXX=clang++
+LDFLAGS+=" -fuse-ld=lld"
+
+# Skia uses malloc_usable_size
+CFLAGS="${CFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+CXXFLAGS="${CXXFLAGS/_FORTIFY_SOURCE=3/_FORTIFY_SOURCE=2}"
+
+# JITted code crashes when CET is used
+CFLAGS+=' -fcf-protection=none'
+CXXFLAGS+=' -fcf-protection=none'
 
 if module_installed systemd; then
   OPTS+=" -D ENABLE_JOURNALD_LOG=ON"

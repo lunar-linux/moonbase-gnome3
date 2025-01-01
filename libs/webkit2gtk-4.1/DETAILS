@@ -1,12 +1,12 @@
           MODULE=webkit2gtk-4.1
-         VERSION=2.44.4
+         VERSION=2.46.5
           SOURCE=webkitgtk-$VERSION.tar.xz
       SOURCE_URL=https://www.webkitgtk.org/releases
-      SOURCE_VFY=sha256:2ce4ec1b78413035037aba8326b31ed72696626b7bea7bace5e46ac0d8cbe796
+      SOURCE_VFY=sha256:bad4020bb0cfb3e740df3082c2d9cbf67cf4095596588a56aecdde6702137805
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/webkitgtk-$VERSION
         WEB_SITE=https://webkitgtk.org/
          ENTERED=20240911
-         UPDATED=20240911
+         UPDATED=20241231
         REPLACES=webkit2gtk3
            SHORT="A Gtk4 web rendering engine"
 
