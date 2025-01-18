@@ -3,3 +3,4 @@ depends mm-common
 depends libsigc++2
 depends XML-Parser
 depends meson
+depends doxygen
