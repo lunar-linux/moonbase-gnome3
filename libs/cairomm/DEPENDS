@@ -3,3 +3,4 @@ depends pkgconf
 depends meson
 depends mm-common
 depends libsigc++2
+depends doxygen
