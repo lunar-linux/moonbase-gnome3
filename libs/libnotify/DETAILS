@@ -1,12 +1,12 @@
           MODULE=libnotify
-         VERSION=0.8.3
+         VERSION=0.8.4
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=https://gitlab.gnome.org/GNOME/libnotify/-/archive/$VERSION/
-      SOURCE_VFY=sha256:2490df996f3b42bd1791819e0a5fdae568db01ed0ba17a87e94f57e12c2bf562
+      SOURCE_VFY=sha256:c1107bf2f452e3fc18c14dd3cff430cc6ffb7190bf14a123ad2b1169814e23e0
         WEB_SITE=https://gitlab.gnome.org/GNOME/libnotify
             TYPE=meson
          ENTERED=20060526
-         UPDATED=20240114
+         UPDATED=20250220
            SHORT="Desktop notification framework library"
 
 cat << EOF
