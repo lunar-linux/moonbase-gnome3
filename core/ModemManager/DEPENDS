@@ -1,21 +1,17 @@
 depends systemd
 depends hicolor-icon-theme
+depends libmbim
+depends libqmi
 depends polkit
 depends ppp
-depends libqmi
 depends vala
 depends intltool
+depends gobject-introspection
 
 optional_depends usb-modeswitch "" "" "install if your modem shows up as a storage drive"
 
 optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "-Dgtk_doc=true " \
+                 "-Dgtk_doc=false" \
                  "for building documentation" \
                  "n"
-
-optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "--disable-introspection" \
-                 "for object introspection" \
-                 "y"

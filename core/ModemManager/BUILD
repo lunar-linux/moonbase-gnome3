@@ -1,14 +1,13 @@
-NOCONFIGURE=1 ./autogen.sh &&
 export LANG='en_US.UTF-8'
 
 if in_depends $MODULE systemd ; then
-  OPTS+=" --with-dbus-sys-dir=/usr/share/dbus-1/system.d \
-          --with-systemd-journal \
-          --with-systemd-suspend-resume"
+  OPTS+=" -Ddbus_policy_dir=/usr/share/dbus-1/system.d \
+          -Dsystemd_journal=true \
+          -Dsystemd_suspend_resume=true"
 fi &&
 
-OPTS+=" --disable-static \
-        --with-polkit=permissive \
-        --with-udev-base-dir=/usr/lib/udev"
+OPTS+=" -Dpolkit=permissive \
+        -Dudevdir=/usr/lib/udev \
+        -Dvapi=true"
 
-default_build
+default_meson_build
