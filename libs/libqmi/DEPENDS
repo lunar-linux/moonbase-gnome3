@@ -1,9 +1,11 @@
 depends python
+depends gobject-introspection
 depends libmbim
+depends libqrtr-glib
 depends libgudev
 
 optional_depends gtk-doc \
-                 "--enable-gtk-doc" \
-                 "--disable-gtk-doc" \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
                  "for building documentation" \
                  "n"
