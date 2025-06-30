@@ -1,15 +1,10 @@
 depends glib-2
+depends gobject-introspection
 depends systemd
 depends libgudev
 
 optional_depends gtk-doc \
-                 "--enable-gtk_doc" \
-                 "--disable-gtk-doc" \
+                 "-Dgtk_doc=true" \
+                 "-Dgtk_doc=false" \
                  "for building documentation" \
                  "n"
-
-optional_depends gobject-introspection \
-                 "--enable-introspection" \
-                 "-disable-introspection" \
-                 "for object introspection" \
-                 "y"
