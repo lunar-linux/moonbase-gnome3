@@ -1,5 +1,3 @@
-autoreconf -fvi &&
-
 OPTS+=" --enable-defaults-service  \
         --disable-static \
         --disable-gtk \
