@@ -1,8 +1,7 @@
-OPTS+=" -Dbuild-demos=true  \
+OPTS+=" -Dbuild-demos=false \
         -Dman-pages=false \
         -Dbuild-examples=false \
         -Dbuild-tests=false \
-        -Dbuild-demos=false \
         -Dvulkan=disabled \
         -Ddocumentation=false \
         -Dcloudproviders=enabled\
