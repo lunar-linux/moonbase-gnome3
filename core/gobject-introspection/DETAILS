@@ -1,11 +1,11 @@
           MODULE=gobject-introspection
-         VERSION=1.83.4
+         VERSION=1.84.0
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION::4}
-      SOURCE_VFY=sha256:86f02e689ff4df362b2d0f0a9acc262ace5dc3e71c9078bdba69246748213855
+      SOURCE_VFY=sha256:945b57da7ec262e5c266b89e091d14be800cc424277d82a02872b7d794a84779
         WEB_SITE=http://live.gnome.org/GObjectIntrospection
          ENTERED=20091003
-         UPDATED=20250309
+         UPDATED=20250704
            SHORT="Generate interface introspection data for GObject libraries"
 
 cat << EOF
