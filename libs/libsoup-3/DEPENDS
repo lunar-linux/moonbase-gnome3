@@ -9,14 +9,13 @@ depends XML-Parser
 depends curl
 depends nghttp2
 depends meson
-depends %KERBEROS
 
 optional_depends vala \
                  "-Dvapi=enabled" \
                  "-Dvapi=disabled" \
                  "for Vala bindings support"
 
-optional_depends cyrus-sasl \
+optional_depends %KERBEROS \
                  "-Dgssapi=enabled" \
                  "-Dgssapi=disabled" \
-                 "for SASL support" \
+                 "for Kergheros support" \
