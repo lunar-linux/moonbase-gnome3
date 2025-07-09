@@ -1,11 +1,11 @@
           MODULE=NetworkManager
-         VERSION=1.52.0
+         VERSION=1.52.1
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/archive/$VERSION/
-      SOURCE_VFY=sha256:4ec7423ac5d06dca846482b184a24a3905a6af0ac1c82a6056866ff1edaa2ae9
+      SOURCE_VFY=sha256:8997dafb8131599134f75ecb2fcdc2d3ea977129796f2ea8b628a05702e6b7de
         WEB_SITE=http://gnome.org/projects/$MODULE
          ENTERED=20130216
-         UPDATED=20250617
+         UPDATED=20250709
            SHORT="Network Management daemon"
 
 cat << EOF
