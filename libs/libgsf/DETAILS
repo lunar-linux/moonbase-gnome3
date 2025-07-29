@@ -6,7 +6,7 @@
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-LIBGSF_1_14_53
         WEB_SITE=http://www.gnome.org
          ENTERED=20021118
-         UPDATED=20241014
+         UPDATED=20250729
            SHORT="Provides an API to access OLE2 streams"
 
 cat << EOF

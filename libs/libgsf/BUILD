@@ -2,6 +2,8 @@
 
 export PYTHONDONTWRITEBYTECODE=1 &&
 
-OPTS+=" --disable-static --disable-gtk-doc-html"
+OPTS+=" --enable-introspection \
+        --disable-static \
+        --disable-gtk-doc-html"
 
 default_build
