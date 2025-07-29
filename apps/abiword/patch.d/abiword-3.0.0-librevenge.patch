@@ -9,19 +9,19 @@ Index: plugins/wpg/xp/ie_impGraphic_WPG.cpp
 -#include <libwpd-stream/libwpd-stream.h>
 +#include <librevenge-stream/librevenge-stream.h>
  #include "xap_Module.h"
-
+ 
  using libwpg::WPGraphics;
 @@ -38,30 +38,35 @@
-
+ 
  ABI_PLUGIN_DECLARE("WPG")
-
+ 
 -class AbiWordPerfectGraphicsInputStream : public WPXInputStream
 +class AbiWordPerfectGraphicsInputStream : public librevenge::RVNGInputStream
  {
  public:
  	AbiWordPerfectGraphicsInputStream(GsfInput *input);
  	~AbiWordPerfectGraphicsInputStream();
-
+ 
 -	virtual bool isOLEStream();
 -	virtual WPXInputStream * getDocumentOLEStream();
 -	virtual WPXInputStream * getDocumentOLEStream(const char * name);
@@ -37,14 +37,14 @@ Index: plugins/wpg/xp/ie_impGraphic_WPG.cpp
  	virtual long tell();
 -	virtual bool atEOS();
 +	virtual bool isEnd();
-
+ 
  private:
-
+ 
  	GsfInput *m_input;
  	GsfInfile *m_ole;
 +	std::map<unsigned, std::string> m_substreams;
  };
-
+ 
  AbiWordPerfectGraphicsInputStream::AbiWordPerfectGraphicsInputStream(GsfInput *input) :
 -	WPXInputStream(),
 +	librevenge::RVNGInputStream(),
@@ -58,9 +58,9 @@ Index: plugins/wpg/xp/ie_impGraphic_WPG.cpp
 @@ -86,50 +91,120 @@
  	return buf;
  }
-
--int AbiWordPerfectGraphicsInputStream::seek(long offset, WPX_SEEK_TYPE seekType)
-+int AbiWordPerfectGraphicsInputStream::seek(long offset, librevenge::RVNG_SEEK_TYPE seekType)
+ 
+-int AbiWordPerfectGraphicsInputStream::seek(long offset, WPX_SEEK_TYPE seekType) 
++int AbiWordPerfectGraphicsInputStream::seek(long offset, librevenge::RVNG_SEEK_TYPE seekType) 
  {
  	GSeekType gsfSeekType = G_SEEK_SET;
  	switch(seekType)
@@ -77,36 +77,36 @@ Index: plugins/wpg/xp/ie_impGraphic_WPG.cpp
 +		gsfSeekType = G_SEEK_END;
 +		break;
  	}
-
+ 
  	return gsf_input_seek(m_input, offset, gsfSeekType);
  }
-
+ 
 -bool AbiWordPerfectGraphicsInputStream::isOLEStream()
 +bool AbiWordPerfectGraphicsInputStream::isStructured()
  {
  	if (!m_ole)
- 		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL));
-
+ 		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL)); 
+ 
 -	if (m_ole != NULL)
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL)); 
++	
 +	if (m_ole)
  		return true;
-
+ 
  	return false;
  }
-
+ 
 -WPXInputStream * AbiWordPerfectGraphicsInputStream::getDocumentOLEStream()
 +unsigned AbiWordPerfectGraphicsInputStream::subStreamCount()
  {
 -	return getDocumentOLEStream("PerfectOffice_MAIN");
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL)); 
++	
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL)); 
++	
 +	if (m_ole)
 +		{
 +			int numChildren = gsf_infile_num_children(m_ole);
@@ -114,20 +114,20 @@ Index: plugins/wpg/xp/ie_impGraphic_WPG.cpp
 +				return numChildren;
 +			return 0;
 +		}
-+
++	
 +	return 0;
  }
-
+ 
 -WPXInputStream * AbiWordPerfectGraphicsInputStream::getDocumentOLEStream(const char * name)
 +const char * AbiWordPerfectGraphicsInputStream::subStreamName(unsigned id)
  {
 -	WPXInputStream *documentStream = NULL;
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL));
-
++		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL)); 
+ 	
  	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL)); 
++	
 +	if (m_ole)
 +		{
 +			if ((int)id >= gsf_infile_num_children(m_ole))
@@ -142,45 +142,45 @@ Index: plugins/wpg/xp/ie_impGraphic_WPG.cpp
 +				}
 +			return i->second.c_str();
 +		}
-+
++	
 +	return 0;
 +}
 +
 +bool AbiWordPerfectGraphicsInputStream::existsSubStream(const char * name)
 +{
 +	if (!m_ole)
- 		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL));
-
+ 		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL)); 
+ 	
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL)); 
++	
  	if (m_ole)
  		{
  			GsfInput *document = gsf_infile_child_by_name(m_ole, name);
- 			if (document)
+ 			if (document) 
  				{
 +					g_object_unref(G_OBJECT (document));
 +					return true;
 +				}
 +		}
-+
++	
 +	return false;
 +}
 +
 +librevenge::RVNGInputStream * AbiWordPerfectGraphicsInputStream::getSubStreamByName(const char * name)
 +{
 +	librevenge::RVNGInputStream *documentStream = NULL;
-+
++	
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL)); 
++	
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL)); 
++	
 +	if (m_ole)
 +		{
 +			GsfInput *document = gsf_infile_child_by_name(m_ole, name);
-+			if (document)
++			if (document) 
 +				{
  					documentStream = new AbiWordPerfectGraphicsInputStream(document);
  					g_object_unref(G_OBJECT (document)); // the only reference should be encapsulated within the new stream
@@ -188,27 +188,27 @@ Index: plugins/wpg/xp/ie_impGraphic_WPG.cpp
 @@ -138,12 +213,35 @@
  	return documentStream;
  }
-
+ 
 +librevenge::RVNGInputStream * AbiWordPerfectGraphicsInputStream::getSubStreamById(unsigned id)
 +{
 +	librevenge::RVNGInputStream *documentStream = NULL;
-+
++	
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL)); 
++	
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL)); 
++	
 +	if (m_ole)
 +		{
 +			GsfInput *document = gsf_infile_child_by_index(m_ole, (int)id);
-+			if (document)
++			if (document) 
 +				{
 +					documentStream = new AbiWordPerfectGraphicsInputStream(document);
 +					g_object_unref(G_OBJECT (document)); // the only reference should be encapsulated within the new stream
 +				}
 +		}
-+
++	
 +	return documentStream;
 +}
 +
@@ -216,7 +216,7 @@ Index: plugins/wpg/xp/ie_impGraphic_WPG.cpp
  {
  	return gsf_input_tell(m_input);
  }
-
+ 
 -bool AbiWordPerfectGraphicsInputStream::atEOS()
 +bool AbiWordPerfectGraphicsInputStream::isEnd()
  {
@@ -253,17 +253,17 @@ Index: plugins/wpg/xp/ie_impGraphic_WPG.cpp
 +	g_object_unref(svgInput);
 +	return result;
  }
-
+ 
 Index: plugins/wpg/plugin.m4
 ===================================================================
 --- ./plugins/wpg/plugin.m4	(revision 34460)
-+++ ./plugins/wpg/plugin.m4	(working copy)
++++ p./lugins/wpg/plugin.m4	(working copy)
 @@ -1,5 +1,5 @@
-
+ 
 -wpg_pkgs="$gsf_req libwpg-0.2 >= 0.2.0 libwpd-0.9 >= 0.9.0 libwpd-stream-0.9 >= 0.9.0"
 +wpg_pkgs="libwpg-0.3 $gsf_req"
  wpg_deps="no"
-
+ 
  if test "$enable_wpg" != ""; then
 Index: plugins/wordperfect/xp/ie_imp_WordPerfect.h
 ===================================================================
@@ -271,7 +271,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.h
 +++ ./plugins/wordperfect/xp/ie_imp_WordPerfect.h	(working copy)
 @@ -30,7 +30,7 @@
  #define IE_IMP_WP_H
-
+ 
  #include <stdio.h>
 -#include <libwpd/libwpd.h>
 +#include <librevenge/librevenge.h>
@@ -281,7 +281,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.h
 @@ -92,7 +92,7 @@
  					IE_Imp ** ppie);
  };
-
+ 
 -class IE_Imp_WordPerfect : public IE_Imp, public WPXDocumentInterface
 +class IE_Imp_WordPerfect : public IE_Imp, public librevenge::RVNGTextInterface
  {
@@ -290,15 +290,15 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.h
 @@ -101,69 +101,83 @@
      virtual void pasteFromBuffer(PD_DocumentRange * pDocRange,
  				 UT_uint8 * pData, UT_uint32 lenData, const char * szEncoding = 0);
-
+ 
 -    virtual void setDocumentMetaData(const WPXPropertyList &propList);
 +	virtual void setDocumentMetaData(const librevenge::RVNGPropertyList &propList);
-
+ 
 -    virtual void startDocument();
 -    virtual void endDocument();
 +	virtual void startDocument(const librevenge::RVNGPropertyList &propList);
 +	virtual void endDocument();
-
+ 
 -    virtual void openPageSpan(const WPXPropertyList &propList);
 -    virtual void closePageSpan() {}
 -    virtual void openHeader(const WPXPropertyList &propList);
@@ -306,7 +306,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.h
 -    virtual void openFooter(const WPXPropertyList &propList);
 -    virtual void closeFooter();
 +	virtual void defineEmbeddedFont(const librevenge::RVNGPropertyList & /* propList */) {}
-
+ 
 -    virtual void openParagraph(const WPXPropertyList &propList, const WPXPropertyListVector &tabStops);
 -    virtual void closeParagraph() {}
 +	virtual void definePageStyle(const librevenge::RVNGPropertyList &) {}
@@ -316,26 +316,26 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.h
 +	virtual void closeHeader();
 +	virtual void openFooter(const librevenge::RVNGPropertyList &propList);
 +	virtual void closeFooter();
-
+ 
 -    virtual void openSpan(const WPXPropertyList &propList);
 -    virtual void closeSpan() {}
 +	virtual void defineSectionStyle(const librevenge::RVNGPropertyList &) {}
 +	virtual void openSection(const librevenge::RVNGPropertyList &propList);
 +	virtual void closeSection() {}
-
+ 
 -    virtual void openSection(const WPXPropertyList &propList, const WPXPropertyListVector &columns);
 -    virtual void closeSection() {}
 +	virtual void defineParagraphStyle(const librevenge::RVNGPropertyList &) {}
 +	virtual void openParagraph(const librevenge::RVNGPropertyList &propList);
 +	virtual void closeParagraph() {}
-
+ 
 -    virtual void insertTab();
 -    virtual void insertText(const WPXString &text);
 -    virtual void insertLineBreak();
 +	virtual void defineCharacterStyle(const librevenge::RVNGPropertyList &) {}
 +	virtual void openSpan(const librevenge::RVNGPropertyList &propList);
 +	virtual void closeSpan() {}
-
+ 
 -    virtual void defineOrderedListLevel(const WPXPropertyList &propList);
 -    virtual void defineUnorderedListLevel(const WPXPropertyList &propList);
 -    virtual void openOrderedListLevel(const WPXPropertyList &propList);
@@ -346,7 +346,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.h
 -    virtual void closeListElement() {}
 +	virtual void openLink(const librevenge::RVNGPropertyList & /* propList */) {}
 +	virtual void closeLink() {}
-
+ 
 -    virtual void openFootnote(const WPXPropertyList &propList);
 -    virtual void closeFootnote();
 -    virtual void openEndnote(const WPXPropertyList &propList);
@@ -356,7 +356,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.h
 +	virtual void insertSpace();
 +	virtual void insertLineBreak();
 +	virtual void insertField(const librevenge::RVNGPropertyList & /* propList */) {}
-
+ 
 -    virtual void openTable(const WPXPropertyList &propList, const WPXPropertyListVector &columns);
 -    virtual void openTableRow(const WPXPropertyList &propList);
 -    virtual void closeTableRow() {}
@@ -370,7 +370,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.h
 +	virtual void closeUnorderedListLevel();
 +	virtual void openListElement(const librevenge::RVNGPropertyList &propList);
 +	virtual void closeListElement() {}
-
+ 
 -    virtual void definePageStyle(const WPXPropertyList&) {}
 -    virtual void defineParagraphStyle(const WPXPropertyList&, const WPXPropertyListVector&) {}
 -    virtual void defineCharacterStyle(const WPXPropertyList&) {}
@@ -393,7 +393,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.h
 +	virtual void closeComment() {}
 +	virtual void openTextBox(const librevenge::RVNGPropertyList & /* propList */) {}
 +	virtual void closeTextBox() {}
-
+ 
 +	virtual void openTable(const librevenge::RVNGPropertyList &propList);
 +	virtual void openTableRow(const librevenge::RVNGPropertyList &propList);
 +	virtual void closeTableRow() {}
@@ -401,7 +401,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.h
 +	virtual void closeTableCell() {}
 +	virtual void insertCoveredTableCell(const librevenge::RVNGPropertyList & /* propList */) {}
 +	virtual void closeTable();
-
+ 
 +	virtual void openFrame(const librevenge::RVNGPropertyList & /* propList */) {}
 +	virtual void closeFrame() {}
 +
@@ -428,16 +428,16 @@ Index: plugins/wordperfect/xp/ie_impexp_WordPerfect.cpp
 +++ ./plugins/wordperfect/xp/ie_impexp_WordPerfect.cpp	(working copy)
 @@ -35,7 +35,6 @@
  ABI_PLUGIN_DECLARE("WordPerfect")
-
+ 
  static IE_Imp_WordPerfect_Sniffer * m_ImpSniffer = 0;
 -static IE_Exp_WordPerfect_Sniffer * m_ExpSniffer = 0;
-
+ 
  #ifdef HAVE_LIBWPS
  static IE_Imp_MSWorks_Sniffer * m_MSWorks_ImpSniffer = 0;
 @@ -49,13 +48,7 @@
  		m_ImpSniffer = new IE_Imp_WordPerfect_Sniffer ();
  	}
-
+ 
 -	if (!m_ExpSniffer)
 -	{
 -		m_ExpSniffer = new IE_Exp_WordPerfect_Sniffer ();
@@ -445,28 +445,28 @@ Index: plugins/wordperfect/xp/ie_impexp_WordPerfect.cpp
 -
  	UT_ASSERT (m_ImpSniffer);
 -	UT_ASSERT (m_ExpSniffer);
-
+ 
  #ifdef HAVE_LIBWPS
  	if (!m_MSWorks_ImpSniffer)
 @@ -79,7 +72,7 @@
  	mi->usage   = "No Usage";
-
+ 
  	IE_Imp::registerImporter (m_ImpSniffer);
 -	//IE_Exp::registerExporter (m_ExpSniffer);
 +
  	return 1;
  }
-
+ 
 @@ -93,18 +86,11 @@
  	mi->usage   = 0;
-
+ 
  	UT_ASSERT (m_ImpSniffer);
 -	UT_ASSERT (m_ExpSniffer);
-
+ 
  	IE_Imp::unregisterImporter (m_ImpSniffer);
  	delete m_ImpSniffer;
  	m_ImpSniffer = 0;
-
+ 	
 -	/*
 -	IE_Exp::unregisterExporter (m_ExpSniffer);
 -	delete m_ExpSniffer;
@@ -490,29 +490,29 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
  #include <gsf/gsf-input-memory.h>
  #include <gsf/gsf-input-stdio.h>
 @@ -60,42 +62,47 @@
-
+ 
  // Stream class
-
+ 
 -#include <libwpd-stream/libwpd-stream.h>
 +#include <librevenge-stream/librevenge-stream.h>
 +#include <libwpd/libwpd.h>
-
+ 
  #include <gsf/gsf-input.h>
  #include <gsf/gsf-infile.h>
  #include <gsf/gsf-infile-msole.h>
 +#include <gsf/gsf-infile-zip.h>
-
+ 
  #ifdef HAVE_LIBWPS
  #include <libwps/libwps.h>
  #endif
-
+ 
 -class AbiWordperfectInputStream : public WPXInputStream
 +class AbiWordperfectInputStream : public librevenge::RVNGInputStream
  {
  public:
  	AbiWordperfectInputStream(GsfInput *input);
  	~AbiWordperfectInputStream();
-
+ 
 -	virtual bool isOLEStream();
 -	virtual WPXInputStream * getDocumentOLEStream();
 -
@@ -530,14 +530,14 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
  	virtual long tell();
 -	virtual bool atEOS();
 +	virtual bool isEnd();
-
+ 
  private:
-
+ 
  	GsfInput *m_input;
  	GsfInfile *m_ole;
 +	std::map<unsigned, std::string> m_substreams;
  };
-
+ 
  AbiWordperfectInputStream::AbiWordperfectInputStream(GsfInput *input) :
 -	WPXInputStream(),
 +	librevenge::RVNGInputStream(),
@@ -551,9 +551,9 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -120,50 +127,120 @@
  	return buf;
  }
-
--int AbiWordperfectInputStream::seek(long offset, WPX_SEEK_TYPE seekType)
-+int AbiWordperfectInputStream::seek(long offset, librevenge::RVNG_SEEK_TYPE seekType)
+ 
+-int AbiWordperfectInputStream::seek(long offset, WPX_SEEK_TYPE seekType) 
++int AbiWordperfectInputStream::seek(long offset, librevenge::RVNG_SEEK_TYPE seekType) 
  {
  	GSeekType gsfSeekType = G_SEEK_SET;
  	switch(seekType)
@@ -570,36 +570,36 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 +		gsfSeekType = G_SEEK_END;
 +		break;
  	}
-
+ 
  	return gsf_input_seek(m_input, offset, gsfSeekType);
  }
-
+ 
 -bool AbiWordperfectInputStream::isOLEStream()
 +bool AbiWordperfectInputStream::isStructured()
  {
  	if (!m_ole)
- 		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL));
-
+ 		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL)); 
+ 
 -	if (m_ole != NULL)
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL)); 
++	
 +	if (m_ole)
  		return true;
-
+ 
  	return false;
  }
-
+ 
 -WPXInputStream * AbiWordperfectInputStream::getDocumentOLEStream()
 +unsigned AbiWordperfectInputStream::subStreamCount()
  {
 -	return getDocumentOLEStream("PerfectOffice_MAIN");
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL)); 
++	
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL)); 
++	
 +	if (m_ole)
 +		{
 +			int numChildren = gsf_infile_num_children(m_ole);
@@ -607,20 +607,20 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 +				return numChildren;
 +			return 0;
 +		}
-+
++	
 +	return 0;
  }
-
+ 
 -WPXInputStream * AbiWordperfectInputStream::getDocumentOLEStream(const char * name)
 +const char * AbiWordperfectInputStream::subStreamName(unsigned id)
  {
 -	WPXInputStream *documentStream = NULL;
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL));
-
++		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL)); 
+ 	
  	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL)); 
++	
 +	if (m_ole)
 +		{
 +			if ((int)id >= gsf_infile_num_children(m_ole))
@@ -635,45 +635,45 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 +				}
 +			return i->second.c_str();
 +		}
-+
++	
 +	return 0;
 +}
 +
 +bool AbiWordperfectInputStream::existsSubStream(const char * name)
 +{
 +	if (!m_ole)
- 		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL));
-
+ 		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL)); 
+ 	
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL)); 
++	
  	if (m_ole)
  		{
  			GsfInput *document = gsf_infile_child_by_name(m_ole, name);
- 			if (document)
+ 			if (document) 
  				{
 +					g_object_unref(G_OBJECT (document));
 +					return true;
 +				}
 +		}
-+
++	
 +	return false;
 +}
 +
 +librevenge::RVNGInputStream * AbiWordperfectInputStream::getSubStreamByName(const char * name)
 +{
 +	librevenge::RVNGInputStream *documentStream = NULL;
-+
++	
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL)); 
++	
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL)); 
++	
 +	if (m_ole)
 +		{
 +			GsfInput *document = gsf_infile_child_by_name(m_ole, name);
-+			if (document)
++			if (document) 
 +				{
  					documentStream = new AbiWordperfectInputStream(document);
  					g_object_unref(G_OBJECT (document)); // the only reference should be encapsulated within the new stream
@@ -681,27 +681,27 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -172,12 +249,35 @@
  	return documentStream;
  }
-
+ 
 +librevenge::RVNGInputStream * AbiWordperfectInputStream::getSubStreamById(unsigned id)
 +{
 +	librevenge::RVNGInputStream *documentStream = NULL;
-+
++	
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_msole_new (m_input, NULL)); 
++	
 +	if (!m_ole)
-+		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL));
-+
++		m_ole = GSF_INFILE(gsf_infile_zip_new (m_input, NULL)); 
++	
 +	if (m_ole)
 +		{
 +			GsfInput *document = gsf_infile_child_by_index(m_ole, (int)id);
-+			if (document)
++			if (document) 
 +				{
 +					documentStream = new AbiWordperfectInputStream(document);
 +					g_object_unref(G_OBJECT (document)); // the only reference should be encapsulated within the new stream
 +				}
 +		}
-+
++	
 +	return documentStream;
 +}
 +
@@ -709,7 +709,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
  {
  	return gsf_input_tell(m_input);
  }
-
+ 
 -bool AbiWordperfectInputStream::atEOS()
 +bool AbiWordperfectInputStream::isEnd()
  {
@@ -718,11 +718,11 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -247,13 +347,13 @@
  {
  	AbiWordperfectInputStream gsfInput(input);
-
+ 
 -	WPDConfidence confidence = WPDocument::isFileFormatSupported(&gsfInput);
 -
 +	libwpd::WPDConfidence confidence = libwpd::WPDocument::isFileFormatSupported(&gsfInput);
-+
++	
  	switch (confidence)
  	{
 -		case WPD_CONFIDENCE_NONE:
@@ -739,7 +739,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
  	AbiWordperfectInputStream gsfInput(input);
 -	WPDResult error = WPDocument::parse(&gsfInput, static_cast<WPXDocumentInterface *>(this), NULL);
 +	libwpd::WPDResult error = libwpd::WPDocument::parse(&gsfInput, static_cast<librevenge::RVNGTextInterface *>(this), NULL);
-
+ 
 -	if (error != WPD_OK)
 +	if (error != libwpd::WPD_OK)
  	{
@@ -748,7 +748,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -329,7 +429,7 @@
  	// nada
  }
-
+ 
 -void IE_Imp_WordPerfect::setDocumentMetaData(const WPXPropertyList &propList)
 +void IE_Imp_WordPerfect::setDocumentMetaData(const librevenge::RVNGPropertyList &propList)
  {
@@ -769,7 +769,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 +	if (propList["librevenge:abstract"])
 +		getDoc()->setMetaDataProp(PD_META_KEY_DESCRIPTION, propList["librevenge:abstract"]->getStr().cstr());
  }
-
+ 
 -void IE_Imp_WordPerfect::startDocument()
 +void IE_Imp_WordPerfect::startDocument(const librevenge::RVNGPropertyList & /* propList */)
  {
@@ -778,25 +778,25 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -357,7 +457,7 @@
  	UT_DEBUGMSG(("AbiWordPerfect: endDocument\n"));
  }
-
+ 
 -void IE_Imp_WordPerfect::openPageSpan(const WPXPropertyList &propList)
 +void IE_Imp_WordPerfect::openPageSpan(const librevenge::RVNGPropertyList &propList)
  {
  	if (m_bHdrFtrOpenCount) return; // HACK
  	UT_DEBUGMSG(("AbiWordPerfect: openPageSpan\n"));
 @@ -378,7 +478,7 @@
-
+ 		
  }
-
+ 
 -void IE_Imp_WordPerfect::openHeader(const WPXPropertyList & /*propList*/)
 +void IE_Imp_WordPerfect::openHeader(const librevenge::RVNGPropertyList & /*propList*/)
  {
  	m_bHdrFtrOpenCount++;
-
+ 	
 @@ -420,7 +520,7 @@
  	*/
  }
-
+ 
 -void IE_Imp_WordPerfect::openFooter(const WPXPropertyList & /*propList*/)
 +void IE_Imp_WordPerfect::openFooter(const librevenge::RVNGPropertyList & /*propList*/)
  {
@@ -805,7 +805,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -432,7 +532,7 @@
  	// see above comments re: closeHeader
  }
-
+ 
 -void IE_Imp_WordPerfect::openParagraph(const WPXPropertyList &propList, const WPXPropertyListVector &tabStops)
 +void IE_Imp_WordPerfect::openParagraph(const librevenge::RVNGPropertyList &propList)
  {
@@ -814,10 +814,10 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -478,13 +578,15 @@
  		(int)(m_topMargin*72), (int)(m_bottomMargin*72), m_leftMarginOffset, m_rightMarginOffset, m_textIndent, lineSpacing);
  	propBuffer += tmpBuffer;
-
+ 	
 -	if (tabStops.count() > 0) // Append the tabstop information
 +	const librevenge::RVNGPropertyListVector *tabStops = propList.child("style:tab-stops");
-+
++	
 +	if (tabStops && tabStops->count()) // Append the tabstop information
  	{
  		propBuffer += "; tabstops:";
@@ -833,19 +833,19 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
  			{
 @@ -515,8 +617,8 @@
  				propBuffer += "0";
-
+ 
  			tmpBuffer = ",";
 -                }
 -        }
 +		}
 +	}
-
-
-
+ 
+ 	
+ 
 @@ -543,7 +645,7 @@
  	}
  }
-
+ 
 -void IE_Imp_WordPerfect::openSpan(const WPXPropertyList &propList)
 +void IE_Imp_WordPerfect::openSpan(const librevenge::RVNGPropertyList &propList)
  {
@@ -854,24 +854,24 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -614,13 +716,14 @@
  	X_CheckDocumentError(appendFmt(propsArray));
  }
-
+ 
 -void IE_Imp_WordPerfect::openSection(const WPXPropertyList &propList, const WPXPropertyListVector &columns)
 +void IE_Imp_WordPerfect::openSection(const librevenge::RVNGPropertyList &propList)
  {
  	if (m_bHdrFtrOpenCount) return; // HACK
  	UT_DEBUGMSG(("AbiWordPerfect: openSection\n"));
-
+ 
  	float marginLeft = 0.0f, marginRight = 0.0f;
 -	int columnsCount = ((columns.count() == 0) ? 1 : columns.count());
 +	const librevenge::RVNGPropertyListVector *columns = propList.child("style:columns");
 +	int columnsCount = ((!columns || !columns->count()) ? 1 : columns->count());
-
+ 
  	// TODO: support spaceAfter
  	if (propList["fo:start-indent"])
 @@ -647,7 +750,7 @@
- 	X_CheckDocumentError(appendSpan(&ucs,1));
+ 	X_CheckDocumentError(appendSpan(&ucs,1));	
  }
-
+ 
 -void IE_Imp_WordPerfect::insertText(const WPXString &text)
 +void IE_Imp_WordPerfect::insertText(const librevenge::RVNGString &text)
  {
@@ -880,14 +880,14 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -658,6 +761,15 @@
  	}
  }
-
+ 
 +void IE_Imp_WordPerfect::insertSpace()
 +{
 +	if (m_bHdrFtrOpenCount) return; // HACK
 +	UT_DEBUGMSG(("AbiWordPerfect: insertSpace\n"));
 +
 +	UT_UCS4Char ucs = UCS_SPACE;
-+	X_CheckDocumentError(appendSpan(&ucs,1));
++	X_CheckDocumentError(appendSpan(&ucs,1));	
 +}
 +
  void IE_Imp_WordPerfect::insertLineBreak()
@@ -895,8 +895,8 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
  	if (m_bHdrFtrOpenCount) return; // HACK
 @@ -668,12 +780,11 @@
  }
-
-
+ 
+ 
 -
 -void IE_Imp_WordPerfect::defineOrderedListLevel(const WPXPropertyList &propList)
 +void IE_Imp_WordPerfect::openOrderedListLevel(const librevenge::RVNGPropertyList &propList)
@@ -905,14 +905,14 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 -	UT_DEBUGMSG(("AbiWordPerfect: defineOrderedListLevel\n"));
 -
 +	UT_DEBUGMSG(("AbiWordPerfect: openOrderedListLevel\n"));
-+
++	
  	int listID = 0, startingNumber = 0, level = 1;
  	char listType = '1';
  	UT_UTF8String textBeforeNumber, textAfterNumber;
 @@ -680,12 +791,12 @@
  	float listLeftOffset = 0.0f;
  	float listMinLabelWidth = 0.0f;
-
+ 	
 -	if (propList["libwpd:id"])
 -		listID = propList["libwpd:id"]->getInt();
 +	if (propList["librevenge:id"])
@@ -933,34 +933,34 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 +
 +	m_iCurrentListLevel++;
  }
-
+ 
 -void IE_Imp_WordPerfect::defineUnorderedListLevel(const WPXPropertyList &propList)
 +void IE_Imp_WordPerfect::closeOrderedListLevel()
  {
  	if (m_bHdrFtrOpenCount) return; // HACK
 -	UT_DEBUGMSG(("AbiWordPerfect: defineUnorderedListLevel\n"));
 +	UT_DEBUGMSG(("AbiWordPerfect: closeOrderedListLevel (level: %i)\n", m_iCurrentListLevel));
-+	UT_ASSERT(m_iCurrentListLevel > 0);
-+
++	UT_ASSERT(m_iCurrentListLevel > 0); 
++	
 +	// every time we close a list level, the level above it is normally renumbered to start at "1"
 +	// again. this code takes care of that.
 +	if (m_iCurrentListLevel < (WP6_NUM_LIST_LEVELS-1))
 +		m_pCurrentListDefinition->setLevelNumber(m_iCurrentListLevel + 1, 0);
-+
++	
 +	m_iCurrentListLevel--;
 +}
-
+ 
 +void IE_Imp_WordPerfect::openUnorderedListLevel(const librevenge::RVNGPropertyList &propList)
 +{
 +	if (m_bHdrFtrOpenCount) return; // HACK
 +	UT_DEBUGMSG(("AbiWordPerfect: openUNorderedListLevel\n"));
-+
++	
  	int listID = 0, level = 1;
 -	WPXString textBeforeNumber, textAfterNumber;
 +	librevenge::RVNGString textBeforeNumber, textAfterNumber;
  	float listLeftOffset = 0.0f;
  	float listMinLabelWidth = 0.0f;
-
+ 	
 -	if (propList["libwpd:id"])
 -		listID = propList["libwpd:id"]->getInt();
 -	if (propList["libwpd:level"])
@@ -977,27 +977,27 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
  		_updateDocumentUnorderedListDefinition(m_pCurrentListDefinition, level);
  	}
 -}
-
+ 
 -//void IE_Imp_WordPerfect::openOrderedListLevel(const int listID)
 -void IE_Imp_WordPerfect::openOrderedListLevel(const WPXPropertyList & /*propList*/)
 -{
 -	if (m_bHdrFtrOpenCount) return; // HACK
 -	UT_DEBUGMSG(("AbiWordPerfect: openOrderedListLevel\n"));
--
+-	
  	m_iCurrentListLevel++;
  }
-
+ 
 -void IE_Imp_WordPerfect::closeOrderedListLevel()
 -{
 -	if (m_bHdrFtrOpenCount) return; // HACK
 -	UT_DEBUGMSG(("AbiWordPerfect: closeOrderedListLevel (level: %i)\n", m_iCurrentListLevel));
--	UT_ASSERT(m_iCurrentListLevel > 0);
--
+-	UT_ASSERT(m_iCurrentListLevel > 0); 
+-	
 -	// every time we close a list level, the level above it is normally renumbered to start at "1"
 -	// again. this code takes care of that.
 -	if (m_iCurrentListLevel < (WP6_NUM_LIST_LEVELS-1))
 -		m_pCurrentListDefinition->setLevelNumber(m_iCurrentListLevel + 1, 0);
--
+-	
 -	m_iCurrentListLevel--;
 -}
 -
@@ -1005,7 +1005,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 -{
 -	if (m_bHdrFtrOpenCount) return; // HACK
 -	UT_DEBUGMSG(("AbiWordPerfect: openUNorderedListLevel\n"));
--
+-	
 -	m_iCurrentListLevel++;
 -}
 -
@@ -1013,7 +1013,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
  {
  	if (m_bHdrFtrOpenCount) return; // HACK
 @@ -796,7 +894,7 @@
-
+ 
  // ASSUMPTION: We assume that unordered lists will always pass a number of "0". unpredictable behaviour
  // may result otherwise
 -void IE_Imp_WordPerfect::openListElement(const WPXPropertyList &propList, const WPXPropertyListVector & /*tabStops*/)
@@ -1024,16 +1024,16 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -885,7 +983,7 @@
  	X_CheckDocumentError(appendSpan(&ucs,1));
  }
-
+ 
 -void IE_Imp_WordPerfect::openFootnote(const WPXPropertyList & /*propList*/)
 +void IE_Imp_WordPerfect::openFootnote(const librevenge::RVNGPropertyList & /*propList*/)
  {
  	if (m_bHdrFtrOpenCount) return; // HACK
-
+ 
 @@ -934,7 +1032,7 @@
  	X_CheckDocumentError(appendStrux(PTX_EndFootnote,NULL));
  }
-
+ 
 -void IE_Imp_WordPerfect::openEndnote(const WPXPropertyList & /*propList*/)
 +void IE_Imp_WordPerfect::openEndnote(const librevenge::RVNGPropertyList & /*propList*/)
  {
@@ -1042,7 +1042,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -975,7 +1073,7 @@
  	X_CheckDocumentError(appendStrux(PTX_EndEndnote,NULL));
  }
-
+ 
 -void IE_Imp_WordPerfect::openTable(const WPXPropertyList &propList, const WPXPropertyListVector &columns)
 +void IE_Imp_WordPerfect::openTable(const librevenge::RVNGPropertyList &propList)
  {
@@ -1051,7 +1051,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -1000,14 +1098,18 @@
  		}
  	}
-
+ 	
 -	propBuffer += "table-column-props:";
 -	WPXPropertyListVector::Iter i(columns);
 -	for (i.rewind(); i.next();)
@@ -1072,12 +1072,12 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 +			propBuffer += tmpBuffer;
 +		}
  	}
-
+ 
  	const gchar* propsArray[3];
 @@ -1018,7 +1120,7 @@
  	X_CheckDocumentError(appendStrux(PTX_SectionTable, propsArray));
  }
-
+ 
 -void IE_Imp_WordPerfect::openTableRow(const WPXPropertyList & /*propList*/)
 +void IE_Imp_WordPerfect::openTableRow(const librevenge::RVNGPropertyList & /*propList*/)
  {
@@ -1086,7 +1086,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -1030,14 +1132,14 @@
  	m_bInCell = false;
  }
-
+ 
 -void IE_Imp_WordPerfect::openTableCell(const WPXPropertyList &propList)
 +void IE_Imp_WordPerfect::openTableCell(const librevenge::RVNGPropertyList &propList)
  {
@@ -1109,7 +1109,7 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
  		AbiWordperfectInputStream gsfInput(input);
 -		WPSResult error = WPSDocument::parse(&gsfInput, static_cast<WPXDocumentInterface *>(this));
 +		libwps::WPSResult error = libwps::WPSDocument::parse(&gsfInput, static_cast<librevenge::RVNGTextInterface *>(this));
-
+ 
 -		if (error != WPS_OK)
 +		if (error != libwps::WPS_OK)
  			{
@@ -1118,14 +1118,14 @@ Index: plugins/wordperfect/xp/ie_imp_WordPerfect.cpp
 @@ -1286,13 +1388,17 @@
  {
  	AbiWordperfectInputStream gsfInput(input);
-
+ 
 -	WPSConfidence confidence = WPSDocument::isFileFormatSupported(&gsfInput);
 +	libwps::WPSKind kind;
 +	libwps::WPSConfidence confidence = libwps::WPSDocument::isFileFormatSupported(&gsfInput, kind);
-+
++	
 +	if (kind != libwps::WPS_TEXT)
 +		confidence = libwps::WPS_CONFIDENCE_NONE;
-
+ 
  	switch (confidence)
  	{
 -		case WPS_CONFIDENCE_NONE:
@@ -1142,7 +1142,7 @@ Index: plugins/wordperfect/xp/Makefile.am
 +++ ./plugins/wordperfect/xp/Makefile.am	(working copy)
 @@ -6,8 +6,6 @@
  	-DABI_BUILD_VERSION=\"$(VERSION)\"
-
+ 
  libxp_la_SOURCES = \
 -	ie_exp_WordPerfect.cpp \
 -	ie_exp_WordPerfect.h \
@@ -1155,32 +1155,32 @@ Index: plugins/wordperfect/xp/ie_impexp_WordPerfect.h
 +++ ./plugins/wordperfect/xp/ie_impexp_WordPerfect.h	(working copy)
 @@ -24,7 +24,6 @@
   */
-
+ 
  #include "ie_imp_WordPerfect.h"
 -#include "ie_exp_WordPerfect.h"
  #include "xap_Module.h"
-
+ 
  #define IE_MIMETYPE_WP_51			"application/wordperfect5.1"
 Index: plugins/wordperfect/plugin.m4
 ===================================================================
 --- ./plugins/wordperfect/plugin.m4	(revision 34460)
 +++ ./plugins/wordperfect/plugin.m4	(working copy)
 @@ -1,6 +1,6 @@
-
+ 
 -wordperfect_pkgs="libwpg-0.2 >= 0.2.0 libwpd-0.9 >= 0.9.0 libwpd-stream-0.9 >= 0.9.0 $gsf_req"
 -wordperfect_wps_pkgs='libwps-0.2 >= 0.1.0'
 +wordperfect_pkgs="libwpd-0.10 $gsf_req"
 +wordperfect_wps_pkgs='libwps-0.3'
  wordperfect_deps="no"
-
+ 
  WORDPERFECT_CFLAGS=
 @@ -29,7 +29,7 @@
-
+ 
  PKG_CHECK_EXISTS([ $wordperfect_wps_pkgs ],
  [
 -	wp_deps_pkgs="$wp_deps_pkgs $wordperfect_wps_pkgs"
 +	wp_deps_pkgs="$wordperfect_wps_pkgs $wp_deps_pkgs"
  	WPS_DEFINE=" -DHAVE_LIBWPS"
  ])
-
+ 
 
