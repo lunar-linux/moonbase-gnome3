@@ -9,6 +9,7 @@ depends systemd
 depends libgudev
 depends mobile-broadband-provider-info
 depends meson
+depends libnvme
 depends polkit
 
 optional_depends readline \
