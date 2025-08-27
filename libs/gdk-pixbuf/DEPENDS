@@ -2,7 +2,6 @@ depends glib-2
 depends meson
 depends docbook2X
 depends gobject-introspection
-depends glycin
 depends docutils
 
 optional_depends libjpeg-turbo \
@@ -34,3 +33,9 @@ optional_depends shared-mime-info \
                  "-Dgio_sniffing=false" \
                  "for file type detection using GIO" \
                  "y"
+
+optional_depends glycin "-Dglycin=enabled" \
+                        "-Dglycin=disabled" \
+                        "Use Glycin as the loader,${PROBLEM_COLOR}Say no on first install${DEFAULT_COLOR}"
+
+
