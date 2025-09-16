@@ -1,7 +1,8 @@
+depends meson
+depends hidapi
 depends libevdev
 depends libgudev
 depends vala
-depends meson
 
 optional_depends gobject-introspection \
                  "-D introspection=true" \

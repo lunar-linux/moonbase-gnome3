@@ -1,11 +1,11 @@
           MODULE=libmanette
-         VERSION=0.2.7
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:cddd5c02a131072c19c6cde6f2cb2cd57eae7dacb50d14c337efd980baa51a51
+         VERSION=0.2.12
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.gnome.org/GNOME/libmanette/-/archive/0.2.12/
+      SOURCE_VFY=sha256:4c2e458e7e9b4d41be19553275fb07cde54a7e82e85fd3b32637f205ff7992e0
         WEB_SITE=https://gnome.pages.gitlab.gnome.org/libmanette/
          ENTERED=20210327
-         UPDATED=20240509
+         UPDATED=20250916
            SHORT="Simple GObject game controller library"
 
 cat << EOF
