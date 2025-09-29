@@ -2,7 +2,7 @@ depends gtkmm3
 depends libgtop
 depends librsvg
 
-optional_depends libwnck \
+optional_depends libwnck3 \
                  "-Dwnck=true" \
                  "-Dwnck=false" \
                  "enable wnck support, this will likely make system-monitor segfault" \
