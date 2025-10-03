@@ -1,12 +1,12 @@
           MODULE=mm-common
-         VERSION=1.0.6
+         VERSION=1.0.7
           SOURCE=$MODULE-$VERSION.tar.xz
       SOURCE_URL=https://download.gnome.org/sources/$MODULE/1.0/
-      SOURCE_VFY=sha256:b55c46037dbcdabc5cee3b389ea11cc3910adb68ebe883e9477847aa660862e7
+      SOURCE_VFY=sha256:494abfce781418259b1e9d8888c73af4de4b6f3be36cc75d9baa8baa0f2a7a39
         WEB_SITE=https://www.gtkmm.org/en/index.html
             TYPE=meson
          ENTERED=20230502
-         UPDATED=20240107
+         UPDATED=20251003
            SHORT="common build files of C++ bindings"
 
 cat << EOF
