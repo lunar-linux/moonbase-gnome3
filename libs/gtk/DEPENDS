@@ -1,3 +1,4 @@
+depends libXdamage
 depends at-spi2-core
 depends pango
 depends gdk-pixbuf
