@@ -1,5 +1,5 @@
 depends gobject-introspection
-depends gtk+-3
+depends gtk
 depends gdk-pixbuf
 depends meson
 
