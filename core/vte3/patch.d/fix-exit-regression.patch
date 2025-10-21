@@ -31,7 +31,7 @@ diff --git a/src/vte.cc b/src/vte.cc
 index 2614e5b4..ea80d1ee 100644
 --- a/src/vte.cc
 +++ b/src/vte.cc
-@@ -3735,6 +3735,9 @@ Terminal::child_watch_done(pid_t pid,
+@@ -3771,6 +3771,9 @@ Terminal::child_watch_done(pid_t pid,
  
          m_pty_pid = -1;
  
