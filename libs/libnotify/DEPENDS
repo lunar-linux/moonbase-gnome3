@@ -2,21 +2,3 @@ depends gobject-introspection
 depends gtk
 depends gdk-pixbuf
 depends meson
-
-optional_depends docbook-xsl \
-                 "-Dman=true" \
-                 "-Dman=false" \
-                 "for generating the man pages" \
-                 "n"
-
-optional_depends xmlto \
-                 "-Ddocbook_docs=enabled" \
-                 "-Ddocbook_docs=disabled" \
-                 "for building docbook documentation" \
-                 "n"
-
-optional_depends gtk-doc \
-                 "-Dgtk_doc=true" \
-                 "-Dgtk_doc=false" \
-                 "for building documentation"\
-                 "n"

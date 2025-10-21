@@ -1,0 +1,3 @@
+default_pre_build
+
+OPTS+=" -Dman=false -Dgtk_doc=false -Ddocbook_docs=disabled"
