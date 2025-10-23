@@ -1,2 +1,0 @@
-default_pre_build  &&
-sedit '/meson_post_install/ d' meson.build
