@@ -13,11 +13,11 @@ optional_depends openldap \
                  "for LDAP backend support" \
                  "n"
 
-optional_depends ORBit2 \
-                 "--enable-orbit" \
-                 "--disable-orbit" \
-                 "use ORBit for IPC instead of DBus" \
-                 "n"
+#optional_depends ORBit2 \
+#                 "--enable-orbit" \
+#                 "--disable-orbit" \
+#                 "use ORBit for IPC instead of DBus" \
+#                 "n"
 
 optional_depends gtk-doc \
                  "--enable-gtk-doc" \
