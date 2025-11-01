@@ -1,16 +1,13 @@
           MODULE=ORBit2
          VERSION=2.14.19
           SOURCE=$MODULE-$VERSION.tar.bz2
-         SOURCE2=ORBit2-build-fix.patch
       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-     SOURCE2_URL=http://github.com/pld-linux/ORBit2/raw/master/
       SOURCE_VFY=sha256:55c900a905482992730f575f3eef34d50bda717c197c97c08fa5a6eafd857550
-     SOURCE2_VFY=sha256:0304b2bba78032ce6301b3bd683c83eee3668d727ff9a03083fcad5cf36ec15e
         WEB_SITE=http://www.gnome.org
          ENTERED=20020714
          UPDATED=20101202
            SHORT="High-performance CORBA Object Request Broker"
-           PSAFE="no"
+PSAFE="no"
 
 cat << EOF
 ORBit is a high-performance CORBA (Common Object Request Broker
