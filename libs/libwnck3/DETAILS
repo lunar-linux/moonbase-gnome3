@@ -1,13 +1,12 @@
           MODULE=libwnck3
-        PKGNAME=libwnck
-         VERSION=3.36.0
-          SOURCE=$PKGNAME-$VERSION.tar.xz
-SOURCE_DIRECTORY=$BUILD_DIRECTORY/$PKGNAME-$VERSION
-      SOURCE_URL=$GNOME_URL/sources/$PKGNAME/${VERSION%.*}
-      SOURCE_VFY=sha256:bc508150b3ed5d22354b0e6774ad4eee465381ebc0ace45eb0e2d3a4186c925f
-        WEB_SITE=http://www.gnome.org
+         VERSION=43.3
+          SOURCE=libwnck-$VERSION.tar.gz
+ SOURCE_URL_FULL=https://github.com/GNOME/libwnck/archive/refs/tags/43.3.tar.gz
+      SOURCE_VFY=sha256:5b73be090c2bc5185a81ac73bb3105864595ed0d4d260917a28f64e9780c103f
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/libwnck-43.3
+        WEB_SITE=https://gitlab.gnome.org/GNOME/libwnck
          ENTERED=20130217
-         UPDATED=20200325
+         UPDATED=2025118
            SHORT="Window Navigator Construction Kit (GTK+3)"
 
 cat << EOF
