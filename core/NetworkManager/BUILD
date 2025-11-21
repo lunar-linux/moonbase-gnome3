@@ -5,6 +5,7 @@ OPTS+=" -D tests=no \
         -D qt=false \
         -D ebpf=false \
         -D docs=false \
+        -D ovs=false \
         -D libaudit=no \
         -D selinux=false \
         -D more_asserts=no \
@@ -12,6 +13,7 @@ OPTS+=" -D tests=no \
         -D more_logging=false \
         -D introspection=true \
         -D firewalld_zone=false \
+        -D nm_cloud_setup=false \
         -D session_tracking_consolekit=false \
         -D dbus_conf_dir=/usr/share/dbus-1/system.d"
 
