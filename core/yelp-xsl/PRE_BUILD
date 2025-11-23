@@ -1,3 +1,0 @@
-default_pre_build
-
-OPTS+=" -Ddocbook=false -Dmallard=false"
