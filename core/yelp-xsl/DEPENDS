@@ -1,3 +1,4 @@
+depends meson
 depends libxslt
 depends itstool
 depends intltool
