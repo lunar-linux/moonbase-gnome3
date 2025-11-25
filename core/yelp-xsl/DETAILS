@@ -6,7 +6,7 @@
         WEB_SITE=https://gitlab.gnome.org/GNOME/yelp-xsl
             TYPE=meson
          ENTERED=20140413
-         UPDATED=20251123
+         UPDATED=20251125
            SHORT="Stylesheets for Yelp"
 
 cat << EOF
