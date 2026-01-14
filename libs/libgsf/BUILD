@@ -1,4 +1,4 @@
-./autogen.sh &&
+#./autogen.sh &&
 
 export PYTHONDONTWRITEBYTECODE=1 &&
 
