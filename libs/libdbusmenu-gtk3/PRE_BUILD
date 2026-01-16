@@ -1,2 +1,0 @@
-default_pre_build &&
-tar xf $SOURCE_CACHE/libdbusmenu_${VERSION}.orig.tar.gz -C $SOURCE_DIRECTORY
