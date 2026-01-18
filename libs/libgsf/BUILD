@@ -1,4 +1,4 @@
-#./autogen.sh &&
+NOCONFIGURE=1 ./autogen.sh &&
 
 export PYTHONDONTWRITEBYTECODE=1 &&
 

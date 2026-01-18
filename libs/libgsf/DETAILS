@@ -5,7 +5,7 @@
       SOURCE_URL_FULL=https://gitlab.gnome.org/GNOME/libgsf/-/archive/LIBGSF_$UVERSION/libgsf-LIBGSF_$UVERSION.tar.bz2
       SOURCE_VFY=sha256:5d9265c954b4ef9cd910c765e9cd5a27d9749812910c8f5f2c7dada3f4c68901
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-LIBGSF_$UVERSION
-        WEB_SITE=https://gitlab.gnome.org/GNOME/$MODULE
+        WEB_SITE=https://gitlab.gnome.org/GNOME/libgsf/
          ENTERED=20021118
          UPDATED=20260114
            SHORT="Provides an API to access OLE2 streams"
