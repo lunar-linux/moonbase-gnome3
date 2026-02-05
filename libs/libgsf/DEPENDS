@@ -7,5 +7,4 @@ depends gtk-doc
 optional_depends gdk-pixbuf \
                  "--with-gdk-pixbuf" \
                  "--without-gdk-pixbuf" \
-                 "use gdk thumbnails" \
-                "For documentation install" "n"
+                 "For documentation install" "n"
