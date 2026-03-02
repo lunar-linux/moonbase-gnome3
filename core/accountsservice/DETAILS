@@ -1,9 +1,9 @@
           MODULE=accountsservice
-         VERSION=23.13.9
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=https://www.freedesktop.org/software/accountsservice/
-      SOURCE_VFY=sha256:adda4cdeae24fa0992e7df3ffff9effa7090be3ac233a3edfdf69d5a9c9b924f
-        WEB_SITE=http://www.freedesktop.org/software/accountsservice/
+         VERSION=25.34.76
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=https://gitlab.freedesktop.org/accountsservice/accountsservice/-/archive/$VERSION/
+      SOURCE_VFY=sha256:6e30df2e17160f037cc47a75f307651132f6907caa71fbd85c4b9c899f3037d5
+        WEB_SITE=https://gitlab.freedesktop.org/accountsservice/accountsservice
          ENTERED=20141018
          UPDATED=20240308
            SHORT="D-Bus interface for user account query and manipulation"
