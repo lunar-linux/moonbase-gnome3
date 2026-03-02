@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:6e30df2e17160f037cc47a75f307651132f6907caa71fbd85c4b9c899f3037d5
         WEB_SITE=https://gitlab.freedesktop.org/accountsservice/accountsservice
          ENTERED=20141018
-         UPDATED=20240308
+         UPDATED=20260301
            SHORT="D-Bus interface for user account query and manipulation"
 
 cat << EOF
