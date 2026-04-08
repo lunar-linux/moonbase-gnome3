@@ -36,6 +36,5 @@ optional_depends shared-mime-info \
 
 optional_depends glycin "-Dglycin=enabled" \
                         "-Dglycin=disabled" \
-                        "Use Glycin as the loader,${PROBLEM_COLOR}Say no on first install${DEFAULT_COLOR}"
-
-
+                        "Use Glycin as the loader,${PROBLEM_COLOR}Say no on first install${DEFAULT_COLOR}" \
+                        "n"

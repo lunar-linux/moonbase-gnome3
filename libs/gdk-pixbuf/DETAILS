@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:140c2d0b899fcf853ee92b26373c9dc228dbcde0820a4246693f4328a27466fa
         WEB_SITE=http://www.gtk.org/
          ENTERED=20091105
-         UPDATED=20260404
+         UPDATED=20260408
            SHORT="An image loading library used with GNOME"
 
 cat << EOF
