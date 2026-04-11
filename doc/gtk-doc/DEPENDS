@@ -6,6 +6,7 @@ depends docbook-xsl
 depends python-lxml
 depends python-pygments
 depends yelp-tools
+depends meson
 
 optional_depends dblatex  "" "" "for PDF support"
 optional_depends jadetex  "" "" "for SGML support (use this or openjade not both)"
