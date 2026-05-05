@@ -1,0 +1,20 @@
+depends libX11
+depends libXcomposite
+depends libXcursor
+depends libXdamage
+depends libXext
+depends libXfixes
+depends libXi
+depends libXinerama
+depends xrandr
+depends libXrender
+depends libxkbcommon
+depends mesa-lib
+depends gobject-introspection
+depends at-spi2-core
+depends pango
+depends gdk-pixbuf
+depends glib-2
+depends libepoxy
+
+optional_depends cups "" "--disable-cups" "enable CUPS as print backend"

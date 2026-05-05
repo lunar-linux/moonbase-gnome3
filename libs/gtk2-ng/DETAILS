@@ -1,0 +1,22 @@
+          MODULE=gtk2-ng
+         VERSION=r22068.0675b80da
+          SOURCE=$MODULE-$VERSION.tar.xz
+ SOURCE_URL_FULL=git+https://git.devuan.org/Daemonratte/gtk2-ng:$VERSION
+#      SOURCE_VFY=sha256:
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+        WEB_SITE=https://git.devuan.org/Daemonratte/gtk2-ng
+         ENTERED=20260505
+         UPDATED=20260505
+        REPLACES=gtk+-2
+           SHORT="fork of gtk+-2"
+
+cat << EOF
+Unofficial, community-maintained fork keeping GTK2 alive and usable on
+modern 64-bit Linux systems.
+
+This fork focuses on modern compatibility while preserving stability,
+performance, ABI compatibility, and original behavior as much as possible.
+X11-first, no forced Wayland migration.
+
+Backed by the devuanusers.com community.
+EOF
