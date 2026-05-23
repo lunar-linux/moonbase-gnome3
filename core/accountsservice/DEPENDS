@@ -3,9 +3,3 @@ depends gobject-introspection
 depends polkit
 depends vala
 depends meson
-
-optional_depends elogind \
-                 "-Delogind=true" \
-                 "-Delogind=false" \
-                 "for elogind support" \
-                 "n"
