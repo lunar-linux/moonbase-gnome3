@@ -24,9 +24,6 @@ if module_installed systemd; then
             -D config_logging_backend_default=journal \
             -D systemdsystemunitdir=/usr/lib/systemd/system"
 else
-    if module_installed elogind; then
-        OPTS+=" -D session_tracking=elogind"
-    fi
     if module_installed syslog-ng; then
         OPTS+="-D config_logging_backend_default=syslog"
     fi
