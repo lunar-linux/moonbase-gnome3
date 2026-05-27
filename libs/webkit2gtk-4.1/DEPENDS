@@ -1,3 +1,4 @@
+depends sysprof
 depends libtasn1
 depends unifdef
 depends cmake
@@ -14,7 +15,7 @@ depends enchant
 depends libXt
 depends openjpeg-2
 depends gperf
-depends libsoup
+depends libsoup-3
 depends libsecret
 depends gtk+-3
 depends bubblewrap
