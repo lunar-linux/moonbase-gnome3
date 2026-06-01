@@ -1,11 +1,11 @@
           MODULE=adwaita-icon-theme
-         VERSION=49.0
+         VERSION=50.0
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=https://gitlab.gnome.org/GNOME/adwaita-icon-theme/-/archive/$VERSION/
-      SOURCE_VFY=sha256:2153e51bd8bce721df377ee2c07dea21f5d04849038576c4b624c79353160b1f
+      SOURCE_VFY=sha256:6b6bf6ca8d705a20d9f6ccfbbca64f4fa7edbcde3c1a8a3c74583578b3a71e81
         WEB_SITE=https://gitlab.gnome.org/GNOME/adwaita-icon-theme
          ENTERED=20021202
-         UPDATED=20251004
+         UPDATED=20260601
            SHORT="Adwaita icon theme"
 ARCHIVE=off
 cat << EOF
