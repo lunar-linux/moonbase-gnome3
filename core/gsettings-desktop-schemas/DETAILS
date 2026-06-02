@@ -1,13 +1,13 @@
-          MODULE=gsettings-desktop-schemas
-         VERSION=48.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:e68f155813bf18f865a8b2c8e9d473588b6ccadcafbb666ab788857c6c2d1bd3
-        WEB_SITE=https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas
-            TYPE=meson
-         ENTERED=20130210
-         UPDATED=20250623
-           SHORT="Shared GSettings schemas for the desktop"
+    MODULE=gsettings-desktop-schemas
+   VERSION=50.1
+    SOURCE=$MODULE-$VERSION.tar.xz
+SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+SOURCE_VFY=sha256:0a2aa25082672585d16fcdab61c7b0e33f035fb87476505c794f29565afa485b
+  WEB_SITE=https://gitlab.gnome.org/GNOME/gsettings-desktop-schemas
+      TYPE=meson
+   ENTERED=20130210
+   UPDATED=20260602
+     SHORT="Shared GSettings schemas for the desktop"
 
 cat << EOF
 Shared GSettings schemas for the desktop.
