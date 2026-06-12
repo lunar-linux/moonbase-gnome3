@@ -1,3 +1,0 @@
-default_pre_build &&
-
-cp -f $SCRIPT_DIRECTORY/pam.d/cinnamon-screensaver data/
