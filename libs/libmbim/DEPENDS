@@ -3,8 +3,5 @@ depends gobject-introspection
 depends systemd
 depends libgudev
 
-optional_depends gtk-doc \
-                 "-Dgtk_doc=true" \
-                 "-Dgtk_doc=false" \
-                 "for building documentation" \
-                 "n"
+optional_depends gtk-doc  "-Dgtk_doc=true" "-Dgtk_doc=false" "for building documentation" "n"
+optional_depends help2man "-Dman=true"     "-Dman=false"     "for man page creation" "n"
