@@ -1,13 +1,18 @@
 OPTS+=" -D CMAKE_INSTALL_PREFIX=/usr  \
         -D CMAKE_SKIP_RPATH=ON        \
         -D CMAKE_BUILD_TYPE=Release   \
+        -D CMAKE_INSTALL_LIBDIR=lib   \
         -D PORT=GTK                   \
         -D LIB_INSTALL_DIR=/usr/lib   \
         -D USE_LIBBACKTRACE=OFF       \
         -D ENABLE_GAMEPAD=OFF         \
         -D ENABLE_MINIBROWSER=ON      \
-        -D ENABLE_DOCUMENTATION=OFF   \
+        -D USE_FLITE=OFF              \
         -D USE_GTK4=OFF               \
+        -D USE_SOUP2=OFF              \
+        -D ENABLE_DOCUMENTATION=OFF   \
+        -D ENABLE_SPEECH_SYNTHESIS=OFF  \
+        -D CMAKE_INSTALL_LIBEXECDIR=lib \
         -D USE_SYSTEM_SYSPROF_CAPTURE=NO \
         -W no-dev"
 

@@ -23,6 +23,10 @@ depends xdg-dbus-proxy
 depends libseccomp
 depends gobject-introspection
 
+# harfnuzz needs to be compiled with icu4c support
+depends icu4c
+depends harfbuzz
+
 optional_depends libjxl \
                  "-DUSE_JPEGXL=ON" \
                  "-DUSE_JPEGXL=OFF" \
@@ -32,7 +36,7 @@ optional_depends geoclue2 \
                  "-DENABLE_GEOLOCATION=ON" \
                  "-DENABLE_GEOLOCATION=OFF" \
                  "for geolocation support"
-                 
+
 optional_depends hyphen \
                  "-DUSE_LIBHYPHEN=ON" \
                  "-DUSE_LIBHYPHEN=OFF" \
@@ -42,7 +46,7 @@ optional_depends libavif \
                  "-DUSE_AVIF=ON" \
                  "-DUSE_AVIF=OFF" \
                  "for AVIF image support"
-                 
+
 optional_depends woff2\
                 "-DUSE_WOFF2=ON" \
                 "-DUSE_WOFF2=OFF" \
