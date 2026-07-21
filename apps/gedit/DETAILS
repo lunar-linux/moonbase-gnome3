@@ -6,7 +6,7 @@
         WEB_SITE=http://www.gnome.org
             TYPE=meson
          ENTERED=20131020
-         UPDATED=20200426
+         UPDATED=20260721
            SHORT="A text editor for GNOME"
 
 cat << EOF
