@@ -5,3 +5,4 @@ depends desktop-file-utils
 depends gsettings-desktop-schemas
 depends libpeas
 depends vala
+depends tepl-4
