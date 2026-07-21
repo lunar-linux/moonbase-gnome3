@@ -1,0 +1,15 @@
+          MODULE=tepl-4
+         VERSION=4.4.0
+          SOURCE=tepl-$VERSION.tar.xz
+      SOURCE_URL=https://download.gnome.org/sources/tepl/${VERSION%.*}
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/tepl-$VERSION
+      SOURCE_VFY=sha256:e6f6673a8a27e8f280725db8fbacec79b20676ae0558755239d15a9808faa256
+        WEB_SITE=https://gitlab.gnome.org/World/gedit/libgedit-tepl
+         ENTERED=20260721
+         UPDATED=20260721
+           SHORT="A GtkSourceView-based text editors and IDE helper library"
+
+cat << EOF
+The Tepl package contains a library that eases the development of
+GtkSourceView-based text editors and IDEs.
+EOF

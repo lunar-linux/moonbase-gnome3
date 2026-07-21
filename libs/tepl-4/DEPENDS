@@ -1,0 +1,11 @@
+depends glib-2
+depends gtk+-3
+depends gtksourceview
+depends amtk
+depends libxml2
+depends uchardet
+
+optional_depends gvfs \
+        "--enable-gvfs-metadata" \
+        "--disable-gvfs-metadata" \
+        "for storing metadata with GVFS instead of the old XML file store"
