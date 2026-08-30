@@ -1,12 +1,12 @@
           MODULE=cairomm
-         VERSION=1.18.0
+         VERSION=1.19.1
           SOURCE=$MODULE-$VERSION.tar.bz2
       SOURCE_URL=https://gitlab.freedesktop.org/cairo/cairomm/-/archive/$VERSION/
-      SOURCE_VFY=sha256:a0444ba4223905b1f8280aaff0f6c548971b95e9e1ab58fe9759bb131e710ecb
+      SOURCE_VFY=sha256:ffc9a607e0ecc004808e7727ab90815e983e486dc3002c87b22f85717c2e9d84
         WEB_SITE=https://cairographics.org/cairomm
             TYPE=meson
          ENTERED=20060821
-         UPDATED=20240902
+         UPDATED=20260829
            SHORT="A C++ API for cairo"
 
 cat << EOF

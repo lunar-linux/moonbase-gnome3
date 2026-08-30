@@ -2,4 +2,4 @@ default_pre_build
 
 export XML_CATALOG_FILES=/etc/xml/catalog
 
-OPTS+=" -Dmaintainer-mode=true -Dbuild-documentation=false"
+OPTS+=" --includedir=/usr/include/cairomm -Dmaintainer-mode=true -Dbuild-documentation=false"
