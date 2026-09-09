@@ -1,15 +1,2 @@
 depends exiv2
-depends gobject-introspection
-depends python-pygobject
 depends meson
-
-optional_depends vala \
-                 "-D vapi=true" \
-                 "-D vapi=false" \
-                 "for vala vapi support"
-
-optional_depends gtk-doc \
-                 "-D gtk_doc=true" \
-                 "-D gtk_doc=false" \
-                 "for building documentation, ${PROBLEM_COLOR}Say NO for now${DEFAULT_COLOR}" \
-                 "n"
