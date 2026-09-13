@@ -3,13 +3,14 @@ export LANG='en_US.UTF-8'
 
 OPTS+=" -D tests=no \
         -D qt=false \
+        -D docs=false \
+        -D man=false \
         -D ebpf=false \
         -D docs=false \
         -D ovs=false \
         -D libaudit=no \
         -D selinux=false \
         -D more_asserts=no \
-        -D modify_system=true \
         -D more_logging=false \
         -D introspection=true \
         -D firewalld_zone=false \

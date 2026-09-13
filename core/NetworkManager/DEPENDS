@@ -1,4 +1,6 @@
 depends dbus-glib
+depends libbpf
+depends bpftool
 depends gobject-introspection
 depends iproute2
 depends libnl3
@@ -25,7 +27,6 @@ optional_depends nss    "-D crypto=nss"    "" "for NSS crypto support (if no the
 optional_depends gnutls "-D crypto=gnutls" "" "for TLS crypto support"
 
 optional_depends dhcpcd   "-D dhcpcd=yes"   "-D dhcpcd=no"   "for DHCP client"
-optional_depends dhcp     "-D dhclient=yes" "-D dhclient=no" "for standard DHCP client"
 optional_depends valgrind "-D valgrind=yes" "-D valgrind=no" "for valgrind support"
 
 optional_depends iwd \
@@ -72,7 +73,3 @@ optional_depends vala \
                  "-D vapi=true" \
                  "-D vapi=false"  \
                  "for vala support (needs introspection support)"
-
-if in_depends "$MODULE" "gobject-introspection"; then
-    depends python-pygobject
-fi
