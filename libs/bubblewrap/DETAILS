@@ -1,11 +1,11 @@
     MODULE=bubblewrap
-   VERSION=0.11.2
+   VERSION=0.12.0
     SOURCE=$MODULE-$VERSION.tar.xz
 SOURCE_URL=https://github.com/projectatomic/bubblewrap/releases/download/v$VERSION/
-SOURCE_VFY=sha256:69abc30005d2186baf7737feacd8da35633b93cf5af38838ecff17c5f8e924f6
+SOURCE_VFY=sha256:9760d007363e3abba7c747489910f9f82d9fca53ba3bd3282e396fa3c97a3314
   WEB_SITE=https://github.com/projectatomic/bubblewrap/
    ENTERED=20190910
-   UPDATED=20260425
+   UPDATED=20260826
      SHORT="Unprivileged sandboxing tool"
 
 cat << EOF
