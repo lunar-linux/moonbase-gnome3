@@ -1,11 +1,11 @@
     MODULE=accountsservice
-   VERSION=26.13.3
+   VERSION=26.27.3
     SOURCE=$MODULE-$VERSION.tar.bz2
 SOURCE_URL=https://gitlab.freedesktop.org/accountsservice/accountsservice/-/archive/$VERSION/
-SOURCE_VFY=sha256:2dd47fc0339ba63b60195e02d61dfab24d2c7d0be84bd2b3a3e9088fa10bbfc3
+SOURCE_VFY=sha256:77e26080fd644df3e339fef561bb77f901e43557dc73e620afb6c10789b9a9e8
   WEB_SITE=https://gitlab.freedesktop.org/accountsservice/accountsservice
    ENTERED=20141018
-   UPDATED=20260525
+   UPDATED=20260915
      SHORT="D-Bus interface for user account query and manipulation"
 
 cat << EOF
