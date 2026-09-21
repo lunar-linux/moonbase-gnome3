@@ -5,7 +5,7 @@
       SOURCE_VFY=sha256:920d1a3fcedeadc32acff95c2e203b319039dd4b4a08dd1a2dfd283d19c0b9ae
         WEB_SITE=http://live.gnome.org/GObjectIntrospection
          ENTERED=20091003
-         UPDATED=20251229
+         UPDATED=20260921
            SHORT="Generate interface introspection data for GObject libraries"
 
 cat << EOF
