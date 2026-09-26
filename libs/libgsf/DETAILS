@@ -1,13 +1,13 @@
           MODULE=libgsf
-         VERSION=1.14.58
+         VERSION=1.14.59
         UVERSION=${VERSION//./_}
           SOURCE=$MODULE-$VERSION.tar.bz2
  SOURCE_URL_FULL=https://gitlab.gnome.org/GNOME/libgsf/-/archive/LIBGSF_$UVERSION/libgsf-LIBGSF_$UVERSION.tar.bz2
-      SOURCE_VFY=sha256:36d7f51bd85443eeb8a05a962f12af64a36b8777c782f49d3c456b06f8a6fc13
+      SOURCE_VFY=sha256:8e98ed7075acc6350abd3f9387b49b285ab3e128ccea5f0f3ba133467c748340
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-LIBGSF_$UVERSION
         WEB_SITE=https://gitlab.gnome.org/GNOME/libgsf/
          ENTERED=20021118
-         UPDATED=20260502
+         UPDATED=20260921
            SHORT="Provides an API to access OLE2 streams"
 
 cat << EOF
