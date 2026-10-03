@@ -1,8 +1,9 @@
           MODULE=at-spi2-core
-         VERSION=2.62.0
-          SOURCE=$MODULE-$VERSION.tar.xz
-      SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
-      SOURCE_VFY=sha256:03a94f7bf35f300daf2843a37cdf36479a91bc53f59a8ea437c79e25d95d1de3
+         VERSION=2.62.0.1
+          SOURCE=$MODULE-$VERSION.tar.gz
+#       SOURCE_URL=$GNOME_URL/sources/$MODULE/${VERSION%.*}
+       SOURCE_URL=https://gitlab.gnome.org/GNOME/at-spi2-core/-/archive/${VERSION}/
+      SOURCE_VFY=sha256:24a6c1fc763f3874f9338cba38952fa9fef68b1028719cdce1eecf49549785bd
         WEB_SITE=http://www.gnome.org
             TYPE=meson
          ENTERED=20120706
