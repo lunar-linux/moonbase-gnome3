@@ -1,12 +1,12 @@
           MODULE=libsoup-3
-         VERSION=3.6.6
+         VERSION=3.8.0
           SOURCE=libsoup-$VERSION.tar.xz
       SOURCE_URL=$GNOME_URL/sources/libsoup/${VERSION%.*}/
-      SOURCE_VFY=sha256:51ed0ae06f9d5a40f401ff459e2e5f652f9a510b7730e1359ee66d14d4872740
+      SOURCE_VFY=sha256:bbf08fa3e03a88c31a3d27a0d87cb422e9490f2d08e149211103df6d638a2238
 SOURCE_DIRECTORY=$BUILD_DIRECTORY/libsoup-$VERSION
         WEB_SITE=https://wiki.gnome.org/Projects/libsoup
          ENTERED=20220325
-         UPDATED=20260216
+         UPDATED=20261003
            SHORT="A SOAP implementation in C"
 
 cat << EOF
