@@ -5,6 +5,6 @@ depends intltool
 depends gobject-introspection
 depends meson
 
-optional_depends vala        "-Dvapi=true"    "-Dvapi=false" "for vapi support,${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}"
-optional_depends docbook-xsl "-Dmanpage=true" "-Dmanpage=false" "for man pages building, ${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}" "n"
+optional_depends vala        "-Dvapi=true"    "-Dvapi=false" "for vapi support"
+optional_depends docbook-xsl "-Dmanpage=true" "-Dmanpage=false" "for man pages building" "n"
 optional_depends gtk-doc     "-Dgtk_doc=true" "-Dgtk_doc=false" "for building documentation, ${PROBLEM_COLOR}Say no for now${DEFAULT_COLOR}" "n"
