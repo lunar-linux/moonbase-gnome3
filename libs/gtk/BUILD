@@ -2,7 +2,6 @@ OPTS+=" -Dbuild-demos=false \
         -Dman-pages=false \
         -Dbuild-examples=false \
         -Dbuild-tests=false \
-        -Dvulkan=disabled \
         -Ddocumentation=false \
         -Dcloudproviders=enabled\
         -Dintrospection=enabled \
