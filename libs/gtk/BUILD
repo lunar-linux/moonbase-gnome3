@@ -5,7 +5,8 @@ OPTS+=" -Dbuild-demos=false \
         -Ddocumentation=false \
         -Dcloudproviders=enabled\
         -Dintrospection=enabled \
-        -Dwin32-backend=false"
+        -Dwin32-backend=false \
+        --prefix /usr/lib "
 
 if [[ "$FFMPEG" == "y" ]]; then
   if [[ "$GSTREAMER" == "y" ]]; then
