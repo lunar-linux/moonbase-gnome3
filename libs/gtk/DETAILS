@@ -6,7 +6,7 @@
       WEB_SITE=http://www.gtk.org
           TYPE=meson
        ENTERED=20200412
-       UPDATED=20261003
+       UPDATED=20261027
       REPLACES=gtk4
          SHORT="GTK is a multi-platform toolkit for creating GUIs"
 
