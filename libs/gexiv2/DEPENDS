@@ -2,3 +2,5 @@ depends gobject-introspection
 depends exiv2
 depends meson
 depends gi-docgen
+depends python-pygobject
+
