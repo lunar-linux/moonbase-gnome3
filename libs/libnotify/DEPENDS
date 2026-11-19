@@ -1,4 +1,4 @@
+depends meson
 depends gobject-introspection
 depends gtk
 depends gdk-pixbuf
-depends meson
